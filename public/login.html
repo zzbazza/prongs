@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Přihlášení - Zlatý jelen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="https://kit.fontawesome.com/4ec2c98bfd.js" crossorigin="anonymous"></script>
+</head>
+<body class="login-page">
+  <div class="login-container">
+    <div class="window">
+      <div class="window-title">
+        <span>Zlatý jelen – Přihlášení</span>
+      </div>
+      <div class="window-content">
+        <div class="login-icon">🦌</div>
+        <h2>Vítejte</h2>
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="password">Heslo:</label>
+            <input type="password" id="password" name="password" autofocus>
+          </div>
+          <div class="button-group">
+            <button type="submit" class="btn-primary">Přihlásit se</button>
+          </div>
+        </form>
+        <div id="error-message" class="error-message"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const password = document.getElementById('password').value;
+      const errorDiv = document.getElementById('error-message');
+
+      try {
+        const response = await fetch('/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ password })
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+          window.location.href = '/';
+        } else {
+          errorDiv.textContent = data.message || 'Nesprávné heslo';
+          document.getElementById('password').value = '';
+        }
+      } catch (error) {
+        errorDiv.textContent = 'Chyba připojení';
+      }
+    });
+  </script>
+</body>
+</html>

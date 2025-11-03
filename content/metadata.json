@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "path": "Texty/uvod.txt",
+      "type": "text",
+      "title": "Úvod do expozice Zlatý jelen",
+      "description": "Vítejte v historické expozici věnované budově Zlatého jelena a jejímu významu pro Starou Bělu",
+      "categories": ["chronicles"],
+      "keywords": ["úvod", "historie", "zlatý jelen", "stará běla"]
+    },
+    {
+      "path": "Fotografie/README.txt",
+      "type": "text",
+      "title": "Ukázka historické fotografie",
+      "description": "Příklad zápisu fotografie do systému - nahraďte skutečným obsahem",
+      "categories": ["photos"],
+      "keywords": ["fotografie", "historická", "ukázka"]
+    },
+    {
+      "path": "Dokumenty/README.txt",
+      "type": "text",
+      "title": "Ukázka projektové dokumentace",
+      "description": "Příklad zápisu PDF dokumentu - nahraďte skutečnými projektovými dokumenty",
+      "categories": ["project-docs"],
+      "keywords": ["dokumentace", "projekt", "ukázka"]
+    }
+  ]
+}

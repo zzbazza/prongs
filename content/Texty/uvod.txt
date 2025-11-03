@@ -1,0 +1,7 @@
+Vítejte v historické expozici!
+
+Tato aplikace vám umožňuje procházet historické dokumenty, fotografie a texty.
+
+Použijte navigaci vlevo pro procházení složek, nebo klikněte na soubory pro jejich zobrazení.
+
+Pro lepší čitelnost můžete v pravém horním rohu přepnout velikost textu.

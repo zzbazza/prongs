@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zlatý jelen - Historická expozice</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="https://kit.fontawesome.com/4ec2c98bfd.js" crossorigin="anonymous"></script>
+</head>
+<body data-text-size="medium">
+  <div class="app-container">
+    <!-- macOS-style Top Bar -->
+    <header class="top-bar">
+      <div class="top-bar-left">
+        <span class="app-title">Zlatý jelen – svědek minulosti</span>
+      </div>
+      <div class="top-bar-center">
+        <div class="search-box">
+          <i class="fa-solid fa-search"></i>
+          <input type="text" id="searchInput" placeholder="Hledat..." />
+        </div>
+      </div>
+      <div class="top-bar-right">
+        <button id="textSizeDecrease" class="icon-btn" title="Zmenšit text" aria-label="Zmenšit text">
+          <span class="icon-stack">
+            <i class="fa-solid fa-font"></i>
+            <i class="fa-solid fa-minus icon-badge"></i>
+          </span>
+        </button>
+        <button id="textSizeIncrease" class="icon-btn" title="Zvětšit text" aria-label="Zvětšit text">
+          <span class="icon-stack">
+            <i class="fa-solid fa-font"></i>
+            <i class="fa-solid fa-plus icon-badge"></i>
+          </span>
+        </button>
+        <button id="homeBtn" class="icon-btn" title="Zpět na hlavní stránku" aria-label="Domů">
+          <i class="fa-regular fa-house"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main content area -->
+    <main class="main-content">
+      <!-- File browser view -->
+      <div id="browserView" class="browser-view">
+        <div id="fileList" class="file-list"></div>
+      </div>
+
+      <!-- Content viewer (for images, PDFs, text, etc.) -->
+      <div id="contentViewer" class="content-viewer hidden">
+        <div class="viewer-header">
+          <button id="closeViewer" class="btn-close">✕ Zavřít</button>
+        </div>
+        <div id="viewerContent" class="viewer-content"></div>
+      </div>
+    </main>
+
+    <!-- Loading indicator -->
+    <div id="loadingIndicator" class="loading-indicator hidden">
+      <div class="loading-spinner"></div>
+      <div>Načítání...</div>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
