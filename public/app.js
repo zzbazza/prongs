@@ -1,23 +1,17 @@
-// Hardcoded categories
-const CATEGORIES = [
-  { id: 'chronicles', title: 'Kroniky', icon: '📖' },
-  { id: 'photos', title: 'Fotografie a pohledy', icon: '📷' },
-  { id: 'exhibition-panels', title: 'Panely výstav', icon: '🖼️' },
-  { id: 'project-docs', title: 'Projektová dokumentace', icon: '📋' },
-  { id: 'old-maps', title: 'Staré mapy', icon: '🗺️' },
-  { id: 'newsletter', title: 'Staroběleský zpravodaj', icon: '📰' }
-];
-
 // Application state
 const state = {
   allItems: [],
+  allCategories: [],
+  currentCategories: [], // Categories at current level
   currentView: 'home', // 'home', 'category', 'search', 'viewer'
-  currentCategory: null,
+  currentCategoryPath: [], // Array of category IDs forming the path
+  categoryPathString: '', // Joined path like "photos/buildings/churches"
   searchQuery: '',
   currentIndex: -1,
   currentFile: null,
   textSize: 'medium',
-  textSizes: ['small', 'medium', 'large']
+  textSizes: ['small', 'medium', 'large'],
+  isLegacy: false // Whether using legacy flat category structure
 };
 
 // DOM elements
@@ -64,10 +58,13 @@ async function init() {
   elements.homeBtn.addEventListener('click', goHome);
   elements.breadcrumbHome.addEventListener('click', goHome);
 
-  // Breadcrumb category click - go back to category/search view
+  // Breadcrumb category click - navigate up one level
   elements.breadcrumbCategory.addEventListener('click', () => {
     if (state.currentView === 'viewer') {
       closeViewer();
+    } else if (state.currentView === 'category' && state.currentCategoryPath.length > 1) {
+      // Navigate up one level in category hierarchy
+      navigateUpCategory();
     }
   });
 
@@ -99,9 +96,55 @@ async function init() {
     goHome();
   });
 
-  // Load all items and show home
-  await loadAllItems();
+  // Load all data and show home
+  await loadAllData();
   showHome();
+}
+
+// Load all categories and items
+async function loadAllData() {
+  setLoading(true);
+  try {
+    // Load categories
+    const catResponse = await fetch('/api/categories');
+    const catData = await catResponse.json();
+    state.allCategories = catData.categories;
+    state.currentCategories = catData.categories;
+    state.isLegacy = catData.isLegacy || false;
+
+    // Load all items
+    const itemsResponse = await fetch('/api/items');
+    const itemsData = await itemsResponse.json();
+    state.allItems = itemsData.items;
+  } catch (error) {
+    console.error('Error loading data:', error);
+    alert('Chyba při načítání obsahu');
+  } finally {
+    setLoading(false);
+  }
+}
+
+// Get category title from path
+function getCategoryTitle(categoryPath) {
+  if (!categoryPath || categoryPath.length === 0) return '';
+
+  let categories = state.allCategories;
+  let title = '';
+
+  for (let i = 0; i < categoryPath.length; i++) {
+    const catId = categoryPath[i];
+    const found = categories.find(c => c.id === catId);
+    if (found) {
+      if (i === categoryPath.length - 1) {
+        title = found.title;
+      }
+      categories = found.subcategories || [];
+    } else {
+      return categoryPath[categoryPath.length - 1];
+    }
+  }
+
+  return title;
 }
 
 // Update breadcrumbs
@@ -122,9 +165,9 @@ function updateBreadcrumbs() {
     elements.breadcrumbCategory.classList.remove('active');
 
     // Show category or search context
-    if (state.currentCategory) {
-      const category = CATEGORIES.find(c => c.id === state.currentCategory);
-      elements.breadcrumbCategory.textContent = category ? category.title : state.currentCategory;
+    if (state.currentCategoryPath.length > 0) {
+      const categoryTitle = getCategoryTitle(state.currentCategoryPath);
+      elements.breadcrumbCategory.textContent = categoryTitle || state.categoryPathString;
     } else if (state.searchQuery) {
       elements.breadcrumbCategory.textContent = `Hledání: "${state.searchQuery}"`;
     } else {
@@ -139,7 +182,7 @@ function updateBreadcrumbs() {
 
     // Show close button
     elements.closeViewer.style.display = 'block';
-  } else if (state.currentView === 'category' && state.currentCategory) {
+  } else if (state.currentView === 'category' && state.currentCategoryPath.length > 0) {
     // Category view
     elements.breadcrumbHome.classList.remove('active');
     elements.breadcrumbSeparator.style.display = 'inline';
@@ -148,8 +191,8 @@ function updateBreadcrumbs() {
     elements.breadcrumbFile.style.display = 'none';
     elements.closeViewer.style.display = 'none';
 
-    const category = CATEGORIES.find(c => c.id === state.currentCategory);
-    elements.breadcrumbCategory.textContent = category ? category.title : state.currentCategory;
+    const categoryTitle = getCategoryTitle(state.currentCategoryPath);
+    elements.breadcrumbCategory.textContent = categoryTitle || state.categoryPathString;
     elements.breadcrumbCategory.classList.add('active');
   } else if (state.currentView === 'search') {
     // Search view
@@ -167,7 +210,9 @@ function updateBreadcrumbs() {
 // Go to home view
 function goHome() {
   state.currentView = 'home';
-  state.currentCategory = null;
+  state.currentCategoryPath = [];
+  state.categoryPathString = '';
+  state.currentCategories = state.allCategories;
   state.searchQuery = '';
   elements.searchInput.value = '';
   elements.clearSearch.classList.add('hidden');
@@ -175,32 +220,64 @@ function goHome() {
   updateBreadcrumbs();
 }
 
+// Navigate up one level in category hierarchy
+function navigateUpCategory() {
+  if (state.currentCategoryPath.length === 0) {
+    goHome();
+    return;
+  }
+
+  // Remove last level from path
+  state.currentCategoryPath.pop();
+  state.categoryPathString = state.currentCategoryPath.join('/');
+
+  if (state.currentCategoryPath.length === 0) {
+    // Back to home
+    goHome();
+  } else {
+    // Find parent category and show its children
+    let categories = state.allCategories;
+    for (let i = 0; i < state.currentCategoryPath.length; i++) {
+      const catId = state.currentCategoryPath[i];
+      const found = categories.find(c => c.id === catId);
+      if (found) {
+        categories = found.subcategories || [];
+      }
+    }
+
+    state.currentCategories = categories;
+    state.currentView = 'category';
+    showHome();
+  }
+}
+
 // Show/hide loading indicator
 function setLoading(isLoading) {
   elements.loadingIndicator.classList.toggle('hidden', !isLoading);
 }
 
-// Load all items from API
-async function loadAllItems() {
-  setLoading(true);
-  try {
-    const response = await fetch('/api/items');
-    const data = await response.json();
-    state.allItems = data.items;
-  } catch (error) {
-    console.error('Error loading items:', error);
-    alert('Chyba při načítání obsahu');
-  } finally {
-    setLoading(false);
-  }
-}
-
-// Show home page with category folders
+// Show home/category page with folders
 function showHome() {
-  const html = CATEGORIES.map(category => `
-    <div class="file-item category-folder" data-category-id="${category.id}">
-      <div class="file-icon">${category.icon}</div>
+  const categories = state.currentCategories;
+
+  if (categories.length === 0) {
+    elements.fileList.innerHTML = `
+      <div class="empty-state">
+        <div class="empty-state-icon">📁</div>
+        <div>Žádné kategorie nenalezeny</div>
+      </div>
+    `;
+    updateBreadcrumbs();
+    return;
+  }
+
+  const html = categories.map(category => `
+    <div class="file-item category-folder"
+         data-category-id="${category.id}"
+         data-has-subcategories="${(category.subcategories && category.subcategories.length > 0) ? 'true' : 'false'}">
+      <div class="file-icon">${category.icon || '📁'}</div>
       <div class="file-name">${escapeHtml(category.title)}</div>
+      ${category.itemCount ? `<div class="file-description">${category.itemCount} položek</div>` : ''}
     </div>
   `).join('');
 
@@ -210,22 +287,53 @@ function showHome() {
   elements.fileList.querySelectorAll('.category-folder').forEach(item => {
     item.addEventListener('click', () => {
       const categoryId = item.dataset.categoryId;
-      showCategory(categoryId);
+      enterCategory(categoryId);
     });
   });
 
   updateBreadcrumbs();
 }
 
-// Show category with its files
-function showCategory(categoryId) {
-  state.currentView = 'category';
-  state.currentCategory = categoryId;
+// Enter a category (navigate into it)
+function enterCategory(categoryId) {
+  // Find the category in current level
+  const category = state.currentCategories.find(c => c.id === categoryId);
+  if (!category) {
+    console.error('Category not found:', categoryId);
+    return;
+  }
 
-  // Filter items by category
-  const filteredItems = state.allItems.filter(item =>
-    item.categories && item.categories.includes(categoryId)
-  );
+  // Update category path
+  state.currentCategoryPath.push(categoryId);
+  state.categoryPathString = state.currentCategoryPath.join('/');
+
+  // Check if category has subcategories
+  if (category.subcategories && category.subcategories.length > 0) {
+    // Show subcategories
+    state.currentView = 'category';
+    state.currentCategories = category.subcategories;
+    showHome(); // Reuse showHome to display subcategories
+  } else {
+    // No subcategories - show items in this category
+    showCategoryItems();
+  }
+}
+
+// Show items in current category
+function showCategoryItems() {
+  state.currentView = 'category';
+
+  // Filter items by current category path
+  const filteredItems = state.allItems.filter(item => {
+    if (state.isLegacy) {
+      // Legacy mode: check if last path segment is in categories array
+      const lastCat = state.currentCategoryPath[state.currentCategoryPath.length - 1];
+      return item.categories && item.categories.includes(lastCat);
+    } else {
+      // New mode: check if categoryId matches current path
+      return item.categoryId === state.categoryPathString;
+    }
+  });
 
   renderItemList(filteredItems);
   updateBreadcrumbs();
@@ -323,7 +431,7 @@ function closeViewer() {
   state.currentFile = null;
 
   // Restore previous view
-  if (state.currentCategory) {
+  if (state.currentCategoryPath.length > 0) {
     state.currentView = 'category';
   } else if (state.searchQuery) {
     state.currentView = 'search';
