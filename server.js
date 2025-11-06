@@ -193,7 +193,7 @@ async function loadMetadata() {
 }
 
 // API endpoint to get all items from metadata
-app.get('/api/items', requireAuth, async (req, res) => {
+app.get('/api/items', async (req, res) => {
   try {
     const metadata = await loadMetadata();
     const { category, search } = req.query;
@@ -232,7 +232,7 @@ app.get('/api/items', requireAuth, async (req, res) => {
 });
 
 // API endpoint to get all categories (hierarchical)
-app.get('/api/categories', requireAuth, async (req, res) => {
+app.get('/api/categories', async (req, res) => {
   try {
     const metadata = await loadMetadata();
     const { parent } = req.query;
@@ -278,7 +278,7 @@ app.get('/api/categories', requireAuth, async (req, res) => {
 });
 
 // Main app
-app.get('/', requireAuth, (req, res) => {
+app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
