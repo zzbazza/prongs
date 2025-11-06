@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zlatý jelen - Historická expozice</title>
+  <title>Stará Běla historická</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
@@ -15,12 +15,15 @@
     <!-- macOS-style Top Bar -->
     <header class="top-bar">
       <div class="top-bar-left">
-        <span class="app-title">Zlatý jelen – svědek minulosti</span>
+        <span class="app-title">Stará Běla historická</span>
       </div>
       <div class="top-bar-center">
         <div class="search-box">
           <i class="fa-solid fa-search"></i>
           <input type="text" id="searchInput" placeholder="Hledat..." />
+          <button id="clearSearch" class="search-clear hidden" title="Vymazat hledání" aria-label="Vymazat">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
         </div>
       </div>
       <div class="top-bar-right">
@@ -42,6 +45,18 @@
       </div>
     </header>
 
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-nav" id="breadcrumbNav">
+      <div class="breadcrumb-content">
+        <span class="breadcrumb-item active" id="breadcrumbHome">Domů</span>
+        <span class="breadcrumb-separator" id="breadcrumbSeparator" style="display: none;">›</span>
+        <span class="breadcrumb-item" id="breadcrumbCategory" style="display: none;"></span>
+        <span class="breadcrumb-separator" id="breadcrumbSeparator2" style="display: none;">›</span>
+        <span class="breadcrumb-item" id="breadcrumbFile" style="display: none;"></span>
+      </div>
+      <button id="closeViewer" class="btn-close-breadcrumb" style="display: none;">✕ Zavřít</button>
+    </nav>
+
     <!-- Main content area -->
     <main class="main-content">
       <!-- File browser view -->
@@ -51,9 +66,6 @@
 
       <!-- Content viewer (for images, PDFs, text, etc.) -->
       <div id="contentViewer" class="content-viewer hidden">
-        <div class="viewer-header">
-          <button id="closeViewer" class="btn-close">✕ Zavřít</button>
-        </div>
         <div id="viewerContent" class="viewer-content"></div>
       </div>
     </main>

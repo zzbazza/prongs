@@ -59,6 +59,15 @@ body[data-text-size="small"] {
   font-size: 14px;
 }
 
+body[data-text-size="small"] .file-item {
+  min-height: 140px;
+  padding: var(--spacing-md);
+}
+
+body[data-text-size="small"] .file-icon {
+  font-size: 56px;
+}
+
 body[data-text-size="medium"] {
   font-size: 18px;
 }
@@ -68,11 +77,23 @@ body[data-text-size="large"] {
 }
 
 body[data-text-size="large"] .file-item {
-  min-height: 180px;
+  min-height: 240px;
 }
 
 body[data-text-size="large"] .file-icon {
-  font-size: 64px;
+  font-size: 96px;
+}
+
+body[data-text-size="large"] .file-name {
+  font-size: 1.3em;
+  line-height: 1.5;
+}
+
+body[data-text-size="large"] .file-description {
+  font-size: 0.95em;
+  line-height: 1.6;
+  max-height: 5em;
+  -webkit-line-clamp: 3;
 }
 
 /* Login page */
@@ -232,7 +253,7 @@ button {
 }
 
 .app-title {
-  font-size: 1.2em;
+  font-size: 1.5em;
   font-weight: 600;
   color: var(--cream-light);
   letter-spacing: 0.5px;
@@ -284,11 +305,110 @@ button {
   color: var(--text-secondary);
 }
 
+.search-clear {
+  position: absolute;
+  right: var(--spacing-md);
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 18px;
+  cursor: pointer;
+  padding: var(--spacing-xs);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.search-clear:hover {
+  background: rgba(0, 0, 0, 0.1);
+  color: var(--text-primary);
+}
+
+.search-clear:active {
+  transform: translateY(-50%) scale(0.9);
+}
+
+.search-clear.hidden {
+  display: none;
+}
+
 .top-bar-right {
   display: flex;
   gap: var(--spacing-sm);
   align-items: center;
   flex-shrink: 0;
+}
+
+/* Breadcrumb Navigation */
+.breadcrumb-nav {
+  background: var(--cream);
+  border-bottom: 1px solid var(--gold-dark);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-lg);
+}
+
+.breadcrumb-content {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: 0.95em;
+}
+
+.breadcrumb-item {
+  color: var(--text-primary);
+  transition: color 0.2s;
+}
+
+.breadcrumb-item.active {
+  font-weight: 600;
+  color: var(--gold-dark);
+}
+
+.breadcrumb-item:not(.active) {
+  cursor: pointer;
+}
+
+.breadcrumb-item:not(.active):hover {
+  color: var(--gold-primary);
+  text-decoration: underline;
+}
+
+.breadcrumb-separator {
+  color: var(--gold-primary);
+  font-weight: 600;
+  user-select: none;
+}
+
+.btn-close-breadcrumb {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background: var(--gold-primary);
+  color: var(--cream-light);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.btn-close-breadcrumb:hover {
+  background: var(--gold-accent);
+  transform: translateY(-1px);
+}
+
+.btn-close-breadcrumb:active {
+  transform: translateY(0);
 }
 
 /* Icon buttons */
@@ -369,9 +489,9 @@ button {
 
 .file-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap: var(--spacing-lg);
-  padding: var(--spacing-md);
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--spacing-xl);
+  padding: var(--spacing-xl);
 }
 
 .file-item {
@@ -379,10 +499,10 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: var(--spacing-lg);
+  padding: var(--spacing-xl);
   border-radius: var(--radius-md);
   cursor: pointer;
-  min-height: 140px;
+  min-height: 180px;
   background: var(--cream-light);
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   border: 2px solid var(--cream-dark);
@@ -402,31 +522,38 @@ button {
 }
 
 .file-icon {
-  font-size: 56px;
+  font-size: 72px;
   margin-bottom: var(--spacing-md);
   filter: drop-shadow(0 2px 4px var(--shadow));
+  flex-shrink: 0;
 }
 
 .file-name {
   text-align: center;
   word-break: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
   font-weight: 600;
   color: var(--text-primary);
-  line-height: 1.3;
-  font-size: 1.05em;
+  line-height: 1.4;
+  font-size: 1.1em;
+  width: 100%;
 }
 
 .file-description {
   text-align: center;
   font-size: 0.85em;
   color: var(--text-secondary);
-  margin-top: var(--spacing-xs);
-  line-height: 1.4;
-  max-height: 3.6em;
+  margin-top: var(--spacing-sm);
+  line-height: 1.5;
+  max-height: 4em;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  width: 100%;
 }
 
 .file-item:hover .file-description {
@@ -450,36 +577,6 @@ button {
 
 .content-viewer.hidden {
   display: none;
-}
-
-.viewer-header {
-  background: linear-gradient(to bottom, var(--cream-light), var(--cream));
-  padding: var(--spacing-md) var(--spacing-lg);
-  border-bottom: 2px solid var(--gold-dark);
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  min-height: 60px;
-  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
-}
-
-.btn-close {
-  padding: var(--spacing-md) var(--spacing-lg);
-  background: var(--cream-dark);
-  border-radius: var(--radius-sm);
-  font-weight: 600;
-  color: var(--text-primary);
-  min-height: 44px;
-  min-width: 100px;
-  transition: all 0.2s;
-  border: 1px solid var(--gold-dark);
-}
-
-.btn-close:hover {
-  background: var(--gold-primary);
-  color: var(--cream-light);
-  border-color: var(--gold-accent);
-  box-shadow: 0 2px 8px var(--shadow);
 }
 
 .viewer-content {
@@ -661,7 +758,19 @@ button {
 /* Responsive adjustments for landscape tablets/touchscreens */
 @media (min-width: 1024px) and (orientation: landscape) {
   .file-list {
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+
+@media (min-width: 1440px) {
+  .file-list {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (min-width: 1920px) {
+  .file-list {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   }
 }
 

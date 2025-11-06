@@ -11,10 +11,11 @@ const CATEGORIES = [
 // Application state
 const state = {
   allItems: [],
-  currentView: 'home', // 'home', 'category', 'search'
+  currentView: 'home', // 'home', 'category', 'search', 'viewer'
   currentCategory: null,
   searchQuery: '',
   currentIndex: -1,
+  currentFile: null,
   textSize: 'medium',
   textSizes: ['small', 'medium', 'large']
 };
@@ -30,7 +31,13 @@ const elements = {
   textSizeIncrease: document.getElementById('textSizeIncrease'),
   homeBtn: document.getElementById('homeBtn'),
   loadingIndicator: document.getElementById('loadingIndicator'),
-  searchInput: document.getElementById('searchInput')
+  searchInput: document.getElementById('searchInput'),
+  clearSearch: document.getElementById('clearSearch'),
+  breadcrumbHome: document.getElementById('breadcrumbHome'),
+  breadcrumbSeparator: document.getElementById('breadcrumbSeparator'),
+  breadcrumbCategory: document.getElementById('breadcrumbCategory'),
+  breadcrumbSeparator2: document.getElementById('breadcrumbSeparator2'),
+  breadcrumbFile: document.getElementById('breadcrumbFile')
 };
 
 // File type icons
@@ -55,13 +62,26 @@ async function init() {
   elements.textSizeDecrease.addEventListener('click', decreaseTextSize);
   elements.textSizeIncrease.addEventListener('click', increaseTextSize);
   elements.homeBtn.addEventListener('click', goHome);
+  elements.breadcrumbHome.addEventListener('click', goHome);
+
+  // Breadcrumb category click - go back to category/search view
+  elements.breadcrumbCategory.addEventListener('click', () => {
+    if (state.currentView === 'viewer') {
+      closeViewer();
+    }
+  });
 
   // Search input with debounce
   let searchTimeout;
   elements.searchInput.addEventListener('input', (e) => {
+    const value = e.target.value;
+
+    // Show/hide clear button
+    elements.clearSearch.classList.toggle('hidden', !value);
+
     clearTimeout(searchTimeout);
     searchTimeout = setTimeout(() => {
-      state.searchQuery = e.target.value.trim();
+      state.searchQuery = value.trim();
       if (state.searchQuery) {
         state.currentView = 'search';
         performSearch();
@@ -71,9 +91,77 @@ async function init() {
     }, 300);
   });
 
+  // Clear search button
+  elements.clearSearch.addEventListener('click', () => {
+    elements.searchInput.value = '';
+    elements.clearSearch.classList.add('hidden');
+    state.searchQuery = '';
+    goHome();
+  });
+
   // Load all items and show home
   await loadAllItems();
   showHome();
+}
+
+// Update breadcrumbs
+function updateBreadcrumbs() {
+  if (state.currentView === 'home') {
+    // Home view
+    elements.breadcrumbHome.classList.add('active');
+    elements.breadcrumbSeparator.style.display = 'none';
+    elements.breadcrumbCategory.style.display = 'none';
+    elements.breadcrumbSeparator2.style.display = 'none';
+    elements.breadcrumbFile.style.display = 'none';
+    elements.closeViewer.style.display = 'none';
+  } else if (state.currentView === 'viewer' && state.currentFile) {
+    // Viewer - show full path including file
+    elements.breadcrumbHome.classList.remove('active');
+    elements.breadcrumbSeparator.style.display = 'inline';
+    elements.breadcrumbCategory.style.display = 'inline';
+    elements.breadcrumbCategory.classList.remove('active');
+
+    // Show category or search context
+    if (state.currentCategory) {
+      const category = CATEGORIES.find(c => c.id === state.currentCategory);
+      elements.breadcrumbCategory.textContent = category ? category.title : state.currentCategory;
+    } else if (state.searchQuery) {
+      elements.breadcrumbCategory.textContent = `Hledání: "${state.searchQuery}"`;
+    } else {
+      elements.breadcrumbCategory.textContent = 'Všechny položky';
+    }
+
+    // Show file name
+    elements.breadcrumbSeparator2.style.display = 'inline';
+    elements.breadcrumbFile.style.display = 'inline';
+    elements.breadcrumbFile.textContent = state.currentFile.title || state.currentFile.path;
+    elements.breadcrumbFile.classList.add('active');
+
+    // Show close button
+    elements.closeViewer.style.display = 'block';
+  } else if (state.currentView === 'category' && state.currentCategory) {
+    // Category view
+    elements.breadcrumbHome.classList.remove('active');
+    elements.breadcrumbSeparator.style.display = 'inline';
+    elements.breadcrumbCategory.style.display = 'inline';
+    elements.breadcrumbSeparator2.style.display = 'none';
+    elements.breadcrumbFile.style.display = 'none';
+    elements.closeViewer.style.display = 'none';
+
+    const category = CATEGORIES.find(c => c.id === state.currentCategory);
+    elements.breadcrumbCategory.textContent = category ? category.title : state.currentCategory;
+    elements.breadcrumbCategory.classList.add('active');
+  } else if (state.currentView === 'search') {
+    // Search view
+    elements.breadcrumbHome.classList.remove('active');
+    elements.breadcrumbSeparator.style.display = 'inline';
+    elements.breadcrumbCategory.style.display = 'inline';
+    elements.breadcrumbSeparator2.style.display = 'none';
+    elements.breadcrumbFile.style.display = 'none';
+    elements.closeViewer.style.display = 'none';
+    elements.breadcrumbCategory.textContent = `Hledání: "${state.searchQuery}"`;
+    elements.breadcrumbCategory.classList.add('active');
+  }
 }
 
 // Go to home view
@@ -82,7 +170,9 @@ function goHome() {
   state.currentCategory = null;
   state.searchQuery = '';
   elements.searchInput.value = '';
+  elements.clearSearch.classList.add('hidden');
   showHome();
+  updateBreadcrumbs();
 }
 
 // Show/hide loading indicator
@@ -123,6 +213,8 @@ function showHome() {
       showCategory(categoryId);
     });
   });
+
+  updateBreadcrumbs();
 }
 
 // Show category with its files
@@ -136,6 +228,7 @@ function showCategory(categoryId) {
   );
 
   renderItemList(filteredItems);
+  updateBreadcrumbs();
 }
 
 // Perform search
@@ -154,6 +247,7 @@ function performSearch() {
   });
 
   renderItemList(results);
+  updateBreadcrumbs();
 }
 
 // Render item list (files)
@@ -193,6 +287,8 @@ function renderItemList(items) {
 // Open file in viewer
 function openFile(item, index) {
   state.currentIndex = index;
+  state.currentFile = item;
+  state.currentView = 'viewer';
   elements.browserView.classList.add('hidden');
   elements.contentViewer.classList.remove('hidden');
 
@@ -215,6 +311,8 @@ function openFile(item, index) {
     default:
       elements.viewerContent.innerHTML = '<div class="empty-state"><div class="empty-state-icon">❌</div><div>Nepodporovaný typ souboru</div></div>';
   }
+
+  updateBreadcrumbs();
 }
 
 // Close viewer
@@ -222,6 +320,18 @@ function closeViewer() {
   elements.contentViewer.classList.add('hidden');
   elements.browserView.classList.remove('hidden');
   state.currentIndex = -1;
+  state.currentFile = null;
+
+  // Restore previous view
+  if (state.currentCategory) {
+    state.currentView = 'category';
+  } else if (state.searchQuery) {
+    state.currentView = 'search';
+  } else {
+    state.currentView = 'home';
+  }
+
+  updateBreadcrumbs();
 }
 
 // Render image viewer with navigation
