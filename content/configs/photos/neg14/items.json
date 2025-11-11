@@ -1,0 +1,29 @@
+{
+  "items": [
+    {
+      "path": "files/FOTO/NEG14/DSC_0112.jpg",
+      "type": "image",
+      "title": "DSC_0112"
+    },
+    {
+      "path": "files/FOTO/NEG14/DSC_0128.jpg",
+      "type": "image",
+      "title": "DSC_0128"
+    },
+    {
+      "path": "files/FOTO/NEG14/DSC_0124.jpg",
+      "type": "image",
+      "title": "DSC_0124"
+    },
+    {
+      "path": "files/FOTO/NEG14/DSC_0125.jpg",
+      "type": "image",
+      "title": "DSC_0125"
+    },
+    {
+      "path": "files/FOTO/NEG14/DSC_0130.jpg",
+      "type": "image",
+      "title": "DSC_0130"
+    }
+  ]
+}
