@@ -767,7 +767,7 @@ function setupSwipeGestures(currentImageIndex, images) {
 
 // Render PDF viewer
 function renderPDFViewer(item) {
-  const pdfPath = `/content/${item.path}`;
+  const pdfPath = `/content/${item.path}#toolbar=0`;
   elements.viewerContent.innerHTML = `
     <div class="pdf-container">
       <iframe src="${pdfPath}" type="application/pdf"></iframe>
