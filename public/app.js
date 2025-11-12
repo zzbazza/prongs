@@ -147,6 +147,27 @@ function getCategoryTitle(categoryPath) {
   return title;
 }
 
+// Get all category titles from path
+function getCategoryTitles(categoryPath) {
+  if (!categoryPath || categoryPath.length === 0) return [];
+
+  let categories = state.allCategories;
+  const titles = [];
+
+  for (let i = 0; i < categoryPath.length; i++) {
+    const catId = categoryPath[i];
+    const found = categories.find(c => c.id === catId);
+    if (found) {
+      titles.push({ id: catId, title: found.title, level: i });
+      categories = found.subcategories || [];
+    } else {
+      titles.push({ id: catId, title: catId, level: i });
+    }
+  }
+
+  return titles;
+}
+
 // Update breadcrumbs
 function updateBreadcrumbs() {
   if (state.currentView === 'home') {
@@ -164,10 +185,11 @@ function updateBreadcrumbs() {
     elements.breadcrumbCategory.style.display = 'inline';
     elements.breadcrumbCategory.classList.remove('active');
 
-    // Show category or search context
+    // Show category path or search context
     if (state.currentCategoryPath.length > 0) {
-      const categoryTitle = getCategoryTitle(state.currentCategoryPath);
-      elements.breadcrumbCategory.textContent = categoryTitle || state.categoryPathString;
+      const categoryTitles = getCategoryTitles(state.currentCategoryPath);
+      const pathHtml = categoryTitles.map(cat => escapeHtml(cat.title)).join(' › ');
+      elements.breadcrumbCategory.innerHTML = pathHtml;
     } else if (state.searchQuery) {
       elements.breadcrumbCategory.textContent = `Hledání: "${state.searchQuery}"`;
     } else {
@@ -191,8 +213,10 @@ function updateBreadcrumbs() {
     elements.breadcrumbFile.style.display = 'none';
     elements.closeViewer.style.display = 'none';
 
-    const categoryTitle = getCategoryTitle(state.currentCategoryPath);
-    elements.breadcrumbCategory.textContent = categoryTitle || state.categoryPathString;
+    // Show full category path
+    const categoryTitles = getCategoryTitles(state.currentCategoryPath);
+    const pathHtml = categoryTitles.map(cat => escapeHtml(cat.title)).join(' › ');
+    elements.breadcrumbCategory.innerHTML = pathHtml;
     elements.breadcrumbCategory.classList.add('active');
   } else if (state.currentView === 'search') {
     // Search view
