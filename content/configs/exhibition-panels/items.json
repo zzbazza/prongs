@@ -1,16 +1,6 @@
 {
   "items": [
     {
-      "path": "files/Tabule/7-PRVOREPUBLIKOVÁ1.pdf",
-      "type": "document",
-      "title": "7-PRVOREPUBLIKOVÁ1"
-    },
-    {
-      "path": "files/Tabule/10-DRUHOVÁLEČNÁ2.pdf",
-      "type": "document",
-      "title": "10-DRUHOVÁLEČNÁ2"
-    },
-    {
       "path": "files/Tabule/12-SOCIALISTICKÁ2.pdf",
       "type": "document",
       "title": "12-SOCIALISTICKÁ2"
@@ -24,21 +14,6 @@
       "path": "files/Tabule/13-KULTURNÍ.pdf",
       "type": "document",
       "title": "13-KULTURNÍ"
-    },
-    {
-      "path": "files/Tabule/5-PŘELOMOVÁ.pdf",
-      "type": "document",
-      "title": "5-PŘELOMOVÁ"
-    },
-    {
-      "path": "files/Tabule/9-DRUHOVÁLEČNÁ1.pdf",
-      "type": "document",
-      "title": "9-DRUHOVÁLEČNÁ1"
-    },
-    {
-      "path": "files/Tabule/8-PRVOREPUBLIKOVÁ2.pdf",
-      "type": "document",
-      "title": "8-PRVOREPUBLIKOVÁ2"
     },
     {
       "path": "files/Tabule/ZLATÝ JELEN3.pdf",
@@ -69,46 +44,6 @@
       "path": "files/Tabule/ZLATÝ JELEN5-OREL.pdf",
       "type": "document",
       "title": "ZLATÝ JELEN5-OREL"
-    },
-    {
-      "path": "files/Tabule/1-PRAVĚKÁ.pdf",
-      "type": "document",
-      "title": "1-PRAVĚKÁ"
-    },
-    {
-      "path": "files/Tabule/6-PRVOVÁLEČNÁ.pdf",
-      "type": "document",
-      "title": "6-PRVOVÁLEČNÁ"
-    },
-    {
-      "path": "files/Tabule/2-KOLONIZAČNÍ.pdf",
-      "type": "document",
-      "title": "2-KOLONIZAČNÍ"
-    },
-    {
-      "path": "files/Tabule/4- POBĚLOHORSKÁ.pdf",
-      "type": "document",
-      "title": "4- POBĚLOHORSKÁ"
-    },
-    {
-      "path": "files/Tabule/3-STŘEDOVĚKÁ.pdf",
-      "type": "document",
-      "title": "3-STŘEDOVĚKÁ"
-    },
-    {
-      "path": "files/Tabule/4-pobělohorská/Vyznačení terénních reliktů šancí na katastru Výškovic na mapách tzv císařského stabilního katastru z roku 1833.jpg",
-      "type": "image",
-      "title": "Vyznačení terénních reliktů šancí na katastru Výškovic na mapách tzv císařského stabilního katastru z roku 1833"
-    },
-    {
-      "path": "files/Tabule/2-kolonizační/Zápis o přítomnosti středověkých jam na katastru Staré Bělé z archivu archeologa Hanse Freisinga (1905–1977), uložen v Archivu Archeologického ústavu v Brně, AVČR.jpg",
-      "type": "image",
-      "title": "Zápis o přítomnosti středověkých jam na katastru Staré Bělé z archivu archeologa Hanse Freisinga (1905–1977), uložen v Archivu Archeologického ústavu v Brně, AVČR"
-    },
-    {
-      "path": "files/Tabule/1-pravěká obr./Tylocidaris nalezena na poli u Výškovic (nálezce Lukáš Klega, foto Jiřina Chalupská).jpg",
-      "type": "image",
-      "title": "Tylocidaris nalezena na poli u Výškovic (nálezce Lukáš Klega, foto Jiřina Chalupská)"
     }
   ]
 }

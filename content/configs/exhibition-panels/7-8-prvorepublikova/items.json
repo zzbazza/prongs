@@ -1,11 +1,20 @@
 {
   "items": [
     {
+      "path": "files/Tabule/7-PRVOREPUBLIKOVÁ1.pdf",
+      "type": "document",
+      "title": "Tabule 7 - Prvorepubliková"
+    },
+    {
+      "path": "files/Tabule/8-PRVOREPUBLIKOVÁ2.pdf",
+      "type": "document",
+      "title": "Tabule 7 - Prvorepubliková část 2"
+    },
+    {
       "path": "files/Tabule/7-8-prvorepubliková/Projektová dokumentace přestavby domu čp3_0.jpg",
       "type": "image",
       "title": "Projektová dokumentace přestavby domu čp3_0",
       "description": "Projektová dokumentace pochází z roku 1905 pro přístavbu světnic a kuchyně při domu č.p. 3 pro pana Pavla Valacha."
-
     },
     {
       "path": "files/Tabule/7-8-prvorepubliková/Začátek stavby Katolického domu v roce 1929.jpg",
@@ -120,7 +129,7 @@
       "path": "files/Tabule/7-8-prvorepubliková/Projektová dokumentace staré budovy hasičárny (rok 1883).jpg",
       "type": "image",
       "title": "Projektová dokumentace staré budovy hasičárny",
-      "description": "Projektová dokumentace hasičského skladiště z roku 1902
+      "description": "Projektová dokumentace hasičského skladiště z roku 1902"
     },
     {
       "path": "files/Tabule/7-8-prvorepubliková/Projektová dokumentace přestavby domu č p 3.jpg",

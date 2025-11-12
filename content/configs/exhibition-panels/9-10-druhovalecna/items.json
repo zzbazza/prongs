@@ -1,6 +1,16 @@
 {
   "items": [
     {
+      "path": "files/Tabule/9-DRUHOVÁLEČNÁ1.pdf",
+      "type": "document",
+      "title": "Tabule 9 - Druhoválečná"
+    },
+    {
+      "path": "files/Tabule/10-DRUHOVÁLEČNÁ2.pdf",
+      "type": "document",
+      "title": "Tabule 9 - Druhoválečná část 2"
+    },
+    {
       "path": "files/Tabule/9-10 - druhoválečná/DSC_0371.jpg",
       "type": "image",
       "title": "Dny osvobození v květnu 1945",
@@ -51,7 +61,7 @@
     {
       "path": "files/Tabule/9-10 - druhoválečná/obr.6 Středověké jámy.jpg",
       "type": "image",
-      "title": "obr.6 Středověké jámy",
+      "title": "obr.6 Středověké jámy"
     },
     {
       "path": "files/Tabule/9-10 - druhoválečná/6.jpg",
@@ -63,7 +73,7 @@
       "path": "files/Tabule/9-10 - druhoválečná/8.jpg",
       "type": "image",
       "title": "Vladimír Vašut",
-      "description": "Vladimír Vašut (1911-1944).
+      "description": "Vladimír Vašut (1911-1944)."
     },
     {
       "path": "files/Tabule/9-10 - druhoválečná/lyčka.jpg",
@@ -141,7 +151,7 @@
       "path": "files/Tabule/9-10 - druhoválečná/obr.7plakát kino sokol.jpg",
       "type": "image",
       "title": "Kino za Protektorátu",
-        "description": "Františka Vávrová s dcerou Eliškou patrně se Slávkou Mulkovou před plakátem na kino v Sokolovně v období Protektorátu Čechy a Morava“
+      "description": "Františka Vávrová s dcerou Eliškou patrně se Slávkou Mulkovou před plakátem na kino v Sokolovně v období Protektorátu Čechy a Morava"
     },
     {
       "path": "files/Tabule/9-10 - druhoválečná/obr.10Klečka Jaroslav_2.jpg",

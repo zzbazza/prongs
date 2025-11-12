@@ -284,7 +284,18 @@ function navigateUpCategory() {
 
     state.currentCategories = categories;
     state.currentView = 'category';
-    showHome();
+
+    // Check if current category has items to display
+    const hasItems = state.allItems.some(item => {
+      if (state.isLegacy) {
+        const lastCat = state.currentCategoryPath[state.currentCategoryPath.length - 1];
+        return item.categories && item.categories.includes(lastCat);
+      } else {
+        return item.categoryId === state.categoryPathString;
+      }
+    });
+
+    showHome(hasItems);
   }
 }
 
@@ -294,10 +305,10 @@ function setLoading(isLoading) {
 }
 
 // Show home/category page with folders
-function showHome() {
+function showHome(includeItems = false) {
   const categories = state.currentCategories;
 
-  if (categories.length === 0) {
+  if (categories.length === 0 && !includeItems) {
     elements.fileList.innerHTML = `
       <div class="empty-state">
         <div class="empty-state-icon">📁</div>
@@ -308,7 +319,8 @@ function showHome() {
     return;
   }
 
-  const html = categories.map(category => `
+  // Build HTML for categories/subcategories
+  let html = categories.map(category => `
     <div class="file-item category-folder"
          data-category-id="${category.id}"
          data-has-subcategories="${(category.subcategories && category.subcategories.length > 0) ? 'true' : 'false'}">
@@ -318,13 +330,59 @@ function showHome() {
     </div>
   `).join('');
 
-  elements.fileList.innerHTML = html;
+  // If includeItems is true, also show items in current category
+  if (includeItems) {
+    const filteredItems = state.allItems.filter(item => {
+      if (state.isLegacy) {
+        const lastCat = state.currentCategoryPath[state.currentCategoryPath.length - 1];
+        return item.categories && item.categories.includes(lastCat);
+      } else {
+        return item.categoryId === state.categoryPathString;
+      }
+    });
 
-  // Add click handlers
+    if (filteredItems.length > 0) {
+      const itemsHtml = filteredItems.map(item => {
+        const iconHtml = item.type === 'image'
+          ? `<img src="/content/${item.path}" alt="${escapeHtml(item.title || item.path)}" class="file-thumbnail" loading="lazy">`
+          : `<div class="file-icon">${FILE_ICONS[item.type] || FILE_ICONS.unknown}</div>`;
+
+        return `
+          <div class="file-item"
+               data-file-path="${item.path}"
+               data-file-type="${item.type}">
+            ${iconHtml}
+            <div class="file-name">${escapeHtml(item.title || item.path)}</div>
+            ${item.description ? `<div class="file-description">${escapeHtml(item.description)}</div>` : ''}
+          </div>
+        `;
+      }).join('');
+
+      html += itemsHtml;
+    }
+  }
+
+  elements.fileList.innerHTML = html || `
+    <div class="empty-state">
+      <div class="empty-state-icon">📁</div>
+      <div>Žádné položky nenalezeny</div>
+    </div>
+  `;
+
+  // Add click handlers for categories
   elements.fileList.querySelectorAll('.category-folder').forEach(item => {
     item.addEventListener('click', () => {
       const categoryId = item.dataset.categoryId;
       enterCategory(categoryId);
+    });
+  });
+
+  // Add click handlers for file items
+  elements.fileList.querySelectorAll('.file-item:not(.category-folder)').forEach(item => {
+    item.addEventListener('click', () => {
+      const filePath = item.dataset.filePath;
+      const fileType = item.dataset.fileType;
+      viewFile(filePath, fileType);
     });
   });
 
@@ -344,12 +402,21 @@ function enterCategory(categoryId) {
   state.currentCategoryPath.push(categoryId);
   state.categoryPathString = state.currentCategoryPath.join('/');
 
+  // Check if category has items in current path
+  const hasItems = state.allItems.some(item => {
+    if (state.isLegacy) {
+      return item.categories && item.categories.includes(categoryId);
+    } else {
+      return item.categoryId === state.categoryPathString;
+    }
+  });
+
   // Check if category has subcategories
   if (category.subcategories && category.subcategories.length > 0) {
-    // Show subcategories
+    // Show subcategories and items (if any)
     state.currentView = 'category';
     state.currentCategories = category.subcategories;
-    showHome(); // Reuse showHome to display subcategories
+    showHome(hasItems); // Pass true if there are items to display after subcategories
   } else {
     // No subcategories - show items in this category
     showCategoryItems();
