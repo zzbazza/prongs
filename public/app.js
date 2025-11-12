@@ -383,13 +383,20 @@ function renderItemList(items) {
     return;
   }
 
-  const html = items.map((item, index) => `
-    <div class="file-item" data-index="${index}" data-type="${item.type}">
-      <div class="file-icon">${FILE_ICONS[item.type] || FILE_ICONS.unknown}</div>
-      <div class="file-name">${escapeHtml(item.title || item.path)}</div>
-      ${item.description ? `<div class="file-description">${escapeHtml(item.description)}</div>` : ''}
-    </div>
-  `).join('');
+  const html = items.map((item, index) => {
+    // Use thumbnail for images, icon for other types
+    const iconHtml = item.type === 'image'
+      ? `<img src="/content/${item.path}" alt="${escapeHtml(item.title || item.path)}" class="file-thumbnail" loading="lazy">`
+      : `<div class="file-icon">${FILE_ICONS[item.type] || FILE_ICONS.unknown}</div>`;
+
+    return `
+      <div class="file-item" data-index="${index}" data-type="${item.type}">
+        ${iconHtml}
+        <div class="file-name">${escapeHtml(item.title || item.path)}</div>
+        ${item.description ? `<div class="file-description">${escapeHtml(item.description)}</div>` : ''}
+      </div>
+    `;
+  }).join('');
 
   elements.fileList.innerHTML = html;
 
