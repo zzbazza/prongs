@@ -342,15 +342,18 @@ function showHome(includeItems = false) {
     });
 
     if (filteredItems.length > 0) {
-      const itemsHtml = filteredItems.map(item => {
+      // Store items for file opening
+      state.currentItems = filteredItems;
+
+      const itemsHtml = filteredItems.map((item, index) => {
         const iconHtml = item.type === 'image'
           ? `<img src="/content/${item.path}" alt="${escapeHtml(item.title || item.path)}" class="file-thumbnail" loading="lazy">`
           : `<div class="file-icon">${FILE_ICONS[item.type] || FILE_ICONS.unknown}</div>`;
 
         return `
-          <div class="file-item"
-               data-file-path="${item.path}"
-               data-file-type="${item.type}">
+          <div class="file-item file-item-actual"
+               data-index="${index}"
+               data-type="${item.type}">
             ${iconHtml}
             <div class="file-name">${escapeHtml(item.title || item.path)}</div>
             ${item.description ? `<div class="file-description">${escapeHtml(item.description)}</div>` : ''}
@@ -378,11 +381,10 @@ function showHome(includeItems = false) {
   });
 
   // Add click handlers for file items
-  elements.fileList.querySelectorAll('.file-item:not(.category-folder)').forEach(item => {
+  elements.fileList.querySelectorAll('.file-item-actual').forEach(item => {
     item.addEventListener('click', () => {
-      const filePath = item.dataset.filePath;
-      const fileType = item.dataset.fileType;
-      viewFile(filePath, fileType);
+      const index = parseInt(item.dataset.index);
+      openFile(state.currentItems[index], index);
     });
   });
 
