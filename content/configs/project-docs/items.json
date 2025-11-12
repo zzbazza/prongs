@@ -1,3 +1,9 @@
 {
-  "items": []
+  "items": [
+    {
+      "path": "files/projektova dokumentace/Kiosk setup.docx",
+      "type": "document",
+      "title": "Kiosk setup"
+    }
+  ]
 }

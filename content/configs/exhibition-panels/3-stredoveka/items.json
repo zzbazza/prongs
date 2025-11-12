@@ -3,37 +3,45 @@
     {
       "path": "files/Tabule/3-středověká/Nález fragmentu patrně renesančního kachle z hloubení sklepa č p 291 v roce 2020.jpg",
       "type": "image",
-      "title": "Nález fragmentu patrně renesančního kachle z hloubení sklepa č p 291 v roce 2020"
+      "title": "Fragment patrně renesančního kachle",
+      "description": "Nález fragmentu patrně renesančního kachle z hloubení sklepa č p 291 v roce 2020"
     },
     {
       "path": "files/Tabule/3-středověká/Kresba kostela sv Mikuláše a jeho okolí k roku 1700 podle znalostí a fantazie Petra Sýkory a Jana Pchálka Kaplička sv Jana Nepomuckého v té době jistě stát nemohla.jpg",
       "type": "image",
-      "title": "Kresba kostela sv Mikuláše a jeho okolí k roku 1700 podle znalostí a fantazie Petra Sýkory a Jana Pchálka Kaplička sv Jana Nepomuckého v té době jistě stát nemohla"
+      "title": "Kresba kostela sv Mikuláše a jeho okolí k roku 1700",
+      "description": "Kresba kostela sv Mikuláše a jeho okolí k roku 1700 podle znalostí a fantazie Petra Sýkory a Jana Pchálka Kaplička sv Jana Nepomuckého v té době jistě stát nemohla"
+
     },
     {
       "path": "files/Tabule/3-středověká/Ostrůvek v rybníce, na kterém snad měla stát tvrz. Foceno před rokem 1950 (archiv TJ Sokol Stará Bělá).jpg",
       "type": "image",
-      "title": "Ostrůvek v rybníce, na kterém snad měla stát tvrz. Foceno před rokem 1950 (archiv TJ Sokol Stará Bělá)"
+      "title": "Ostrůvek v rybníce",
+      "description": "Ostrůvek v rybníce, na kterém snad měla stát tvrz. Foceno před rokem 1950 (archiv TJ Sokol Stará Bělá)"
     },
     {
       "path": "files/Tabule/3-středověká/Privilegium Jana staršího ze Žerotína z roku 1558 (z pozůstalosti Fr. Dedka, uloženo v Státním okresním archivu v Kroměříži).jpg",
       "type": "image",
-      "title": "Privilegium Jana staršího ze Žerotína z roku 1558 (z pozůstalosti Fr. Dedka, uloženo v Státním okresním archivu v Kroměříži)"
+      "title": "Privilegium Jana staršího ze Žerotína z roku 1558",
+      "description": "Z pozůstalosti Františka Dedka, originál uložen v Státním okresním archivu v Kroměříži."
     },
     {
       "path": "files/Tabule/3-středověká/Keramika vytažená z břehů a koryta řeky Odry Lukášem Klegou (foto Jiřina Chalupská).jpg",
       "type": "image",
-      "title": "Keramika vytažená z břehů a koryta řeky Odry Lukášem Klegou (foto Jiřina Chalupská)"
+      "title": "Keramika vytažená z břehů a koryta řeky Odry",
+      "description": "Keramika vytažená z břehů a koryta řeky Odry Lukášem Klegou (foto Jiřina Chalupská)"
     },
     {
       "path": "files/Tabule/3-středověká/Kresba kostela sv Mikuláše, která pochází z roku 1596 a jejím autorem je starobělský farář Matouš Schaupius (v Bělé 1657 – 1670 archiv rodiny Jana Pchálka.jpg",
       "type": "image",
-      "title": "Kresba kostela sv Mikuláše, která pochází z roku 1596 a jejím autorem je starobělský farář Matouš Schaupius (v Bělé 1657 – 1670 archiv rodiny Jana Pchálka"
+      "title": "Kresba kostela sv Mikuláše",
+      "description": "Kresba pochází z roku 1596 a jejím autorem je starobělský farář Matouš Schaupius (v Bělé 1657 – 1670 archiv rodiny Jana Pchálka"
     },
     {
       "path": "files/Tabule/3-středověká/Kupní smlouva Ctibora z Pěrkova z roku 1597 (z pozůstalosti Fr Dedka, uloženo v Státním okresním archivu v Kroměříži).jpg",
       "type": "image",
-      "title": "Kupní smlouva Ctibora z Pěrkova z roku 1597 (z pozůstalosti Fr Dedka, uloženo v Státním okresním archivu v Kroměříži)"
+      "title": "Kupní smlouva Ctibora z Pěrkova z roku 1597",
+      "description": "Z pozůstalosti Františka Dedka, originál uložen v Státním okresním archivu v Kroměříži."
     }
   ]
 }

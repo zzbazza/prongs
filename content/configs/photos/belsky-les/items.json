@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "path": "files/foto1/3-bělský les/DSC_0413.jpg",
+      "type": "image",
+      "title": "DSC_0413"
+    },
+    {
+      "path": "files/foto1/3-bělský les/DSC_0417.jpg",
+      "type": "image",
+      "title": "DSC_0417"
+    },
+    {
+      "path": "files/foto1/3-bělský les/DSC_0419.jpg",
+      "type": "image",
+      "title": "DSC_0419"
+    },
+    {
+      "path": "files/foto1/3-bělský les/DSC_0415.jpg",
+      "type": "image",
+      "title": "DSC_0415"
+    }
+  ]
+}

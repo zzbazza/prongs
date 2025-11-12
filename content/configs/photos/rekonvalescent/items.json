@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "path": "files/foto1/12-Rekonvalescent/DSC_0184.jpg",
+      "type": "image",
+      "title": "DSC_0184"
+    },
+    {
+      "path": "files/foto1/12-Rekonvalescent/DSC_0185.jpg",
+      "type": "image",
+      "title": "DSC_0185"
+    },
+    {
+      "path": "files/foto1/12-Rekonvalescent/DSC_0186.jpg",
+      "type": "image",
+      "title": "DSC_0186"
+    },
+    {
+      "path": "files/foto1/12-Rekonvalescent/DSC_0187.jpg",
+      "type": "image",
+      "title": "DSC_0187"
+    }
+  ]
+}
