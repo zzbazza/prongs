@@ -1,0 +1,59 @@
+{
+  "items": [
+    {
+      "path": "files/zpravodaj/2008/01-leden/zpravodaj_2008_leden.pdf",
+      "type": "document",
+      "title": "zpravodaj_2008_leden"
+    },
+    {
+      "path": "files/zpravodaj/2008/02-unor/zpravodaj_2008_unor.pdf",
+      "type": "document",
+      "title": "zpravodaj_2008_unor"
+    },
+    {
+      "path": "files/zpravodaj/2008/03-brezen/zpravodaj_2008_brezen.pdf",
+      "type": "document",
+      "title": "zpravodaj_2008_brezen"
+    },
+    {
+      "path": "files/zpravodaj/2008/04-duben/zpravodaj_2008_duben.pdf",
+      "type": "document",
+      "title": "zpravodaj_2008_duben"
+    },
+    {
+      "path": "files/zpravodaj/2008/05-kveten/zpravodaj_2008_kveten.pdf",
+      "type": "document",
+      "title": "zpravodaj_2008_kveten"
+    },
+    {
+      "path": "files/zpravodaj/2008/06-cerven/zpravodaj_2008_cerven.pdf",
+      "type": "document",
+      "title": "zpravodaj_2008_cerven"
+    },
+    {
+      "path": "files/zpravodaj/2008/07-08-cervenec-srpen/zpravodaj_2008_cervenec-srpen.pdf",
+      "type": "document",
+      "title": "zpravodaj_2008_cervenec-srpen"
+    },
+    {
+      "path": "files/zpravodaj/2008/09-zari/zpravodaj_2008_zari.pdf",
+      "type": "document",
+      "title": "zpravodaj_2008_zari"
+    },
+    {
+      "path": "files/zpravodaj/2008/10-rijen/zpravodaj_2008_rijen.pdf",
+      "type": "document",
+      "title": "zpravodaj_2008_rijen"
+    },
+    {
+      "path": "files/zpravodaj/2008/11-listopad/zpravodaj_2008_listopad.pdf",
+      "type": "document",
+      "title": "zpravodaj_2008_listopad"
+    },
+    {
+      "path": "files/zpravodaj/2008/12-prosinec/zpravodaj_2008_prosinec.pdf",
+      "type": "document",
+      "title": "zpravodaj_2008_prosinec"
+    }
+  ]
+}

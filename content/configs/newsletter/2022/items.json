@@ -1,0 +1,59 @@
+{
+  "items": [
+    {
+      "path": "files/zpravodaj/2022/01-leden/zpravodaj_2022_leden.pdf",
+      "type": "document",
+      "title": "zpravodaj_2022_leden"
+    },
+    {
+      "path": "files/zpravodaj/2022/02-unor/zpravodaj_2022_unor.pdf",
+      "type": "document",
+      "title": "zpravodaj_2022_unor"
+    },
+    {
+      "path": "files/zpravodaj/2022/03-brezen/zpravodaj_2022_brezen.pdf",
+      "type": "document",
+      "title": "zpravodaj_2022_brezen"
+    },
+    {
+      "path": "files/zpravodaj/2022/04-duben/zpravodaj_2022_duben.pdf",
+      "type": "document",
+      "title": "zpravodaj_2022_duben"
+    },
+    {
+      "path": "files/zpravodaj/2022/05-kveten/zpravodaj_2022_kveten.pdf",
+      "type": "document",
+      "title": "zpravodaj_2022_kveten"
+    },
+    {
+      "path": "files/zpravodaj/2022/06-cerven/zpravodaj_2022_cerven.pdf",
+      "type": "document",
+      "title": "zpravodaj_2022_cerven"
+    },
+    {
+      "path": "files/zpravodaj/2022/07-08-cervenec-srpen/zpravodaj_2022_cervenec-srpen.pdf",
+      "type": "document",
+      "title": "zpravodaj_2022_cervenec-srpen"
+    },
+    {
+      "path": "files/zpravodaj/2022/09-zari/zpravodaj_2022_zari.pdf",
+      "type": "document",
+      "title": "zpravodaj_2022_zari"
+    },
+    {
+      "path": "files/zpravodaj/2022/10-rijen/zpravodaj_2022_rijen.pdf",
+      "type": "document",
+      "title": "zpravodaj_2022_rijen"
+    },
+    {
+      "path": "files/zpravodaj/2022/11-listopad/zpravodaj_2022_listopad.pdf",
+      "type": "document",
+      "title": "zpravodaj_2022_listopad"
+    },
+    {
+      "path": "files/zpravodaj/2022/12-prosinec/zpravodaj_2022_prosinec.pdf",
+      "type": "document",
+      "title": "zpravodaj_2022_prosinec"
+    }
+  ]
+}

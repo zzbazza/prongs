@@ -1,0 +1,59 @@
+{
+  "items": [
+    {
+      "path": "files/zpravodaj/2011/01-leden/zpravodaj_2011_leden.pdf",
+      "type": "document",
+      "title": "zpravodaj_2011_leden"
+    },
+    {
+      "path": "files/zpravodaj/2011/02-unor/zpravodaj_2011_unor.pdf",
+      "type": "document",
+      "title": "zpravodaj_2011_unor"
+    },
+    {
+      "path": "files/zpravodaj/2011/03-brezen/zpravodaj_2011_brezen.pdf",
+      "type": "document",
+      "title": "zpravodaj_2011_brezen"
+    },
+    {
+      "path": "files/zpravodaj/2011/04-duben/zpravodaj_2011_duben.pdf",
+      "type": "document",
+      "title": "zpravodaj_2011_duben"
+    },
+    {
+      "path": "files/zpravodaj/2011/05-kveten/zpravodaj_2011_kveten.pdf",
+      "type": "document",
+      "title": "zpravodaj_2011_kveten"
+    },
+    {
+      "path": "files/zpravodaj/2011/06-cerven/zpravodaj_2011_cerven.pdf",
+      "type": "document",
+      "title": "zpravodaj_2011_cerven"
+    },
+    {
+      "path": "files/zpravodaj/2011/07-08-cervenec-srpen/zpravodaj_2011_cervenec-srpen.pdf",
+      "type": "document",
+      "title": "zpravodaj_2011_cervenec-srpen"
+    },
+    {
+      "path": "files/zpravodaj/2011/09-zari/zpravodaj_2011_zari.pdf",
+      "type": "document",
+      "title": "zpravodaj_2011_zari"
+    },
+    {
+      "path": "files/zpravodaj/2011/10-rijen/zpravodaj_2011_rijen.pdf",
+      "type": "document",
+      "title": "zpravodaj_2011_rijen"
+    },
+    {
+      "path": "files/zpravodaj/2011/11-listopad/zpravodaj_2011_listopad.pdf",
+      "type": "document",
+      "title": "zpravodaj_2011_listopad"
+    },
+    {
+      "path": "files/zpravodaj/2011/12-prosinec/zpravodaj_2011_prosinec.pdf",
+      "type": "document",
+      "title": "zpravodaj_2011_prosinec"
+    }
+  ]
+}

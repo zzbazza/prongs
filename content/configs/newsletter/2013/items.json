@@ -1,0 +1,59 @@
+{
+  "items": [
+    {
+      "path": "files/zpravodaj/2013/01-leden/zpravodaj_2013_leden.pdf",
+      "type": "document",
+      "title": "zpravodaj_2013_leden"
+    },
+    {
+      "path": "files/zpravodaj/2013/02-unor/zpravodaj_2013_unor.pdf",
+      "type": "document",
+      "title": "zpravodaj_2013_unor"
+    },
+    {
+      "path": "files/zpravodaj/2013/03-brezen/zpravodaj_2013_brezen.pdf",
+      "type": "document",
+      "title": "zpravodaj_2013_brezen"
+    },
+    {
+      "path": "files/zpravodaj/2013/04-duben/zpravodaj_2013_duben.pdf",
+      "type": "document",
+      "title": "zpravodaj_2013_duben"
+    },
+    {
+      "path": "files/zpravodaj/2013/05-kveten/zpravodaj_2013_kveten.pdf",
+      "type": "document",
+      "title": "zpravodaj_2013_kveten"
+    },
+    {
+      "path": "files/zpravodaj/2013/06-cerven/zpravodaj_2013_cerven.pdf",
+      "type": "document",
+      "title": "zpravodaj_2013_cerven"
+    },
+    {
+      "path": "files/zpravodaj/2013/07-08-cervenec-srpen/zpravodaj_2013_cervenec-srpen.pdf",
+      "type": "document",
+      "title": "zpravodaj_2013_cervenec-srpen"
+    },
+    {
+      "path": "files/zpravodaj/2013/09-zari/zpravodaj_2013_zari.pdf",
+      "type": "document",
+      "title": "zpravodaj_2013_zari"
+    },
+    {
+      "path": "files/zpravodaj/2013/10-rijen/zpravodaj_2013_rijen.pdf",
+      "type": "document",
+      "title": "zpravodaj_2013_rijen"
+    },
+    {
+      "path": "files/zpravodaj/2013/11-listopad/zpravodaj_2013_listopad.pdf",
+      "type": "document",
+      "title": "zpravodaj_2013_listopad"
+    },
+    {
+      "path": "files/zpravodaj/2013/12-prosinec/zpravodaj_2013_prosinec.pdf",
+      "type": "document",
+      "title": "zpravodaj_2013_prosinec"
+    }
+  ]
+}

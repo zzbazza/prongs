@@ -1,0 +1,54 @@
+{
+  "items": [
+    {
+      "path": "files/zpravodaj/2023/01-leden/zpravodaj_2023_leden.pdf",
+      "type": "document",
+      "title": "zpravodaj_2023_leden"
+    },
+    {
+      "path": "files/zpravodaj/2023/02-unor/zpravodaj_2023_unor.pdf",
+      "type": "document",
+      "title": "zpravodaj_2023_unor"
+    },
+    {
+      "path": "files/zpravodaj/2023/03-brezen/zpravodaj_2023_brezen.pdf",
+      "type": "document",
+      "title": "zpravodaj_2023_brezen"
+    },
+    {
+      "path": "files/zpravodaj/2023/04-duben/zpravodaj_2023_duben.pdf",
+      "type": "document",
+      "title": "zpravodaj_2023_duben"
+    },
+    {
+      "path": "files/zpravodaj/2023/05-kveten/zpravodaj_2023_kveten.pdf",
+      "type": "document",
+      "title": "zpravodaj_2023_kveten"
+    },
+    {
+      "path": "files/zpravodaj/2023/06-cerven/zpravodaj_2023_cerven.pdf",
+      "type": "document",
+      "title": "zpravodaj_2023_cerven"
+    },
+    {
+      "path": "files/zpravodaj/2023/09-zari/zpravodaj_2023_zari.pdf",
+      "type": "document",
+      "title": "zpravodaj_2023_zari"
+    },
+    {
+      "path": "files/zpravodaj/2023/10-rijen/zpravodaj_2023_rijen.pdf",
+      "type": "document",
+      "title": "zpravodaj_2023_rijen"
+    },
+    {
+      "path": "files/zpravodaj/2023/11-listopad/zpravodaj_2023_listopad.pdf",
+      "type": "document",
+      "title": "zpravodaj_2023_listopad"
+    },
+    {
+      "path": "files/zpravodaj/2023/12-prosinec/zpravodaj_2023_prosinec.pdf",
+      "type": "document",
+      "title": "zpravodaj_2023_prosinec"
+    }
+  ]
+}

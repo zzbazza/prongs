@@ -1,0 +1,59 @@
+{
+  "items": [
+    {
+      "path": "files/zpravodaj/2015/01-leden/zpravodaj_2015_leden.pdf",
+      "type": "document",
+      "title": "zpravodaj_2015_leden"
+    },
+    {
+      "path": "files/zpravodaj/2015/02-unor/zpravodaj_2015_unor.pdf",
+      "type": "document",
+      "title": "zpravodaj_2015_unor"
+    },
+    {
+      "path": "files/zpravodaj/2015/03-brezen/zpravodaj_2015_brezen.pdf",
+      "type": "document",
+      "title": "zpravodaj_2015_brezen"
+    },
+    {
+      "path": "files/zpravodaj/2015/04-duben/zpravodaj_2015_duben.pdf",
+      "type": "document",
+      "title": "zpravodaj_2015_duben"
+    },
+    {
+      "path": "files/zpravodaj/2015/05-kveten/zpravodaj_2015_kveten.pdf",
+      "type": "document",
+      "title": "zpravodaj_2015_kveten"
+    },
+    {
+      "path": "files/zpravodaj/2015/06-cerven/zpravodaj_2015_cerven.pdf",
+      "type": "document",
+      "title": "zpravodaj_2015_cerven"
+    },
+    {
+      "path": "files/zpravodaj/2015/07-08-cervenec-srpen/zpravodaj_2015_cervenec-srpen.pdf",
+      "type": "document",
+      "title": "zpravodaj_2015_cervenec-srpen"
+    },
+    {
+      "path": "files/zpravodaj/2015/09-zari/zpravodaj_2015_zari.pdf",
+      "type": "document",
+      "title": "zpravodaj_2015_zari"
+    },
+    {
+      "path": "files/zpravodaj/2015/10-rijen/zpravodaj_2015_rijen.pdf",
+      "type": "document",
+      "title": "zpravodaj_2015_rijen"
+    },
+    {
+      "path": "files/zpravodaj/2015/11-listopad/zpravodaj_2015_listopad.pdf",
+      "type": "document",
+      "title": "zpravodaj_2015_listopad"
+    },
+    {
+      "path": "files/zpravodaj/2015/12-prosinec/zpravodaj_2015_prosinec.pdf",
+      "type": "document",
+      "title": "zpravodaj_2015_prosinec"
+    }
+  ]
+}

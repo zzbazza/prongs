@@ -1,0 +1,54 @@
+{
+  "items": [
+    {
+      "path": "files/zpravodaj/2025/01-leden/zpravodaj_2025_leden.pdf",
+      "type": "document",
+      "title": "zpravodaj_2025_leden"
+    },
+    {
+      "path": "files/zpravodaj/2025/02-unor/zpravodaj_2025_unor.pdf",
+      "type": "document",
+      "title": "zpravodaj_2025_unor"
+    },
+    {
+      "path": "files/zpravodaj/2025/03-brezen/zpravodaj_2025_brezen.pdf",
+      "type": "document",
+      "title": "zpravodaj_2025_brezen"
+    },
+    {
+      "path": "files/zpravodaj/2025/04-duben/zpravodaj_2025_duben.pdf",
+      "type": "document",
+      "title": "zpravodaj_2025_duben"
+    },
+    {
+      "path": "files/zpravodaj/2025/05-kveten/zpravodaj_2025_kveten.pdf",
+      "type": "document",
+      "title": "zpravodaj_2025_kveten"
+    },
+    {
+      "path": "files/zpravodaj/2025/06-cerven/zpravodaj_2025_cerven.pdf",
+      "type": "document",
+      "title": "zpravodaj_2025_cerven"
+    },
+    {
+      "path": "files/zpravodaj/2025/07-08-cervenec-srpen/zpravodaj_2025_cervenec-srpen.pdf",
+      "type": "document",
+      "title": "zpravodaj_2025_cervenec-srpen"
+    },
+    {
+      "path": "files/zpravodaj/2025/09-zari/zpravodaj_2025_zari.pdf",
+      "type": "document",
+      "title": "zpravodaj_2025_zari"
+    },
+    {
+      "path": "files/zpravodaj/2025/10-rijen/zpravodaj_2025_rijen.pdf",
+      "type": "document",
+      "title": "zpravodaj_2025_rijen"
+    },
+    {
+      "path": "files/zpravodaj/2025/11-listopad/zpravodaj_2025_listopad.pdf",
+      "type": "document",
+      "title": "zpravodaj_2025_listopad"
+    }
+  ]
+}

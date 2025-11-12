@@ -1,0 +1,59 @@
+{
+  "items": [
+    {
+      "path": "files/zpravodaj/2019/01-leden/zpravodaj_2019_leden.pdf",
+      "type": "document",
+      "title": "zpravodaj_2019_leden"
+    },
+    {
+      "path": "files/zpravodaj/2019/02-unor/zpravodaj_2019_unor.pdf",
+      "type": "document",
+      "title": "zpravodaj_2019_unor"
+    },
+    {
+      "path": "files/zpravodaj/2019/03-brezen/zpravodaj_2019_brezen.pdf",
+      "type": "document",
+      "title": "zpravodaj_2019_brezen"
+    },
+    {
+      "path": "files/zpravodaj/2019/04-duben/zpravodaj_2019_duben.pdf",
+      "type": "document",
+      "title": "zpravodaj_2019_duben"
+    },
+    {
+      "path": "files/zpravodaj/2019/05-kveten/zpravodaj_2019_kveten.pdf",
+      "type": "document",
+      "title": "zpravodaj_2019_kveten"
+    },
+    {
+      "path": "files/zpravodaj/2019/06-cerven/zpravodaj_2019_cerven.pdf",
+      "type": "document",
+      "title": "zpravodaj_2019_cerven"
+    },
+    {
+      "path": "files/zpravodaj/2019/07-08-cervenec-srpen/zpravodaj_2019_cervenec-srpen.pdf",
+      "type": "document",
+      "title": "zpravodaj_2019_cervenec-srpen"
+    },
+    {
+      "path": "files/zpravodaj/2019/09-zari/zpravodaj_2019_zari.pdf",
+      "type": "document",
+      "title": "zpravodaj_2019_zari"
+    },
+    {
+      "path": "files/zpravodaj/2019/10-rijen/zpravodaj_2019_rijen.pdf",
+      "type": "document",
+      "title": "zpravodaj_2019_rijen"
+    },
+    {
+      "path": "files/zpravodaj/2019/11-listopad/zpravodaj_2019_listopad.pdf",
+      "type": "document",
+      "title": "zpravodaj_2019_listopad"
+    },
+    {
+      "path": "files/zpravodaj/2019/12-prosinec/zpravodaj_2019_prosinec.pdf",
+      "type": "document",
+      "title": "zpravodaj_2019_prosinec"
+    }
+  ]
+}
