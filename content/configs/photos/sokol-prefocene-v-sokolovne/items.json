@@ -1,29 +1,119 @@
 {
   "items": [
     {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0822.jpg",
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0576.jpg",
       "type": "image",
-      "title": "DSC_0822"
+      "title": "DSC_0576"
     },
     {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0742.jpg",
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0580-cvič_sbor sokola starobělškého 1908.jpg",
       "type": "image",
-      "title": "DSC_0742"
+      "title": "DSC_0580-cvič_sbor sokola starobělškého 1908"
     },
     {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0815.jpg",
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0582cvič_sbor sokola starobělškého 1908.jpg",
       "type": "image",
-      "title": "DSC_0815"
+      "title": "DSC_0582cvič_sbor sokola starobělškého 1908"
     },
     {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0809.jpg",
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0582cvič_sbor sokola starobělškého 1908a.jpg",
       "type": "image",
-      "title": "DSC_0809"
+      "title": "DSC_0582cvič_sbor sokola starobělškého 1908a"
     },
     {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0710-spartakiáda 1959.jpg",
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0583-Slavnost otevření sokolovny(5_srpna1923).jpg",
       "type": "image",
-      "title": "DSC_0710-spartakiáda 1959"
+      "title": "DSC_0583-Slavnost otevření sokolovny(5_srpna1923)"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0583-Slavnost otevření sokolovny(5_srpna1923)a.jpg",
+      "type": "image",
+      "title": "DSC_0583-Slavnost otevření sokolovny(5_srpna1923)a"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0588-První ženský sbor sokola(1913).jpg",
+      "type": "image",
+      "title": "DSC_0588-První ženský sbor sokola(1913)"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0588-První ženský sbor sokola(1913)a.jpg",
+      "type": "image",
+      "title": "DSC_0588-První ženský sbor sokola(1913)a"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0593.jpg",
+      "type": "image",
+      "title": "DSC_0593"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0594-Dorost starobělského sokola(1908).jpg",
+      "type": "image",
+      "title": "DSC_0594-Dorost starobělského sokola(1908)"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0597.jpg",
+      "type": "image",
+      "title": "DSC_0597"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0599.jpg",
+      "type": "image",
+      "title": "DSC_0599"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0604.jpg",
+      "type": "image",
+      "title": "DSC_0604"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0606.jpg",
+      "type": "image",
+      "title": "DSC_0606"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0607.jpg",
+      "type": "image",
+      "title": "DSC_0607"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0609.jpg",
+      "type": "image",
+      "title": "DSC_0609"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0611.jpg",
+      "type": "image",
+      "title": "DSC_0611"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0614-turnaj Bělá 1957a.jpg",
+      "type": "image",
+      "title": "DSC_0614-turnaj Bělá 1957a"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0616(1965).jpg",
+      "type": "image",
+      "title": "DSC_0616(1965)"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0619(1965).jpg",
+      "type": "image",
+      "title": "DSC_0619(1965)"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0621(1965).jpg",
+      "type": "image",
+      "title": "DSC_0621(1965)"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0623-(1965).jpg",
+      "type": "image",
+      "title": "DSC_0623-(1965)"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0626.jpg",
+      "type": "image",
+      "title": "DSC_0626"
     },
     {
       "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0626a.jpg",
@@ -31,9 +121,529 @@
       "title": "DSC_0626a"
     },
     {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0629(1956).jpg",
+      "type": "image",
+      "title": "DSC_0629(1956)"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0631(1956).jpg",
+      "type": "image",
+      "title": "DSC_0631(1956)"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0632(1956).jpg",
+      "type": "image",
+      "title": "DSC_0632(1956)"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0633(1956).jpg",
+      "type": "image",
+      "title": "DSC_0633(1956)"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0635(4_7_1954).jpg",
+      "type": "image",
+      "title": "DSC_0635(4_7_1954)"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0637.jpg",
+      "type": "image",
+      "title": "DSC_0637"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0638(7_6_1953).jpg",
+      "type": "image",
+      "title": "DSC_0638(7_6_1953)"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0640(4_7_1954).jpg",
+      "type": "image",
+      "title": "DSC_0640(4_7_1954)"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0643(4_7_1954).jpg",
+      "type": "image",
+      "title": "DSC_0643(4_7_1954)"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0646.jpg",
+      "type": "image",
+      "title": "DSC_0646"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0647-akademie 50 let sokola(22_2_1953) .jpg",
+      "type": "image",
+      "title": "DSC_0647-akademie 50 let sokola(22_2_1953) "
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0647.jpg",
+      "type": "image",
+      "title": "DSC_0647"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0651(4_7_1954).jpg",
+      "type": "image",
+      "title": "DSC_0651(4_7_1954)"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0652akademie 50 let sokola(22_2_1953).jpg",
+      "type": "image",
+      "title": "DSC_0652akademie 50 let sokola(22_2_1953)"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0655(4_7_1954).jpg",
+      "type": "image",
+      "title": "DSC_0655(4_7_1954)"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0657(7_6_1953).jpg",
+      "type": "image",
+      "title": "DSC_0657(7_6_1953)"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0657a.jpg",
+      "type": "image",
+      "title": "DSC_0657a"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0659.jpg",
+      "type": "image",
+      "title": "DSC_0659"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0660(7_6-1953).jpg",
+      "type": "image",
+      "title": "DSC_0660(7_6-1953)"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0662.jpg",
+      "type": "image",
+      "title": "DSC_0662"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0664-(7_6_1953).jpg",
+      "type": "image",
+      "title": "DSC_0664-(7_6_1953)"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0665.jpg",
+      "type": "image",
+      "title": "DSC_0665"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0667-(7_6_1953).jpg",
+      "type": "image",
+      "title": "DSC_0667-(7_6_1953)"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0668.jpg",
+      "type": "image",
+      "title": "DSC_0668"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0669.jpg",
+      "type": "image",
+      "title": "DSC_0669"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0672-spartakiáda 1959.jpg",
+      "type": "image",
+      "title": "DSC_0672-spartakiáda 1959"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0674.jpg",
+      "type": "image",
+      "title": "DSC_0674"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0678-7_6_1953.jpg",
+      "type": "image",
+      "title": "DSC_0678-7_6_1953"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0679.jpg",
+      "type": "image",
+      "title": "DSC_0679"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0680-7_6_1953.jpg",
+      "type": "image",
+      "title": "DSC_0680-7_6_1953"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0681.jpg",
+      "type": "image",
+      "title": "DSC_0681"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0683(4_7_1954).jpg",
+      "type": "image",
+      "title": "DSC_0683(4_7_1954)"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0685(4_7_1954).jpg",
+      "type": "image",
+      "title": "DSC_0685(4_7_1954)"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0688-7_6_1953.jpg",
+      "type": "image",
+      "title": "DSC_0688-7_6_1953"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0689.jpg",
+      "type": "image",
+      "title": "DSC_0689"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0690-spartakiáda 1959.jpg",
+      "type": "image",
+      "title": "DSC_0690-spartakiáda 1959"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0694-spartakiáda 1959.jpg",
+      "type": "image",
+      "title": "DSC_0694-spartakiáda 1959"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0696-spartakiáda 1959.jpg",
+      "type": "image",
+      "title": "DSC_0696-spartakiáda 1959"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0700-spartakiáda 1959.jpg",
+      "type": "image",
+      "title": "DSC_0700-spartakiáda 1959"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0702-veřejné cvičení 1958.jpg",
+      "type": "image",
+      "title": "DSC_0702-veřejné cvičení 1958"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0705-veřejné cvičení 1958.jpg",
+      "type": "image",
+      "title": "DSC_0705-veřejné cvičení 1958"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0707-spartakiáda 1959.jpg",
+      "type": "image",
+      "title": "DSC_0707-spartakiáda 1959"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0710-spartakiáda 1959.jpg",
+      "type": "image",
+      "title": "DSC_0710-spartakiáda 1959"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0712-spartakiáda 1959.jpg",
+      "type": "image",
+      "title": "DSC_0712-spartakiáda 1959"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0715-spartakiáda 1959.jpg",
+      "type": "image",
+      "title": "DSC_0715-spartakiáda 1959"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0717-spartakiáda 1959.jpg",
+      "type": "image",
+      "title": "DSC_0717-spartakiáda 1959"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0719(4_7_1954).jpg",
+      "type": "image",
+      "title": "DSC_0719(4_7_1954)"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0722(4_7_1954).jpg",
+      "type": "image",
+      "title": "DSC_0722(4_7_1954)"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0724.jpg",
+      "type": "image",
+      "title": "DSC_0724"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0725.jpg",
+      "type": "image",
+      "title": "DSC_0725"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0727.jpg",
+      "type": "image",
+      "title": "DSC_0727"
+    },
+    {
       "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0728.jpg",
       "type": "image",
       "title": "DSC_0728"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0731(4_7_1954).jpg",
+      "type": "image",
+      "title": "DSC_0731(4_7_1954)"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0733.jpg",
+      "type": "image",
+      "title": "DSC_0733"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0734-nácvik na III cs 1965 .jpg",
+      "type": "image",
+      "title": "DSC_0734-nácvik na III cs 1965 "
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0736 první máj 1960.jpg",
+      "type": "image",
+      "title": "DSC_0736 první máj 1960"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0739-výstava 50 let sokola trabá Bělá - 25_1_1953 .jpg",
+      "type": "image",
+      "title": "DSC_0739-výstava 50 let sokola trabá Bělá - 25_1_1953 "
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0741.jpg",
+      "type": "image",
+      "title": "DSC_0741"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0742.jpg",
+      "type": "image",
+      "title": "DSC_0742"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0743.jpg",
+      "type": "image",
+      "title": "DSC_0743"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0745.jpg",
+      "type": "image",
+      "title": "DSC_0745"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0746.jpg",
+      "type": "image",
+      "title": "DSC_0746"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0748.jpg",
+      "type": "image",
+      "title": "DSC_0748"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0750-nácvik na III cs 1965.jpg",
+      "type": "image",
+      "title": "DSC_0750-nácvik na III cs 1965"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0752.jpg",
+      "type": "image",
+      "title": "DSC_0752"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0753.jpg",
+      "type": "image",
+      "title": "DSC_0753"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0754.jpg",
+      "type": "image",
+      "title": "DSC_0754"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0755.jpg",
+      "type": "image",
+      "title": "DSC_0755"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0756.jpg",
+      "type": "image",
+      "title": "DSC_0756"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0757.jpg",
+      "type": "image",
+      "title": "DSC_0757"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0759.jpg",
+      "type": "image",
+      "title": "DSC_0759"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0762.jpg",
+      "type": "image",
+      "title": "DSC_0762"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0764.jpg",
+      "type": "image",
+      "title": "DSC_0764"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0765.jpg",
+      "type": "image",
+      "title": "DSC_0765"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0766.jpg",
+      "type": "image",
+      "title": "DSC_0766"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0767.jpg",
+      "type": "image",
+      "title": "DSC_0767"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0769.jpg",
+      "type": "image",
+      "title": "DSC_0769"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0770.jpg",
+      "type": "image",
+      "title": "DSC_0770"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0772.jpg",
+      "type": "image",
+      "title": "DSC_0772"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0773.jpg",
+      "type": "image",
+      "title": "DSC_0773"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0777-Sokolské nářaďové družstvo v roce 1922, třetí zprava Mudr_B Lyčka .jpg",
+      "type": "image",
+      "title": "DSC_0777-Sokolské nářaďové družstvo v roce 1922, třetí zprava Mudr_B Lyčka "
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0781.jpg",
+      "type": "image",
+      "title": "DSC_0781"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0782.jpg",
+      "type": "image",
+      "title": "DSC_0782"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0784-Slečinka z bílého zámečku,1929.jpg",
+      "type": "image",
+      "title": "DSC_0784-Slečinka z bílého zámečku,1929"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0786.jpg",
+      "type": "image",
+      "title": "DSC_0786"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0788.jpg",
+      "type": "image",
+      "title": "DSC_0788"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0790.jpg",
+      "type": "image",
+      "title": "DSC_0790"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0790a.jpg",
+      "type": "image",
+      "title": "DSC_0790a"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0791.jpg",
+      "type": "image",
+      "title": "DSC_0791"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0793Plikovník švec-divadlo.jpg",
+      "type": "image",
+      "title": "DSC_0793Plikovník švec-divadlo"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0793Plukovník švec-divadlo_a.jpg",
+      "type": "image",
+      "title": "DSC_0793Plukovník švec-divadlo_a"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0795-Šumavský slavíček 1930.jpg",
+      "type": "image",
+      "title": "DSC_0795-Šumavský slavíček 1930"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0798-Blaničtí rytíři.jpg",
+      "type": "image",
+      "title": "DSC_0798-Blaničtí rytíři"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0800-Píseň hor.jpg",
+      "type": "image",
+      "title": "DSC_0800-Píseň hor"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0803-Slečinka z bílého zámečku,1929.jpg",
+      "type": "image",
+      "title": "DSC_0803-Slečinka z bílého zámečku,1929"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0803.jpg",
+      "type": "image",
+      "title": "DSC_0803"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0807.jpg",
+      "type": "image",
+      "title": "DSC_0807"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0808.jpg",
+      "type": "image",
+      "title": "DSC_0808"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0809.jpg",
+      "type": "image",
+      "title": "DSC_0809"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0812.jpg",
+      "type": "image",
+      "title": "DSC_0812"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0815.jpg",
+      "type": "image",
+      "title": "DSC_0815"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0817.jpg",
+      "type": "image",
+      "title": "DSC_0817"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0819.jpg",
+      "type": "image",
+      "title": "DSC_0819"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0820.jpg",
+      "type": "image",
+      "title": "DSC_0820"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0822.jpg",
+      "type": "image",
+      "title": "DSC_0822"
     },
     {
       "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0823.jpg",
@@ -41,9 +651,19 @@
       "title": "DSC_0823"
     },
     {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0923.jpg",
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0824.jpg",
       "type": "image",
-      "title": "DSC_0923"
+      "title": "DSC_0824"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0825.jpg",
+      "type": "image",
+      "title": "DSC_0825"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0828.jpg",
+      "type": "image",
+      "title": "DSC_0828"
     },
     {
       "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0829.jpg",
@@ -51,9 +671,269 @@
       "title": "DSC_0829"
     },
     {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0921.jpg",
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0831.jpg",
       "type": "image",
-      "title": "DSC_0921"
+      "title": "DSC_0831"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0832.jpg",
+      "type": "image",
+      "title": "DSC_0832"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0833.jpg",
+      "type": "image",
+      "title": "DSC_0833"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0834.jpg",
+      "type": "image",
+      "title": "DSC_0834"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0835.jpg",
+      "type": "image",
+      "title": "DSC_0835"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0836.jpg",
+      "type": "image",
+      "title": "DSC_0836"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0838.jpg",
+      "type": "image",
+      "title": "DSC_0838"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0839.jpg",
+      "type": "image",
+      "title": "DSC_0839"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0841.jpg",
+      "type": "image",
+      "title": "DSC_0841"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0843.jpg",
+      "type": "image",
+      "title": "DSC_0843"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0846.jpg",
+      "type": "image",
+      "title": "DSC_0846"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0848.jpg",
+      "type": "image",
+      "title": "DSC_0848"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0850.jpg",
+      "type": "image",
+      "title": "DSC_0850"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0852.jpg",
+      "type": "image",
+      "title": "DSC_0852"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0853.jpg",
+      "type": "image",
+      "title": "DSC_0853"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0854.jpg",
+      "type": "image",
+      "title": "DSC_0854"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0855.jpg",
+      "type": "image",
+      "title": "DSC_0855"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0856a.jpg",
+      "type": "image",
+      "title": "DSC_0856a"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0858.jpg",
+      "type": "image",
+      "title": "DSC_0858"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0859.jpg",
+      "type": "image",
+      "title": "DSC_0859"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0860.jpg",
+      "type": "image",
+      "title": "DSC_0860"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0861.jpg",
+      "type": "image",
+      "title": "DSC_0861"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0862.jpg",
+      "type": "image",
+      "title": "DSC_0862"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0865.jpg",
+      "type": "image",
+      "title": "DSC_0865"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0866.jpg",
+      "type": "image",
+      "title": "DSC_0866"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0867.jpg",
+      "type": "image",
+      "title": "DSC_0867"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0868.jpg",
+      "type": "image",
+      "title": "DSC_0868"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0869.jpg",
+      "type": "image",
+      "title": "DSC_0869"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0870.jpg",
+      "type": "image",
+      "title": "DSC_0870"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0872a.jpg",
+      "type": "image",
+      "title": "DSC_0872a"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0874.jpg",
+      "type": "image",
+      "title": "DSC_0874"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0875.jpg",
+      "type": "image",
+      "title": "DSC_0875"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0876.jpg",
+      "type": "image",
+      "title": "DSC_0876"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0877.jpg",
+      "type": "image",
+      "title": "DSC_0877"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0878.jpg",
+      "type": "image",
+      "title": "DSC_0878"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0879.jpg",
+      "type": "image",
+      "title": "DSC_0879"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0880.jpg",
+      "type": "image",
+      "title": "DSC_0880"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0881.jpg",
+      "type": "image",
+      "title": "DSC_0881"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0884.jpg",
+      "type": "image",
+      "title": "DSC_0884"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0885.jpg",
+      "type": "image",
+      "title": "DSC_0885"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0886.jpg",
+      "type": "image",
+      "title": "DSC_0886"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0887.jpg",
+      "type": "image",
+      "title": "DSC_0887"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0888.jpg",
+      "type": "image",
+      "title": "DSC_0888"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0890.jpg",
+      "type": "image",
+      "title": "DSC_0890"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0891.jpg",
+      "type": "image",
+      "title": "DSC_0891"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0893.jpg",
+      "type": "image",
+      "title": "DSC_0893"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0894.jpg",
+      "type": "image",
+      "title": "DSC_0894"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0896.jpg",
+      "type": "image",
+      "title": "DSC_0896"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0897.jpg",
+      "type": "image",
+      "title": "DSC_0897"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0905.jpg",
+      "type": "image",
+      "title": "DSC_0905"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0905a.jpg",
+      "type": "image",
+      "title": "DSC_0905a"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0906.jpg",
+      "type": "image",
+      "title": "DSC_0906"
+    },
+    {
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0912.jpg",
+      "type": "image",
+      "title": "DSC_0912"
     },
     {
       "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0913.jpg",
@@ -71,904 +951,24 @@
       "title": "DSC_0917"
     },
     {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0784-Slečinka z bílého zámečku,1929.jpg",
-      "type": "image",
-      "title": "DSC_0784-Slečinka z bílého zámečku,1929"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0690-spartakiáda 1959.jpg",
-      "type": "image",
-      "title": "DSC_0690-spartakiáda 1959"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0659.jpg",
-      "type": "image",
-      "title": "DSC_0659"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0906.jpg",
-      "type": "image",
-      "title": "DSC_0906"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0678-7_6_1953.jpg",
-      "type": "image",
-      "title": "DSC_0678-7_6_1953"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0668.jpg",
-      "type": "image",
-      "title": "DSC_0668"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0712-spartakiáda 1959.jpg",
-      "type": "image",
-      "title": "DSC_0712-spartakiáda 1959"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0696-spartakiáda 1959.jpg",
-      "type": "image",
-      "title": "DSC_0696-spartakiáda 1959"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0700-spartakiáda 1959.jpg",
-      "type": "image",
-      "title": "DSC_0700-spartakiáda 1959"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0694-spartakiáda 1959.jpg",
-      "type": "image",
-      "title": "DSC_0694-spartakiáda 1959"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0665.jpg",
-      "type": "image",
-      "title": "DSC_0665"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0672-spartakiáda 1959.jpg",
-      "type": "image",
-      "title": "DSC_0672-spartakiáda 1959"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0664-(7_6_1953).jpg",
-      "type": "image",
-      "title": "DSC_0664-(7_6_1953)"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0662.jpg",
-      "type": "image",
-      "title": "DSC_0662"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0660(7_6-1953).jpg",
-      "type": "image",
-      "title": "DSC_0660(7_6-1953)"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0657a.jpg",
-      "type": "image",
-      "title": "DSC_0657a"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0657(7_6_1953).jpg",
-      "type": "image",
-      "title": "DSC_0657(7_6_1953)"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0652akademie 50 let sokola(22_2_1953).jpg",
-      "type": "image",
-      "title": "DSC_0652akademie 50 let sokola(22_2_1953)"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0651(4_7_1954).jpg",
-      "type": "image",
-      "title": "DSC_0651(4_7_1954)"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0647-akademie 50 let sokola(22_2_1953) .jpg",
-      "type": "image",
-      "title": "DSC_0647-akademie 50 let sokola(22_2_1953) "
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0647.jpg",
-      "type": "image",
-      "title": "DSC_0647"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0646.jpg",
-      "type": "image",
-      "title": "DSC_0646"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0731(4_7_1954).jpg",
-      "type": "image",
-      "title": "DSC_0731(4_7_1954)"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0722(4_7_1954).jpg",
-      "type": "image",
-      "title": "DSC_0722(4_7_1954)"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0719(4_7_1954).jpg",
-      "type": "image",
-      "title": "DSC_0719(4_7_1954)"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0685(4_7_1954).jpg",
-      "type": "image",
-      "title": "DSC_0685(4_7_1954)"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0683(4_7_1954).jpg",
-      "type": "image",
-      "title": "DSC_0683(4_7_1954)"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0655(4_7_1954).jpg",
-      "type": "image",
-      "title": "DSC_0655(4_7_1954)"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0643(4_7_1954).jpg",
-      "type": "image",
-      "title": "DSC_0643(4_7_1954)"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0640(4_7_1954).jpg",
-      "type": "image",
-      "title": "DSC_0640(4_7_1954)"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0638(7_6_1953).jpg",
-      "type": "image",
-      "title": "DSC_0638(7_6_1953)"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0637.jpg",
-      "type": "image",
-      "title": "DSC_0637"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0635(4_7_1954).jpg",
-      "type": "image",
-      "title": "DSC_0635(4_7_1954)"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0633(1956).jpg",
-      "type": "image",
-      "title": "DSC_0633(1956)"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0632(1956).jpg",
-      "type": "image",
-      "title": "DSC_0632(1956)"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0631(1956).jpg",
-      "type": "image",
-      "title": "DSC_0631(1956)"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0629(1956).jpg",
-      "type": "image",
-      "title": "DSC_0629(1956)"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0626.jpg",
-      "type": "image",
-      "title": "DSC_0626"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0623-(1965).jpg",
-      "type": "image",
-      "title": "DSC_0623-(1965)"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0621(1965).jpg",
-      "type": "image",
-      "title": "DSC_0621(1965)"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0619(1965).jpg",
-      "type": "image",
-      "title": "DSC_0619(1965)"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0616(1965).jpg",
-      "type": "image",
-      "title": "DSC_0616(1965)"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0614-turnaj Bělá 1957a.jpg",
-      "type": "image",
-      "title": "DSC_0614-turnaj Bělá 1957a"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0611.jpg",
-      "type": "image",
-      "title": "DSC_0611"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0609.jpg",
-      "type": "image",
-      "title": "DSC_0609"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0607.jpg",
-      "type": "image",
-      "title": "DSC_0607"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0604.jpg",
-      "type": "image",
-      "title": "DSC_0604"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0606.jpg",
-      "type": "image",
-      "title": "DSC_0606"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0597.jpg",
-      "type": "image",
-      "title": "DSC_0597"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0599.jpg",
-      "type": "image",
-      "title": "DSC_0599"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0593.jpg",
-      "type": "image",
-      "title": "DSC_0593"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0594-Dorost starobělského sokola(1908).jpg",
-      "type": "image",
-      "title": "DSC_0594-Dorost starobělského sokola(1908)"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0588-První ženský sbor sokola(1913)a.jpg",
-      "type": "image",
-      "title": "DSC_0588-První ženský sbor sokola(1913)a"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0588-První ženský sbor sokola(1913).jpg",
-      "type": "image",
-      "title": "DSC_0588-První ženský sbor sokola(1913)"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0583-Slavnost otevření sokolovny(5_srpna1923)a.jpg",
-      "type": "image",
-      "title": "DSC_0583-Slavnost otevření sokolovny(5_srpna1923)a"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0583-Slavnost otevření sokolovny(5_srpna1923).jpg",
-      "type": "image",
-      "title": "DSC_0583-Slavnost otevření sokolovny(5_srpna1923)"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0582cvič_sbor sokola starobělškého 1908a.jpg",
-      "type": "image",
-      "title": "DSC_0582cvič_sbor sokola starobělškého 1908a"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0582cvič_sbor sokola starobělškého 1908.jpg",
-      "type": "image",
-      "title": "DSC_0582cvič_sbor sokola starobělškého 1908"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0576.jpg",
-      "type": "image",
-      "title": "DSC_0576"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0580-cvič_sbor sokola starobělškého 1908.jpg",
-      "type": "image",
-      "title": "DSC_0580-cvič_sbor sokola starobělškého 1908"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0812.jpg",
-      "type": "image",
-      "title": "DSC_0812"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0807.jpg",
-      "type": "image",
-      "title": "DSC_0807"
-    },
-    {
       "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0919.jpg",
       "type": "image",
       "title": "DSC_0919"
     },
     {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0912.jpg",
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0921.jpg",
       "type": "image",
-      "title": "DSC_0912"
+      "title": "DSC_0921"
     },
     {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0905a.jpg",
+      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0923.jpg",
       "type": "image",
-      "title": "DSC_0905a"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0905.jpg",
-      "type": "image",
-      "title": "DSC_0905"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0897.jpg",
-      "type": "image",
-      "title": "DSC_0897"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0896.jpg",
-      "type": "image",
-      "title": "DSC_0896"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0893.jpg",
-      "type": "image",
-      "title": "DSC_0893"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0891.jpg",
-      "type": "image",
-      "title": "DSC_0891"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0894.jpg",
-      "type": "image",
-      "title": "DSC_0894"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0888.jpg",
-      "type": "image",
-      "title": "DSC_0888"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0890.jpg",
-      "type": "image",
-      "title": "DSC_0890"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0885.jpg",
-      "type": "image",
-      "title": "DSC_0885"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0887.jpg",
-      "type": "image",
-      "title": "DSC_0887"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0884.jpg",
-      "type": "image",
-      "title": "DSC_0884"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0886.jpg",
-      "type": "image",
-      "title": "DSC_0886"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0881.jpg",
-      "type": "image",
-      "title": "DSC_0881"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0880.jpg",
-      "type": "image",
-      "title": "DSC_0880"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0878.jpg",
-      "type": "image",
-      "title": "DSC_0878"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0877.jpg",
-      "type": "image",
-      "title": "DSC_0877"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0879.jpg",
-      "type": "image",
-      "title": "DSC_0879"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0876.jpg",
-      "type": "image",
-      "title": "DSC_0876"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0875.jpg",
-      "type": "image",
-      "title": "DSC_0875"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0874.jpg",
-      "type": "image",
-      "title": "DSC_0874"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0872a.jpg",
-      "type": "image",
-      "title": "DSC_0872a"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0870.jpg",
-      "type": "image",
-      "title": "DSC_0870"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0869.jpg",
-      "type": "image",
-      "title": "DSC_0869"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0868.jpg",
-      "type": "image",
-      "title": "DSC_0868"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0867.jpg",
-      "type": "image",
-      "title": "DSC_0867"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0865.jpg",
-      "type": "image",
-      "title": "DSC_0865"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0866.jpg",
-      "type": "image",
-      "title": "DSC_0866"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0862.jpg",
-      "type": "image",
-      "title": "DSC_0862"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0860.jpg",
-      "type": "image",
-      "title": "DSC_0860"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0861.jpg",
-      "type": "image",
-      "title": "DSC_0861"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0859.jpg",
-      "type": "image",
-      "title": "DSC_0859"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0858.jpg",
-      "type": "image",
-      "title": "DSC_0858"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0856a.jpg",
-      "type": "image",
-      "title": "DSC_0856a"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0855.jpg",
-      "type": "image",
-      "title": "DSC_0855"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0854.jpg",
-      "type": "image",
-      "title": "DSC_0854"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0853.jpg",
-      "type": "image",
-      "title": "DSC_0853"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0852.jpg",
-      "type": "image",
-      "title": "DSC_0852"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0850.jpg",
-      "type": "image",
-      "title": "DSC_0850"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0848.jpg",
-      "type": "image",
-      "title": "DSC_0848"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0846.jpg",
-      "type": "image",
-      "title": "DSC_0846"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0843.jpg",
-      "type": "image",
-      "title": "DSC_0843"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0841.jpg",
-      "type": "image",
-      "title": "DSC_0841"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0839.jpg",
-      "type": "image",
-      "title": "DSC_0839"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0838.jpg",
-      "type": "image",
-      "title": "DSC_0838"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0836.jpg",
-      "type": "image",
-      "title": "DSC_0836"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0835.jpg",
-      "type": "image",
-      "title": "DSC_0835"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0833.jpg",
-      "type": "image",
-      "title": "DSC_0833"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0834.jpg",
-      "type": "image",
-      "title": "DSC_0834"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0832.jpg",
-      "type": "image",
-      "title": "DSC_0832"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0831.jpg",
-      "type": "image",
-      "title": "DSC_0831"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0825.jpg",
-      "type": "image",
-      "title": "DSC_0825"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0824.jpg",
-      "type": "image",
-      "title": "DSC_0824"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0828.jpg",
-      "type": "image",
-      "title": "DSC_0828"
+      "title": "DSC_0923"
     },
     {
       "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0926.jpg",
       "type": "image",
       "title": "DSC_0926"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0820.jpg",
-      "type": "image",
-      "title": "DSC_0820"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0819.jpg",
-      "type": "image",
-      "title": "DSC_0819"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0817.jpg",
-      "type": "image",
-      "title": "DSC_0817"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0808.jpg",
-      "type": "image",
-      "title": "DSC_0808"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0803-Slečinka z bílého zámečku,1929.jpg",
-      "type": "image",
-      "title": "DSC_0803-Slečinka z bílého zámečku,1929"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0803.jpg",
-      "type": "image",
-      "title": "DSC_0803"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0800-Píseň hor.jpg",
-      "type": "image",
-      "title": "DSC_0800-Píseň hor"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0798-Blaničtí rytíři.jpg",
-      "type": "image",
-      "title": "DSC_0798-Blaničtí rytíři"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0795-Šumavský slavíček 1930.jpg",
-      "type": "image",
-      "title": "DSC_0795-Šumavský slavíček 1930"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0793Plukovník švec-divadlo_a.jpg",
-      "type": "image",
-      "title": "DSC_0793Plukovník švec-divadlo_a"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0793Plikovník švec-divadlo.jpg",
-      "type": "image",
-      "title": "DSC_0793Plikovník švec-divadlo"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0791.jpg",
-      "type": "image",
-      "title": "DSC_0791"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0790a.jpg",
-      "type": "image",
-      "title": "DSC_0790a"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0790.jpg",
-      "type": "image",
-      "title": "DSC_0790"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0788.jpg",
-      "type": "image",
-      "title": "DSC_0788"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0786.jpg",
-      "type": "image",
-      "title": "DSC_0786"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0782.jpg",
-      "type": "image",
-      "title": "DSC_0782"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0781.jpg",
-      "type": "image",
-      "title": "DSC_0781"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0777-Sokolské nářaďové družstvo v roce 1922, třetí zprava Mudr_B Lyčka .jpg",
-      "type": "image",
-      "title": "DSC_0777-Sokolské nářaďové družstvo v roce 1922, třetí zprava Mudr_B Lyčka "
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0773.jpg",
-      "type": "image",
-      "title": "DSC_0773"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0772.jpg",
-      "type": "image",
-      "title": "DSC_0772"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0770.jpg",
-      "type": "image",
-      "title": "DSC_0770"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0769.jpg",
-      "type": "image",
-      "title": "DSC_0769"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0767.jpg",
-      "type": "image",
-      "title": "DSC_0767"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0766.jpg",
-      "type": "image",
-      "title": "DSC_0766"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0765.jpg",
-      "type": "image",
-      "title": "DSC_0765"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0764.jpg",
-      "type": "image",
-      "title": "DSC_0764"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0762.jpg",
-      "type": "image",
-      "title": "DSC_0762"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0759.jpg",
-      "type": "image",
-      "title": "DSC_0759"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0757.jpg",
-      "type": "image",
-      "title": "DSC_0757"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0756.jpg",
-      "type": "image",
-      "title": "DSC_0756"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0755.jpg",
-      "type": "image",
-      "title": "DSC_0755"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0753.jpg",
-      "type": "image",
-      "title": "DSC_0753"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0754.jpg",
-      "type": "image",
-      "title": "DSC_0754"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0752.jpg",
-      "type": "image",
-      "title": "DSC_0752"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0750-nácvik na III cs 1965.jpg",
-      "type": "image",
-      "title": "DSC_0750-nácvik na III cs 1965"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0748.jpg",
-      "type": "image",
-      "title": "DSC_0748"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0746.jpg",
-      "type": "image",
-      "title": "DSC_0746"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0745.jpg",
-      "type": "image",
-      "title": "DSC_0745"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0743.jpg",
-      "type": "image",
-      "title": "DSC_0743"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0741.jpg",
-      "type": "image",
-      "title": "DSC_0741"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0739-výstava 50 let sokola trabá Bělá - 25_1_1953 .jpg",
-      "type": "image",
-      "title": "DSC_0739-výstava 50 let sokola trabá Bělá - 25_1_1953 "
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0736 první máj 1960.jpg",
-      "type": "image",
-      "title": "DSC_0736 první máj 1960"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0734-nácvik na III cs 1965 .jpg",
-      "type": "image",
-      "title": "DSC_0734-nácvik na III cs 1965 "
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0727.jpg",
-      "type": "image",
-      "title": "DSC_0727"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0733.jpg",
-      "type": "image",
-      "title": "DSC_0733"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0725.jpg",
-      "type": "image",
-      "title": "DSC_0725"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0724.jpg",
-      "type": "image",
-      "title": "DSC_0724"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0717-spartakiáda 1959.jpg",
-      "type": "image",
-      "title": "DSC_0717-spartakiáda 1959"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0705-veřejné cvičení 1958.jpg",
-      "type": "image",
-      "title": "DSC_0705-veřejné cvičení 1958"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0689.jpg",
-      "type": "image",
-      "title": "DSC_0689"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0702-veřejné cvičení 1958.jpg",
-      "type": "image",
-      "title": "DSC_0702-veřejné cvičení 1958"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0688-7_6_1953.jpg",
-      "type": "image",
-      "title": "DSC_0688-7_6_1953"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0681.jpg",
-      "type": "image",
-      "title": "DSC_0681"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0680-7_6_1953.jpg",
-      "type": "image",
-      "title": "DSC_0680-7_6_1953"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0679.jpg",
-      "type": "image",
-      "title": "DSC_0679"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0674.jpg",
-      "type": "image",
-      "title": "DSC_0674"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0669.jpg",
-      "type": "image",
-      "title": "DSC_0669"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0667-(7_6_1953).jpg",
-      "type": "image",
-      "title": "DSC_0667-(7_6_1953)"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0715-spartakiáda 1959.jpg",
-      "type": "image",
-      "title": "DSC_0715-spartakiáda 1959"
-    },
-    {
-      "path": "files/foto1/sokol (přefocené v sokolovně)/DSC_0707-spartakiáda 1959.jpg",
-      "type": "image",
-      "title": "DSC_0707-spartakiáda 1959"
     }
   ]
 }

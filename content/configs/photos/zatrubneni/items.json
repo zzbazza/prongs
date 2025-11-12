@@ -1,9 +1,19 @@
 {
   "items": [
     {
-      "path": "files/foto1/7-zatrubnění/DSC_0450.jpg",
+      "path": "files/foto1/7-zatrubnění/8(hostinec U Lípy)/DSC_0451.jpg",
       "type": "image",
-      "title": "DSC_0450"
+      "title": "DSC_0451"
+    },
+    {
+      "path": "files/foto1/7-zatrubnění/8(hostinec U Lípy)/DSC_0452.jpg",
+      "type": "image",
+      "title": "DSC_0452"
+    },
+    {
+      "path": "files/foto1/7-zatrubnění/DSC_0443.jpg",
+      "type": "image",
+      "title": "DSC_0443"
     },
     {
       "path": "files/foto1/7-zatrubnění/DSC_0445.jpg",
@@ -16,19 +26,9 @@
       "title": "DSC_0448"
     },
     {
-      "path": "files/foto1/7-zatrubnění/DSC_0443.jpg",
+      "path": "files/foto1/7-zatrubnění/DSC_0450.jpg",
       "type": "image",
-      "title": "DSC_0443"
-    },
-    {
-      "path": "files/foto1/7-zatrubnění/8(hostinec U Lípy)/DSC_0451.jpg",
-      "type": "image",
-      "title": "DSC_0451"
-    },
-    {
-      "path": "files/foto1/7-zatrubnění/8(hostinec U Lípy)/DSC_0452.jpg",
-      "type": "image",
-      "title": "DSC_0452"
+      "title": "DSC_0450"
     }
   ]
 }

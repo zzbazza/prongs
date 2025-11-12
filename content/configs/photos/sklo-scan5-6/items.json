@@ -6,11 +6,6 @@
       "title": "DSC_0746"
     },
     {
-      "path": "files/FOTO/SKLO-SCAN5-6/DSC_0753.jpg",
-      "type": "image",
-      "title": "DSC_0753"
-    },
-    {
       "path": "files/FOTO/SKLO-SCAN5-6/DSC_0747.jpg",
       "type": "image",
       "title": "DSC_0747"
@@ -26,6 +21,11 @@
       "title": "DSC_0751"
     },
     {
+      "path": "files/FOTO/SKLO-SCAN5-6/DSC_0753.jpg",
+      "type": "image",
+      "title": "DSC_0753"
+    },
+    {
       "path": "files/FOTO/SKLO-SCAN5-6/DSC_0755.jpg",
       "type": "image",
       "title": "DSC_0755"
@@ -34,6 +34,11 @@
       "path": "files/FOTO/SKLO-SCAN5-6/DSC_0757.jpg",
       "type": "image",
       "title": "DSC_0757"
+    },
+    {
+      "path": "files/FOTO/SKLO-SCAN5-6/DSC_0758.jpg",
+      "type": "image",
+      "title": "DSC_0758"
     },
     {
       "path": "files/FOTO/SKLO-SCAN5-6/DSC_0760.jpg",
@@ -46,14 +51,19 @@
       "title": "DSC_0761"
     },
     {
+      "path": "files/FOTO/SKLO-SCAN5-6/DSC_0762.jpg",
+      "type": "image",
+      "title": "DSC_0762"
+    },
+    {
       "path": "files/FOTO/SKLO-SCAN5-6/DSC_0763.jpg",
       "type": "image",
       "title": "DSC_0763"
     },
     {
-      "path": "files/FOTO/SKLO-SCAN5-6/DSC_0762.jpg",
+      "path": "files/FOTO/SKLO-SCAN5-6/DSC_0765.jpg",
       "type": "image",
-      "title": "DSC_0762"
+      "title": "DSC_0765"
     },
     {
       "path": "files/FOTO/SKLO-SCAN5-6/DSC_0766.jpg",
@@ -64,16 +74,6 @@
       "path": "files/FOTO/SKLO-SCAN5-6/DSC_0768.jpg",
       "type": "image",
       "title": "DSC_0768"
-    },
-    {
-      "path": "files/FOTO/SKLO-SCAN5-6/DSC_0758.jpg",
-      "type": "image",
-      "title": "DSC_0758"
-    },
-    {
-      "path": "files/FOTO/SKLO-SCAN5-6/DSC_0765.jpg",
-      "type": "image",
-      "title": "DSC_0765"
     }
   ]
 }

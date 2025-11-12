@@ -1,9 +1,9 @@
 {
   "items": [
     {
-      "path": "files/FOTO/NEG2/DSC_0052.jpg",
+      "path": "files/FOTO/NEG2/DSC_0042.jpg",
       "type": "image",
-      "title": "DSC_0052"
+      "title": "DSC_0042"
     },
     {
       "path": "files/FOTO/NEG2/DSC_0043.jpg",
@@ -11,14 +11,14 @@
       "title": "DSC_0043"
     },
     {
-      "path": "files/FOTO/NEG2/DSC_0042.jpg",
-      "type": "image",
-      "title": "DSC_0042"
-    },
-    {
       "path": "files/FOTO/NEG2/DSC_0049.jpg",
       "type": "image",
       "title": "DSC_0049"
+    },
+    {
+      "path": "files/FOTO/NEG2/DSC_0052.jpg",
+      "type": "image",
+      "title": "DSC_0052"
     }
   ]
 }

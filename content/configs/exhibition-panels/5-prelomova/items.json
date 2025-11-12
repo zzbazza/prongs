@@ -6,27 +6,15 @@
       "title": "Výstavní panel 5 - Přelomová"
     },
     {
-      "path": "files/Tabule/5-přelomová/Budova školy s rozšířením roku 1870.jpg",
-      "type": "image",
-      "title": "Budova školy s rozšířením roku 1870",
-      "description": "Archiv Františka Dedka"
-    },
-    {
-      "path": "files/Tabule/5-přelomová/Fotografie z průběhu stavby vodárny, tedy pravděpodobně z roku 1899.jpg",
-      "type": "image",
-      "title": "Fotografie z průběhu stavby vodárny",
-      "description": "Fotografie pochází pravděpodobně z roku 1899. Archiv Františka Dedka"
-    },
-    {
       "path": "files/Tabule/5-přelomová/Budova Ozdravovny Vítkovických železáren, dostavěno v roce 1900 (archiv Oldřicha Dlouhého).jpg",
       "type": "image",
       "title": "Budova Ozdravovny Vítkovických železáren",
       "description": "Ozdravovna byla dostavena v roce 1900. Archiv Oldřicha Dlouhého"
     },
     {
-      "path": "files/Tabule/5-přelomová/Nová cesta do Výškovic postavená roku 1895.jpg",
+      "path": "files/Tabule/5-přelomová/Budova školy s rozšířením roku 1870.jpg",
       "type": "image",
-      "title": "Nová cesta do Výškovic postavená roku 1895",
+      "title": "Budova školy s rozšířením roku 1870",
       "description": "Archiv Františka Dedka"
     },
     {
@@ -36,16 +24,10 @@
       "description": "Archiv Františka Dedka"
     },
     {
-      "path": "files/Tabule/5-přelomová/Přestavba staré fary pro doktora Františka Challu.jpg",
+      "path": "files/Tabule/5-přelomová/Fotografie z průběhu stavby vodárny, tedy pravděpodobně z roku 1899.jpg",
       "type": "image",
-      "title": "Přestavba staré fary pro doktora Františka Challu",
-      "description": "Poskytl Úřad MO Stará Bělá"
-    },
-    {
-      "path": "files/Tabule/5-přelomová/Úprava farní zahrady patrně z roku 1904 čerstvě po výsadbě a výstavbě chodníku.jpg",
-      "type": "image",
-      "title": "Úprava farní zahrady patrně z roku 1904 čerstvě po výsadbě a výstavbě chodníku",
-      "description": "Archiv Františka Dedka"
+      "title": "Fotografie z průběhu stavby vodárny",
+      "description": "Fotografie pochází pravděpodobně z roku 1899. Archiv Františka Dedka"
     },
     {
       "path": "files/Tabule/5-přelomová/Nejstarší vyobrazení obce 1850–1870.jpg",
@@ -53,14 +35,32 @@
       "title": "Nejstarší vyobrazení obce 1850–1870"
     },
     {
+      "path": "files/Tabule/5-přelomová/Nová cesta do Výškovic postavená roku 1895.jpg",
+      "type": "image",
+      "title": "Nová cesta do Výškovic postavená roku 1895",
+      "description": "Archiv Františka Dedka"
+    },
+    {
       "path": "files/Tabule/5-přelomová/Plán přestavby hostince U Zlatého jelena.jpg",
       "type": "image",
       "title": "Plán přestavby hostince U Zlatého jelena"
     },
     {
+      "path": "files/Tabule/5-přelomová/Přestavba staré fary pro doktora Františka Challu.jpg",
+      "type": "image",
+      "title": "Přestavba staré fary pro doktora Františka Challu",
+      "description": "Poskytl Úřad MO Stará Bělá"
+    },
+    {
       "path": "files/Tabule/5-přelomová/Výřez mapy z roku 1910 s vyznačením vodárny a studní.jpg",
       "type": "image",
       "title": "Výřez mapy z roku 1910 s vyznačením vodárny a studní"
+    },
+    {
+      "path": "files/Tabule/5-přelomová/Úprava farní zahrady patrně z roku 1904 čerstvě po výsadbě a výstavbě chodníku.jpg",
+      "type": "image",
+      "title": "Úprava farní zahrady patrně z roku 1904 čerstvě po výsadbě a výstavbě chodníku",
+      "description": "Archiv Františka Dedka"
     }
   ]
 }

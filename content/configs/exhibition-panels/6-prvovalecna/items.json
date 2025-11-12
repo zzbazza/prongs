@@ -12,10 +12,20 @@
       "description": "Sídlo měla v budově č p 173 Po krajích majitelé domu manželé Máchovi – Johana a Ludvík, hostinský U Zlatého jelena"
     },
     {
-      "path": "files/Tabule/6-prvoválečná/Václav Dedek píše domů z fronty2a.jpg",
+      "path": "files/Tabule/6-prvoválečná/František Dedek v Rakousko-uherské uniformě.jpg",
       "type": "image",
-      "title": "Dopis domů",
-      "description": "Václav Dedek píše dopis domů z fronty I. světové války."
+      "title": "František Dedek v Rakousko-uherské uniformě"
+    },
+    {
+      "path": "files/Tabule/6-prvoválečná/Jan Pchálek na frontě – uprostřed s rukama vbok.jpg",
+      "type": "image",
+      "title": "Jan Pchálek na frontě",
+      "description": "Jan Pchálek na frontě I. světové války – uprostřed s rukama v bok."
+    },
+    {
+      "path": "files/Tabule/6-prvoválečná/Obr.10_zásobování uhlím 1.jpg",
+      "type": "image",
+      "title": "Obr.10_zásobování uhlím 1"
     },
     {
       "path": "files/Tabule/6-prvoválečná/Socha Pokoj vám, která stála na křižovatce dnešní ulice Blanické a U Sochy.jpg",
@@ -36,31 +46,26 @@
       "description": "Zleva: Volný, Adámek a Kokeš, vojáci ze Staré Bělé, na fotografii pořízené 17. června 1917."
     },
     {
+      "path": "files/Tabule/6-prvoválečná/Václav Dedek píše domů z fronty.jpg",
+      "type": "image",
+      "title": "Václav Dedek píše domů z fronty"
+    },
+    {
+      "path": "files/Tabule/6-prvoválečná/Václav Dedek píše domů z fronty1.jpg",
+      "type": "image",
+      "title": "Václav Dedek píše domů z fronty1"
+    },
+    {
       "path": "files/Tabule/6-prvoválečná/Václav Dedek píše domů z fronty2.jpg",
       "type": "image",
       "title": "Dopis domů",
       "description": "Václav Dedek píše dopis domů z fronty I. světové války."
     },
     {
-      "path": "files/Tabule/6-prvoválečná/Jan Pchálek na frontě – uprostřed s rukama vbok.jpg",
+      "path": "files/Tabule/6-prvoválečná/Václav Dedek píše domů z fronty2a.jpg",
       "type": "image",
-      "title": "Jan Pchálek na frontě",
-      "description": "Jan Pchálek na frontě I. světové války – uprostřed s rukama v bok."
-    },
-    {
-      "path": "files/Tabule/6-prvoválečná/František Dedek v Rakousko-uherské uniformě.jpg",
-      "type": "image",
-      "title": "František Dedek v Rakousko-uherské uniformě"
-    },
-    {
-      "path": "files/Tabule/6-prvoválečná/Václav Dedek píše domů z fronty.jpg",
-      "type": "image",
-      "title": "Václav Dedek píše domů z fronty"
-    },
-    {
-      "path": "files/Tabule/6-prvoválečná/obr.15_Karel Sýkora ruské zajetí a vstup do legie 3.jpg",
-      "type": "image",
-      "title": "obr.15_Karel Sýkora ruské zajetí a vstup do legie 3"
+      "title": "Dopis domů",
+      "description": "Václav Dedek píše dopis domů z fronty I. světové války."
     },
     {
       "path": "files/Tabule/6-prvoválečná/obr.10b_zásobování uhlím 2.jpg",
@@ -78,9 +83,9 @@
       "title": "obr.14_Karel Sýkora ruské zajetí a vstup do legie 2"
     },
     {
-      "path": "files/Tabule/6-prvoválečná/Václav Dedek píše domů z fronty1.jpg",
+      "path": "files/Tabule/6-prvoválečná/obr.15_Karel Sýkora ruské zajetí a vstup do legie 3.jpg",
       "type": "image",
-      "title": "Václav Dedek píše domů z fronty1"
+      "title": "obr.15_Karel Sýkora ruské zajetí a vstup do legie 3"
     },
     {
       "path": "files/Tabule/6-prvoválečná/obr.16_Karel Sýkora ruské zajetí a vstup do legie 4.jpg",
@@ -91,11 +96,6 @@
       "path": "files/Tabule/6-prvoválečná/obr.9 Gregárek žádá o zvýšení zabíjaček.jpg",
       "type": "image",
       "title": "obr.9 Gregárek žádá o zvýšení zabíjaček"
-    },
-    {
-      "path": "files/Tabule/6-prvoválečná/Obr.10_zásobování uhlím 1.jpg",
-      "type": "image",
-      "title": "Obr.10_zásobování uhlím 1"
     }
   ]
 }

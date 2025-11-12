@@ -1,11 +1,6 @@
 {
   "items": [
     {
-      "path": "files/FOTO/NEG5/DSC_0082.jpg",
-      "type": "image",
-      "title": "DSC_0082"
-    },
-    {
       "path": "files/FOTO/NEG5/DSC_0061.jpg",
       "type": "image",
       "title": "DSC_0061"
@@ -19,6 +14,11 @@
       "path": "files/FOTO/NEG5/DSC_0080a.jpg",
       "type": "image",
       "title": "DSC_0080a"
+    },
+    {
+      "path": "files/FOTO/NEG5/DSC_0082.jpg",
+      "type": "image",
+      "title": "DSC_0082"
     }
   ]
 }

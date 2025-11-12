@@ -1,61 +1,6 @@
 {
   "items": [
     {
-      "path": "files/FOTO/přelom 19. a 20. století/DSC_0046.jpg",
-      "type": "image",
-      "title": "DSC_0046"
-    },
-    {
-      "path": "files/FOTO/přelom 19. a 20. století/DSC_0005.jpg",
-      "type": "image",
-      "title": "DSC_0005"
-    },
-    {
-      "path": "files/FOTO/přelom 19. a 20. století/DSC_0004.jpg",
-      "type": "image",
-      "title": "DSC_0004"
-    },
-    {
-      "path": "files/FOTO/přelom 19. a 20. století/DSC_0438.jpg",
-      "type": "image",
-      "title": "DSC_0438"
-    },
-    {
-      "path": "files/FOTO/přelom 19. a 20. století/DSC_0048(1).jpg",
-      "type": "image",
-      "title": "DSC_0048(1)"
-    },
-    {
-      "path": "files/FOTO/přelom 19. a 20. století/DSC_0043(1).jpg",
-      "type": "image",
-      "title": "DSC_0043(1)"
-    },
-    {
-      "path": "files/FOTO/přelom 19. a 20. století/DSC_0020(1).jpg",
-      "type": "image",
-      "title": "DSC_0020(1)"
-    },
-    {
-      "path": "files/FOTO/přelom 19. a 20. století/DSC_0209a.jpg",
-      "type": "image",
-      "title": "DSC_0209a"
-    },
-    {
-      "path": "files/FOTO/přelom 19. a 20. století/DSC_0208.jpg",
-      "type": "image",
-      "title": "DSC_0208"
-    },
-    {
-      "path": "files/FOTO/přelom 19. a 20. století/DSC_0204.jpg",
-      "type": "image",
-      "title": "DSC_0204"
-    },
-    {
-      "path": "files/FOTO/přelom 19. a 20. století/DSC_0016(1).jpg",
-      "type": "image",
-      "title": "DSC_0016(1)"
-    },
-    {
       "path": "files/FOTO/přelom 19. a 20. století/DSC_0001.jpg",
       "type": "image",
       "title": "DSC_0001"
@@ -64,6 +9,16 @@
       "path": "files/FOTO/přelom 19. a 20. století/DSC_0002.jpg",
       "type": "image",
       "title": "DSC_0002"
+    },
+    {
+      "path": "files/FOTO/přelom 19. a 20. století/DSC_0004.jpg",
+      "type": "image",
+      "title": "DSC_0004"
+    },
+    {
+      "path": "files/FOTO/přelom 19. a 20. století/DSC_0005.jpg",
+      "type": "image",
+      "title": "DSC_0005"
     },
     {
       "path": "files/FOTO/přelom 19. a 20. století/DSC_0008.jpg",
@@ -106,6 +61,11 @@
       "title": "DSC_0015"
     },
     {
+      "path": "files/FOTO/přelom 19. a 20. století/DSC_0016(1).jpg",
+      "type": "image",
+      "title": "DSC_0016(1)"
+    },
+    {
       "path": "files/FOTO/přelom 19. a 20. století/DSC_0016.jpg",
       "type": "image",
       "title": "DSC_0016"
@@ -129,6 +89,11 @@
       "path": "files/FOTO/přelom 19. a 20. století/DSC_0018.jpg",
       "type": "image",
       "title": "DSC_0018"
+    },
+    {
+      "path": "files/FOTO/přelom 19. a 20. století/DSC_0020(1).jpg",
+      "type": "image",
+      "title": "DSC_0020(1)"
     },
     {
       "path": "files/FOTO/přelom 19. a 20. století/DSC_0020.jpg",
@@ -261,6 +226,11 @@
       "title": "DSC_0042"
     },
     {
+      "path": "files/FOTO/přelom 19. a 20. století/DSC_0043(1).jpg",
+      "type": "image",
+      "title": "DSC_0043(1)"
+    },
+    {
       "path": "files/FOTO/přelom 19. a 20. století/DSC_0043.jpg",
       "type": "image",
       "title": "DSC_0043"
@@ -279,6 +249,16 @@
       "path": "files/FOTO/přelom 19. a 20. století/DSC_0045.jpg",
       "type": "image",
       "title": "DSC_0045"
+    },
+    {
+      "path": "files/FOTO/přelom 19. a 20. století/DSC_0046.jpg",
+      "type": "image",
+      "title": "DSC_0046"
+    },
+    {
+      "path": "files/FOTO/přelom 19. a 20. století/DSC_0048(1).jpg",
+      "type": "image",
+      "title": "DSC_0048(1)"
     },
     {
       "path": "files/FOTO/přelom 19. a 20. století/DSC_0048.jpg",
@@ -386,6 +366,11 @@
       "title": "DSC_0202"
     },
     {
+      "path": "files/FOTO/přelom 19. a 20. století/DSC_0204.jpg",
+      "type": "image",
+      "title": "DSC_0204"
+    },
+    {
       "path": "files/FOTO/přelom 19. a 20. století/DSC_0205.jpg",
       "type": "image",
       "title": "DSC_0205"
@@ -399,6 +384,16 @@
       "path": "files/FOTO/přelom 19. a 20. století/DSC_0207a.jpg",
       "type": "image",
       "title": "DSC_0207a"
+    },
+    {
+      "path": "files/FOTO/přelom 19. a 20. století/DSC_0208.jpg",
+      "type": "image",
+      "title": "DSC_0208"
+    },
+    {
+      "path": "files/FOTO/přelom 19. a 20. století/DSC_0209a.jpg",
+      "type": "image",
+      "title": "DSC_0209a"
     },
     {
       "path": "files/FOTO/přelom 19. a 20. století/DSC_0415.jpg",
@@ -469,6 +464,11 @@
       "path": "files/FOTO/přelom 19. a 20. století/DSC_0437.jpg",
       "type": "image",
       "title": "DSC_0437"
+    },
+    {
+      "path": "files/FOTO/přelom 19. a 20. století/DSC_0438.jpg",
+      "type": "image",
+      "title": "DSC_0438"
     },
     {
       "path": "files/FOTO/přelom 19. a 20. století/DSC_0439.jpg",

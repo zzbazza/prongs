@@ -6,16 +6,10 @@
       "title": "Tabule 2 - Kolonizační fáze"
     },
     {
-      "path": "files/Tabule/2-kolonizační/Zápis archeologa Lumíra Jisla (1921–1969) o přítomnosti středověkých jam na katastru Staré Bělé, uložen v Archivu Archeologického ústavu v Brně, AVČR.jpg",
+      "path": "files/Tabule/2-kolonizační/Fotokopie originálu listiny biskupa Bruna ze Schauenburku, kde daruje ves Starou Bělou v léno. Fotokopii pořídil František Dedek.jpg",
       "type": "image",
-      "title": "Zápis archeologa Lumíra Jisla (1921–1969)",
-      "description": "Zapis o přítomnosti středověkých jam na katastru Staré Bělé, uložen v Archivu Archeologického ústavu v Brně, AVČR"
-    },
-    {
-      "path": "files/Tabule/2-kolonizační/obr.2 predikční mapa pravděpodobnosti osídlení ve 12. století.jpg",
-      "type": "image",
-      "title": "obr.2 predikční mapa pravděpodobnosti osídlení ve 12. století",
-      "description": "Tmavá barva zbačí větší míru pravděpodobnosti osídlení. V oválu je vyznačena lokalita Staré Bělé."
+      "title": "Fotokopie originálu listiny biskupa Bruna ze Schauenburku",
+      "description": "Fotokopie originálu listiny biskupa Bruna ze Schauenburku, kde daruje ves Starou Bělou v léno. Fotokopii pořídil František Dedek"
     },
     {
       "path": "files/Tabule/2-kolonizační/Kresebná dokumentace keramických nálezů datovaných do přelomu 13 a 14 století nalezených na Mitrovické č p 319, uložena ve Slezském zemském muzeu, inv č M5021, M5022, M5084, M5124, M5168, M5155, M4976, M4915, M4994.jpg",
@@ -24,10 +18,10 @@
       "description": "Kresebná dokumentace keramických nálezů datovaných do přelomu 13 a 14 století nalezených na Mitrovické č p 319, uložena ve Slezském zemském muzeu, inv č M5021, M5022, M5084, M5124, M5168, M5155, M4976, M4915, M4994"
     },
     {
-      "path": "files/Tabule/2-kolonizační/Fotokopie originálu listiny biskupa Bruna ze Schauenburku, kde daruje ves Starou Bělou v léno. Fotokopii pořídil František Dedek.jpg",
+      "path": "files/Tabule/2-kolonizační/Rekonstrukce zalesnění ve středověku před velkou kolonizací ve 13 století dle Emila Opravila (Opravil, E 1974 Moravskoslezský pomezní les do začátku kolonizace).jpg",
       "type": "image",
-      "title": "Fotokopie originálu listiny biskupa Bruna ze Schauenburku",
-      "description": "Fotokopie originálu listiny biskupa Bruna ze Schauenburku, kde daruje ves Starou Bělou v léno. Fotokopii pořídil František Dedek"
+      "title": "Rekonstrukce zalesnění ve středověku před velkou kolonizací ve 13 století.",
+      "description": "Vyobrazení dle Emila Opravila (Opravil, E 1974 Moravskoslezský pomezní les do začátku kolonizace)"
     },
     {
       "path": "files/Tabule/2-kolonizační/Vyobrazení olomouckého biskupa Bruna ze Schauenburku Bartoloměj Paprocký 1593 Zrcadlo slawného markrabstwí Morawského O počátku a starožittnostíi stavu prelátského O vzáctnosti a swattosti jeho. Knihy druhé s446.jpg",
@@ -36,16 +30,22 @@
       "description": "Vyobrazil jej Bartoloměj Paprocký 1593 v Zrcadle slawného markrabstwí Morawského O počátku a starožittnostíi stavu prelátského O vzáctnosti a swattosti jeho. Knihy druhé s446"
     },
     {
-      "path": "files/Tabule/2-kolonizační/Rekonstrukce zalesnění ve středověku před velkou kolonizací ve 13 století dle Emila Opravila (Opravil, E 1974 Moravskoslezský pomezní les do začátku kolonizace).jpg",
+      "path": "files/Tabule/2-kolonizační/Zápis archeologa Lumíra Jisla (1921–1969) o přítomnosti středověkých jam na katastru Staré Bělé, uložen v Archivu Archeologického ústavu v Brně, AVČR.jpg",
       "type": "image",
-      "title": "Rekonstrukce zalesnění ve středověku před velkou kolonizací ve 13 století.",
-      "description": "Vyobrazení dle Emila Opravila (Opravil, E 1974 Moravskoslezský pomezní les do začátku kolonizace)"
+      "title": "Zápis archeologa Lumíra Jisla (1921–1969)",
+      "description": "Zapis o přítomnosti středověkých jam na katastru Staré Bělé, uložen v Archivu Archeologického ústavu v Brně, AVČR"
     },
     {
       "path": "files/Tabule/2-kolonizační/Zápis o přítomnosti středověkých jam na katastru Staré Bělé z archivu archeologa Hanse Freisinga (1905–1977), uložen v Archivu Archeologického ústavu v Brně, AVČR.jpg",
       "type": "image",
       "title": "Zápis o přítomnosti středověkých jam na katastru Staré Bělé",
       "description": "Z archivu archeologa Hanse Freisinga (1905–1977), uložen v Archivu Archeologického ústavu v Brně, AVČR"
+    },
+    {
+      "path": "files/Tabule/2-kolonizační/obr.2 predikční mapa pravděpodobnosti osídlení ve 12. století.jpg",
+      "type": "image",
+      "title": "obr.2 predikční mapa pravděpodobnosti osídlení ve 12. století",
+      "description": "Tmavá barva zbačí větší míru pravděpodobnosti osídlení. V oválu je vyznačena lokalita Staré Bělé."
     }
   ]
 }
