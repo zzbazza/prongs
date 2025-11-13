@@ -5,6 +5,29 @@
       "type": "document",
       "title": "Tabule 13 – Kulturní"
     },
-
+{
+      "path": "files/Tabule/13-kulturní/obr2_koncertMps.jpg",
+      "type": "image",
+      "title": "Program Mužský pěvecký sbor",
+      "description": "Koncert Mužského pěveckého sboru v 50. letech."
+    },
+    {
+      "path": "files/Tabule/13-kulturní/obr3_koncertŽps.jpg",
+      "type": "image",
+      "title": "Program Ženský pěvecký sbor",
+      "description": "Koncert Ženského pěveckého sboru v 50. letech."
+    },
+    {
+      "path": "files/Tabule/13-kulturní/Obr1_ČSM1955_.jpg",
+      "type": "image",
+      "title": "Smíšený pěvecký sbor",
+      "description": "Smíšený pěvecký sbor Bělan při ČSM v roce 1955 s dirigentem Jiřím Šindlem."
+    },
+    {
+      "path": "files/Tabule/13-kulturní/obr15_Bělan.jpg",
+      "type": "image",
+      "title": "Tanečnice Bělanu",
+      "description": "Tanečnice souboru Bělan na Spartakiádě v roce 1960."
+    },
   ]
 }
