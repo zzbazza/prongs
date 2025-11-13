@@ -22,16 +22,6 @@ async function init() {
   elements.homeBtn.addEventListener('click', goHome);
   elements.breadcrumbHome.addEventListener('click', goHome);
 
-  // Breadcrumb category click - navigate up one level
-  elements.breadcrumbCategory.addEventListener('click', () => {
-    if (state.currentView === 'viewer') {
-      closeViewer();
-    } else if (state.currentView === 'category' && state.currentCategoryPath.length > 1) {
-      // Navigate up one level in category hierarchy
-      navigateUpCategory();
-    }
-  });
-
   // Search input with debounce
   let searchTimeout;
   elements.searchInput.addEventListener('input', (e) => {

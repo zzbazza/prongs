@@ -398,6 +398,32 @@ button {
   text-decoration: underline;
 }
 
+.breadcrumb-segment {
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.breadcrumb-segment:hover {
+  color: var(--gold-primary);
+  text-decoration: underline;
+}
+
+.breadcrumb-segment.active {
+  font-weight: 600;
+  color: var(--gold-dark);
+  cursor: default;
+}
+
+.breadcrumb-segment.active:hover {
+  text-decoration: none;
+}
+
+.breadcrumb-separator-inline {
+  color: var(--text-secondary);
+  margin: 0 0.5em;
+}
+
 .breadcrumb-separator {
   color: var(--gold-primary);
   font-weight: 600;
@@ -514,7 +540,7 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: var(--spacing-xl);
+  padding: 15px var(--spacing-xl);
   border-radius: var(--radius-md);
   cursor: pointer;
   min-height: 180px;

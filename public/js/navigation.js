@@ -7,6 +7,17 @@ import { getCategoryTitles } from './api.js';
 import { escapeHtml } from './utils.js';
 import { openFile } from './fileViewer.js';
 
+function buildCategoryBreadcrumb(categoryTitles, isActive = false) {
+  // Build clickable breadcrumb segments
+  const segments = categoryTitles.map((cat, index) => {
+    const isLast = index === categoryTitles.length - 1;
+    const className = isLast && isActive ? 'breadcrumb-segment active' : 'breadcrumb-segment';
+    return `<span class="${className}" data-level="${index}">${escapeHtml(cat.title)}</span>`;
+  });
+
+  return segments.join(' <span class="breadcrumb-separator-inline">›</span> ');
+}
+
 export function updateBreadcrumbs() {
   if (state.currentView === 'home') {
     // Home view
@@ -26,8 +37,8 @@ export function updateBreadcrumbs() {
     // Show category path or search context
     if (state.currentCategoryPath.length > 0) {
       const categoryTitles = getCategoryTitles(state.currentCategoryPath);
-      const pathHtml = categoryTitles.map(cat => escapeHtml(cat.title)).join(' › ');
-      elements.breadcrumbCategory.innerHTML = pathHtml;
+      elements.breadcrumbCategory.innerHTML = buildCategoryBreadcrumb(categoryTitles, false);
+      attachBreadcrumbHandlers();
     } else if (state.searchQuery) {
       elements.breadcrumbCategory.textContent = `Hledání: "${state.searchQuery}"`;
     } else {
@@ -53,9 +64,8 @@ export function updateBreadcrumbs() {
 
     // Show full category path
     const categoryTitles = getCategoryTitles(state.currentCategoryPath);
-    const pathHtml = categoryTitles.map(cat => escapeHtml(cat.title)).join(' › ');
-    elements.breadcrumbCategory.innerHTML = pathHtml;
-    elements.breadcrumbCategory.classList.add('active');
+    elements.breadcrumbCategory.innerHTML = buildCategoryBreadcrumb(categoryTitles, true);
+    attachBreadcrumbHandlers();
   } else if (state.currentView === 'search') {
     // Search view
     elements.breadcrumbHome.classList.remove('active');
@@ -67,6 +77,84 @@ export function updateBreadcrumbs() {
     elements.breadcrumbCategory.textContent = `Hledání: "${state.searchQuery}"`;
     elements.breadcrumbCategory.classList.add('active');
   }
+}
+
+function attachBreadcrumbHandlers() {
+  // Attach click handlers to each breadcrumb segment
+  const segments = elements.breadcrumbCategory.querySelectorAll('.breadcrumb-segment');
+  segments.forEach(segment => {
+    segment.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const level = parseInt(segment.dataset.level);
+      navigateToBreadcrumbLevel(level);
+    });
+  });
+}
+
+function navigateToBreadcrumbLevel(level) {
+  // Navigate to a specific breadcrumb level
+  // level 0 = first category, level 1 = second category, etc.
+
+  if (level < 0 || level >= state.currentCategoryPath.length) {
+    return;
+  }
+
+  // Close viewer if open
+  if (state.currentView === 'viewer') {
+    elements.contentViewer.classList.add('hidden');
+    elements.browserView.classList.remove('hidden');
+  }
+
+  // If clicking on last level, just refresh the current view
+  if (level === state.currentCategoryPath.length - 1) {
+    state.currentView = 'category';
+    const hasItems = state.allItems.some(item => {
+      if (state.isLegacy) {
+        const lastCat = state.currentCategoryPath[level];
+        return item.categories && item.categories.includes(lastCat);
+      } else {
+        return item.categoryId === state.categoryPathString;
+      }
+    });
+    showHome(hasItems);
+    updateBreadcrumbs();
+    return;
+  }
+
+  // Otherwise, navigate to that level
+  state.currentCategoryPath = state.currentCategoryPath.slice(0, level + 1);
+  state.categoryPathString = state.currentCategoryPath.join('/');
+  state.currentView = 'category';
+
+  // Find categories at this level
+  let categories = state.allCategories;
+  for (let i = 0; i < state.currentCategoryPath.length; i++) {
+    const catId = state.currentCategoryPath[i];
+    const found = categories.find(c => c.id === catId);
+    if (found && i === state.currentCategoryPath.length - 1) {
+      // We're at the target level
+      if (found.subcategories && found.subcategories.length > 0) {
+        state.currentCategories = found.subcategories;
+      } else {
+        state.currentCategories = [];
+      }
+    } else if (found) {
+      categories = found.subcategories || [];
+    }
+  }
+
+  // Check if this level has items
+  const hasItems = state.allItems.some(item => {
+    if (state.isLegacy) {
+      const lastCat = state.currentCategoryPath[level];
+      return item.categories && item.categories.includes(lastCat);
+    } else {
+      return item.categoryId === state.categoryPathString;
+    }
+  });
+
+  showHome(hasItems);
+  updateBreadcrumbs();
 }
 
 export function goHome() {
