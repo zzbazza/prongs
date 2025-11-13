@@ -5,14 +5,72 @@
 import { elements } from '../state.js';
 import { escapeHtml } from '../utils.js';
 
-// Render PDF viewer
-export function renderPDFViewer(item) {
-  const pdfPath = `/content/${item.path}#toolbar=0`;
+// Render PDF viewer using PDF.js - renders all pages without controls
+export async function renderPDFViewer(item) {
+  const pdfPath = `/content/${item.path}`;
+
   elements.viewerContent.innerHTML = `
     <div class="pdf-container">
-      <iframe src="${pdfPath}" type="application/pdf"></iframe>
+      <div class="pdf-canvas-container" style="overflow: auto; width: 100%; height: 100%; background: #525252; padding: var(--spacing-lg);">
+        <div id="pdfPages" style="display: flex; flex-direction: column; align-items: center; gap: var(--spacing-md);"></div>
+      </div>
     </div>
   `;
+
+  // Check if PDF.js is loaded
+  if (typeof pdfjsLib === 'undefined') {
+    elements.viewerContent.innerHTML = `
+      <div class="empty-state">
+        <div class="empty-state-icon">⚠️</div>
+        <div>PDF.js knihovna nebyla načtena</div>
+      </div>
+    `;
+    return;
+  }
+
+  // Set worker path
+  pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+  const scale = 1.5;
+  const pagesContainer = document.getElementById('pdfPages');
+
+  // Load PDF and render all pages
+  try {
+    const loadingTask = pdfjsLib.getDocument(pdfPath);
+    const pdfDoc = await loadingTask.promise;
+
+    // Render each page
+    for (let pageNum = 1; pageNum <= pdfDoc.numPages; pageNum++) {
+      const page = await pdfDoc.getPage(pageNum);
+      const viewport = page.getViewport({ scale: scale });
+
+      // Create canvas for this page
+      const canvas = document.createElement('canvas');
+      const ctx = canvas.getContext('2d');
+      canvas.height = viewport.height;
+      canvas.width = viewport.width;
+      canvas.style.display = 'block';
+      canvas.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.3)';
+
+      pagesContainer.appendChild(canvas);
+
+      // Render page
+      const renderContext = {
+        canvasContext: ctx,
+        viewport: viewport
+      };
+
+      await page.render(renderContext).promise;
+    }
+  } catch (error) {
+    console.error('Error loading PDF:', error);
+    elements.viewerContent.innerHTML = `
+      <div class="empty-state">
+        <div class="empty-state-icon">❌</div>
+        <div>Chyba při načítání PDF</div>
+      </div>
+    `;
+  }
 }
 
 // Render text viewer
