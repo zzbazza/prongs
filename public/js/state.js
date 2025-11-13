@@ -1,0 +1,51 @@
+/**
+ * Application State and Constants
+ */
+
+// Application state
+export const state = {
+  allItems: [],
+  allCategories: [],
+  currentCategories: [], // Categories at current level
+  currentView: 'home', // 'home', 'category', 'search', 'viewer'
+  currentCategoryPath: [], // Array of category IDs forming the path
+  categoryPathString: '', // Joined path like "photos/buildings/churches"
+  searchQuery: '',
+  currentIndex: -1,
+  currentFile: null,
+  currentItems: [], // Items in current view
+  textSize: 'medium',
+  textSizes: ['small', 'medium', 'large'],
+  isLegacy: false // Whether using legacy flat category structure
+};
+
+// DOM elements
+export const elements = {
+  fileList: document.getElementById('fileList'),
+  browserView: document.getElementById('browserView'),
+  contentViewer: document.getElementById('contentViewer'),
+  viewerContent: document.getElementById('viewerContent'),
+  closeViewer: document.getElementById('closeViewer'),
+  textSizeDecrease: document.getElementById('textSizeDecrease'),
+  textSizeIncrease: document.getElementById('textSizeIncrease'),
+  homeBtn: document.getElementById('homeBtn'),
+  loadingIndicator: document.getElementById('loadingIndicator'),
+  searchInput: document.getElementById('searchInput'),
+  clearSearch: document.getElementById('clearSearch'),
+  breadcrumbHome: document.getElementById('breadcrumbHome'),
+  breadcrumbSeparator: document.getElementById('breadcrumbSeparator'),
+  breadcrumbCategory: document.getElementById('breadcrumbCategory'),
+  breadcrumbSeparator2: document.getElementById('breadcrumbSeparator2'),
+  breadcrumbFile: document.getElementById('breadcrumbFile')
+};
+
+// File type icons
+export const FILE_ICONS = {
+  folder: '📁',
+  image: '🖼️',
+  document: '📄',
+  text: '📝',
+  video: '🎬',
+  audio: '🎵',
+  unknown: '📎'
+};
