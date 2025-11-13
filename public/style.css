@@ -52,7 +52,7 @@
 }
 
 body {
-  font-family: "Crimson Text", "Playfair Display", "Georgia", "Times New Roman", serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-weight: 400;
   background: var(--bg-primary);
   color: var(--text-primary);
@@ -113,7 +113,7 @@ h1, h2, h3, h4, h5, h6,
 .breadcrumb-item,
 .breadcrumb-segment,
 .file-metadata h2 {
-  font-family: "Bodoni", "Crimson Text", "Playfair Display", "Georgia", "Times New Roman", serif;
+  font-family: "Bodoni", Georgia, "Times New Roman", serif;
 }
 
 /* Login page */
