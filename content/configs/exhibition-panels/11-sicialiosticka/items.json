@@ -41,7 +41,7 @@
       "description": "Cvičení dorostu na kruzích po sjednocení tělovýchovy (1965)."
     },
    {
-      "path": "files/Tabule/11-12-socialistická/obr.5-mapa.jpg",
+      "path": "files/Tabule/11-12-socialistická/obr5-mapa.jpg",
       "type": "image",
       "title": "Situační nákres",
       "description": "Situační nákres kluziště, koupaliště a hřiště po sjednocení tělovýchovy a přestavby rybníků."
@@ -71,10 +71,46 @@
       "description": "Pohled na střed obce z kostelní věže po druhé světové válce."
     },
     {
-      "path": "files/Tabule/11-12-socialistická/obr10s-velky.jpg",
+      "path": "files/Tabule/11-12-socialistická/obr9-přestavba zahradkářské klubovny.jpg",
       "type": "image",
-      "title": "Pohled na střed obce",
-      "description": "Pohled na střed obce z kostelní věže po druhé světové válce."
+      "title": "Zahrádkářská klubovna",
+      "description": "Přestavba zahrádkářské klubovny."
+    },
+    {
+      "path": "files/Tabule/11-12-socialistická/DSC_0333.jpg",
+      "type": "image",
+      "title": "Včelařská klubovna",
+      "description": "Včelařská klubovna po dostavbě roku 1971."
+    },
+    {
+      "path": "files/Tabule/11-12-socialistická/obr.10_1954kmp.jpg",
+      "type": "image",
+      "title": "Kurz medového pečiva",
+      "description": "Účastnice kurzu medového pečiva v roce 1954."
+    },
+    {
+      "path": "files/Tabule/11-12-socialistická/obr11_DSC_0364a.jpg",
+      "type": "image",
+      "title": "Památník obětem II. světové války",
+      "description": "Památník obětem II. světové války po jeho odhalení roku 1950."
+    },
+     {
+      "path": "files/Tabule/11-12-socialistická/obr12_1968 majpob.jpg",
+      "type": "image",
+      "title": "Májová pobožnost",
+      "description": "Májová pobožnost u Panny Marie lurdské v roce 1968 v Bělském lese."
+    },
+    {
+      "path": "files/Tabule/11-12-socialistická/obr13_1968-prbt.jpg",
+      "type": "image",
+      "title": "Svátek Božího těla",
+      "description": "Průvod ke svátku Božího těla v roce 1968."
+    },
+    {
+      "path": "files/Tabule/11-12-socialistická/obr14plak.jpg",
+      "type": "image",
+      "title": "Program oslav",
+      "description": "Program oslav 700letého výročí první zmínky Staré Bělé v roce 1972."
     },
   ]
 }
