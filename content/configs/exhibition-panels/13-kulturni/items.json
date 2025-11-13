@@ -29,5 +29,35 @@
       "title": "Tanečnice Bělanu",
       "description": "Tanečnice souboru Bělan na Spartakiádě v roce 1960."
     },
+    {
+      "path": "files/Tabule/13-kulturní/obr16_LMSochačtí.jpg",
+      "type": "image",
+      "title": "manžeké v kroji",
+      "description": "Libuše a Miloš Sochačtí v kroji navrženém Jiřinou Královou"
+    },
+    {
+      "path": "files/Tabule/13-kulturní/obr14_1958šenov.jpg",
+      "type": "image",
+      "title": "Bělan v Šenově",
+      "description": "Soubor Bělan při vystoupení v Šenově 13. července 1958."
+    },
+    {
+      "path": "files/Tabule/13-kulturní/plakát.jpg",
+      "type": "image",
+      "title": "Plakát Naši furianti",
+      "description": "Plakát divadelního představení z roku 1954 Naši furianti."
+    },
+     {
+      "path": "files/Tabule/13-kulturní/obr6_Zelené_pustiny1958.jpg",
+      "type": "image",
+      "title": "Zelené pustiny",
+      "description": "Zelené pustiny: Jiřina Polášková a Jaroslav Matýsek."
+    },
+     {
+      "path": "files/Tabule/13-kulturní/obr7_D34zp.jpg",
+      "type": "image",
+      "title": "Divadelní soubor v Praze",
+      "description": "Divadelní soubor v Praze při odehrání Zelených pustin v divadle D34."
+    },
   ]
 }
