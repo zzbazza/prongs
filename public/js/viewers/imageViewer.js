@@ -157,6 +157,12 @@ function setupSwipeGestures(currentImageIndex, images, openFile) {
   }, { passive: true });
 
   function handleSwipe(currentIndex, imageList) {
+    // Don't navigate if image is zoomed - allow panning instead
+    const img = document.getElementById('currentImage');
+    if (img && img.classList.contains('zoomed')) {
+      return;
+    }
+
     const swipeThreshold = 50;
     const diff = touchStartX - touchEndX;
 
