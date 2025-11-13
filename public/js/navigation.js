@@ -105,9 +105,34 @@ function navigateToBreadcrumbLevel(level) {
     elements.browserView.classList.remove('hidden');
   }
 
-  // If clicking on last level, just refresh the current view
-  if (level === state.currentCategoryPath.length - 1) {
-    state.currentView = 'category';
+  // Navigate to that level
+  state.currentCategoryPath = state.currentCategoryPath.slice(0, level + 1);
+  state.categoryPathString = state.currentCategoryPath.join('/');
+  state.currentView = 'category';
+
+  // Find the category at this level
+  let categories = state.allCategories;
+  let targetCategory = null;
+
+  for (let i = 0; i < state.currentCategoryPath.length; i++) {
+    const catId = state.currentCategoryPath[i];
+    const found = categories.find(c => c.id === catId);
+    if (found) {
+      if (i === state.currentCategoryPath.length - 1) {
+        // We're at the target level
+        targetCategory = found;
+      } else {
+        categories = found.subcategories || [];
+      }
+    }
+  }
+
+  // Determine what to show: subcategories or items
+  if (targetCategory && targetCategory.subcategories && targetCategory.subcategories.length > 0) {
+    // This category has subcategories - show them
+    state.currentCategories = targetCategory.subcategories;
+
+    // Check if there are also items at this level
     const hasItems = state.allItems.some(item => {
       if (state.isLegacy) {
         const lastCat = state.currentCategoryPath[level];
@@ -116,44 +141,15 @@ function navigateToBreadcrumbLevel(level) {
         return item.categoryId === state.categoryPathString;
       }
     });
+
+    // Show subcategories and items if they exist
     showHome(hasItems);
-    updateBreadcrumbs();
-    return;
+  } else {
+    // No subcategories - just show items in this category
+    state.currentCategories = [];
+    showCategoryItems();
   }
 
-  // Otherwise, navigate to that level
-  state.currentCategoryPath = state.currentCategoryPath.slice(0, level + 1);
-  state.categoryPathString = state.currentCategoryPath.join('/');
-  state.currentView = 'category';
-
-  // Find categories at this level
-  let categories = state.allCategories;
-  for (let i = 0; i < state.currentCategoryPath.length; i++) {
-    const catId = state.currentCategoryPath[i];
-    const found = categories.find(c => c.id === catId);
-    if (found && i === state.currentCategoryPath.length - 1) {
-      // We're at the target level
-      if (found.subcategories && found.subcategories.length > 0) {
-        state.currentCategories = found.subcategories;
-      } else {
-        state.currentCategories = [];
-      }
-    } else if (found) {
-      categories = found.subcategories || [];
-    }
-  }
-
-  // Check if this level has items
-  const hasItems = state.allItems.some(item => {
-    if (state.isLegacy) {
-      const lastCat = state.currentCategoryPath[level];
-      return item.categories && item.categories.includes(lastCat);
-    } else {
-      return item.categoryId === state.categoryPathString;
-    }
-  });
-
-  showHome(hasItems);
   updateBreadcrumbs();
 }
 
