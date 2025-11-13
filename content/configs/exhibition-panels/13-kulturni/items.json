@@ -59,5 +59,29 @@
       "title": "Divadelní soubor v Praze",
       "description": "Divadelní soubor v Praze při odehrání Zelených pustin v divadle D34."
     },
+    {
+      "path": "files/Tabule/13-kulturní/obr8_DF-STB.jpg",
+      "type": "image",
+      "title": "Divadelní festival",
+      "description": "Divadelní festival ve Staré Bělé."
+    },
+    {
+      "path": "files/Tabule/13-kulturní/obr9_1961michalkovice.jpg",
+      "type": "image",
+      "title": "Kutnohorští havíři",
+      "description": "Divadelní hra Kutnohorští havíři v roce 1961 na Michálkovické divadelní přehlídce."
+    },
+    {
+      "path": "files/Tabule/13-kulturní/obr10_1962jeseň.jpg",
+      "type": "image",
+      "title": "Starobělská jeseň",
+      "description": "III. Starobělská jeseň."
+    },
+    {
+      "path": "files/Tabule/13-kulturní/obr11_CHarleyova_teta.jpg",
+      "type": "image",
+      "title": "Starobělská jeseň",
+      "description": "Divadelní hra Charleyova teta."
+    },
   ]
 }
