@@ -575,7 +575,7 @@ button {
 .file-icon {
   font-size: 72px;
   margin-bottom: var(--spacing-md);
-  filter: drop-shadow(0 2px 4px var(--shadow));
+  filter: grayscale(100%) sepia(100%) hue-rotate(-10deg) saturate(80%) brightness(0.95) drop-shadow(0 2px 4px var(--shadow));
   flex-shrink: 0;
 }
 
@@ -585,7 +585,7 @@ button {
   object-fit: cover;
   border-radius: var(--radius-sm);
   margin-bottom: var(--spacing-md);
-  filter: drop-shadow(0 2px 4px var(--shadow));
+  filter: grayscale(100%) sepia(100%) hue-rotate(-10deg) saturate(80%) brightness(0.95) drop-shadow(0 2px 4px var(--shadow));
   flex-shrink: 0;
   background: var(--cream-dark);
 }
