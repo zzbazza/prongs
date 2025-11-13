@@ -506,7 +506,7 @@ button {
 }
 
 .icon-btn i {
-  font-size: 24px;
+  font-size: 26px;
   filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.2));
 }
 
@@ -516,14 +516,14 @@ button {
 }
 
 .icon-stack .fa-font {
-  font-size: 24px;
+  font-size: 26px;
 }
 
 .icon-stack .icon-badge {
   position: absolute;
   bottom: -2px;
   right: -8px;
-  font-size: 12px;
+  font-size: 13px;
   background: var(--gold-accent);
   color: var(--cream-light);
   border-radius: 50%;

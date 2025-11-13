@@ -26,6 +26,7 @@ export const elements = {
   contentViewer: document.getElementById('contentViewer'),
   viewerContent: document.getElementById('viewerContent'),
   closeViewer: document.getElementById('closeViewer'),
+  backBtn: document.getElementById('backBtn'),
   textSizeDecrease: document.getElementById('textSizeDecrease'),
   textSizeIncrease: document.getElementById('textSizeIncrease'),
   homeBtn: document.getElementById('homeBtn'),

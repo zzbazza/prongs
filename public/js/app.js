@@ -17,6 +17,14 @@ async function init() {
 
   // Event listeners
   elements.closeViewer.addEventListener('click', closeViewer);
+  elements.backBtn.addEventListener('click', () => {
+    // If viewing a file, close viewer; otherwise navigate up one category
+    if (state.currentView === 'viewer') {
+      closeViewer();
+    } else {
+      navigateUpCategory();
+    }
+  });
   elements.textSizeDecrease.addEventListener('click', decreaseTextSize);
   elements.textSizeIncrease.addEventListener('click', increaseTextSize);
   elements.homeBtn.addEventListener('click', goHome);
