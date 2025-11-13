@@ -1,0 +1,154 @@
+files/Tabule/1-praveka.pdf <- files/Tabule/1-PRAVĚKÁ.pdf
+files/Tabule/1-pravěká obr/img3700.jpg <- files/Tabule/1-pravěká obr/IMG_3700.JPG
+files/Tabule/1-pravěká obr/isselicrinus-vyskovic.jpg <- files/Tabule/1-pravěká obr/Isselicrinus nalezen na poli u Výškovic (nálezce Lukáš Klega, foto Jiřina Chalupská).jpg
+files/Tabule/1-pravěká obr/jadro-jezovky-odre.jpg <- files/Tabule/1-pravěká obr/Jádro ježovky nalezeno v Odře (nálezce Lukáš Klega, foto Jiřina Chalupská).jpg
+files/Tabule/1-pravěká obr/klokocovsky-koral-vyskovic.jpg <- files/Tabule/1-pravěká obr/Klokočovský korál nalezen na poli u Výškovic (nálezce Lukáš Klega, foto Jiřina Chalupská).jpg
+files/Tabule/1-pravěká obr/klokocovsky-koral.jpg <- files/Tabule/1-pravěká obr/Klokočovský korál, nalezen u Honculi (nálezce Lukáš Klega, foto Jiřina Chalupská).jpg
+files/Tabule/1-pravěká obr/mamuti-kel-recisti-odry.jpg <- files/Tabule/1-pravěká obr/Mamutí kel nalezen v řečišti Odry roku 2009 v blízkosti Honculi (Místo uložení Ostravské muzeum, inv čB 14007, fotila Viera Gřondělová).jpg
+files/Tabule/1-pravěká obr/otisk-hrebenatky.jpg <- files/Tabule/1-pravěká obr/Otisk hřebenatky, nalezeno v Odře (nálezce Lukáš Klega, foto Jiřina Chalupská).jpg
+files/Tabule/1-pravěká obr/rekonstrukce-zalesneni.jpg <- files/Tabule/1-pravěká obr/Rekonstrukce zalesnění pro 9.–12. stol podle Havlíka.jpg
+files/Tabule/1-pravěká obr/sekeromlat-pude-domu-ve.jpg <- files/Tabule/1-pravěká obr/Sekeromlat nalezen na půdě domu č. p. 119 ve Výškovicích, pocházející snad ze Staré Bělé (Muzeum fojtství v Kopřivnici, inv. č. 1293).jpg
+files/Tabule/1-pravěká obr/sekeromlat-pude-domu-ve-1.jpg <- files/Tabule/1-pravěká obr/Sekeromlat nalezen na půdě domu č. p. 119 ve Výškovicích, pocházející snad ze Staré Bělé (Muzeum fojtství v Kopřivnici, inv. č. 1293)1.jpg
+files/Tabule/1-pravěká obr/silicit-opolskeho-strukturou-zivocisne.jpg <- files/Tabule/1-pravěká obr/Silicit opolského typu se strukturou živočišné houby, nalezen na poli u Výškovic (nálezce Lukáš Klega, foto Jiřina Chalupská).jpg
+files/Tabule/1-pravěká obr/terebratulidni-ramenonozec-zemedelskeho-druzstva.jpg <- files/Tabule/1-pravěká obr/Terebratulidní ramenonožec nalezen na poli u zemědělského družstva (nálezce Lukáš Klega, foto Jiřina Chalupská).jpg
+files/Tabule/1-pravěká obr/tylocidaris-vyskovic.jpg <- files/Tabule/1-pravěká obr/Tylocidaris nalezena na poli u Výškovic (nálezce Lukáš Klega, foto Jiřina Chalupská).jpg
+files/Tabule/1-pravěká obr/vyznaceni-komunikacnich-tras-janak.jpg <- files/Tabule/1-pravěká obr/Vyznačení komunikačních tras Janák a kol-2022_Historická krajina na pomezí Slezska a Moravy I pravěk, str mapa č 3.jpg
+files/Tabule/1-pravěká obr/zkremenele-drevo.jpg <- files/Tabule/1-pravěká obr/Zkřemenělé dřevo (nálezce Lukáš Klega, foto Jiřina Chalupská).jpg
+files/Tabule/10-druhovalecna2.pdf <- files/Tabule/10-DRUHOVÁLEČNÁ2.pdf
+files/Tabule/11-socialisticka1.pdf <- files/Tabule/11-SOCIALISTICKÁ1.pdf
+files/Tabule/12-socialisticka2.pdf <- files/Tabule/12-SOCIALISTICKÁ2.pdf
+files/Tabule/13-kulturni.pdf <- files/Tabule/13-KULTURNÍ.pdf
+files/Tabule/14-druzstevni.pdf <- files/Tabule/14-DRUŽSTEVNÍ.pdf
+files/Tabule/2-kolonizacni.pdf <- files/Tabule/2-KOLONIZAČNÍ.pdf
+files/Tabule/2-kolonizační/fotokopie-originalu-listiny-biskupa.jpg <- files/Tabule/2-kolonizační/Fotokopie originálu listiny biskupa Bruna ze Schauenburku, kde daruje ves Starou Bělou v léno. Fotokopii pořídil František Dedek.jpg
+files/Tabule/2-kolonizační/kresebna-dokumentace-keramickych-nalezu.jpg <- files/Tabule/2-kolonizační/Kresebná dokumentace keramických nálezů datovaných do přelomu 13 a 14 století nalezených na Mitrovické č p 319, uložena ve Slezském zemském muzeu, inv č M5021, M5022, M5084, M5124, M5168, M5155, M4976, M4915, M4994.jpg
+files/Tabule/2-kolonizační/rekonstrukce-zalesneni-ve-stredoveku.jpg <- files/Tabule/2-kolonizační/Rekonstrukce zalesnění ve středověku před velkou kolonizací ve 13 století dle Emila Opravila (Opravil, E 1974 Moravskoslezský pomezní les do začátku kolonizace).jpg
+files/Tabule/2-kolonizační/vyobrazeni-olomouckeho-biskupa-bruna.jpg <- files/Tabule/2-kolonizační/Vyobrazení olomouckého biskupa Bruna ze Schauenburku Bartoloměj Paprocký 1593 Zrcadlo slawného markrabstwí Morawského O počátku a starožittnostíi stavu prelátského O vzáctnosti a swattosti jeho. Knihy druhé s446.jpg
+files/Tabule/2-kolonizační/zapis-archeologa-lumira-jisla.jpg <- files/Tabule/2-kolonizační/Zápis archeologa Lumíra Jisla (1921–1969) o přítomnosti středověkých jam na katastru Staré Bělé, uložen v Archivu Archeologického ústavu v Brně, AVČR.jpg
+files/Tabule/2-kolonizační/zapis-pritomnosti-stredovekych-jam.jpg <- files/Tabule/2-kolonizační/Zápis o přítomnosti středověkých jam na katastru Staré Bělé z archivu archeologa Hanse Freisinga (1905–1977), uložen v Archivu Archeologického ústavu v Brně, AVČR.jpg
+files/Tabule/2-kolonizační/obr-predikcni-pravdepodobnosti-osidleni.jpg <- files/Tabule/2-kolonizační/obr.2 predikční mapa pravděpodobnosti osídlení ve 12. století.jpg
+files/Tabule/3-stredoveka.pdf <- files/Tabule/3-STŘEDOVĚKÁ.pdf
+files/Tabule/3-středověká/keramika-vytazena-brehu-koryta.jpg <- files/Tabule/3-středověká/Keramika vytažená z břehů a koryta řeky Odry Lukášem Klegou (foto Jiřina Chalupská).jpg
+files/Tabule/3-středověká/kresba-kostela-sv-mikulase.jpg <- files/Tabule/3-středověká/Kresba kostela sv Mikuláše a jeho okolí k roku 1700 podle znalostí a fantazie Petra Sýkory a Jana Pchálka Kaplička sv Jana Nepomuckého v té době jistě stát nemohla.jpg
+files/Tabule/3-středověká/kresba-kostela-sv-mikulase-1.jpg <- files/Tabule/3-středověká/Kresba kostela sv Mikuláše, která pochází z roku 1596 a jejím autorem je starobělský farář Matouš Schaupius (v Bělé 1657 – 1670 archiv rodiny Jana Pchálka.jpg
+files/Tabule/3-středověká/kupni-smlouva-ctibora-perkova.jpg <- files/Tabule/3-středověká/Kupní smlouva Ctibora z Pěrkova z roku 1597 (z pozůstalosti Fr Dedka, uloženo v Státním okresním archivu v Kroměříži).jpg
+files/Tabule/3-středověká/nalez-fragmentu-patrne-renesancniho.jpg <- files/Tabule/3-středověká/Nález fragmentu patrně renesančního kachle z hloubení sklepa č p 291 v roce 2020.jpg
+files/Tabule/3-středověká/ostruvek-rybnice.jpg <- files/Tabule/3-středověká/Ostrůvek v rybníce, na kterém snad měla stát tvrz. Foceno před rokem 1950 (archiv TJ Sokol Stará Bělá).jpg
+files/Tabule/3-středověká/privilegium-jana-starsiho-zerotina.jpg <- files/Tabule/3-středověká/Privilegium Jana staršího ze Žerotína z roku 1558 (z pozůstalosti Fr. Dedka, uloženo v Státním okresním archivu v Kroměříži).jpg
+files/Tabule/4-pobelohorska.pdf <- files/Tabule/4- POBĚLOHORSKÁ.pdf
+files/Tabule/4-pobělohorská/kostel-sv-jana-nepomuckeho.jpg <- files/Tabule/4-pobělohorská/Kostel sv Jana Nepomuckého mezi léty 1895 a 1900 (archiv Františka Dedka).jpg
+files/Tabule/4-pobělohorská/kostel-sv-jana-nepomuckeho-1.jpg <- files/Tabule/4-pobělohorská/Kostel sv Jana Nepomuckého mezi léty 1895 a 1900 (archiv Františka Dedka)1.jpg
+files/Tabule/4-pobělohorská/vyznaceni-terennich-reliktu-sanci.jpg <- files/Tabule/4-pobělohorská/Vyznačení terénních reliktů šancí na katastru Nové Bělé na mapách tzv císařského stabilního katastru z roku 1833.jpg
+files/Tabule/4-pobělohorská/vyznaceni-terennich-reliktu-sanci-1.jpg <- files/Tabule/4-pobělohorská/Vyznačení terénních reliktů šancí na katastru Výškovic na mapách tzv císařského stabilního katastru z roku 1833.jpg
+files/Tabule/4-pobělohorská/vyznaceni-sanci-komunikace-nove.jpg <- files/Tabule/4-pobělohorská/Vyznačení šancí a komunikace z Nové Bělé do Výškovic z II Vojenského mapování z roku 1840 na podkladu Základní mapy ČR Vyznačeno 25 10 2025 v programu Qgis.jpg
+files/Tabule/4-pobělohorská/vyznaceni-sanci-katastru-nove.jpg <- files/Tabule/4-pobělohorská/Vyznačení šancí na katastru Nové Bělé na mapách II Vojenského mapování z roku 1840.jpg
+files/Tabule/4-pobělohorská/zavrazdeni-ondrase-jurasem-malba.jpg <- files/Tabule/4-pobělohorská/Zavraždění Ondráše Jurášem Malba patrně z počátku 19 století Zámek Vsetín.jpg
+files/Tabule/5-prelomova.pdf <- files/Tabule/5-PŘELOMOVÁ.pdf
+files/Tabule/5-přelomová/budova-ozdravovny-vitkovickych-zelezaren.jpg <- files/Tabule/5-přelomová/Budova Ozdravovny Vítkovických železáren, dostavěno v roce 1900 (archiv Oldřicha Dlouhého).jpg
+files/Tabule/5-přelomová/budova-skoly-rozsirenim.jpg <- files/Tabule/5-přelomová/Budova školy s rozšířením roku 1870.jpg
+files/Tabule/5-přelomová/fara-bez-prestavby-provedene.jpg <- files/Tabule/5-přelomová/Fara bez přestavby provedené v roce 1900.jpg
+files/Tabule/5-přelomová/fotografie-prubehu-stavby-vodarny.jpg <- files/Tabule/5-přelomová/Fotografie z průběhu stavby vodárny, tedy pravděpodobně z roku 1899.jpg
+files/Tabule/5-přelomová/nejstarsi-vyobrazeni-obce.jpg <- files/Tabule/5-přelomová/Nejstarší vyobrazení obce 1850–1870.jpg
+files/Tabule/5-přelomová/nova-cesta-vyskovic-postavena.jpg <- files/Tabule/5-přelomová/Nová cesta do Výškovic postavená roku 1895.jpg
+files/Tabule/5-přelomová/plan-prestavby-hostince-zlateho.jpg <- files/Tabule/5-přelomová/Plán přestavby hostince U Zlatého jelena.jpg
+files/Tabule/5-přelomová/prestavba-stare-fary-doktora.jpg <- files/Tabule/5-přelomová/Přestavba staré fary pro doktora Františka Challu.jpg
+files/Tabule/5-přelomová/vyrez-mapy-vyznacenim-vodarny.jpg <- files/Tabule/5-přelomová/Výřez mapy z roku 1910 s vyznačením vodárny a studní.jpg
+files/Tabule/5-přelomová/uprava-farni-zahrady-patrne.jpg <- files/Tabule/5-přelomová/Úprava farní zahrady patrně z roku 1904 čerstvě po výsadbě a výstavbě chodníku.jpg
+files/Tabule/6-prvovalecna.pdf <- files/Tabule/6-PRVOVÁLEČNÁ.pdf
+files/Tabule/6-prvoválečná/domobranecka-ceta-sidlo-mela.jpg <- files/Tabule/6-prvoválečná/Domobranecká četa. Sídlo měla v budově č p 173 Po krajích majitelé domu manželé Máchovi – Johana a Ludvík, hostinský U Zlatého jelena.jpg
+files/Tabule/6-prvoválečná/frantisek-dedek-rakousko.jpg <- files/Tabule/6-prvoválečná/František Dedek v Rakousko-uherské uniformě.jpg
+files/Tabule/6-prvoválečná/jan-pchalek-fronte.jpg <- files/Tabule/6-prvoválečná/Jan Pchálek na frontě – uprostřed s rukama vbok.jpg
+files/Tabule/6-prvoválečná/obr-10zasobovani-uhlim.jpg <- files/Tabule/6-prvoválečná/Obr.10_zásobování uhlím 1.jpg
+files/Tabule/6-prvoválečná/socha-pokoj-vam.jpg <- files/Tabule/6-prvoválečná/Socha Pokoj vám, která stála na křižovatce dnešní ulice Blanické a U Sochy.jpg
+files/Tabule/6-prvoválečná/starobelane-volny.jpg <- files/Tabule/6-prvoválečná/Starobělané Volný, Adámek a Kokeš v první světové válce, foceno 17 6 1917.jpg
+files/Tabule/6-prvoválečná/starobelane-volny-1.jpg <- files/Tabule/6-prvoválečná/Starobělané Volný, Adámek a Kokeš v první světové válce, foceno 17 6 1917a.jpg
+files/Tabule/6-prvoválečná/vaclav-dedek-pise-domu.jpg <- files/Tabule/6-prvoválečná/Václav Dedek píše domů z fronty.jpg
+files/Tabule/6-prvoválečná/vaclav-dedek-pise-domu-1.jpg <- files/Tabule/6-prvoválečná/Václav Dedek píše domů z fronty1.jpg
+files/Tabule/6-prvoválečná/vaclav-dedek-pise-domu-2.jpg <- files/Tabule/6-prvoválečná/Václav Dedek píše domů z fronty2.jpg
+files/Tabule/6-prvoválečná/vaclav-dedek-pise-domu-3.jpg <- files/Tabule/6-prvoválečná/Václav Dedek píše domů z fronty2a.jpg
+files/Tabule/6-prvoválečná/obr-10bzasobovani-uhlim.jpg <- files/Tabule/6-prvoválečná/obr.10b_zásobování uhlím 2.jpg
+files/Tabule/6-prvoválečná/obr-13karel-sykora-ruske.jpg <- files/Tabule/6-prvoválečná/obr.13_Karel Sýkora ruské zajetí a vstup do legie 1.jpg
+files/Tabule/6-prvoválečná/obr-14karel-sykora-ruske.jpg <- files/Tabule/6-prvoválečná/obr.14_Karel Sýkora ruské zajetí a vstup do legie 2.jpg
+files/Tabule/6-prvoválečná/obr-15karel-sykora-ruske.jpg <- files/Tabule/6-prvoválečná/obr.15_Karel Sýkora ruské zajetí a vstup do legie 3.jpg
+files/Tabule/6-prvoválečná/obr-16karel-sykora-ruske.jpg <- files/Tabule/6-prvoválečná/obr.16_Karel Sýkora ruské zajetí a vstup do legie 4.jpg
+files/Tabule/6-prvoválečná/obr-gregarek-zada-zvyseni.jpg <- files/Tabule/6-prvoválečná/obr.9 Gregárek žádá o zvýšení zabíjaček.jpg
+files/Tabule/7-8-prvorepubliková/bez-nazvu.jpg <- files/Tabule/7-8-prvorepubliková/Bez názvu-1.jpg
+files/Tabule/7-8-prvorepubliková/dsc0576.jpg <- files/Tabule/7-8-prvorepubliková/DSC_0576.jpg
+files/Tabule/7-8-prvorepubliková/dsc0582cvicsbor-sokola-starobelskeho.jpg <- files/Tabule/7-8-prvorepubliková/DSC_0582cvič_sbor sokola starobělškého 1908.jpg
+files/Tabule/7-8-prvorepubliková/dsc0588.jpg <- files/Tabule/7-8-prvorepubliková/DSC_0588-První ženský sbor sokola(1913)a.jpg
+files/Tabule/7-8-prvorepubliková/dsc0593.jpg <- files/Tabule/7-8-prvorepubliková/DSC_0593.jpg
+files/Tabule/7-8-prvorepubliková/dsc0594.jpg <- files/Tabule/7-8-prvorepubliková/DSC_0594-Dorost starobělského sokola(1908).jpg
+files/Tabule/7-8-prvorepubliková/divadelni-hra-omladiny-kristus.jpg <- files/Tabule/7-8-prvorepubliková/Divadelní hra Omladiny Kristus vítězí.jpg
+files/Tabule/7-8-prvorepubliková/dorost-tj-sokol-roce.jpg <- files/Tabule/7-8-prvorepubliková/Dorost TJ Sokol v roce 1925 před oponou Sokolovny s výjevem věštící Libuše.jpg
+files/Tabule/7-8-prvorepubliková/dum-prestavbe-ukoncene.jpg <- files/Tabule/7-8-prvorepubliková/Dům č p 3 po přestavbě ukončené roku 1909.jpg
+files/Tabule/7-8-prvorepubliková/muzi-tj-sokol-roce.jpg <- files/Tabule/7-8-prvorepubliková/Muži TJ Sokol v roce 1908 na dvoře domu č p 173.jpg
+files/Tabule/7-8-prvorepubliková/muzsky-pevecky-sbor-dtj.jpg <- files/Tabule/7-8-prvorepubliková/Mužský pěvecký sbor DTJ v roce 1934.jpg
+files/Tabule/7-8-prvorepubliková/pohlednice-vydana-pri-prilezitosti.jpg <- files/Tabule/7-8-prvorepubliková/Pohlednice vydaná při příležitosti otevření Katolického domu.jpg
+files/Tabule/7-8-prvorepubliková/projektova-dokumentace-nove-budovy.jpg <- files/Tabule/7-8-prvorepubliková/Projektová dokumentace nové budovy hasičárny (rok 1937).jpg
+files/Tabule/7-8-prvorepubliková/projektova-dokumentace-nove-budovy-1.jpg <- files/Tabule/7-8-prvorepubliková/Projektová dokumentace nové budovy hasičárny (rok 1937)1.jpg
+files/Tabule/7-8-prvorepubliková/projektova-dokumentace-prestavby-domu.jpg <- files/Tabule/7-8-prvorepubliková/Projektová dokumentace přestavby domu č p 3.jpg
+files/Tabule/7-8-prvorepubliková/projektova-dokumentace-prestavby-domu-1.jpg <- files/Tabule/7-8-prvorepubliková/Projektová dokumentace přestavby domu č p 3a.jpg
+files/Tabule/7-8-prvorepubliková/projektova-dokumentace-prestavby-domu-2.jpg <- files/Tabule/7-8-prvorepubliková/Projektová dokumentace přestavby domu čp3_0.jpg
+files/Tabule/7-8-prvorepubliková/projektova-dokumentace-stare-budovy.jpg <- files/Tabule/7-8-prvorepubliková/Projektová dokumentace staré budovy hasičárny (rok 1883).jpg
+files/Tabule/7-8-prvorepubliková/projektova-dokumentace-celni-strany.jpg <- files/Tabule/7-8-prvorepubliková/Projektová dokumentace čelní strany Sokolovny.jpg
+files/Tabule/7-8-prvorepubliková/projektova-dokumentace-celni-strany-1.jpg <- files/Tabule/7-8-prvorepubliková/Projektová dokumentace čelní strany Sokolovny1.jpg
+files/Tabule/7-8-prvorepubliková/slavnost-odhaleni-pomniku-obetem.jpg <- files/Tabule/7-8-prvorepubliková/Slavnost k odhalení pomníku obětem první světové války, Masaryka a A. Švehly v roce 1936.jpg
+files/Tabule/7-8-prvorepubliková/slavnostni-otevreni-sokolovny.jpg <- files/Tabule/7-8-prvorepubliková/Slavnostní otevření Sokolovny roku 1923.jpg
+files/Tabule/7-8-prvorepubliková/slavnostni-otevreni-sokolovny-1.jpg <- files/Tabule/7-8-prvorepubliková/Slavnostní otevření Sokolovny roku 19231.jpg
+files/Tabule/7-8-prvorepubliková/slavnostni-otevreni-sokolovny-2.jpg <- files/Tabule/7-8-prvorepubliková/Slavnostní otevření Sokolovny roku 19232.jpg
+files/Tabule/7-8-prvorepubliková/sveceni-praporu-dtj.jpg <- files/Tabule/7-8-prvorepubliková/Svěcení praporu DTJ.jpg
+files/Tabule/7-8-prvorepubliková/zacatek-stavby-katolickeho-domu.jpg <- files/Tabule/7-8-prvorepubliková/Začátek stavby Katolického domu v roce 1929.jpg
+files/Tabule/7-8-prvorepubliková/ucastnici-vcelarskeho-kurzu-roce.jpg <- files/Tabule/7-8-prvorepubliková/Účastníci včelařského kurzu v roce 1932.jpg
+files/Tabule/7-8-prvorepubliková/clenky-dtj-pred-hostincem.jpg <- files/Tabule/7-8-prvorepubliková/Členky DTJ před hostincem U lípy.jpg
+files/Tabule/7-8-prvorepubliková/clenove-brigady-vystavbu-husova.jpg <- files/Tabule/7-8-prvorepubliková/Členové brigády pro výstavbu Husova sboru.jpg
+files/Tabule/7-prvorepublikova1.pdf <- files/Tabule/7-PRVOREPUBLIKOVÁ1.pdf
+files/Tabule/8-prvorepublikova2.pdf <- files/Tabule/8-PRVOREPUBLIKOVÁ2.pdf
+files/Tabule/9-10 - druhoválečná/1.jpg <- files/Tabule/9-10 - druhoválečná/1.jpg
+files/Tabule/9-10 - druhoválečná/1761756366593.jpg <- files/Tabule/9-10 - druhoválečná/1761756366593-ddb18ed6.jpg
+files/Tabule/9-10 - druhoválečná/1761756720823.jpg <- files/Tabule/9-10 - druhoválečná/1761756720823-ede7967b.jpg
+files/Tabule/9-10 - druhoválečná/1761757033481.jpg <- files/Tabule/9-10 - druhoválečná/1761757033481-651c44d0.jpg
+files/Tabule/9-10 - druhoválečná/2.jpg <- files/Tabule/9-10 - druhoválečná/2.jpg
+files/Tabule/9-10 - druhoválečná/3.jpg <- files/Tabule/9-10 - druhoválečná/3.jpg
+files/Tabule/9-10 - druhoválečná/4.jpg <- files/Tabule/9-10 - druhoválečná/4.jpg
+files/Tabule/9-10 - druhoválečná/5.jpg <- files/Tabule/9-10 - druhoválečná/5.jpg
+files/Tabule/9-10 - druhoválečná/6.jpg <- files/Tabule/9-10 - druhoválečná/6.jpg
+files/Tabule/9-10 - druhoválečná/7.jpg <- files/Tabule/9-10 - druhoválečná/7.jpg
+files/Tabule/9-10 - druhoválečná/8.jpg <- files/Tabule/9-10 - druhoválečná/8.jpg
+files/Tabule/9-10 - druhoválečná/bez-nazvu-1.jpg <- files/Tabule/9-10 - druhoválečná/Bez názvu-2.jpg
+files/Tabule/9-10 - druhoválečná/bez-nazvu-2.jpg <- files/Tabule/9-10 - druhoválečná/Bez názvu-3.jpg
+files/Tabule/9-10 - druhoválečná/bez-nazvu-3.jpg <- files/Tabule/9-10 - druhoválečná/Bez názvu-4.jpg
+files/Tabule/9-10 - druhoválečná/dsc0049.jpg <- files/Tabule/9-10 - druhoválečná/DSC_0049.jpg
+files/Tabule/9-10 - druhoválečná/dsc0052.jpg <- files/Tabule/9-10 - druhoválečná/DSC_0052.jpg
+files/Tabule/9-10 - druhoválečná/dsc0059a.jpg <- files/Tabule/9-10 - druhoválečná/DSC_0059a.jpg
+files/Tabule/9-10 - druhoválečná/dsc0071a.jpg <- files/Tabule/9-10 - druhoválečná/DSC_0071a.jpg
+files/Tabule/9-10 - druhoválečná/dsc0075a.jpg <- files/Tabule/9-10 - druhoválečná/DSC_0075a.jpg
+files/Tabule/9-10 - druhoválečná/dsc0148.jpg <- files/Tabule/9-10 - druhoválečná/DSC_0148.jpg
+files/Tabule/9-10 - druhoválečná/dsc0371.jpg <- files/Tabule/9-10 - druhoválečná/DSC_0371.jpg
+files/Tabule/9-10 - druhoválečná/dsc0376.jpg <- files/Tabule/9-10 - druhoválečná/DSC_0376.jpg
+files/Tabule/9-10 - druhoválečná/most-pres-odru-strzen.jpg <- files/Tabule/9-10 - druhoválečná/Most přes Odru stržen povodní v roce 1940 Vzadu je strážní budka.jpg
+files/Tabule/9-10 - druhoválečná/most-pres-odru-strzen-1.jpg <- files/Tabule/9-10 - druhoválečná/Most přes Odru stržen povodní v roce 1940 Vzadu je strážní budka1.jpg
+files/Tabule/9-10 - druhoválečná/most-pres-odru-strzen-2.jpg <- files/Tabule/9-10 - druhoválečná/Most přes Odru stržen povodní v roce 1940 Vzadu je strážní budka2.jpg
+files/Tabule/9-10 - druhoválečná/naves-rekonstrukci-roce.jpg <- files/Tabule/9-10 - druhoválečná/Náves po rekonstrukci v roce 1941.jpg
+files/Tabule/9-10 - druhoválečná/nemecky-prapor-obecni-skole.jpg <- files/Tabule/9-10 - druhoválečná/Německý prapor na obecní škole.jpg
+files/Tabule/9-10 - druhoválečná/sloup-elektrickeho-napeti-gregarkove.jpg <- files/Tabule/9-10 - druhoválečná/Sloup elektrického napětí na Gregárkově ulici po náletech z přelomu dubna a května 1945.jpg
+files/Tabule/9-10 - druhoválečná/lycka.jpg <- files/Tabule/9-10 - druhoválečná/lyčka.jpg
+files/Tabule/9-10 - druhoválečná/obr-10klecka-jaroslav2.jpg <- files/Tabule/9-10 - druhoválečná/obr.10Klečka Jaroslav_2.jpg
+files/Tabule/9-10 - druhoválečná/obr-11matej-jaroslav4.jpg <- files/Tabule/9-10 - druhoválečná/obr.11Matěj Jaroslav_4.jpg
+files/Tabule/9-10 - druhoválečná/obr-12novacek-cyril7.jpg <- files/Tabule/9-10 - druhoválečná/obr.12Nováček Cyril_7.jpg
+files/Tabule/9-10 - druhoválečná/obr-mutinova-jenovefa.jpg <- files/Tabule/9-10 - druhoválečná/obr.17 Mutinová Jenovéfa.jpg
+files/Tabule/9-10 - druhoválečná/obr-2.jpg <- files/Tabule/9-10 - druhoválečná/obr.2.jpg
+files/Tabule/9-10 - druhoválečná/obr-lycka-bretislav2.jpg <- files/Tabule/9-10 - druhoválečná/obr.23 Lyčka Břetislav_2.jpg
+files/Tabule/9-10 - druhoválečná/obr-narodni-osvobozeni-5zari1945rocnik.jpg <- files/Tabule/9-10 - druhoválečná/obr.24 Národní Osvobození 5_září_1945_ročník XVI_číslo 95.jpg
+files/Tabule/9-10 - druhoválečná/obr-3.jpg <- files/Tabule/9-10 - druhoválečná/obr.3.jpg
+files/Tabule/9-10 - druhoválečná/obr-5.jpg <- files/Tabule/9-10 - druhoválečná/obr.5.jpg
+files/Tabule/9-10 - druhoválečná/obr-stredoveke-jamy.jpg <- files/Tabule/9-10 - druhoválečná/obr.6 Středověké jámy.jpg
+files/Tabule/9-10 - druhoválečná/obr-7plakat-kino-sokol.jpg <- files/Tabule/9-10 - druhoválečná/obr.7plakát kino sokol.jpg
+files/Tabule/9-10 - druhoválečná/obr-8.jpg <- files/Tabule/9-10 - druhoválečná/obr.8.jpg
+files/Tabule/9-10 - druhoválečná/obr-9filla-rostislav2.jpg <- files/Tabule/9-10 - druhoválečná/obr.9Filla Rostislav_2.jpg
+files/Tabule/9-10 - druhoválečná/obr8a.jpg <- files/Tabule/9-10 - druhoválečná/obr8a.jpg
+files/Tabule/9-druhovalecna1.pdf <- files/Tabule/9-DRUHOVÁLEČNÁ1.pdf
+files/Tabule/zlaty-jelen1.pdf <- files/Tabule/ZLATÝ JELEN1.pdf
+files/Tabule/zlaty-jelen2.pdf <- files/Tabule/ZLATÝ JELEN2.pdf
+files/Tabule/zlaty-jelen3.pdf <- files/Tabule/ZLATÝ JELEN3.pdf
+files/Tabule/zlaty-jelen4.pdf <- files/Tabule/ZLATÝ JELEN4-SOKOL.pdf
+files/Tabule/zlaty-jelen5.pdf <- files/Tabule/ZLATÝ JELEN5-OREL.pdf
