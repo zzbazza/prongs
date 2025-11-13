@@ -15,31 +15,32 @@ function setupImageZoom() {
 
   if (!img || !container) return;
 
-  let currentScale = 1;
-  const zoomStep = 0.25;
-  const minScale = 0.5;
-  const maxScale = 4;
+  let currentZoom = 100; // Percentage for max-width/max-height
+  const zoomStep = 20; // 20% steps
+  const minZoom = 100; // Don't go below fit-to-container
+  const maxZoom = 500; // 500% max
 
   // Set initial size to fit container
   function fitToContainer() {
-    img.style.transform = 'scale(1)';
-    img.style.transformOrigin = 'center center';
-    currentScale = 1;
+    currentZoom = 100;
+    img.style.maxWidth = '100%';
+    img.style.maxHeight = '100%';
+    img.style.width = 'auto';
+    img.style.height = 'auto';
     img.classList.remove('zoomed');
     container.scrollTo(0, 0);
   }
 
   // Apply zoom
-  function applyZoom(scale) {
-    currentScale = Math.max(minScale, Math.min(maxScale, scale));
-    img.style.transform = `scale(${currentScale})`;
+  function applyZoom(zoom) {
+    currentZoom = Math.max(minZoom, Math.min(maxZoom, zoom));
+    img.style.maxWidth = `${currentZoom}%`;
+    img.style.maxHeight = `${currentZoom}%`;
 
-    if (currentScale > 1) {
+    if (currentZoom > 100) {
       img.classList.add('zoomed');
-      img.style.transformOrigin = 'top left';
     } else {
       img.classList.remove('zoomed');
-      img.style.transformOrigin = 'center center';
     }
   }
 
@@ -47,23 +48,20 @@ function setupImageZoom() {
   zoomInBtn.addEventListener('click', (e) => {
     e.stopPropagation();
     e.preventDefault();
-    console.log('Zooming in', currentScale, zoomStep);
-    applyZoom(currentScale + zoomStep);
+    applyZoom(currentZoom + zoomStep);
   });
 
   // Zoom out
   zoomOutBtn.addEventListener('click', (e) => {
     e.stopPropagation();
     e.preventDefault();
-    console.log('Zooming out', currentScale, zoomStep);
-    applyZoom(currentScale - zoomStep);
+    applyZoom(currentZoom - zoomStep);
   });
 
   // Reset zoom
   zoomResetBtn.addEventListener('click', (e) => {
     e.stopPropagation();
     e.preventDefault();
-    console.log('Zooming reset', currentScale, zoomStep);
     fitToContainer();
   });
 
@@ -72,9 +70,8 @@ function setupImageZoom() {
     // Don't zoom if clicking on a button or control
     if (e.target !== img) return;
 
-    console.log('Zooming click', currentScale, zoomStep);
-    if (currentScale === 1) {
-      applyZoom(2);
+    if (currentZoom === 100) {
+      applyZoom(200);
     } else {
       fitToContainer();
     }
@@ -91,14 +88,13 @@ function setupImageZoom() {
     if (e.ctrlKey || e.metaKey) {
       e.preventDefault();
       const delta = e.deltaY > 0 ? -zoomStep : zoomStep;
-      console.log('Zooming wheel', currentScale, delta);
-      applyZoom(currentScale + delta);
+      applyZoom(currentZoom + delta);
     }
   }, { passive: false });
 
   // Touch pinch zoom support
   let initialDistance = 0;
-  let initialScale = 1;
+  let initialZoom = 100;
 
   container.addEventListener('touchstart', (e) => {
     if (e.touches.length === 2) {
@@ -106,7 +102,7 @@ function setupImageZoom() {
         e.touches[0].pageX - e.touches[1].pageX,
         e.touches[0].pageY - e.touches[1].pageY
       );
-      initialScale = currentScale;
+      initialZoom = currentZoom;
     }
   }, { passive: true });
 
@@ -117,8 +113,9 @@ function setupImageZoom() {
         e.touches[0].pageX - e.touches[1].pageX,
         e.touches[0].pageY - e.touches[1].pageY
       );
-      const scale = initialScale * (currentDistance / initialDistance);
-      applyZoom(scale);
+      const zoomRatio = currentDistance / initialDistance;
+      const newZoom = initialZoom * zoomRatio;
+      applyZoom(newZoom);
     }
   }, { passive: false });
 
@@ -138,14 +135,25 @@ function setupSwipeGestures(currentImageIndex, images, openFile) {
   const container = document.getElementById('imageContainer');
   let touchStartX = 0;
   let touchEndX = 0;
+  let isSingleTouch = false;
 
   container.addEventListener('touchstart', (e) => {
-    touchStartX = e.changedTouches[0].screenX;
+    // Only track swipes for single-touch gestures (not pinch zoom)
+    if (e.touches.length === 1) {
+      isSingleTouch = true;
+      touchStartX = e.changedTouches[0].screenX;
+    } else {
+      isSingleTouch = false;
+    }
   }, { passive: true });
 
   container.addEventListener('touchend', (e) => {
-    touchEndX = e.changedTouches[0].screenX;
-    handleSwipe(currentImageIndex, images);
+    // Only handle swipe if it was a single-touch gesture
+    if (isSingleTouch && e.touches.length === 0) {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe(currentImageIndex, images);
+    }
+    isSingleTouch = false;
   }, { passive: true });
 
   function handleSwipe(currentIndex, imageList) {
