@@ -83,5 +83,17 @@
       "title": "Starobělská jeseň",
       "description": "Divadelní hra Charleyova teta."
     },
+    {
+      "path": "files/Tabule/13-kulturní/obr12_1974Poprask-program.jpg",
+      "type": "image",
+      "title": "Poprask na laguně",
+      "description": "Nové obsazení ve hře Poprask na laguně v roce 1974."
+    },
+    {
+      "path": "files/Tabule/13-kulturní/Bez názvu-5.jpg",
+      "type": "image",
+      "title": "Scéna Poprask na laguně",
+      "description": "Scéna představení Poprask na laguně v roce 1974."
+    },
   ]
 }
