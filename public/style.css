@@ -52,7 +52,7 @@
 }
 
 body {
-  font-family: "Bodoni", "Crimson Text", "Playfair Display", "Georgia", "Times New Roman", serif;
+  font-family: "Crimson Text", "Playfair Display", "Georgia", "Times New Roman", serif;
   font-weight: 400;
   background: var(--bg-primary);
   color: var(--text-primary);
@@ -104,6 +104,16 @@ body[data-text-size="large"] .file-description {
   line-height: 1.6;
   max-height: 5em;
   -webkit-line-clamp: 3;
+}
+
+/* Bodoni font for titles and headings */
+h1, h2, h3, h4, h5, h6,
+.app-title,
+.file-name,
+.breadcrumb-item,
+.breadcrumb-segment,
+.file-metadata h2 {
+  font-family: "Bodoni", "Crimson Text", "Playfair Display", "Georgia", "Times New Roman", serif;
 }
 
 /* Login page */
@@ -585,7 +595,7 @@ button {
   object-fit: cover;
   border-radius: var(--radius-sm);
   margin-bottom: var(--spacing-md);
-  filter: grayscale(100%) sepia(100%) hue-rotate(-10deg) saturate(80%) brightness(0.95) drop-shadow(0 2px 4px var(--shadow));
+  filter: drop-shadow(0 2px 4px var(--shadow));
   flex-shrink: 0;
   background: var(--cream-dark);
 }
