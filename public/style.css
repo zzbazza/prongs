@@ -51,6 +51,11 @@
   box-sizing: border-box;
 }
 
+html {
+  touch-action: manipulation;
+  -ms-touch-action: manipulation;
+}
+
 body {
   font-family: Georgia, "Times New Roman", serif;
   font-weight: 400;
@@ -696,6 +701,7 @@ body[data-text-size="large"] .file-thumbnail {
   overflow: auto;
   background: rgba(0, 0, 0, 0.05);
   border-radius: var(--radius-md);
+  touch-action: pan-x pan-y pinch-zoom;
 }
 
 .image-container:has(img.zoomed) {
@@ -855,6 +861,7 @@ body[data-text-size="large"] .file-thumbnail {
   height: 100%;
   border-radius: var(--radius-md);
   overflow: hidden;
+  touch-action: pan-x pan-y;
 }
 
 .pdf-container iframe {
