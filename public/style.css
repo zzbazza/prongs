@@ -866,7 +866,11 @@ body[data-text-size="large"] .file-thumbnail {
   height: 100%;
   border-radius: var(--radius-md);
   overflow: hidden;
-  touch-action: pan-x pan-y;
+  touch-action: pan-x pan-y pinch-zoom;
+}
+
+.pdf-canvas-container {
+  touch-action: pan-x pan-y pinch-zoom;
 }
 
 .pdf-container iframe {
