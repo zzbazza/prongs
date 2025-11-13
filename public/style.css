@@ -1,3 +1,12 @@
+/* Bodoni Font */
+@font-face {
+  font-family: 'Bodoni';
+  src: url('/static/Bodoni-CE Bold.ttf') format('truetype');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Zlatý jelen color scheme - inspired by exposition poster */
 :root {
   --gold-primary: #B8944A;
@@ -43,7 +52,8 @@
 }
 
 body {
-  font-family: "Crimson Text", "Playfair Display", "Georgia", "Times New Roman", serif;
+  font-family: "Bodoni", "Crimson Text", "Playfair Display", "Georgia", "Times New Roman", serif;
+  font-weight: 400;
   background: var(--bg-primary);
   color: var(--text-primary);
   overflow: hidden;
