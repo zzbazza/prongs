@@ -20,6 +20,17 @@ function setupImageZoom() {
   const minZoom = 100; // Don't go below fit-to-container
   const maxZoom = 500; // 500% max
 
+  // Detect if image is wider than container
+  function checkImageWidth() {
+    const imageWidth = img.offsetWidth || img.naturalWidth;
+    const containerWidth = container.offsetWidth;
+    return {
+      imageWidth,
+      containerWidth,
+      isWider: imageWidth > containerWidth
+    };
+  }
+
   // Set initial size to fit container
   function fitToContainer() {
     currentZoom = 100;
@@ -28,6 +39,7 @@ function setupImageZoom() {
     img.style.width = 'auto';
     img.style.height = 'auto';
     img.classList.remove('zoomed');
+    container.style.justifyContent = 'center';
     container.scrollTo(0, 0);
   }
 
@@ -39,8 +51,22 @@ function setupImageZoom() {
 
     if (currentZoom > 100) {
       img.classList.add('zoomed');
+
+      // Check if image is wider than container after zoom
+      setTimeout(() => {
+        const widthInfo = checkImageWidth();
+        if (widthInfo.isWider) {
+          // Image is wider - align to left for easier scrolling
+          container.style.justifyContent = 'flex-start';
+        } else {
+          // Image is narrower - keep centered
+          container.style.justifyContent = 'center';
+        }
+        console.log('Image width:', widthInfo.imageWidth, 'Container width:', widthInfo.containerWidth);
+      }, 0);
     } else {
       img.classList.remove('zoomed');
+      container.style.justifyContent = 'center';
     }
   }
 
