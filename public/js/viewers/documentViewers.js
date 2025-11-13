@@ -9,35 +9,51 @@ import { escapeHtml } from '../utils.js';
 export async function renderPDFViewer(item) {
   const pdfPath = `/content/${item.path}`;
 
+  // Show loading state
   elements.viewerContent.innerHTML = `
     <div class="pdf-container">
       <div class="pdf-canvas-container" style="overflow: auto; width: 100%; height: 100%; background: #525252; padding: var(--spacing-lg);">
-        <div id="pdfPages" style="display: flex; flex-direction: column; align-items: center; gap: var(--spacing-md);"></div>
+        <div id="pdfPages" style="display: flex; flex-direction: column; align-items: center; gap: var(--spacing-md);">
+          <div style="color: white; padding: var(--spacing-xl);">Načítání PDF...</div>
+        </div>
       </div>
     </div>
   `;
 
   // Check if PDF.js is loaded
   if (typeof pdfjsLib === 'undefined') {
+    console.error('PDF.js library not loaded');
     elements.viewerContent.innerHTML = `
       <div class="empty-state">
         <div class="empty-state-icon">⚠️</div>
         <div>PDF.js knihovna nebyla načtena</div>
+        <div style="font-size: 0.9em; margin-top: var(--spacing-md);">Zkuste obnovit stránku</div>
       </div>
     `;
     return;
   }
 
-  // Set worker path
-  pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+  // Set worker path before anything else
+  if (!pdfjsLib.GlobalWorkerOptions.workerSrc) {
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+  }
 
   const scale = 1.5;
   const pagesContainer = document.getElementById('pdfPages');
 
   // Load PDF and render all pages
   try {
-    const loadingTask = pdfjsLib.getDocument(pdfPath);
+    // Clear loading message
+    pagesContainer.innerHTML = '';
+
+    const loadingTask = pdfjsLib.getDocument({
+      url: pdfPath,
+      cMapUrl: 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/cmaps/',
+      cMapPacked: true,
+    });
+
     const pdfDoc = await loadingTask.promise;
+    console.log(`PDF loaded: ${pdfDoc.numPages} pages`);
 
     // Render each page
     for (let pageNum = 1; pageNum <= pdfDoc.numPages; pageNum++) {
@@ -51,6 +67,7 @@ export async function renderPDFViewer(item) {
       canvas.width = viewport.width;
       canvas.style.display = 'block';
       canvas.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.3)';
+      canvas.style.background = 'white';
 
       pagesContainer.appendChild(canvas);
 
@@ -61,6 +78,7 @@ export async function renderPDFViewer(item) {
       };
 
       await page.render(renderContext).promise;
+      console.log(`Rendered page ${pageNum}`);
     }
   } catch (error) {
     console.error('Error loading PDF:', error);
@@ -68,6 +86,7 @@ export async function renderPDFViewer(item) {
       <div class="empty-state">
         <div class="empty-state-icon">❌</div>
         <div>Chyba při načítání PDF</div>
+        <div style="font-size: 0.9em; margin-top: var(--spacing-md);">${error.message || 'Neznámá chyba'}</div>
       </div>
     `;
   }
