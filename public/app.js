@@ -586,31 +586,43 @@ function setupImageZoom() {
 
     if (currentScale > 1) {
       img.classList.add('zoomed');
+      img.style.transformOrigin = 'top left';
     } else {
       img.classList.remove('zoomed');
+      img.style.transformOrigin = 'center center';
     }
   }
 
   // Zoom in
   zoomInBtn.addEventListener('click', (e) => {
     e.stopPropagation();
+    e.preventDefault();
+    console.log('Zooming in', currentScale, zoomStep);
     applyZoom(currentScale + zoomStep);
   });
 
   // Zoom out
   zoomOutBtn.addEventListener('click', (e) => {
     e.stopPropagation();
+    e.preventDefault();
+    console.log('Zooming out', currentScale, zoomStep);
     applyZoom(currentScale - zoomStep);
   });
 
   // Reset zoom
   zoomResetBtn.addEventListener('click', (e) => {
     e.stopPropagation();
+    e.preventDefault();
+    console.log('Zooming reset', currentScale, zoomStep);
     fitToContainer();
   });
 
   // Click image to toggle zoom
   img.addEventListener('click', (e) => {
+    // Don't zoom if clicking on a button or control
+    if (e.target !== img) return;
+
+    console.log('Zooming click', currentScale, zoomStep);
     if (currentScale === 1) {
       applyZoom(2);
     } else {
@@ -629,6 +641,7 @@ function setupImageZoom() {
     if (e.ctrlKey || e.metaKey) {
       e.preventDefault();
       const delta = e.deltaY > 0 ? -zoomStep : zoomStep;
+      console.log('Zooming wheel', currentScale, delta);
       applyZoom(currentScale + delta);
     }
   }, { passive: false });

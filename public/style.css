@@ -652,6 +652,11 @@ body[data-text-size="large"] .file-thumbnail {
   border-radius: var(--radius-md);
 }
 
+.image-container:has(img.zoomed) {
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
 .image-container img {
   max-width: 100%;
   max-height: 100%;
@@ -665,15 +670,18 @@ body[data-text-size="large"] .file-thumbnail {
 
 .image-container img.zoomed {
   cursor: zoom-out;
+  max-width: none;
+  max-height: none;
+  transform-origin: top left;
 }
 
 .image-zoom-controls {
-  position: absolute;
-  bottom: var(--spacing-lg);
-  right: var(--spacing-lg);
+  position: fixed;
+  bottom: calc(var(--spacing-lg) + 40px);
+  right: calc(22% + var(--spacing-lg));
   display: flex;
   gap: var(--spacing-sm);
-  z-index: 10;
+  z-index: 1000;
 }
 
 .zoom-btn {
@@ -756,7 +764,7 @@ body[data-text-size="large"] .file-thumbnail {
 }
 
 .image-nav {
-  position: absolute;
+  position: fixed;
   top: 50%;
   transform: translateY(-50%);
   background: var(--gold-primary);
@@ -772,6 +780,7 @@ body[data-text-size="large"] .file-thumbnail {
   border: 2px solid var(--gold-accent);
   transition: all 0.2s;
   box-shadow: 0 4px 16px var(--shadow-hover);
+  z-index: 1000;
 }
 
 .image-nav:hover {
@@ -791,7 +800,7 @@ body[data-text-size="large"] .file-thumbnail {
 }
 
 .image-nav.next {
-  right: var(--spacing-xl);
+  right: calc(22% + var(--spacing-xl));
 }
 
 /* PDF viewer */
