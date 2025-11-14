@@ -73,6 +73,47 @@
       "title": "Hostinec U Zlatého jelena",
       "description": "Projektový plán hostince U Zlatého jelena."
     },
-   
+   {
+      "path": "files/Tabule/1914domcetata.jpg",
+      "type": "image",
+      "title": "Domobranecká četa 1914",
+      "description": "Domobranecká četa v roce 1914. Po stranách manželé Johana a Ludvík Máchovi (archiv Jiřího Klegy)."
+    },
+    {
+      "path": "files/Tabule/Obr6_1867volby_návěstí.jpg",
+      "type": "image",
+      "title": "Návěstí 1867",
+      "description": "Návěstí k volbě do obecního zastupitelstva v roce 1867 (archiv Františka Dedka)."
+    },
+    {
+      "path": "files/Tabule/Obr7_1867protokol_voleb.jpg",
+      "type": "image",
+      "title": "Protokol voleb 1867",
+      "description": "Protokol o volbě zastupitelstva obecního v roce 1867 (archiv Františka Dedka)."
+    },
+    {
+      "path": "files/Tabule/Obr8_1885volba_výboru.jpg",
+      "type": "image",
+      "title": "Volby 1885",
+      "description": "Vypsání volby obecního výboru a náhradníků v roce 1885 (archiv Františka Dedka)."
+    },
+    {
+      "path": "files/Tabule/Obr9_1888volba_výboru.jpg",
+      "type": "image",
+      "title": "Volby 1888",
+      "description": "Pozvání na volby do výboru roku 1888 (archiv Františka Dedka)."
+    },
+    {
+      "path": "files/Tabule/BSMO_kart118_ic3166_Stankovi.jpg",
+      "type": "image",
+      "title": "Plán přestavby sálu 1937",
+      "description": "Plán přestavby sálu na bytové jednotky v roce 1937 (Archiv města Ostravy)."
+    },
+    {
+      "path": "files/Tabule/Obr14_1936sl_pam.jpg",
+      "type": "image",
+      "title": "Slavnost 1936",
+      "description": "Slavnost k odhalení pomníku z roku 1936. Čekání na příjezd Malypetra před budovou hostince (archiv Františka Dedka)."
+    },
 ]
 }
