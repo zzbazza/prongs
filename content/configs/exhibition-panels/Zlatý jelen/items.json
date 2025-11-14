@@ -1,1 +1,25 @@
-
+{
+  "items": [
+    {
+      "path": "files/Tabule/ZLATÝ JELEN1.pdf",
+      "type": "document",
+      "title": "Zlatý jelen - panel č. 1"
+    },
+    {
+      "path": "files/Tabule/ZLATÝ JELEN2.pdf",
+      "type": "document",
+      "title": "Zlatý jelen - panel č. 2"
+    },
+    {
+      "path": "files/Tabule/ZLATÝ JELEN3.pdf",
+      "type": "document",
+      "title": "Zlatý jelen - panel č. 3"
+    },
+    {
+      "path": "files/Tabule/14-družstevní/obr1_1947Nová Svoboda.jpg",
+      "type": "image",
+      "title": "Nová svoboda",
+      "description": "Novinový článek v Nové Svobodě 1947."
+    },
+]
+}
