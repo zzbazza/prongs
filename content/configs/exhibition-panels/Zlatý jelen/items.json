@@ -43,5 +43,36 @@
       "title": "Centrum obce 1937–1940",
       "description": "Pohled na střed obce 1937–1940 (archiv Františka Dedka)."
     },
+    {
+      "path": "files/Tabule/mapa.jpg",
+      "type": "image",
+      "title": "Císařské otisky",
+      "description": "Parc. č. 304 a 305 Kateřiny Urbánkové (vyznačený dům č. p. 124) na císařských otiscích stabilního katastru z roku 1833."
+    },
+    {
+      "path": "files/Tabule/situalčni_plan.jpg",
+      "type": "image",
+      "title": "ituační plán z roku 1888",
+      "description": "Situační plán z roku 1888 dělaný pro potřeby řezníka Javorského (Archiv města Ostravy). "
+    },
+    {
+      "path": "files/Tabule/starafoto_a.jpg",
+      "type": "image",
+      "title": "Matouš Hořínek 1893",
+      "description": "Matouš Hořínek s manželkou Terezií a dcerami (zleva Terezie, Cecílie Prokšová, Marie), foceno roku 1893 (archiv Jiřího Klegy)."
+    },
+    {
+      "path": "files/Tabule/razítko.jpg",
+      "type": "image",
+      "title": "Družstvo společenského hostince",
+      "description": "Razítko Družstva společenského hostince (Archiv města Ostravy)."
+    },
+    {
+      "path": "files/Tabule/plan-jelen.jpg",
+      "type": "image",
+      "title": "Hostinec U Zlatého jelena",
+      "description": "Projektový plán hostince U Zlatého jelena."
+    },
+   
 ]
 }
