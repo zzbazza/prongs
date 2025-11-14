@@ -1,49 +1,4 @@
 {
   "items": [
-    {
-      "path": "files/Tabule/11-socialisticka1.pdf",
-      "type": "document",
-      "title": "11-SOCIALISTICKÁ1"
-    },
-    {
-      "path": "files/Tabule/12-socialisticka2.pdf",
-      "type": "document",
-      "title": "12-SOCIALISTICKÁ2"
-    },
-    {
-      "path": "files/Tabule/13-kulturni.pdf",
-      "type": "document",
-      "title": "13-KULTURNÍ"
-    },
-    {
-      "path": "files/Tabule/14-druzstevni.pdf",
-      "type": "document",
-      "title": "14-DRUŽSTEVNÍ"
-    },
-    {
-      "path": "files/Tabule/zlaty-jelen1.pdf",
-      "type": "document",
-      "title": "ZLATÝ JELEN1"
-    },
-    {
-      "path": "files/Tabule/zlaty-jelen2.pdf",
-      "type": "document",
-      "title": "ZLATÝ JELEN2"
-    },
-    {
-      "path": "files/Tabule/zlaty-jelen3.pdf",
-      "type": "document",
-      "title": "ZLATÝ JELEN3"
-    },
-    {
-      "path": "files/Tabule/zlaty-jelen4.pdf",
-      "type": "document",
-      "title": "ZLATÝ JELEN4-SOKOL"
-    },
-    {
-      "path": "files/Tabule/zlaty-jelen5.pdf",
-      "type": "document",
-      "title": "ZLATÝ JELEN5-OREL"
-    }
   ]
 }
