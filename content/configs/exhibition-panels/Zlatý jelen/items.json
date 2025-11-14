@@ -34,8 +34,14 @@
      {
       "path": "files/Tabule/Zlatý_jelen/Obr17_1923-1937.jpg",
       "type": "image",
-      "title": "Centrum obce 1898",
-      "description": "Novinový článek v Nové Svobodě 1947."
+      "title": "Centrum obce 1923-1937",
+      "description": "Pohled na střed obce 1923–1937 (archiv Františka Dedka)."
+    },
+    {
+      "path": "files/Tabule/Zlatý_jelen/DSC_0264.jpg",
+      "type": "image",
+      "title": "Centrum obce 1937–1940",
+      "description": "Pohled na střed obce 1937–1940 (archiv Františka Dedka)."
     },
 ]
 }
