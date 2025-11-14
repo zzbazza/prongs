@@ -5,3 +5,35 @@
       "type": "document",
       "title": "Tabule 14 – Družstevní"
     },
+    {
+      "path": "files/Tabule/14-družstevní/obr1_1947Nová Svoboda.jpg",
+      "type": "image",
+      "title": "Nová svoboda",
+      "description": "Novinový článek v Nové Svobodě 1947."
+    },
+    {
+      "path": "files/Tabule/14-družstevní/obr2_1953ŠHol_1.jpg",
+      "type": "image",
+      "title": "Štěpán Holaň",
+      "description": "Článek o procesu se Štěpánem Holaněm, 1953."
+    },
+      {
+      "path": "files/Tabule/14-družstevní/obr3_1953Zemnoviny.jpg",
+      "type": "image",
+      "title": "Jsou všichni na jejich lodi?",
+      "description": "Novinový článek v Zemědělských novinách v roce 1953 – Jsou všichni na jejich lodi?"
+    },
+    {
+      "path": "files/Tabule/14-družstevní/bourani.jpg",
+      "type": "image",
+      "title": "Bourání panského dvora",
+      "description": "Bourání panského dvora před výstavbou budov JZD, 1961."
+    },
+    {
+      "path": "files/Tabule/14-družstevní/obr5-mapa.jpg",
+      "type": "image",
+      "title": "Plánované hospodaření JZD",
+      "description": "Plánované hospodaření JZD – stav před kolektivizací a stav po rozorání mezí."
+    },
+]
+}
