@@ -199,7 +199,41 @@
       "title": "Zípis schůze 1908",
       "description": "Výtah ze zápisu výborové schůze TJ Sokol 28. dubna 1908 (archiv TJ Sokol Stará Bělá)."
     },
-     
-    
+    {
+      "path": "files/Tabule/Zlatý_jelen/OUMO_kart395_Orel_01.jpg",
+      "type": "image",
+      "title": "Přestavba 1921",
+      "description": "Oznamovací protokol o přestavbě prostor na tělocvičnu Jednoty Orla Čsl. v roce 1921 (Archiv města Ostravy)."
+    },
+    {
+      "path": "files/Tabule/Zlatý_jelen/Obr26_1920Kristus.jpg",
+      "type": "image",
+      "title": "Kristus vítězí",
+      "description": "Herci Omladiny v divadelní hře Kristus vítězí (poskytl Jiří Stuchlý)."
+    },
+     {
+      "path": "files/Tabule/Zlatý_jelen/Obr28_1923ples.jpg",
+      "type": "image",
+      "title": "Ples Orla 1923",
+      "description": "Pozvánka na ples Jednoty Orla Čsl. v roce 1923 (archiv Oldřicha Dlouhého)."
+    },
+  {
+      "path": "files/Tabule/Zlatý_jelen/Obr29_1928ples.jpg",
+      "type": "image",
+      "title": "Ples Orla 1928",
+      "description": "Pozvánka na ples Jednoty Orla Čsl. v roce 1928 (poskytl Jiří Stuchlý)."
+    },  
+    {
+      "path": "files/Tabule/Zlatý_jelen/Obr30_1929ples.jpg",
+      "type": "image",
+      "title": "Ples Orla 1929",
+      "description": "Pozvánka na ples Jednoty Orla Čsl. v roce 1929 (archiv Oldřicha Dlouhého)."
+    },  
+    {
+      "path": "files/Tabule/Zlatý_jelen/Obr31_1930ples.jpg",
+      "type": "image",
+      "title": "Ples Orla 1930",
+      "description": "Pozvánka na ples Jednoty Orla Čsl. v roce 1930 (poskytl Jiří Stuchlý)."
+    }, 
 ]
 }
