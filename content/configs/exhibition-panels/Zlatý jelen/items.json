@@ -26,9 +26,15 @@
       "title": "Zlatý jelen Jednota Orla ČSL.– panel č. 5"
     },
     {
-      "path": "files/Tabule/14-družstevní/obr1_1947Nová Svoboda.jpg",
+      "path": "files/Tabule/Zlatý_jelen/foto-uvod.jpg",
       "type": "image",
-      "title": "Nová svoboda",
+      "title": "Centrum obce 1898",
+      "description": "Centrum obce a Společenský hostinec v původní podobě před přestavbou v roce 1898 (archiv Františka Dedka)."
+    },
+     {
+      "path": "files/Tabule/Zlatý_jelen/Obr17_1923-1937.jpg",
+      "type": "image",
+      "title": "Centrum obce 1898",
       "description": "Novinový článek v Nové Svobodě 1947."
     },
 ]
