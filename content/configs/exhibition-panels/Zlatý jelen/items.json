@@ -32,6 +32,18 @@
       "description": "Centrum obce a Společenský hostinec v původní podobě před přestavbou v roce 1898 (archiv Františka Dedka)."
     },
      {
+      "path": "files/Tabule/Zlatý_jelen/1.jpg",
+      "type": "image",
+      "title": "Náves 1899–1922 ",
+      "description": "Pohled na náves od jihu mezi léty 1899–1922."
+    },
+    {
+      "path": "files/Tabule/Zlatý_jelen/2.jpg",
+      "type": "image",
+      "title": "Hostinec po roce 1899",
+      "description": "Pohled na hostinec U Zlatého jelena od východu po roce 1899."
+    }, 
+    {
       "path": "files/Tabule/Zlatý_jelen/Obr17_1923-1937.jpg",
       "type": "image",
       "title": "Centrum obce 1923-1937",
@@ -44,76 +56,114 @@
       "description": "Pohled na střed obce 1937–1940 (archiv Františka Dedka)."
     },
     {
-      "path": "files/Tabule/mapa.jpg",
+      "path": "files/Tabule/Zlatý_jelen/DSC_0234.jpg",
+      "type": "image",
+      "title": "Budova č. p. 173",
+      "description": "Pohled na zadní trakt Motyčkovy pekárny s budovou č. p. 173 ve 30. letech, před 1937."
+    },
+    {
+      "path": "files/Tabule/Zlatý_jelen/5.jpg",
+      "type": "image",
+      "title": "Náves z kostela 1930–1940",
+      "description": "Pohled na náves z věže kostela mezi léty 1930 a 1940."
+    },
+    {
+      "path": "files/Tabule/Zlatý_jelen/DSC_0275.jpg",
+      "type": "image",
+      "title": "Náves 1940–1941",
+      "description": "Pohled na náves od jihu v letech 1940, 1941."
+    },
+    {
+      "path": "files/Tabule/Zlatý_jelen/6.jpg",
+      "type": "image",
+      "title": "Náves 1941–1945",
+      "description": "Pohled na náves ze západu 1941–1945."
+    },
+    {
+      "path": "files/Tabule/Zlatý_jelen/7.jpg",
+      "type": "image",
+      "title": "Náves 1941–1945",
+      "description": "Pohled na náves ze západu 1941–1945. "
+    },
+    {
+      "path": "files/Tabule/Zlatý_jelen/mapa.jpg",
       "type": "image",
       "title": "Císařské otisky",
       "description": "Parc. č. 304 a 305 Kateřiny Urbánkové (vyznačený dům č. p. 124) na císařských otiscích stabilního katastru z roku 1833."
     },
     {
-      "path": "files/Tabule/situalčni_plan.jpg",
+      "path": "files/Tabule/Zlatý_jelen/situalčni_plan.jpg",
       "type": "image",
       "title": "ituační plán z roku 1888",
       "description": "Situační plán z roku 1888 dělaný pro potřeby řezníka Javorského (Archiv města Ostravy). "
     },
     {
-      "path": "files/Tabule/starafoto_a.jpg",
+      "path": "files/Tabule/Zlatý_jelen/starafoto_a.jpg",
       "type": "image",
       "title": "Matouš Hořínek 1893",
       "description": "Matouš Hořínek s manželkou Terezií a dcerami (zleva Terezie, Cecílie Prokšová, Marie), foceno roku 1893 (archiv Jiřího Klegy)."
     },
     {
-      "path": "files/Tabule/razítko.jpg",
+      "path": "files/Tabule/Zlatý_jelen/razítko.jpg",
       "type": "image",
       "title": "Družstvo společenského hostince",
       "description": "Razítko Družstva společenského hostince (Archiv města Ostravy)."
     },
     {
-      "path": "files/Tabule/plan-jelen.jpg",
+      "path": "files/Tabule/Zlatý_jelen/plan-jelen.jpg",
       "type": "image",
       "title": "Hostinec U Zlatého jelena",
       "description": "Projektový plán hostince U Zlatého jelena."
     },
    {
-      "path": "files/Tabule/1914domcetata.jpg",
+      "path": "files/Tabule/Zlatý_jelen/1914domcetata.jpg",
       "type": "image",
       "title": "Domobranecká četa 1914",
       "description": "Domobranecká četa v roce 1914. Po stranách manželé Johana a Ludvík Máchovi (archiv Jiřího Klegy)."
     },
     {
-      "path": "files/Tabule/Obr6_1867volby_návěstí.jpg",
+      "path": "files/Tabule/Zlatý_jelen/Obr6_1867volby_návěstí.jpg",
       "type": "image",
       "title": "Návěstí 1867",
       "description": "Návěstí k volbě do obecního zastupitelstva v roce 1867 (archiv Františka Dedka)."
     },
     {
-      "path": "files/Tabule/Obr7_1867protokol_voleb.jpg",
+      "path": "files/Tabule/Zlatý_jelen/Obr7_1867protokol_voleb.jpg",
       "type": "image",
       "title": "Protokol voleb 1867",
       "description": "Protokol o volbě zastupitelstva obecního v roce 1867 (archiv Františka Dedka)."
     },
     {
-      "path": "files/Tabule/Obr8_1885volba_výboru.jpg",
+      "path": "files/Tabule/Zlatý_jelen/Obr8_1885volba_výboru.jpg",
       "type": "image",
       "title": "Volby 1885",
       "description": "Vypsání volby obecního výboru a náhradníků v roce 1885 (archiv Františka Dedka)."
     },
     {
-      "path": "files/Tabule/Obr9_1888volba_výboru.jpg",
+      "path": "files/Tabule/Zlatý_jelen/Obr9_1888volba_výboru.jpg",
       "type": "image",
       "title": "Volby 1888",
       "description": "Pozvání na volby do výboru roku 1888 (archiv Františka Dedka)."
     },
     {
-      "path": "files/Tabule/BSMO_kart118_ic3166_Stankovi.jpg",
+      "path": "files/Tabule/Zlatý_jelen/BSMO_kart118_ic3166_Stankovi.jpg",
       "type": "image",
       "title": "Plán přestavby sálu 1937",
       "description": "Plán přestavby sálu na bytové jednotky v roce 1937 (Archiv města Ostravy)."
     },
     {
-      "path": "files/Tabule/Obr14_1936sl_pam.jpg",
+      "path": "files/Tabule/Zlatý_jelen/Obr14_1936sl_pam.jpg",
       "type": "image",
       "title": "Slavnost 1936",
       "description": "Slavnost k odhalení pomníku z roku 1936. Čekání na příjezd Malypetra před budovou hostince (archiv Františka Dedka)."
     },
+       {
+      "path": "files/Tabule/Zlatý_jelen/3.jpg",
+      "type": "image",
+      "title": "Průvod 1936",
+      "description": "Průvod slavnosti k odhalení památníku I. sv. války, T. G. Masaryka a A. Švehly v roce 1936. "
+    },
+     
+    
 ]
 }
