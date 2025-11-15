@@ -5,7 +5,7 @@
       "type": "document",
       "title": "Tabule 13 – Kulturní"
     },
-{
+    {
       "path": "files/Tabule/13-kulturní/obr2_koncertMps.jpg",
       "type": "image",
       "title": "Program Mužský pěvecký sbor",
@@ -47,13 +47,13 @@
       "title": "Plakát Naši furianti",
       "description": "Plakát divadelního představení z roku 1954 Naši furianti."
     },
-     {
+    {
       "path": "files/Tabule/13-kulturní/obr6_Zelené_pustiny1958.jpg",
       "type": "image",
       "title": "Zelené pustiny",
       "description": "Zelené pustiny: Jiřina Polášková a Jaroslav Matýsek."
     },
-     {
+    {
       "path": "files/Tabule/13-kulturní/obr7_D34zp.jpg",
       "type": "image",
       "title": "Divadelní soubor v Praze",
@@ -94,6 +94,6 @@
       "type": "image",
       "title": "Scéna Poprask na laguně",
       "description": "Scéna představení Poprask na laguně v roce 1974."
-    },
+    }
   ]
 }

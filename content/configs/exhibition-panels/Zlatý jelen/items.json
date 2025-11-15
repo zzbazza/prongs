@@ -31,7 +31,7 @@
       "title": "Centrum obce 1898",
       "description": "Centrum obce a Společenský hostinec v původní podobě před přestavbou v roce 1898 (archiv Františka Dedka)."
     },
-     {
+    {
       "path": "files/Tabule/Zlatý_jelen/1.jpg",
       "type": "image",
       "title": "Náves 1899–1922 ",
@@ -42,7 +42,7 @@
       "type": "image",
       "title": "Hostinec po roce 1899",
       "description": "Pohled na hostinec U Zlatého jelena od východu po roce 1899."
-    }, 
+    },
     {
       "path": "files/Tabule/Zlatý_jelen/Obr17_1923-1937.jpg",
       "type": "image",
@@ -115,7 +115,7 @@
       "title": "Hostinec U Zlatého jelena",
       "description": "Projektový plán hostince U Zlatého jelena."
     },
-   {
+    {
       "path": "files/Tabule/Zlatý_jelen/1914domcetata.jpg",
       "type": "image",
       "title": "Domobranecká četa 1914",
@@ -157,7 +157,7 @@
       "title": "Slavnost 1936",
       "description": "Slavnost k odhalení pomníku z roku 1936. Čekání na příjezd Malypetra před budovou hostince (archiv Františka Dedka)."
     },
-       {
+    {
       "path": "files/Tabule/Zlatý_jelen/3.jpg",
       "type": "image",
       "title": "Průvod 1936",
@@ -211,29 +211,29 @@
       "title": "Kristus vítězí",
       "description": "Herci Omladiny v divadelní hře Kristus vítězí (poskytl Jiří Stuchlý)."
     },
-     {
+    {
       "path": "files/Tabule/Zlatý_jelen/Obr28_1923ples.jpg",
       "type": "image",
       "title": "Ples Orla 1923",
       "description": "Pozvánka na ples Jednoty Orla Čsl. v roce 1923 (archiv Oldřicha Dlouhého)."
     },
-  {
+    {
       "path": "files/Tabule/Zlatý_jelen/Obr29_1928ples.jpg",
       "type": "image",
       "title": "Ples Orla 1928",
       "description": "Pozvánka na ples Jednoty Orla Čsl. v roce 1928 (poskytl Jiří Stuchlý)."
-    },  
+    },
     {
       "path": "files/Tabule/Zlatý_jelen/Obr30_1929ples.jpg",
       "type": "image",
       "title": "Ples Orla 1929",
       "description": "Pozvánka na ples Jednoty Orla Čsl. v roce 1929 (archiv Oldřicha Dlouhého)."
-    },  
+    },
     {
       "path": "files/Tabule/Zlatý_jelen/Obr31_1930ples.jpg",
       "type": "image",
       "title": "Ples Orla 1930",
       "description": "Pozvánka na ples Jednoty Orla Čsl. v roce 1930 (poskytl Jiří Stuchlý)."
-    }, 
-]
+    }
+  ]
 }
