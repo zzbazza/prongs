@@ -4,7 +4,7 @@
 
 import { state, elements, FILE_ICONS } from './state.js';
 import { getCategoryTitles } from './api.js';
-import { escapeHtml } from './utils.js';
+import { escapeHtml, getThumbnailPath } from './utils.js';
 import { openFile } from './fileViewer.js';
 
 function buildCategoryBreadcrumb(categoryTitles, isActive = false) {
@@ -261,7 +261,7 @@ export function showHome(includeItems = false) {
 
       const itemsHtml = filteredItems.map((item, index) => {
         const iconHtml = item.type === 'image'
-          ? `<img src="/content/${item.path}" alt="${escapeHtml(item.title || item.path)}" class="file-thumbnail" loading="lazy">`
+          ? `<img src="/content/${getThumbnailPath(item.path)}" alt="${escapeHtml(item.title || item.path)}" class="file-thumbnail" loading="lazy">`
           : `<div class="file-icon">${FILE_ICONS[item.type] || FILE_ICONS.unknown}</div>`;
 
         return `
@@ -389,7 +389,7 @@ export function renderItemList(items) {
   const html = items.map((item, index) => {
     // Use thumbnail for images, icon for other types
     const iconHtml = item.type === 'image'
-      ? `<img src="/content/${item.path}" alt="${escapeHtml(item.title || item.path)}" class="file-thumbnail" loading="lazy">`
+      ? `<img src="/content/${getThumbnailPath(item.path)}" alt="${escapeHtml(item.title || item.path)}" class="file-thumbnail" loading="lazy">`
       : `<div class="file-icon">${FILE_ICONS[item.type] || FILE_ICONS.unknown}</div>`;
 
     return `
