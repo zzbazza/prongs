@@ -1,9 +1,14 @@
 {
   "items": [
     {
-      "path": "files/Tabule/10-druhovalecna2.pdf",
-      "type": "document",
+      "path": "files/Tabule/9-druhovalecna1.dzi",
+      "type": "panel",
       "title": "Tabule 9 - Druhoválečná část 2"
+    },
+    {
+      "path": "files/Tabule/10-druhovalecna2.dzi",
+      "type": "panel",
+      "title": "Tabule 10 - Druhoválečná"
     },
     {
       "path": "files/Tabule/9-10 - druhoválečná/1.jpg",
@@ -243,11 +248,6 @@
       "type": "image",
       "title": "Sloup elektrického napětí",
       "description": "Sloup elektrického napětí na Gregárkově ulici ve Staré Bělé po náletech z přelomu dubna a května 1945. Foto: Archiv Františka Dedka"
-    },
-    {
-      "path": "files/Tabule/9-druhovalecna1.pdf",
-      "type": "document",
-      "title": "Tabule 9 - Druhoválečná"
     }
   ]
 }

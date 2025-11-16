@@ -1,6 +1,16 @@
 {
   "items": [
     {
+      "path": "files/Tabule/7-prvorepublikova1.dzi",
+      "type": "panel",
+      "title": "Tabule 7 - Prvorepubliková"
+    },
+    {
+      "path": "files/Tabule/8-prvorepublikova2.dzi",
+      "type": "panel",
+      "title": "Tabule 7 - Prvorepubliková část 2"
+    },
+    {
       "path": "files/Tabule/7-8-prvorepubliková/bez-nazvu.jpg",
       "type": "image",
       "title": "Slavnost položení základního kamene Sokolovny",
@@ -173,16 +183,6 @@
       "type": "image",
       "title": "Členové brigády pro výstavbu Husova sboru",
       "description": "Členové brigády pro výstavbu Husova sboru. Archiv rodiny Krejčíčkovy"
-    },
-    {
-      "path": "files/Tabule/7-prvorepublikova1.pdf",
-      "type": "document",
-      "title": "Tabule 7 - Prvorepubliková"
-    },
-    {
-      "path": "files/Tabule/8-prvorepublikova2.pdf",
-      "type": "document",
-      "title": "Tabule 7 - Prvorepubliková část 2"
     }
   ]
 }

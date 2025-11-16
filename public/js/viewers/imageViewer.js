@@ -87,10 +87,10 @@ export function renderImageViewer(item, openFile) {
       url: imagePath
     },
     // Appearance
-    showNavigationControl: false,
+    showNavigationControl: true,
     showRotationControl: false,
     showHomeControl: false,
-    showZoomControl: false,
+    showZoomControl: true,
     showFullPageControl: false,
     // Behavior
     defaultZoomLevel: 0,

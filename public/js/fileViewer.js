@@ -5,7 +5,7 @@
 import { state, elements } from './state.js';
 import { updateBreadcrumbs } from './navigation.js';
 import { renderImageViewer } from './viewers/imageViewer.js';
-import { renderPDFViewer, renderTextViewer, renderVideoViewer, renderAudioViewer } from './viewers/documentViewers.js';
+import { renderPDFViewer, renderTextViewer, renderVideoViewer, renderAudioViewer, renderPanelViewer } from './viewers/documentViewers.js';
 
 export function openFile(item, index) {
   state.currentIndex = index;
@@ -20,6 +20,9 @@ export function openFile(item, index) {
       break;
     case 'document':
       renderPDFViewer(item);
+      break;
+    case 'panel':
+      renderPanelViewer(item);
       break;
     case 'text':
       renderTextViewer(item);

@@ -1,9 +1,11 @@
 /**
- * Document Viewers (PDF, Text, Video, Audio)
+ * Document Viewers (PDF, Text, Video, Audio, Panel)
  */
 
 import { elements } from '../state.js';
 import { escapeHtml } from '../utils.js';
+
+let currentPanelViewer = null;
 
 // Simple PDF viewer using iframe with Chrome's built-in PDF viewer
 export function renderPDFViewer(item) {
@@ -71,4 +73,75 @@ export function renderAudioViewer(item) {
       </audio>
     </div>
   `;
+}
+
+// Render panel viewer using OpenSeadragon with DZI tiles
+export function renderPanelViewer(item) {
+  // Cleanup previous viewer if exists
+  if (currentPanelViewer) {
+    currentPanelViewer.destroy();
+    currentPanelViewer = null;
+  }
+
+  // The path should point to a .dzi file
+  const dziPath = `/content/${item.path}`;
+
+  elements.viewerContent.innerHTML = `
+    <div class="panel-viewer-container" style="width: 100%; height: 100%;">
+      <div id="panel-viewer" style="width: 100%; height: 100%; background: #525252;"></div>
+    </div>
+  `;
+
+  // Check if OpenSeadragon is loaded
+  if (typeof OpenSeadragon === 'undefined') {
+    console.error('OpenSeadragon not loaded');
+    document.getElementById('panel-viewer').innerHTML = `
+      <div style="color: white; padding: var(--spacing-xl); text-align: center;">
+        <div>OpenSeadragon knihovna nebyla načtena</div>
+        <div style="font-size: 0.9em; margin-top: var(--spacing-md);">Zkuste obnovit stránku</div>
+      </div>
+    `;
+    return;
+  }
+
+  // Initialize OpenSeadragon viewer with DZI tiles
+  currentPanelViewer = OpenSeadragon({
+    id: 'panel-viewer',
+    prefixUrl: 'https://cdnjs.cloudflare.com/ajax/libs/openseadragon/4.1.0/images/',
+    tileSources: dziPath,
+    // Appearance
+    showNavigationControl: false,
+    showRotationControl: false,
+    showHomeControl: false,
+    showZoomControl: false,
+    showFullPageControl: false,
+    // Behavior
+    defaultZoomLevel: 0,
+    minZoomLevel: 0.5,
+    maxZoomLevel: 10,
+    visibilityRatio: 1.0,
+    constrainDuringPan: true,
+    animationTime: 0.5,
+    // Touch gestures
+    gestureSettingsMouse: {
+      clickToZoom: false,
+      dblClickToZoom: true,
+      pinchToZoom: true,
+      flickEnabled: true,
+      flickMinSpeed: 0.5
+    },
+    gestureSettingsTouch: {
+      clickToZoom: false,
+      dblClickToZoom: true,
+      pinchToZoom: true,
+      flickEnabled: true,
+      flickMinSpeed: 0.5
+    },
+    // Performance
+    immediateRender: true,
+    smoothTileEdgesMinZoom: 1.5,
+    blendTime: 0.1
+  });
+
+  console.log('Panel viewer initialized for:', dziPath);
 }

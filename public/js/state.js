@@ -48,5 +48,6 @@ export const FILE_ICONS = {
   text: '📝',
   video: '🎬',
   audio: '🎵',
+  panel: '🖼️',
   unknown: '📎'
 };
