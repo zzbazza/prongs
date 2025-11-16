@@ -1,27 +1,27 @@
 {
   "items": [
     {
-      "path": "files/Tabule/ZLATÝ JELEN1.pdf",
+      "path": "files/Tabule/zlaty-jelen1.pdf",
       "type": "document",
       "title": "Zlatý jelen – panel č. 1"
     },
     {
-      "path": "files/Tabule/ZLATÝ JELEN2.pdf",
+      "path": "files/Tabule/zlaty-jelen2.pdf",
       "type": "document",
       "title": "Zlatý jelen – panel č. 2"
     },
     {
-      "path": "files/Tabule/ZLATÝ JELEN3.pdf",
+      "path": "files/Tabule/zlaty-jelen3.pdf",
       "type": "document",
       "title": "Zlatý jelen – panel č. 3"
     },
     {
-      "path": "files/Tabule/ZLATÝ JELEN4-SOKOL.pdf",
+      "path": "files/Tabule/zlaty-jelen4.pdf",
       "type": "document",
       "title": "Zlatý jelen TJ Sokol – panel č. 4"
     },
     {
-      "path": "files/Tabule/ZLATÝ JELEN5-OREL.pdf",
+      "path": "files/Tabule/zlaty-jelen5.pdf",
       "type": "document",
       "title": "Zlatý jelen Jednota Orla ČSL.– panel č. 5"
     },
@@ -94,7 +94,7 @@
     {
       "path": "files/Tabule/Zlatý_jelen/situalčni_plan.jpg",
       "type": "image",
-      "title": "ituační plán z roku 1888",
+      "title": "Situační plán z roku 1888",
       "description": "Situační plán z roku 1888 dělaný pro potřeby řezníka Javorského (Archiv města Ostravy). "
     },
     {
