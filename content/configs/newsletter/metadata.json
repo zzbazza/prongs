@@ -1,5 +1,7 @@
 {
   "title": "Staroběleský zpravodaj",
   "icon": "📰",
+  "icon_path": "/static/icons/logo_ZPRAVODAJ.svg",
+  "filter": false,
   "description": "Stará Běla newsletter"
 }

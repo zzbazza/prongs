@@ -1,5 +1,7 @@
 {
   "title": "9,10  Druhoválečná",
   "icon": "🎖️",
+  "icon_path": "/static/icons/protektorat.svg",
+  "filter": false,
   "description": "Tabule 9-10 - období druhé světové války"
 }

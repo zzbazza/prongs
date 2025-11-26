@@ -1,5 +1,7 @@
 {
   "title": "Listiny",
   "icon": "📜",
+  "icon_path": "/static/icons/listina.svg",
+  "filter": false,
   "description": "Historické dokumenty a listiny"
 }

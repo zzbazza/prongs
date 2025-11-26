@@ -1,5 +1,7 @@
 {
   "title": "Kronika zahradkáři",
   "icon": "🌱",
+  "icon_path": "/static/icons/zahradkari.svg",
+  "filter": false,
   "description": "Kronika zahradkářů"
 }

@@ -1,5 +1,7 @@
 {
   "title": "Zlatý jelen",
   "icon": "🦌",
+  "icon_path": "/static/icons/jelen.svg",
+  "filter": false,
   "description": ""
 }

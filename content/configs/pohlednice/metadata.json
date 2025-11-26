@@ -1,5 +1,7 @@
 {
   "title": "Pohlednice",
-  "icon": "files/ikony/pohlednice.svg",
+  "icon": "💌",
+  "icon_path": "/static/icons/pohlednice.svg",
+  "filter": false,
   "description": "Historické pohlednice"
 }

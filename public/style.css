@@ -83,6 +83,11 @@ body[data-text-size="small"] .file-icon {
   font-size: 56px;
 }
 
+body[data-text-size="small"] .file-icon-svg {
+  width: 100px;
+  height: 56px;
+}
+
 body[data-text-size="medium"] {
   font-size: 18px;
 }
@@ -97,6 +102,11 @@ body[data-text-size="large"] .file-item {
 
 body[data-text-size="large"] .file-icon {
   font-size: 96px;
+}
+
+body[data-text-size="large"] .file-icon-svg {
+  width: 140px;
+  height: 96px;
 }
 
 body[data-text-size="large"] .file-name {
@@ -597,6 +607,23 @@ button {
   margin-bottom: var(--spacing-md);
   filter: grayscale(100%) sepia(100%) hue-rotate(-10deg) saturate(80%) brightness(0.95) drop-shadow(0 2px 4px var(--shadow));
   flex-shrink: 0;
+}
+
+.file-icon-svg {
+  max-width: 120px;
+  height: 72px;
+  margin-bottom: var(--spacing-md);
+  filter: grayscale(100%) sepia(100%) hue-rotate(-10deg) saturate(80%) brightness(0.95) drop-shadow(0 2px 4px var(--shadow));
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.file-icon-svg.no-filter {
+  filter: drop-shadow(0 2px 4px var(--shadow));
+}
+
+.file-icon.no-filter {
+  filter: drop-shadow(0 2px 4px var(--shadow));
 }
 
 .file-thumbnail {

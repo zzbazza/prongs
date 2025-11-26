@@ -138,6 +138,8 @@ async function scanConfigsDirectory(dirPath, categoryPath = []) {
         pathString: subdirCategoryPath.join('/'),
         title: subdirMetadata.title || subdir.name,
         icon: subdirMetadata.icon || '📁',
+        icon_path: subdirMetadata.icon_path || null,
+        filter: subdirMetadata.filter !== undefined ? subdirMetadata.filter : true,
         description: subdirMetadata.description || '',
         parentPath: categoryPath,
         subcategories: subdirResult.categories,

@@ -234,15 +234,26 @@ export function showHome(includeItems = false) {
   }
 
   // Build HTML for categories/subcategories
-  let html = categories.map(category => `
-    <div class="file-item category-folder"
-         data-category-id="${category.id}"
-         data-has-subcategories="${(category.subcategories && category.subcategories.length > 0) ? 'true' : 'false'}">
-      <div class="file-icon">${category.icon || '📁'}</div>
-      <div class="file-name">${escapeHtml(category.title)}</div>
-      ${category.itemCount ? `<div class="file-description">${category.itemCount} položek</div>` : ''}
-    </div>
-  `).join('');
+  let html = categories.map(category => {
+    // Use icon_path for SVG if available, otherwise use text icon
+    // Apply filter class based on metadata filter property (default: true)
+    const shouldFilter = category.filter !== undefined ? category.filter : true;
+    const filterClass = shouldFilter ? '' : 'no-filter';
+
+    const iconHtml = category.icon_path
+      ? `<img src="${category.icon_path}" alt="${escapeHtml(category.title)}" class="file-icon-svg ${filterClass}">`
+      : `<div class="file-icon ${filterClass}">${category.icon || '📁'}</div>`;
+
+    return `
+      <div class="file-item category-folder"
+           data-category-id="${category.id}"
+           data-has-subcategories="${(category.subcategories && category.subcategories.length > 0) ? 'true' : 'false'}">
+        ${iconHtml}
+        <div class="file-name">${escapeHtml(category.title)}</div>
+        ${category.itemCount ? `<div class="file-description">${category.itemCount} položek</div>` : ''}
+      </div>
+    `;
+  }).join('');
 
   // If includeItems is true, also show items in current category
   if (includeItems) {

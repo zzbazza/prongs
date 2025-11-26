@@ -1,5 +1,7 @@
 {
   "title": "Sokol",
   "category": "photos",
-  "icon": "🤸"
+  "icon": "🤸",
+  "icon_path": "/static/icons/logo-sokol.svg",
+  "filter": false
 }
