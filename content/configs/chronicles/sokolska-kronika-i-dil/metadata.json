@@ -1,5 +1,7 @@
 {
   "title": "Sokolská kronika I. díl",
   "icon": "📕",
+  "icon_path": "/static/icons/logo-sokol.svg",
+  "filter": false,
   "description": "Sokolská kronika - první díl"
 }
