@@ -1,5 +1,7 @@
 {
   "title": "Orelská kronika Jan Pchálek",
   "icon": "📓",
+  "icon_path": "/static/icons/orel_old.svg",
+  "filter": false,
   "description": "Orelská kronika - Jan Pchálek"
 }
