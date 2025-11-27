@@ -1,4 +1,6 @@
 {
-  "title": "Kronika obce Star· Bl· 1922-1937",
+  "title": "Kronika obce Star√° Bl√° 1922-1937",
+  "icon_path": "/static/icons/znak_bela.svg",
+  "filter": false,
   "category": "chronicles"
 }
