@@ -1,5 +1,7 @@
 {
   "title": "Panely výstav",
   "icon": "🖼️",
+  "icon_path": "/static/icons/panely.svg",
+  "filter": false,
   "description": "Exhibition panels"
 }
