@@ -1,6 +1,6 @@
 {
   "title": "Kroniky",
-  "icon": "📖",
+  "icon": "📕",
   "icon_path": "/static/icons/sokol_stb.svg",
   "filter": false,
   "description": "Historical chronicles of Stará Běla"
