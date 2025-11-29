@@ -1,7 +1,6 @@
 {
-  "title": "Kronika obce Stará Blá 1922-1937",
+  "title": "Kronika obce Stará Bělá 1922-1937",
   "icon": "📖",
   "icon_path": "/static/icons/znak_bela.svg",
-  "filter": false,
-  "category": "chronicles"
+  "filter": false
 }
