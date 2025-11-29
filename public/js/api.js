@@ -62,7 +62,14 @@ export function getCategoryTitles(categoryPath) {
     const catId = categoryPath[i];
     const found = categories.find(c => c.id === catId);
     if (found) {
-      titles.push({ id: catId, title: found.title, level: i });
+      titles.push({
+        id: catId,
+        title: found.title,
+        level: i,
+        icon: found.icon,
+        icon_path: found.icon_path,
+        filter: found.filter
+      });
       categories = found.subcategories || [];
     } else {
       titles.push({ id: catId, title: catId, level: i });

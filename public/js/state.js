@@ -34,10 +34,7 @@ export const elements = {
   searchInput: document.getElementById('searchInput'),
   clearSearch: document.getElementById('clearSearch'),
   breadcrumbHome: document.getElementById('breadcrumbHome'),
-  breadcrumbSeparator: document.getElementById('breadcrumbSeparator'),
-  breadcrumbCategory: document.getElementById('breadcrumbCategory'),
-  breadcrumbSeparator2: document.getElementById('breadcrumbSeparator2'),
-  breadcrumbFile: document.getElementById('breadcrumbFile')
+  breadcrumbContent: document.getElementById('breadcrumbContent')
 };
 
 // File type icons

@@ -400,8 +400,8 @@ button {
 .breadcrumb-nav {
   background: var(--cream);
   border-bottom: 1px solid var(--gold-dark);
-  padding: var(--spacing-sm) var(--spacing-lg);
-  min-height: 40px;
+  padding: var(--spacing-md) var(--spacing-lg);
+  min-height: 56px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -412,13 +412,20 @@ button {
 .breadcrumb-content {
   display: flex;
   align-items: center;
-  gap: var(--spacing-sm);
-  font-size: 0.95em;
+  gap: var(--spacing-md);
+  font-size: 1.1em;
 }
 
 .breadcrumb-item {
   color: var(--text-primary);
   transition: color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.breadcrumb-item i {
+  font-size: 0.9em;
 }
 
 .breadcrumb-item.active {
@@ -435,36 +442,36 @@ button {
   text-decoration: underline;
 }
 
-.breadcrumb-segment {
-  color: var(--text-primary);
-  cursor: pointer;
-  transition: color 0.2s;
+.breadcrumb-icon {
+  font-size: 1em;
+  display: inline-flex;
+  align-items: center;
+  filter: grayscale(100%) sepia(100%) hue-rotate(-10deg) saturate(80%) brightness(0.95);
 }
 
-.breadcrumb-segment:hover {
-  color: var(--gold-primary);
-  text-decoration: underline;
+.breadcrumb-icon.no-filter {
+  filter: none;
 }
 
-.breadcrumb-segment.active {
-  font-weight: 600;
-  color: var(--gold-dark);
-  cursor: default;
+.breadcrumb-icon-svg {
+  height: 1.2em;
+  width: auto;
+  max-width: 1.5em;
+  display: inline-block;
+  vertical-align: middle;
+  filter: grayscale(100%) sepia(100%) hue-rotate(-10deg) saturate(80%) brightness(0.95);
+  object-fit: contain;
 }
 
-.breadcrumb-segment.active:hover {
-  text-decoration: none;
-}
-
-.breadcrumb-separator-inline {
-  color: var(--text-secondary);
-  margin: 0 0.5em;
+.breadcrumb-icon-svg.no-filter {
+  filter: none;
 }
 
 .breadcrumb-separator {
   color: var(--gold-primary);
   font-weight: 600;
   user-select: none;
+  font-size: 1.2em;
 }
 
 .btn-close-breadcrumb {

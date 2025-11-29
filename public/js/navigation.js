@@ -7,88 +7,133 @@ import { getCategoryTitles } from './api.js';
 import { escapeHtml, getThumbnailPath } from './utils.js';
 import { openFile } from './fileViewer.js';
 
-function buildCategoryBreadcrumb(categoryTitles, isActive = false) {
-  // Build clickable breadcrumb segments
-  const segments = categoryTitles.map((cat, index) => {
-    const isLast = index === categoryTitles.length - 1;
-    const className = isLast && isActive ? 'breadcrumb-segment active' : 'breadcrumb-segment';
-    return `<span class="${className}" data-level="${index}">${escapeHtml(cat.title)}</span>`;
-  });
+function getCategoryIcon(cat) {
+  // Use icon_path for SVG if available, otherwise use text icon, fallback to folder icon
+  const shouldFilter = cat.filter !== undefined ? cat.filter : true;
+  const filterClass = shouldFilter ? '' : 'no-filter';
 
-  return segments.join(' <span class="breadcrumb-separator-inline">›</span> ');
+  if (cat.icon_path) {
+    return `<img src="${cat.icon_path}" alt="" class="breadcrumb-icon-svg ${filterClass}">`;
+  } else if (cat.icon) {
+    return `<span class="breadcrumb-icon ${filterClass}">${cat.icon}</span>`;
+  } else {
+    return `<i class="fa-solid fa-folder"></i>`;
+  }
 }
 
 export function updateBreadcrumbs() {
+  // Clear all breadcrumbs except home
+  const homeElement = elements.breadcrumbHome;
+  elements.breadcrumbContent.innerHTML = '';
+  elements.breadcrumbContent.appendChild(homeElement);
+
   if (state.currentView === 'home') {
-    // Home view
-    elements.breadcrumbHome.classList.add('active');
-    elements.breadcrumbSeparator.style.display = 'none';
-    elements.breadcrumbCategory.style.display = 'none';
-    elements.breadcrumbSeparator2.style.display = 'none';
-    elements.breadcrumbFile.style.display = 'none';
+    // Home view - just show home
+    homeElement.classList.add('active');
     elements.closeViewer.style.display = 'none';
   } else if (state.currentView === 'viewer' && state.currentFile) {
     // Viewer - show full path including file
-    elements.breadcrumbHome.classList.remove('active');
-    elements.breadcrumbSeparator.style.display = 'inline';
-    elements.breadcrumbCategory.style.display = 'inline';
-    elements.breadcrumbCategory.classList.remove('active');
+    homeElement.classList.remove('active');
 
-    // Show category path or search context
+    // Add category breadcrumbs
     if (state.currentCategoryPath.length > 0) {
       const categoryTitles = getCategoryTitles(state.currentCategoryPath);
-      elements.breadcrumbCategory.innerHTML = buildCategoryBreadcrumb(categoryTitles, false);
-      attachBreadcrumbHandlers();
+      categoryTitles.forEach((cat, index) => {
+        // Add separator
+        const separator = document.createElement('span');
+        separator.className = 'breadcrumb-separator';
+        separator.textContent = '›';
+        elements.breadcrumbContent.appendChild(separator);
+
+        // Add category item
+        const item = document.createElement('span');
+        item.className = 'breadcrumb-item';
+        item.dataset.level = index;
+        item.innerHTML = `${getCategoryIcon(cat)} ${escapeHtml(cat.title)}`;
+        item.addEventListener('click', () => navigateToBreadcrumbLevel(index));
+        elements.breadcrumbContent.appendChild(item);
+      });
     } else if (state.searchQuery) {
-      elements.breadcrumbCategory.textContent = `Hledání: "${state.searchQuery}"`;
+      // Add search breadcrumb
+      const separator = document.createElement('span');
+      separator.className = 'breadcrumb-separator';
+      separator.textContent = '›';
+      elements.breadcrumbContent.appendChild(separator);
+
+      const item = document.createElement('span');
+      item.className = 'breadcrumb-item';
+      item.innerHTML = `<i class="fa-solid fa-search"></i> Hledání: "${escapeHtml(state.searchQuery)}"`;
+      elements.breadcrumbContent.appendChild(item);
     } else {
-      elements.breadcrumbCategory.textContent = 'Všechny položky';
+      // Add "all items" breadcrumb
+      const separator = document.createElement('span');
+      separator.className = 'breadcrumb-separator';
+      separator.textContent = '›';
+      elements.breadcrumbContent.appendChild(separator);
+
+      const item = document.createElement('span');
+      item.className = 'breadcrumb-item';
+      item.innerHTML = `<i class="fa-solid fa-folder-open"></i> Všechny položky`;
+      elements.breadcrumbContent.appendChild(item);
     }
 
-    // Show file name
-    elements.breadcrumbSeparator2.style.display = 'inline';
-    elements.breadcrumbFile.style.display = 'inline';
-    elements.breadcrumbFile.textContent = state.currentFile.title || state.currentFile.path;
-    elements.breadcrumbFile.classList.add('active');
+    // Add file breadcrumb
+    const separator = document.createElement('span');
+    separator.className = 'breadcrumb-separator';
+    separator.textContent = '›';
+    elements.breadcrumbContent.appendChild(separator);
+
+    const fileItem = document.createElement('span');
+    fileItem.className = 'breadcrumb-item active';
+    fileItem.innerHTML = `<i class="fa-solid fa-file"></i> ${escapeHtml(state.currentFile.title || state.currentFile.path)}`;
+    elements.breadcrumbContent.appendChild(fileItem);
 
     // Show close button
     elements.closeViewer.style.display = 'block';
   } else if (state.currentView === 'category' && state.currentCategoryPath.length > 0) {
     // Category view
-    elements.breadcrumbHome.classList.remove('active');
-    elements.breadcrumbSeparator.style.display = 'inline';
-    elements.breadcrumbCategory.style.display = 'inline';
-    elements.breadcrumbSeparator2.style.display = 'none';
-    elements.breadcrumbFile.style.display = 'none';
-    elements.closeViewer.style.display = 'none';
+    homeElement.classList.remove('active');
 
-    // Show full category path
+    // Add category breadcrumbs
     const categoryTitles = getCategoryTitles(state.currentCategoryPath);
-    elements.breadcrumbCategory.innerHTML = buildCategoryBreadcrumb(categoryTitles, true);
-    attachBreadcrumbHandlers();
+    categoryTitles.forEach((cat, index) => {
+      // Add separator
+      const separator = document.createElement('span');
+      separator.className = 'breadcrumb-separator';
+      separator.textContent = '›';
+      elements.breadcrumbContent.appendChild(separator);
+
+      // Add category item
+      const item = document.createElement('span');
+      const isLast = index === categoryTitles.length - 1;
+      item.className = isLast ? 'breadcrumb-item active' : 'breadcrumb-item';
+      item.dataset.level = index;
+      item.innerHTML = `${getCategoryIcon(cat)} ${escapeHtml(cat.title)}`;
+      if (!isLast) {
+        item.addEventListener('click', () => navigateToBreadcrumbLevel(index));
+      }
+      elements.breadcrumbContent.appendChild(item);
+    });
+
+    elements.closeViewer.style.display = 'none';
   } else if (state.currentView === 'search') {
     // Search view
-    elements.breadcrumbHome.classList.remove('active');
-    elements.breadcrumbSeparator.style.display = 'inline';
-    elements.breadcrumbCategory.style.display = 'inline';
-    elements.breadcrumbSeparator2.style.display = 'none';
-    elements.breadcrumbFile.style.display = 'none';
-    elements.closeViewer.style.display = 'none';
-    elements.breadcrumbCategory.textContent = `Hledání: "${state.searchQuery}"`;
-    elements.breadcrumbCategory.classList.add('active');
-  }
-}
+    homeElement.classList.remove('active');
 
-function attachBreadcrumbHandlers() {
-  // Attach click handlers to each breadcrumb segment
-  const segments = elements.breadcrumbCategory.querySelectorAll('.breadcrumb-segment');
-  segments.forEach(segment => {
-    segment.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const level = parseInt(segment.dataset.level);
-      navigateToBreadcrumbLevel(level);
-    });
-  });
+    // Add separator
+    const separator = document.createElement('span');
+    separator.className = 'breadcrumb-separator';
+    separator.textContent = '›';
+    elements.breadcrumbContent.appendChild(separator);
+
+    // Add search breadcrumb
+    const item = document.createElement('span');
+    item.className = 'breadcrumb-item active';
+    item.innerHTML = `<i class="fa-solid fa-search"></i> Hledání: "${escapeHtml(state.searchQuery)}"`;
+    elements.breadcrumbContent.appendChild(item);
+
+    elements.closeViewer.style.display = 'none';
+  }
 }
 
 function navigateToBreadcrumbLevel(level) {
