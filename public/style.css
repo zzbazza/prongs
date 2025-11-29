@@ -578,7 +578,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 15px var(--spacing-xl);
   border-radius: var(--radius-md);
   cursor: pointer;
@@ -652,7 +652,7 @@ body[data-text-size="large"] .file-thumbnail {
   hyphens: auto;
   font-weight: 600;
   color: var(--text-primary);
-  line-height: 1.4;
+  line-height: 1.1;
   font-size: 1.1em;
   width: 100%;
 }
@@ -674,6 +674,22 @@ body[data-text-size="large"] .file-thumbnail {
 }
 
 .file-item:hover .file-description {
+  color: var(--cream-light);
+  opacity: 0.9;
+}
+
+.category-count {
+  text-align: center;
+  font-size: 0.85em;
+  color: var(--text-secondary);
+  margin-top: auto;
+  padding-top: var(--spacing-sm);
+  line-height: 1.5;
+  width: 100%;
+  font-weight: 500;
+}
+
+.file-item:hover .category-count {
   color: var(--cream-light);
   opacity: 0.9;
 }

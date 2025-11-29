@@ -250,7 +250,7 @@ export function showHome(includeItems = false) {
            data-has-subcategories="${(category.subcategories && category.subcategories.length > 0) ? 'true' : 'false'}">
         ${iconHtml}
         <div class="file-name">${escapeHtml(category.title)}</div>
-        ${category.itemCount ? `<div class="file-description">${category.itemCount} položek</div>` : ''}
+        ${category.itemCount ? `<div class="category-count">${category.itemCount} položek</div>` : ''}
       </div>
     `;
   }).join('');
