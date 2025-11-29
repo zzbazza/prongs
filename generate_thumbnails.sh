@@ -94,7 +94,7 @@ process_image() {
 
     # Check if thumbnail already exists
     if [ -f "$thumb_path" ]; then
-        echo -e "${YELLOW}⊙${NC} Skipping (exists): $image_path"
+#        echo -e "${YELLOW}⊙${NC} Skipping (exists): $image_path"
         ((skipped_thumbnails++))
         return 0
     fi

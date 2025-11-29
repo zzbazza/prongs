@@ -67,7 +67,7 @@ process_pdf() {
 
     # Check if DZI already exists
     if [ -f "$dzi_path" ]; then
-        echo -e "${YELLOW}⊙${NC} Skipping (exists): $pdf_name.dzi"
+#        echo -e "${YELLOW}⊙${NC} Skipping (exists): $pdf_name.dzi"
         ((skipped_dzi++))
         return 0
     fi
