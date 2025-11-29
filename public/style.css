@@ -654,9 +654,9 @@ body[data-text-size="large"] .file-thumbnail {
 
 .file-name {
   text-align: center;
-  word-break: break-word;
+  word-break: normal;
   overflow-wrap: break-word;
-  hyphens: auto;
+  hyphens: none;
   font-weight: 600;
   color: var(--text-primary);
   line-height: 1.1;
