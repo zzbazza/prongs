@@ -130,7 +130,7 @@ while IFS= read -r -d '' image_path; do
     if is_image "$image_path"; then
         process_image "$image_path"
     fi
-done < <(find content/files -type f -print0)
+done < <(find content/files -type d -name 'thumbnails' -prune -o -type f -print0)
 
 # Print statistics
 echo ""
