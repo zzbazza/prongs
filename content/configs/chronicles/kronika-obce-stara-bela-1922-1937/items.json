@@ -4,6 +4,16 @@
       "path": "files/kroniky/Kronika_obce_Stara_Bela_1922-1937.pdf",
       "type": "document",
       "title": "Kronika obce Stará Bělá 1922-1937"
+    },
+    {
+      "path": "files/kroniky/Kronika_obce_Stara_Bela_1945-1969.pdf",
+      "type": "document",
+      "title": "Kronika obce Stará Bělá 1945-1969"
+    },
+    {
+      "path": "files/kroniky/Kronika_obce_Stara_Bela_1970-1981.pdf",
+      "type": "document",
+      "title": "Kronika obce Stará Bělá 1970-1981"
     }
   ]
 }
