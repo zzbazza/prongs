@@ -1,5 +1,7 @@
 {
   "title": "4 Pobělohorská",
   "icon": "⚔️",
-  "description": "Tabule 4 - pobělohorské období"
+  "description": "Tabule 4 - pobělohorské období",
+  "icon_path": "/static/icons/reduta.png",
+  "filter": false
 }

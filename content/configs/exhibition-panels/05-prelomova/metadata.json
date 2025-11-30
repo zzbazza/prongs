@@ -1,5 +1,7 @@
 {
   "title": "5 Přelomová",
   "icon": "🏭",
-  "description": "Tabule 5 - přelomové období"
+  "description": "Tabule 5 - přelomové období",
+  "icon_path": "/static/icons/vitkovice.svg",
+  "filter": false
 }
