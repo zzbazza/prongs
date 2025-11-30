@@ -326,7 +326,6 @@ export function showHome(includeItems = false) {
                data-type="${item.type}">
             ${iconHtml}
             <div class="file-name">${escapeHtml(item.title || item.path)}</div>
-            ${item.description ? `<div class="file-description">${escapeHtml(item.description)}</div>` : ''}
           </div>
         `;
       }).join('');
@@ -422,9 +421,8 @@ export function performSearch() {
   const searchLower = state.searchQuery.toLowerCase();
   const results = state.allItems.filter(item => {
     const titleMatch = item.title?.toLowerCase().includes(searchLower);
-    const descMatch = item.description?.toLowerCase().includes(searchLower);
     const keywordMatch = item.keywords?.some(k => k.toLowerCase().includes(searchLower));
-    return titleMatch || descMatch || keywordMatch;
+    return titleMatch || keywordMatch;
   });
 
   renderItemList(results);
@@ -452,7 +450,6 @@ export function renderItemList(items) {
       <div class="file-item" data-index="${index}" data-type="${item.type}">
         ${iconHtml}
         <div class="file-name">${escapeHtml(item.title || item.path)}</div>
-        ${item.description ? `<div class="file-description">${escapeHtml(item.description)}</div>` : ''}
       </div>
     `;
   }).join('');

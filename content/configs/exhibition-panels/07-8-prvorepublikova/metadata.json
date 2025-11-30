@@ -1,5 +1,7 @@
 {
   "title": "7,8 Pprvorepubliková",
   "icon": "🏛️",
-  "description": "Tabule 7-8 - prvorepublikové období"
+  "description": "Tabule 7-8 - prvorepublikové období",
+  "icon_path": "/static/icons/masaryk.svg",
+  "filter": false
 }

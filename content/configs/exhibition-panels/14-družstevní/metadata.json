@@ -1,5 +1,7 @@
 {
   "title": "14 Družstevní",
   "icon": "🤝",
-  "description": ""
+  "description": "",
+  "icon_path": "/static/icons/jzd.svg",
+  "filter": false
 }

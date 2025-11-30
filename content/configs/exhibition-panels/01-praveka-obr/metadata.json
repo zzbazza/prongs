@@ -1,5 +1,7 @@
 {
   "title": "1 Pravěká",
   "icon": "🦴",
-  "description": "Tabule 1 - pravěk a archeologické nálezy"
+  "description": "Tabule 1 - pravěk a archeologické nálezy",
+  "icon_path": "/static/icons/mammoth.svg",
+  "filter": false
 }

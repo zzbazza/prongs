@@ -1,5 +1,7 @@
 {
   "title": "2 Kolonizační",
   "icon": "🗺️",
-  "description": "Tabule 2 - kolonizační období"
+  "description": "Tabule 2 - kolonizační období",
+  "icon_path": "/static/icons/kolonizace.png",
+  "filter": false
 }

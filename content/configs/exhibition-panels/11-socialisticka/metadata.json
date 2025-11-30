@@ -1,5 +1,7 @@
 {
   "title": "11,12 Socialistická",
   "icon": "🏭",
-  "description": ""
+  "description": "",
+  "icon_path": "/static/icons/socialismus.svg",
+  "filter": false
 }

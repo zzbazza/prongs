@@ -1,5 +1,7 @@
 {
   "title": "3 Středověká",
   "icon": "🏰",
-  "description": "Tabule 3 - středověké období"
+  "description": "Tabule 3 - středověké období",
+  "icon_path": "/static/icons/listina.svg",
+  "filter": false
 }

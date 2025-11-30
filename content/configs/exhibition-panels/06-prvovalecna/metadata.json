@@ -1,5 +1,7 @@
 {
   "title": "6 Prvoválečná",
   "icon": "⚔️",
-  "description": "Tabule 6 - období první světové války"
+  "description": "Tabule 6 - období první světové války",
+  "icon_path": "/static/icons/first-war.svg",
+  "filter": false
 }
