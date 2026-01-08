@@ -79,6 +79,7 @@ Each category folder can contain one or more JSON files with content items. All 
 - `title` (required): Display title for the item
 - `description` (optional): Longer description shown in viewer
 - `keywords` (optional): Array of keywords for searching
+- `display` (optional): Set to `false` to hide this item from display. Defaults to `true` if not specified
 
 **Example:**
 ```json
@@ -90,10 +91,18 @@ Each category folder can contain one or more JSON files with content items. All 
       "title": "Panel první světová válka",
       "description": "Panel věnovaný první světové válce a jejím dopadům na region Stará Běla",
       "keywords": ["panel", "historie", "první světová válka", "stará běla"]
+    },
+    {
+      "path": "files/draft_photo.jpg",
+      "type": "image",
+      "title": "Draft photo",
+      "display": false
     }
   ]
 }
 ```
+
+**Note:** Items with `"display": false` will be completely hidden from the application, including search results and category views. This is useful for temporarily hiding content without deleting it.
 
 ## Creating Categories
 

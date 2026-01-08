@@ -94,12 +94,14 @@ async function scanConfigsDirectory(dirPath, categoryPath = []) {
         const data = JSON.parse(content);
 
         if (data.items && Array.isArray(data.items)) {
-          // Add category path to each item
-          const itemsWithCategory = data.items.map(item => ({
-            ...item,
-            categoryPath: [...categoryPath],
-            categoryId: categoryPath.join('/')
-          }));
+          // Add category path to each item and filter out items with display: false
+          const itemsWithCategory = data.items
+            .filter(item => item.display !== false)
+            .map(item => ({
+              ...item,
+              categoryPath: [...categoryPath],
+              categoryId: categoryPath.join('/')
+            }));
           result.items.push(...itemsWithCategory);
         }
       } catch (err) {
@@ -201,6 +203,9 @@ app.get('/api/items', async (req, res) => {
     const { category, search } = req.query;
 
     let items = metadata.items;
+
+    // Filter out items with display: false
+    items = items.filter(item => item.display !== false);
 
     // Filter by category (supports hierarchical paths like "photos/buildings/churches")
     if (category) {

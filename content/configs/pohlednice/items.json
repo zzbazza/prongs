@@ -3,7 +3,8 @@
     {
       "path": "files/pohlednice/100.jpg",
       "type": "image",
-      "title": "100"
+      "title": "Fara",
+      "description": "Pohled na faru z Junácké ulice. Sbírka Oldřicha dlouhého."
     },
     {
       "path": "files/pohlednice/101.jpg",
@@ -29,37 +30,38 @@
     {
       "path": "files/pohlednice/105.jpg",
       "type": "image",
-      "title": "105"
+      "title": "Blahopřání ke svatbě - Josef Zlámal"
     },
     {
       "path": "files/pohlednice/106.jpg",
       "type": "image",
-      "title": "106"
+      "title": "Ples TJ Sokol Klimkovice - 1947"
     },
     {
       "path": "files/pohlednice/107.jpg",
       "type": "image",
-      "title": "107"
+      "title": "Ples Orel - 1923"
     },
     {
       "path": "files/pohlednice/108.jpg",
       "type": "image",
-      "title": "108"
+      "title": "Ples Horymír - 1907"
     },
     {
       "path": "files/pohlednice/109.jpg",
       "type": "image",
-      "title": "109"
+      "title": "Ples Svaz katolických žen a dívek - 1938"
     },
     {
       "path": "files/pohlednice/10a.jpg",
       "type": "image",
-      "title": "10a"
+      "title": "Rekonvalescent a"
     },
     {
       "path": "files/pohlednice/10b.jpg",
       "type": "image",
-      "title": "10b"
+      "title": "Rekonvalescent b",
+      "display": false
     },
     {
       "path": "files/pohlednice/110a.jpg",
@@ -74,37 +76,42 @@
     {
       "path": "files/pohlednice/111.jpg",
       "type": "image",
-      "title": "111"
+      "title": "Pohlednice z Nové Bělé",
+      "description": "Kostel Stará Bělá, škola a obecní hostinec Nová Bělá"
     },
     {
       "path": "files/pohlednice/112a.jpg",
       "type": "image",
-      "title": "112a"
+      "title": "Pohlednice Nová Bělá - a",
+      "description": "Ulice, Kaplička a škola Nová Bělá, 1918"
     },
     {
       "path": "files/pohlednice/112b.jpg",
       "type": "image",
-      "title": "112b"
+      "title": "Pohlednice Nová Bělá - b"
     },
     {
       "path": "files/pohlednice/113.jpg",
       "type": "image",
-      "title": "113"
+      "title": "Pohlednice Nová Bělá",
+      "description": "Kaplička, škola, hasičská zbrojnice a obchod Nová Bělá"
     },
     {
       "path": "files/pohlednice/114.jpg",
       "type": "image",
-      "title": "114"
+      "title": "Pohlednice Nová Bělá",
+      "description": "Ulice, Kaplička a škola Nová Bělá"
     },
     {
       "path": "files/pohlednice/115a.jpg",
       "type": "image",
-      "title": "115a"
+      "title": "Pohlednice Proskovice - a",
+      "description": "Hasičská zbrojnice, hostinec a škola Proskovice"
     },
     {
       "path": "files/pohlednice/115b.jpg",
       "type": "image",
-      "title": "115b"
+      "title": "Pohlednice Proskovice - b"
     },
     {
       "path": "files/pohlednice/116a.jpg",
@@ -121,42 +128,43 @@
     {
       "path": "files/pohlednice/117a.jpg",
       "type": "image",
-      "title": "117a"
+      "title": "Památka na mši svatou r.1902 - a"
     },
     {
       "path": "files/pohlednice/117b.jpg",
       "type": "image",
-      "title": "117b"
+      "title": "Památka na mši svatou r.1902 - b"
     },
     {
       "path": "files/pohlednice/118a.jpg",
       "type": "image",
-      "title": "118a"
+      "title": "Památka na kněžské jubileum - a"
     },
     {
       "path": "files/pohlednice/118b.jpg",
       "type": "image",
-      "title": "118b"
+      "title": "Památka na kněžské jubileum - b"
     },
     {
       "path": "files/pohlednice/119a.jpg",
       "type": "image",
-      "title": "119a"
+      "title": "Pohled na Starou Bělou - a"
     },
     {
       "path": "files/pohlednice/119b.jpg",
       "type": "image",
-      "title": "119b"
+      "title": "Pohled na Starou Bělou - b"
     },
     {
       "path": "files/pohlednice/11a.jpg",
       "type": "image",
-      "title": "11a"
+      "title": "Pohled na Mitrovickou ulici - a"
     },
     {
       "path": "files/pohlednice/11b.jpg",
       "type": "image",
-      "title": "11b"
+      "title": "Pohled na Mitrovickou ulici - b",
+      "display": false
     },
     {
       "path": "files/pohlednice/120a.jpg",
@@ -171,177 +179,194 @@
     {
       "path": "files/pohlednice/121.jpg",
       "type": "image",
-      "title": "121"
+      "title": "Hasičský ples Nová Bělá 1896"
     },
     {
       "path": "files/pohlednice/122.jpg",
       "type": "image",
-      "title": "122"
+      "title": "Osvědčení 1946"
     },
     {
       "path": "files/pohlednice/12a.jpg",
       "type": "image",
-      "title": "12a"
+      "title": "Pohled Stará Bělá",
+      "description": "Pohled na Starou Bělou, kostel, školu a hostinec U Matěje"
     },
     {
       "path": "files/pohlednice/12b.jpg",
       "type": "image",
-      "title": "12b"
+      "title": "Pohled Stará Bělá - 12b",
+      "display": false
     },
     {
       "path": "files/pohlednice/13.jpg",
       "type": "image",
-      "title": "13"
+      "title": "Pohled Stará Bělá",
+      "description": "Národní hostinec, kostel, obecná škola, četnické stanoviště. Přelom 18 a 19 století"
     },
     {
       "path": "files/pohlednice/14.jpg",
       "type": "image",
-      "title": "14"
+      "title": "Pohled Stará Bělá",
+      "description": "Národní hostinec, kostel, obecná škola, četnické stanoviště. Přelom 18 a 19 století"
     },
     {
       "path": "files/pohlednice/15a.jpg",
       "type": "image",
-      "title": "15a"
+      "title": "Stará Bělá 1880 - a"
     },
     {
       "path": "files/pohlednice/15b.jpg",
       "type": "image",
-      "title": "15b"
+      "title": "Stará Bělá 1880 - b"
     },
     {
       "path": "files/pohlednice/16a.jpg",
       "type": "image",
-      "title": "16a"
+      "title": "Pohled Stará Bělá",
+      "description": "Kostel, škola, potravní spolek"
     },
     {
       "path": "files/pohlednice/16b.jpg",
       "type": "image",
-      "title": "16b"
+      "title": "16b",
+      "display": false
     },
     {
       "path": "files/pohlednice/17a.jpg",
       "type": "image",
-      "title": "17a"
+      "title": "Hostinec U Lípy - a"
     },
     {
       "path": "files/pohlednice/17b.jpg",
       "type": "image",
-      "title": "17b"
+      "title": "Hostinec U Lípy - b"
     },
     {
       "path": "files/pohlednice/18.jpg",
       "type": "image",
-      "title": "18"
+      "title": "Hostinec U Lípy"
     },
     {
       "path": "files/pohlednice/19.jpg",
       "type": "image",
-      "title": "19"
+      "title": "Hostinec U Lípy"
     },
     {
       "path": "files/pohlednice/1a.jpg",
       "type": "image",
-      "title": "1a"
+      "title": "Pohled na Kostel 1900 - a"
     },
     {
       "path": "files/pohlednice/1b.jpg",
       "type": "image",
-      "title": "1b"
+      "title": "Pohled na Kostel 1900 - b"
     },
     {
       "path": "files/pohlednice/20a.jpg",
       "type": "image",
-      "title": "20a"
+      "title": "Sokolovna, kostel, Junácká ulice, památník - a"
     },
     {
       "path": "files/pohlednice/20b.jpg",
       "type": "image",
-      "title": "20b"
+      "title": "Sokolovna, kostel, Junácká ulice, památník - b"
     },
     {
       "path": "files/pohlednice/21a.jpg",
       "type": "image",
-      "title": "21a"
+      "title": "Bělské pohledy - a",
+      "description": "Vila Hrabovských, kostel, škola, hasičská zbrojnice, obchom M Sochorkové"
     },
     {
       "path": "files/pohlednice/21b.jpg",
       "type": "image",
-      "title": "21b"
+      "title": "Bělské pohledy - b"
     },
     {
       "path": "files/pohlednice/22a.jpg",
       "type": "image",
-      "title": "22a"
+      "title": "Pozdrav z Bělé - a",
+      "description": "Kostel, škola, hasičská zbrojnice, obchom Fr. Sýkorové, hostinec U Máchů"
     },
     {
       "path": "files/pohlednice/22b.jpg",
       "type": "image",
-      "title": "22b"
+      "title": "Pozdrav z Bělé - b"
     },
     {
       "path": "files/pohlednice/23a.jpg",
       "type": "image",
-      "title": "23a"
+      "title": "Pozdrav z Bělé - a",
+      "description": "Kostel, škola, hasičská zbrojnice, obchom Fr. Sýkorové, hostinec U Máchů"
     },
     {
       "path": "files/pohlednice/23b.jpg",
       "type": "image",
-      "title": "23b"
+      "title": "Pozdrav z Bělé - b"
     },
     {
       "path": "files/pohlednice/24a.jpg",
       "type": "image",
-      "title": "24a"
+      "title": "Pozdrav ze Staré Bělé - a",
+      "description": "Kostel, škola, Vila Dra. Bordovského, Náves. 1911"
     },
     {
       "path": "files/pohlednice/24b.jpg",
       "type": "image",
-      "title": "24b"
+      "title": "Pozdrav ze Staré Bělé - b"
     },
     {
       "path": "files/pohlednice/25.jpg",
       "type": "image",
-      "title": "25"
+      "title": "Stará Bělá",
+      "description": "Kostel, škola, obchod Fr. Mikuly, hasičská zbrojnice"
     },
     {
       "path": "files/pohlednice/26.jpg",
       "type": "image",
-      "title": "26"
+      "title": "Pordrav ze Staré Bělé",
+      "description": "Vila Jos. Hrabovského, kostel, škola, hasičská zbrojnice, obchom M Sochorkové"
     },
     {
       "path": "files/pohlednice/27.jpg",
       "type": "image",
-      "title": "27"
+      "title": "Pohled Nová Bělá",
+      "description": "Kostel Stará Bělá, škola a obecní hostinec Nová Bělá"
     },
     {
       "path": "files/pohlednice/28a.jpg",
       "type": "image",
-      "title": "28a"
+      "title": "Pohled Dakota - a",
+      "description": "Restaurace Lesní pramen, dnes Dakota. Rok 1934."
     },
     {
       "path": "files/pohlednice/28b.jpg",
       "type": "image",
-      "title": "28b"
+      "title": "Pohled Dakota - b"
     },
     {
       "path": "files/pohlednice/29.jpg",
       "type": "image",
-      "title": "29"
+      "title": "Náves Stará Bělá",
+      "description": "Starobělská náves. Sokolovna, obchod a pekárna, Zlatý jelen."
     },
     {
       "path": "files/pohlednice/2a.jpg",
       "type": "image",
-      "title": "2a"
+      "title": "Pohled Bělá - a",
+      "description": "Kostel, Zlatý jelen."
     },
     {
       "path": "files/pohlednice/2b.jpg",
       "type": "image",
-      "title": "2b"
+      "title": "Pohled Bělá - b"
     },
     {
       "path": "files/pohlednice/30.jpg",
       "type": "image",
-      "title": "30"
+      "title": "30",
+      "description": "Jan Motyčka, rok 1912"
     },
     {
       "path": "files/pohlednice/31.jpg",
@@ -941,7 +966,8 @@
     {
       "path": "files/pohlednice/DSC_0256.jpg",
       "type": "image",
-      "title": "DSC_0256"
+      "title": "DSC_0256",
+      "display": false
     },
     {
       "path": "files/pohlednice/DSC_0257.jpg",
@@ -1006,7 +1032,8 @@
     {
       "path": "files/pohlednice/DSC_0270.jpg",
       "type": "image",
-      "title": "DSC_0270"
+      "title": "DSC_0270",
+      "display": false
     },
     {
       "path": "files/pohlednice/DSC_0271.jpg",
@@ -1031,7 +1058,8 @@
     {
       "path": "files/pohlednice/DSC_0275.jpg",
       "type": "image",
-      "title": "DSC_0275"
+      "title": "DSC_0275",
+      "display": false
     },
     {
       "path": "files/pohlednice/DSC_0276.jpg",
@@ -1131,7 +1159,8 @@
     {
       "path": "files/pohlednice/DSC_0295.jpg",
       "type": "image",
-      "title": "DSC_0295"
+      "title": "DSC_0295",
+      "display": false
     },
     {
       "path": "files/pohlednice/DSC_0296.jpg",
@@ -1141,12 +1170,14 @@
     {
       "path": "files/pohlednice/DSC_0297.jpg",
       "type": "image",
-      "title": "DSC_0297"
+      "title": "DSC_0297",
+      "display": false
     },
     {
       "path": "files/pohlednice/DSC_0298.jpg",
       "type": "image",
-      "title": "DSC_0298"
+      "title": "DSC_0298",
+      "display": false
     },
     {
       "path": "files/pohlednice/DSC_0299.jpg",
@@ -1191,7 +1222,8 @@
     {
       "path": "files/pohlednice/DSC_0308.jpg",
       "type": "image",
-      "title": "DSC_0308"
+      "title": "DSC_0308",
+      "display": false
     },
     {
       "path": "files/pohlednice/DSC_0309.jpg",
@@ -1201,7 +1233,8 @@
     {
       "path": "files/pohlednice/DSC_0310.jpg",
       "type": "image",
-      "title": "DSC_0310"
+      "title": "DSC_0310",
+      "display": false
     },
     {
       "path": "files/pohlednice/DSC_0311.jpg",
@@ -1211,7 +1244,8 @@
     {
       "path": "files/pohlednice/DSC_0312.jpg",
       "type": "image",
-      "title": "DSC_0312"
+      "title": "DSC_0312",
+      "display": false
     },
     {
       "path": "files/pohlednice/DSC_0313.jpg",
@@ -1226,7 +1260,8 @@
     {
       "path": "files/pohlednice/DSC_0315.jpg",
       "type": "image",
-      "title": "DSC_0315"
+      "title": "DSC_0315",
+      "display": false
     },
     {
       "path": "files/pohlednice/DSC_0317.jpg",
@@ -1241,7 +1276,8 @@
     {
       "path": "files/pohlednice/DSC_0319.jpg",
       "type": "image",
-      "title": "DSC_0319"
+      "title": "DSC_0319",
+      "display": false
     },
     {
       "path": "files/pohlednice/DSC_0324.jpg",
@@ -1271,7 +1307,8 @@
     {
       "path": "files/pohlednice/DSC_0332.jpg",
       "type": "image",
-      "title": "DSC_0332"
+      "title": "DSC_0332",
+      "display": false
     },
     {
       "path": "files/pohlednice/DSC_0333.jpg",
@@ -1286,7 +1323,8 @@
     {
       "path": "files/pohlednice/DSC_0335.jpg",
       "type": "image",
-      "title": "DSC_0335"
+      "title": "DSC_0335",
+      "display": false
     },
     {
       "path": "files/pohlednice/DSC_0336.jpg",
@@ -1296,7 +1334,8 @@
     {
       "path": "files/pohlednice/DSC_0337.jpg",
       "type": "image",
-      "title": "DSC_0337"
+      "title": "DSC_0337",
+      "display": false
     },
     {
       "path": "files/pohlednice/DSC_0338.jpg",
@@ -1306,7 +1345,8 @@
     {
       "path": "files/pohlednice/DSC_0339.jpg",
       "type": "image",
-      "title": "DSC_0339"
+      "title": "DSC_0339",
+      "display": false
     },
     {
       "path": "files/pohlednice/DSC_0340.jpg",
@@ -1316,7 +1356,8 @@
     {
       "path": "files/pohlednice/DSC_0342.jpg",
       "type": "image",
-      "title": "DSC_0342"
+      "title": "DSC_0342",
+      "display": false
     },
     {
       "path": "files/pohlednice/DSC_0344.jpg",
@@ -1326,12 +1367,14 @@
     {
       "path": "files/pohlednice/DSC_0345.jpg",
       "type": "image",
-      "title": "DSC_0345"
+      "title": "DSC_0345",
+      "display": false
     },
     {
       "path": "files/pohlednice/DSC_0346.jpg",
       "type": "image",
-      "title": "DSC_0346"
+      "title": "DSC_0346",
+      "display": false
     },
     {
       "path": "files/pohlednice/DSC_0349.jpg",
@@ -1351,22 +1394,24 @@
     {
       "path": "files/pohlednice/DSC_0352.jpg",
       "type": "image",
-      "title": "DSC_0352"
+      "title": "Husův sbor",
+      "display": false
     },
     {
       "path": "files/pohlednice/DSC_0353.jpg",
       "type": "image",
-      "title": "DSC_0353"
+      "title": "Husův sbor"
     },
     {
       "path": "files/pohlednice/DSC_0354.jpg",
       "type": "image",
-      "title": "DSC_0354"
+      "title": "Sokolovna 1923"
     },
     {
       "path": "files/pohlednice/DSC_0355.jpg",
       "type": "image",
-      "title": "DSC_0355"
+      "title": "Sokolovna 1923",
+      "display": false
     },
     {
       "path": "files/pohlednice/DSC_0356.jpg",
@@ -1376,12 +1421,14 @@
     {
       "path": "files/pohlednice/DSC_0357.jpg",
       "type": "image",
-      "title": "DSC_0357"
+      "title": "DSC_0357",
+      "display": false
     },
     {
       "path": "files/pohlednice/DSC_0359.jpg",
       "type": "image",
-      "title": "DSC_0359"
+      "title": "DSC_0359",
+      "display": false
     },
     {
       "path": "files/pohlednice/DSC_0360.jpg",
@@ -1396,7 +1443,8 @@
     {
       "path": "files/pohlednice/DSC_0362.jpg",
       "type": "image",
-      "title": "DSC_0362"
+      "title": "DSC_0362",
+      "display": false
     },
     {
       "path": "files/pohlednice/DSC_0363.jpg",
@@ -1406,7 +1454,8 @@
     {
       "path": "files/pohlednice/DSC_0364.jpg",
       "type": "image",
-      "title": "DSC_0364"
+      "title": "DSC_0364",
+      "display": false
     },
     {
       "path": "files/pohlednice/DSC_0365.jpg",
@@ -1436,7 +1485,8 @@
     {
       "path": "files/pohlednice/DSC_0370.jpg",
       "type": "image",
-      "title": "DSC_0370"
+      "title": "DSC_0370",
+      "display": false
     },
     {
       "path": "files/pohlednice/DSC_0371.jpg",
@@ -1451,12 +1501,14 @@
     {
       "path": "files/pohlednice/DSC_0373.jpg",
       "type": "image",
-      "title": "DSC_0373"
+      "title": "DSC_0373",
+      "display": false
     },
     {
       "path": "files/pohlednice/DSC_0374.jpg",
       "type": "image",
-      "title": "DSC_0374"
+      "title": "DSC_0374",
+      "display": false
     },
     {
       "path": "files/pohlednice/DSC_0375.jpg",
@@ -1476,7 +1528,8 @@
     {
       "path": "files/pohlednice/DSC_0379.jpg",
       "type": "image",
-      "title": "DSC_0379"
+      "title": "DSC_0379",
+      "display": false
     },
     {
       "path": "files/pohlednice/DSC_0380.jpg",
@@ -1486,7 +1539,8 @@
     {
       "path": "files/pohlednice/DSC_0381.jpg",
       "type": "image",
-      "title": "DSC_0381"
+      "title": "DSC_0381",
+      "display": false
     },
     {
       "path": "files/pohlednice/DSC_0382.jpg",
@@ -1501,7 +1555,8 @@
     {
       "path": "files/pohlednice/DSC_0385.jpg",
       "type": "image",
-      "title": "DSC_0385"
+      "title": "DSC_0385",
+      "display": false
     },
     {
       "path": "files/pohlednice/DSC_0387.jpg",
@@ -1521,7 +1576,8 @@
     {
       "path": "files/pohlednice/DSC_0391.jpg",
       "type": "image",
-      "title": "DSC_0391"
+      "title": "DSC_0391",
+      "display": false
     },
     {
       "path": "files/pohlednice/DSC_0393.jpg",
@@ -1541,7 +1597,8 @@
     {
       "path": "files/pohlednice/DSC_0397.jpg",
       "type": "image",
-      "title": "DSC_0397"
+      "title": "DSC_0397",
+      "display": false
     },
     {
       "path": "files/pohlednice/DSC_0398.jpg",
@@ -1561,7 +1618,8 @@
     {
       "path": "files/pohlednice/DSC_0401.jpg",
       "type": "image",
-      "title": "DSC_0401"
+      "title": "DSC_0401",
+      "display": false
     },
     {
       "path": "files/pohlednice/DSC_0403.jpg",
@@ -1576,7 +1634,8 @@
     {
       "path": "files/pohlednice/DSC_0406.jpg",
       "type": "image",
-      "title": "DSC_0406"
+      "title": "DSC_0406",
+      "display": false
     },
     {
       "path": "files/pohlednice/DSC_0407.jpg",
@@ -1601,7 +1660,8 @@
     {
       "path": "files/pohlednice/DSC_0411.jpg",
       "type": "image",
-      "title": "DSC_0411"
+      "title": "DSC_0411",
+      "display": false
     },
     {
       "path": "files/pohlednice/DSC_0412.jpg",
@@ -1611,7 +1671,8 @@
     {
       "path": "files/pohlednice/DSC_0413.jpg",
       "type": "image",
-      "title": "DSC_0413"
+      "title": "DSC_0413",
+      "display": false
     },
     {
       "path": "files/pohlednice/DSC_0416.jpg",
@@ -1621,7 +1682,8 @@
     {
       "path": "files/pohlednice/DSC_0417.jpg",
       "type": "image",
-      "title": "DSC_0417"
+      "title": "DSC_0417",
+      "display": false
     }
   ]
 }

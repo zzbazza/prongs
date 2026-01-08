@@ -1,0 +1,7 @@
+{
+  "title": "Plány",
+  "icon": "🗺️",
+  "icon_path": "/static/icons/blueprint.svg",
+  "filter": false,
+  "description": "Historické plány a mapy"
+}
