@@ -1,159 +1,535 @@
 {
   "items": [
     {
-      "path": "files/PLAKÁTY/Bez názvu-1.jpg",
+      "path": "files/PLAKÁTY/položeni_zakladniho_kamene1922.jpg",
       "type": "image",
-      "title": "Položení základního kamene",
-      "description": "Položení základního kamene Sokolovny, rok 1922."
+      "title": "Položení základního kamene Sokolovny",
+      "description": "Slavnost položení základního kamene ku stavbě Sokolovny ve Staré Bělé 1. října 1923."
+      
     },
     {
-      "path": "files/PLAKÁTY/DSC_1286a.jpg",
+      "path": "files/PLAKÁTY/slavnostní_otevření_sokolovny-4_8_1923a",
       "type": "image",
-      "title": "Sokol"
+      "title": "slavnostní otevření Sokolovny",
+      "description": "Slavnostní otevření Sokolovny 4. a 5. srpna 1923."
     },
     {
-      "path": "files/PLAKÁTY/DSC_1388.jpg",
+      "path": "files/PLAKÁTY/veřejná_čítárna26.jpg",
       "type": "image",
-      "title": "Naši furianti",
-      "description": "Divadelní představení TJ Sokol"
+      "title": "Otevření čítárny 1926",
+      "description": "Otevření veřejné čítárny 14. listopadu 1926."
     },
     {
-      "path": "files/PLAKÁTY/DSC_1400.jpg",
+      "path": "files/PLAKÁTY/zájezd1925.jpg",
       "type": "image",
-      "title": "Růže z paseky",
-      "description": "Divadelní představení TJ Sokol"
+      "title": "Akademie 11. 7. 1925",
+      "description": "Tělocvičná a hudební akademie 11. července 1925."
     },
     {
-      "path": "files/PLAKÁTY/DSC_1410.jpg",
+      "path": "files/PLAKÁTY/akademie1925.jpg",
       "type": "image",
-      "title": "Výročí založení TJ Sokol",
-      "description": "30 leté výročí založení TJ Sokol, rok 1933"
+      "title": "Akademie 13. 12. 1925",
+      "description": "Tělocvičná akademie TJ Sokol Stará Bělá 13. prosimce 1925.Plakát Akademie TJ Sokol"
     },
     {
-      "path": "files/PLAKÁTY/IMG_20251002_0021.jpg",
+      "path": "files/PLAKÁTY/akademie1927.jpg",
       "type": "image",
-      "title": "Svátek svobody",
-      "description": "Oslavy svátku svobody, rok 1936"
+      "title": "Akademie 18. 11. 1927"
+    "description": "Ručně kreslená pozvánka na akdemii TJ Sokol 18. listopadu 1927."
     },
     {
-      "path": "files/PLAKÁTY/IMG_20251002_0027a.jpg",
+      "path": "files/PLAKÁTY/akademie1927a.jpg",
       "type": "image",
-      "title": "IMG_20251002_0027a"
+      "title": "Akademie 27. 11. 1927",
+      "description": "Tělocvičná akademie TJ Sokol Stará Bělá 27. listopadu 1927."
     },
     {
-      "path": "files/PLAKÁTY/IMG_20251003_0001a.jpg",
+      "path": "files/PLAKÁTY/akademie1928.jpg",
       "type": "image",
-      "title": "IMG_20251003_0001a"
+      "title": "Akademie 1928",
+      "description": "Tělocvičná akademie TJ Sokol Stará Bělá 18. listopadu 1928."
     },
     {
-      "path": "files/PLAKÁTY/IMG_20251003_0022.jpg",
+      "path": "files/PLAKÁTY/akademie1929.jpg",
       "type": "image",
-      "title": "IMG_20251003_0022"
+      "title": "Akademie 1929",
+      "description": "Slet sokolské župy Moravskoslezské v Místku – tělocvičná akademie 15. a 16. června 1929."
     },
     {
-      "path": "files/PLAKÁTY/IMG_20251004_0002.jpg",
+      "path": "files/PLAKÁTY/akademie1930.jpg",
       "type": "image",
-      "title": "IMG_20251004_0002"
+      "title": "Akademie 1930",
+      "description": "Tělocvičná akademie TJ Sokol Stará Bělá 23. listopadu 1930."
+    },
+    
+    {
+      "path": "files/PLAKÁTY/akademie1931.jpg",
+      "type": "image",
+      "title": "Akademie 1931",
+      "description": "Tělocvičná akademie TJ Sokol Stará Bělá 22. listopadu 1931."
     },
     {
-      "path": "files/PLAKÁTY/IMG_20251004_0011aa.jpg",
+      "path": "files/PLAKÁTY/akademie1933.jpg",
       "type": "image",
-      "title": "IMG_20251004_0011aa"
+      "title": "Akademie 1933",
+      "description": "Tělocvičná akademie TJ Sokol Stará Bělá 26. listopadu 1933."
     },
     {
-      "path": "files/PLAKÁTY/IMG_20251005_0001.jpg",
+      "path": "files/PLAKÁTY/akademie1936.jpg",
       "type": "image",
-      "title": "IMG_20251005_0001"
+      "title": "Akademie 1936",
+      "description": "Tělocvičná akademie TJ Sokol Stará Bělá 22. listopadu 1936."
     },
     {
-      "path": "files/PLAKÁTY/IMG_20251005_000a.jpg",
+      "path": "files/PLAKÁTY/akademie_dorostenecka1937.jpg",
       "type": "image",
-      "title": "IMG_20251005_000a"
+      "title": "Akademie 17. 1. 1937",
+      "description": "Dorostenecká akademie TJ Sokol Stará Bělá 17. ledna 1937."
     },
     {
-      "path": "files/PLAKÁTY/IMG_20251005_0011.jpg",
+      "path": "files/PLAKÁTY/akademie1937.jpg",
       "type": "image",
-      "title": "IMG_20251005_0011"
+      "title": "Akademie 21. 11. 1937",
+      "description": "Tělocvičná akademie TJ Sokol Stará Bělá 21. listopadu 1937."
+    },          
+    {
+      "path": "files/PLAKÁTY/akademie1940.jpg",
+      "type": "image",
+      "title": "Akademie 1940",
+      "description": "Tělocvičná akademie TJ Sokol Stará Bělá 15. prosince 1940."
     },
     {
-      "path": "files/PLAKÁTY/IMG_20251006_0008.jpg",
+      "path": "files/PLAKÁTY/české_slovo26_1.jpg",
       "type": "image",
-      "title": "IMG_20251006_0008"
+      "title": "České slovo 4. 7. 1936a",
+      "description": "Nedělní vydání České slovo 4. července 1926. Sokolský slet v Praze 1926."
     },
     {
-      "path": "files/PLAKÁTY/Plukovník Švec.jpg",
+      "path": "files/PLAKÁTY/české_slovo26_2.jpg",
       "type": "image",
-      "title": "Plukovník Švec"
+      "title": "České slovo 4. 7. 1936b",
+      "description": "Nedělní vydání České slovo 4. července 1926. Sokolský slet v Praze 1926."
     },
     {
-      "path": "files/PLAKÁTY/Stíny války 27 října 1937.jpg",
+      "path": "files/PLAKÁTY/české_slovo26_3.jpg",
       "type": "image",
-      "title": "Stíny války 27 října 1937"
+      "title": "České slovo 4. 7. 1936c",
+      "description": "Nedělní vydání České slovo 4. července 1926. Sokolský slet v Praze 1926."
     },
     {
-      "path": "files/PLAKÁTY/baťoch1.jpg",
+      "path": "files/PLAKÁTY/české_slovo26_4.jpg",
       "type": "image",
-      "title": "baťoch1"
+      "title": "České slovo 4. 7. 1936c",
+      "description": "Nedělní vydání České slovo 4. července 1926. Sokolský slet v Praze 1926."
     },
     {
-      "path": "files/PLAKÁTY/blaničti rytiři.jpg",
+      "path": "files/PLAKÁTY/členská schůze1925a.jpg",
       "type": "image",
-      "title": "blaničti rytiři"
+      "title": "Členská schůze 1925",
+      "description": "Pozvánka na členskou schůzi TJ Sokol Stará Bělá 20. prosince 1925.Plakát schůze TJ Sokol"
     },
     {
-      "path": "files/PLAKÁTY/manifestační projev.jpg",
+      "path": "files/PLAKÁTY/film-vše_pro_lásku1930.jpg",
       "type": "image",
-      "title": "manifestační projev"
+      "title": "Vše pro lásku 1930",
+      "description": "Plakát k filmu Vše pro lásku, 1930. (Na hanáckém gruntu hospodaří Matěj Křópal se svou ženou. Na prázdniny k nim přijede neteř Věra. Při malé dopravní nehodě potká Věra svého známého inženýra Peterse, který je zasnouben s emancipovanou Olgou. Věřino bohatství ho však tak zláká, že se Věře začne dvořit. Do sousedního statku přijede na letní byt bohatá vdova se zhýčkaným synem Douglasem, který se do Věry zamiluje a po Petersově odjezdu ji stále obletuje. Při návštěvě Brna se Matěj dostane v kavárně do sporu s pánem a dámou, kterými jsou Peters s Olgou. Peters, který se s Matějem osobně předtím nesetkal, ho urazí. Peters se opět vypraví za Věrou, narazí na Douglase a zesměšní ho. Při pokusu o pomstu je Douglas Petersem zbit. Žně končí a slaví se dožínky. Přijede i Peters, uvidí Matěje, a ten ho vyžene. Cestou zpět Peters sveze Věru, ale potkají auto s Douglasem a žárlivou Olgou. Po krátké honičce Peters havaruje a Douglas Věru zachrání, za což je odměněn polibkem. (Podle dobového popisku.)
+      Filmové materiály se do dnešních dní nezachovaly."
     },
     {
-      "path": "files/PLAKÁTY/perle paní serafinky.jpg",
+      "path": "files/PLAKÁTY/vše_pro_lásku1931.jpg",
       "type": "image",
-      "title": "perle paní serafinky"
+      "title": "Vše pro lásku 1931",
+      "description": "Pozvánka ke shlednutí filmu Vše pro lásku, 1931.Kino Stará Bělá"
     },
     {
-      "path": "files/PLAKÁTY/slavnostní otevření sokolovny-4_8_1923a.jpg",
+      "path": "files/PLAKÁTY/kino_pozvanka_plukovník_švec31.jpg",
       "type": "image",
-      "title": "slavnostní otevření sokolovny-4_8_1923a"
+      "title": "Kino - Plukovník švec 1931",
+      "description": "Pozvánka ke shlednutí filmu Plukovník Švec 15. a 16. srpna 1931. Jako první hraný film získal snímek osvobození od povinných dávek ze zábav, kterým bylo zvýhodňováno uvádění "kulturně osvětových" titulů."
     },
     {
-      "path": "files/PLAKÁTY/tělocvičná akademie 15 prosince 1940.jpg",
+      "path": "files/PLAKÁTY/hra-pražslý_žid1923.jpg",
       "type": "image",
-      "title": "tělocvičná akademie 15 prosince 1940"
+      "title": "Pražský Žid 1923",
+      "description": "Hra Pražský Žid 4. srpna 1923. První hra v nově otevřené starobělské Sokolovně.Divadlo TJ Sokol"
     },
     {
-      "path": "files/PLAKÁTY/tělocvičná akademie 21 listopadu 1937.jpg",
+      "path": "files/PLAKÁTY/hra-devce_z_predmesti1924.jpg",
       "type": "image",
-      "title": "tělocvičná akademie 21 listopadu 1937"
+      "title": "Děvče z předměstí 1924",
+      "description": "Zpěvohra Děvče z předměstí 25. května 1924."
     },
     {
-      "path": "files/PLAKÁTY/tělocvičná akademie 22 listopadu 1936.jpg",
+      "path": "files/PLAKÁTY/hra-mamselle_nitouche1925.jpg",
       "type": "image",
-      "title": "tělocvičná akademie 22 listopadu 1936"
+      "title": "Mamselle Nitouche Velikonoce 1925",
+      "description": "Opereta Mamselle Nitouche aneb Slečna svatoušek na Velikonoce 12. a 13. dubna 1925."
     },
     {
-      "path": "files/PLAKÁTY/tělocvičná akademie 22_11_1931.jpg",
+      "path": "files/PLAKÁTY/hra-mamselle1925.jpg",
       "type": "image",
-      "title": "tělocvičná akademie 22_11_1931"
+      "title": "Mamselle Nitouche 1. 5. 1925",
+      "description": "Opereta Mamselle Nitouche aneb Slečna svatoušek 1. května 1925."
     },
     {
-      "path": "files/PLAKÁTY/tělocvičná akademie 27 listopadu 1927.jpg",
+      "path": "files/PLAKÁTY/hra-v_českém_ráji_1925.jpg",
       "type": "image",
-      "title": "tělocvičná akademie 27 listopadu 1927"
+      "title": "V Českém ráji 1925.",
+      "description": "Pohostinská hra V Českém ráji 13. září 1925."
     },
     {
-      "path": "files/PLAKÁTY/veřejné cvičení 13 červenec 1930.jpg",
+      "path": "files/PLAKÁTY/hra-baťoch1925.jpg",
       "type": "image",
-      "title": "veřejné cvičení 13 červenec 1930"
+      "title": "Baťoch 1925",
+      "description": "Div. veselohra TJ Sokol Stará Bělá – Baťoch 27. října 1925."
     },
     {
-      "path": "files/PLAKÁTY/veřejné cvičení 31 července 1932.jpg",
+      "path": "files/PLAKÁTY/hra-batoch_22_11_1925.jpg",
       "type": "image",
-      "title": "veřejné cvičení 31 července 1932"
+      "title": "Baťoch 22. 11. 1925",
+      "description": "Pozvánka na div. veselohru TJ Sokol Stará Bělá – Baťoch v krmelínské Sokolovně 22. listopadu 1925."
     },
     {
-      "path": "files/PLAKÁTY/veřejné cvičení_14 července 29a.jpg",
+      "path": "files/PLAKÁTY/hra-žabec_1925.jpg",
       "type": "image",
-      "title": "veřejné cvičení_14 července 29a"
-    }
+      "title": "Žabec 1925",
+      "description": "Veselohra Žabec 26. prosince 1925."
+    },
+    {
+      "path": "files/PLAKÁTY/hra-Krista_z_myslivny_1926.jpg",
+      "type": "image",
+      "title": "Krista z myslivny 1926",
+      "description": "Opereta Krista z myslivny 27. a 28. února 1926."
+    },
+    {
+      "path": "files/PLAKÁTY/hra-goral1926.jpg",
+      "type": "image",
+      "title": "Goral 1926",
+      "description": "Div. hra Goral 4. dubna 1926."
+    },
+    {
+      "path": "files/PLAKÁTY/hra-pan_farář_a_jeho_kostelník1926.jpg",
+      "type": "image",
+      "title": "Pan farář a jeho kostelník 1926",
+      "description": "Div. hra Pan farář a jeho kostelník 19. září 1926."
+    },
+    {
+      "path": "files/PLAKÁTY/hra-Hoši_z_první_legie_1926.jpg",
+      "type": "image",
+      "title": "Hoši z první legie 1926",
+      "description": "Zpěvohra Hoši z první legie 31. října a 1. listopadu 1926."
+    },
+    {
+      "path": "files/PLAKÁTY/hra-dítě_cirku1927.jpg",
+      "type": "image",
+      "title": "Dítě cirku 1927",
+      "description": "Opereta Dítě cirku 17. a 18. dubna 1927."
+    },
+   {
+      "path": "files/PLAKÁTY/hra-vesely_matuško_1928.jpg",
+      "type": "image",
+      "title": "Veselý Matuško 1928",
+      "description": "Opereta Veselý Matuško aneb slovanská krev – velikonoční neděle a pondělí 8. a 9. dubna 1928."
+    },
+   {
+      "path": "files/PLAKÁTY/sokol_stb_10let_1928.jpg",
+      "type": "image",
+      "title": "Bouře 1928",
+      "description": "Vlastenecká div. hra Bouře k 10. výročí vzniku republiky 27. října 1928."
+    },
+   {
+      "path": "files/PLAKÁTY/hra-slečínka1929.jpg",
+      "type": "image",
+      "title": "Slečinka 1929",
+      "description": "Div. hra Slečinka z bílého zámečku 24. března 1929."
+    },
+    {
+      "path": "files/PLAKÁTY/hra-Plukovník_Švec1929.jpg",
+      "type": "image",
+      "title": "Plukovník Švec 1929",
+      "description": "Div. hra Plukovník Švec 27. a 28. října 1929."
+    },
+    {
+      "path": "files/PLAKÁTY/hra-muzikanti_z_vesnice1931.jpg",
+      "type": "image",
+      "title": "Muzikanti z české vesnice 1931",
+      "description": "Opereta Muzikanti z české vesnice 25. prosince 1931."
+    },
+    {
+      "path": "files/PLAKÁTY/hra-perle_paní_serafinky1932.jpg",
+      "type": "image",
+      "title": "Perle panny Serafínky 1932",
+      "description": "Opereta Perle panny Serafínky 25. a 26. prosince 1932."
+    },
+    {
+      "path": "files/PLAKÁTY/hra-růže_z_paseky1933.jpg",
+      "type": "image",
+      "title": "Růže z paseky 1933",
+      "description": "Opereta Růže z paseky (Zasnoubení na paloučku) 25. prosince 1933."
+    },
+    
+    {
+      "path": "files/PLAKÁTY/hra-mařenku_si_neber_1934.jpg",
+      "type": "image",
+      "title": "Mařenku si neber 1934",
+      "description": "Div. hra Mařenku si neber 25. března 1934."
+    },
+    {
+      "path": "files/PLAKÁTY/hra-cigánečka1934.jpg",
+      "type": "image",
+      "title": "Cigánečka 1934",
+      "description": "Opereta Cigánečka o velikonoční neděli 16. dubna 1934."
+    },
+    {
+      "path": "files/PLAKÁTY/hra-Stíny_války1937.jpg",
+      "type": "image",
+      "title": "Stíny války 1937",
+      "description": "Div. hra Stíny války 27. října 1937."
+    },
+    {
+      "path": "files/PLAKÁTY/hra-naši_furianti1941.jpg",
+      "type": "image",
+      "title": "Naši furianti 1941",
+      "description": "Div. hra Naši furianti 13. dubna 1941."
+    },
+    {
+      "path": "files/PLAKÁTY/hra-troje_přání47.jpg",
+      "type": "image",
+      "title": "Troje přání 1947",
+      "description": "Pohádka Troje přání 22. března 1947."
+    },
+    {
+      "path": "files/PLAKÁTY/hra-černý_vlk1947.jpg",
+      "type": "image",
+      "title": "Černý vlk 1947",
+      "description": "Divadelní hra Černý vlk 10. května 1947."
+    },
+    {
+      "path": "files/PLAKÁTY/manifestační projev1925.jpg",
+      "type": "image",
+      "title": "Manifestační projev 1925",
+      "description": "Manifestační projev pro odluku církve od státu 22. března 1925."
+    },
+    {
+      "path": "files/PLAKÁTY/husova_oslava1937.jpg",
+      "type": "image",
+      "title": "usova oslava 1937",
+      "description": "Husova oslava 5. července 1937."
+    },
+    
+     {
+      "path": "files/PLAKÁTY/slet1922.jpg",
+      "type": "image",
+      "title": "Slet 1922",
+      "description": "Slet Sokolstva v Moravské Ostravě 1922."
+    },
+     {
+      "path": "files/PLAKÁTY/výlet1925.jpg",
+      "type": "image",
+      "title": "Výlet 1925",
+      "description": "Výlet – sraz sokolských jednot v Brušperku 31. května 1925. "
+    },
+     {
+      "path": "files/PLAKÁTY/krajsky_slet_ol_28.jpg",
+      "type": "image",
+      "title": "Krajský slet 1928",
+      "description": "Krajský slet Sokolstva v Olomouci 6. července 1928."
+    },
+    {
+      "path": "files/PLAKÁTY/slet_polsko1929.jpg",
+      "type": "image",
+      "title": "Slet 1929",
+      "description": "Slet Sokolstva v Poznani 28. června – 1. července 1929."
+    },
+    {
+      "path": "files/PLAKÁTY/krajsky_slet_Orlova1929.jpg",
+      "type": "image",
+      "title": "Krajský slet 1929",
+      "description": "Krajský slet Sokolstva v Orlové 29. a 30. června a 5 – 7. července 1929."
+    },
+    {
+      "path": "files/PLAKÁTY/slet_Místek29.jpg",
+      "type": "image",
+      "title": "Župní slet 1929",
+      "description": "Slet sokolské župy moravskoslezské v Místku 16. října 1929."
+    },
+    {
+      "path": "files/PLAKÁTY/krajsky_slet_Přerov1931.jpg",
+      "type": "image",
+      "title": "Krajský slet 1931",
+      "description": "Krajský slet Sokolstva v Přerově 28. června 1931."
+    },
+    {
+      "path": "files/PLAKÁTY/slet_opava1934.jpg",
+      "type": "image",
+      "title": "Krajský slet 1934",
+      "description": "Krajský slet Sokolstva v Opavě 17. června a 1. července 1934."
+    },
+    {
+      "path": "files/PLAKÁTY/zájezd_místek1937.jpg",
+      "type": "image",
+      "title": "Zájezd 1937",
+      "description": "Zájezd Sokolské župy moravskoslezské do Místku 20. června 1937."
+    },
+    {
+      "path": "files/PLAKÁTY/sokol25_let_1928.jpg",
+      "type": "image",
+      "title": "Slavnost 1928",
+      "description": "25 let trváví Sokola ve Staré Bělé 15. ledna 1928."
+    },
+    {
+      "path": "files/PLAKÁTY/oslava1930.jpg",
+      "type": "image",
+      "title": "Slavnost 1930",
+      "description": "Oslava k 80. narozeninám TGM. 9., 15. a 16. března 1930."
+    },
+    {
+      "path": "files/PLAKÁTY/oslava1933.jpg",
+      "type": "image",
+      "title": "Slavnost 1933",
+      "description": "Oslava k 30letému působení Sokola ve Staré Bělé 28. ledna 1933."
+    },
+    {
+      "path": "files/PLAKÁTY/odhaleni_pommiku1936.jpg",
+      "type": "image",
+      "title": "Slavnost pomníky 1936",
+      "description": "Slavnost k odhalení pomíků T. G. Masarykovi a Antonínu Švehlovi, 5. července 1936."
+    },
+    {
+      "path": "files/PLAKÁTY/oslava1936.jpg",
+      "type": "image",
+      "title": "Oslava svátku svobody 1936",
+      "description": "Oslava svátku svobody 28. října 1936."
+    },
+    {
+      "path": "files/PLAKÁTY/orelska_slavnost1939.jpg",
+      "type": "image",
+      "title": "Orelská slavnost 1939",
+      "description": "Orelská slavnost 23. července 1939."
+    },
+    {
+      "path": "files/PLAKÁTY/plakát_sokol.jpg",
+      "type": "image",
+      "title": "Sokolský plakát",
+      "description": "Sokolský plakát - VSTUPTE DO SOKOLA! "
+    },
+    
+    {
+      "path": "files/PLAKÁTY/ples1931a.jpg",
+      "type": "image",
+      "title": "Ples 1931",
+      "description": "Sokolský ples 31. ledna 1931."
+    },
+    {
+      "path": "files/PLAKÁTY/přátelský_večírek1941.jpg",
+      "type": "image",
+      "title": "Večírek 1941",
+      "description": "Přátelský večírek Sokola 22. února 1941."
+    },
+    {
+      "path": "files/PLAKÁTY/sletový_večer1926.jpg",
+      "type": "image",
+      "title": "Sletový večer 1926",
+      "description": "Sletový večer ve Staré Bělé 2. května 1926."
+    },
+    
+    {
+      "path": "files/PLAKÁTY/veřejné cvičení1926.jpg",
+      "type": "image",
+      "title": "Veřejné cvičení 1926",
+      "description": "Veřejné cvičení TJ Sokol Stará Bělá 1. srpna 1926."
+    },
+    {
+      "path": "files/PLAKÁTY/veřejné_cvičení1927.jpg",
+      "type": "image",
+      "title": "Veřejné cvičení 1927",
+      "description": "Veřejné cvičení TJ Sokol Stará Bělá 17. července 1927."
+    },
+    {
+      "path": "files/PLAKÁTY/veřejné_cvičení1928.jpg",
+      "type": "image",
+      "title": "Veřejné cvičení 1928",
+      "description": "Veřejné cvičení TJ Sokol Stará Bělá 22. července 1928."
+    },
+    {
+      "path": "files/PLAKÁTY/veřejné_cvičení1929.jpg",
+      "type": "image",
+      "title": "Veřejné cvičení 1929",
+      "description": "Veřejné cvičení TJ Sokol Stará Bělá 14. července 1929."
+    },
+    {
+      "path": "files/PLAKÁTY/veřejné_cvičení1930.jpg",
+      "type": "image",
+      "title": "Veřejné cvičení 1930",
+      "description": "Veřejné cvičení TJ Sokol Stará Bělá 13. července 1930."
+    },
+    {
+      "path": "files/PLAKÁTY/veřejné_cvičení1931.jpg",
+      "type": "image",
+      "title": "Veřejné cvičení 1931",
+      "description": "Veřejné cvičení TJ Sokol Stará Bělá 21. června 1931."
+    },
+    {
+      "path": "files/PLAKÁTY/veřejné_cvičení1932.jpg",
+      "type": "image",
+      "title": "Veřejné cvičení 1932",
+      "description": "Veřejné cvičení TJ Sokol Stará Bělá 31. července 1932."
+    },
+    {
+      "path": "files/PLAKÁTY/veřejné_cvičení1933.jpg",
+      "type": "image",
+      "title": "Veřejné cvičení 1933",
+      "description": "Veřejné cvičení TJ Sokol Stará Bělá 2. července 1933."
+    },
+    {
+      "path": "files/PLAKÁTY/veřejné_cvičení1934.jpg",
+      "type": "image",
+      "title": "Veřejné cvičení 1934",
+      "description": "Veřejné cvičení TJ Sokol Stará Bělá 15. července 1934."
+    },
+    {
+      "path": "files/PLAKÁTY/veřejné_cvičení1935.jpg",
+      "type": "image",
+      "title": "Veřejné cvičení 1935",
+      "description": "Veřejné cvičení TJ Sokol Stará Bělá 14. července 1935."
+    },
+    {
+      "path": "files/PLAKÁTY/IMG_20251005_0001a.jpg",
+      "type": "image",
+      "title": "Vyzva veřejné cvičení 1935",
+      "description": "Vyzývající text k veřejnému cvičení 14. července 1935."
+    },
+    {
+      "path": "files/PLAKÁTY/ukázka_cvičení1939.jpg",
+      "type": "image",
+      "title": "Veřejné cvičení 1939",
+      "description": "Ukázka veřejné cvičební hodiny 16. července 1939."
+    },
+    {
+      "path": "files/PLAKÁTY/veřejné_cvičení1945.jpg",
+      "type": "image",
+      "title": "Veřejné cvičení 1945",
+      "description": "Veřejné cvičení TJ Sokol Stará Bělá 12. srpna 1945."
+    },
+    {
+      "path": "files/PLAKÁTY/diplom29.jpg",
+      "type": "image",
+      "title": "Diplom Antonínu Chmelaři",
+      "description": "Diplom udělělený Antonínu Chmelaři v roce 1929."
+    },
+    {
+      "path": "files/PLAKÁTY/výstava_frenštát.jpg",
+      "type": "image",
+      "title": "rajinská výstava 1934",
+      "description": "K moravského Pobeskydí, červenec – srpen 1934. "
+    },
+    {
+      "path": "files/PLAKÁTY/děti_do_sokola.jpg",
+      "type": "image",
+      "title": "Text rodičům",
+      "description": "Text vyzývající rodiče k zapojení dětí do řad Sokolstva. "
+    },
+    
+    
   ]
 }
