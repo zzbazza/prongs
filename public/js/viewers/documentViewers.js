@@ -32,6 +32,7 @@ export async function renderTextViewer(item) {
       <div class="text-container">
         <h2>${escapeHtml(item.title || item.path)}</h2>
         ${item.description ? `<p style="color: var(--text-secondary); margin-bottom: var(--spacing-md);">${escapeHtml(item.description)}</p>` : ''}
+        <p class="metadata-filepath">${escapeHtml(item.path)}</p>
         <hr style="margin: var(--spacing-lg) 0; border: 1px solid var(--gold-dark); opacity: 0.3;">
         <pre style="white-space: pre-wrap; font-family: inherit;">${escapeHtml(text)}</pre>
       </div>
@@ -67,6 +68,7 @@ export function renderAudioViewer(item) {
       <div class="file-icon" style="font-size: 96px; margin-bottom: 24px;">🎵</div>
       <h2 style="margin-bottom: 24px;">${escapeHtml(item.title || item.path)}</h2>
       ${item.description ? `<p style="color: var(--text-secondary); margin-bottom: var(--spacing-lg);">${escapeHtml(item.description)}</p>` : ''}
+      <p class="metadata-filepath">${escapeHtml(item.path)}</p>
       <audio controls style="width: 100%; max-width: 500px;">
         <source src="${audioPath}">
         Váš prohlížeč nepodporuje přehrávání audia.

@@ -859,6 +859,16 @@ body[data-text-size="large"] .file-thumbnail {
   margin-bottom: var(--spacing-xs);
 }
 
+.metadata-filepath {
+  margin: 0;
+  margin-top: auto;
+  color: var(--text-secondary);
+  font-size: 0.75em;
+  opacity: 0.6;
+  word-break: break-all;
+  font-family: monospace;
+}
+
 .keyword-tag {
   display: inline-block;
   background: var(--gold-primary);

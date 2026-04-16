@@ -60,6 +60,7 @@ export function renderImageViewer(item, openFile) {
             <strong>Klíčová slova:</strong> ${item.keywords.map(k => `<span class="keyword-tag">${escapeHtml(k)}</span>`).join(' ')}
           </div>
         ` : ''}
+        <p class="metadata-filepath">${escapeHtml(item.path)}</p>
       </div>
     </div>
   `;
