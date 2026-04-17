@@ -9,8 +9,17 @@ let currentViewer = null;
 let isTagMode = false;
 let currentItem = null;
 
+// Drag-to-draw state
+let dragStart = null;  // { fx, fy, posX, posY }
+let isDragging = false;
+let justDragged = false;
+let rubberBand = null;
+
 const TAG_DEFAULT_W = 0.08;
 const TAG_DEFAULT_H = 0.12;
+const DRAG_THRESHOLD_PX = 6; // minimum pixels to count as a drag vs click
+
+// --- Overlay helpers ---
 
 function clearOverlays() {
   if (currentViewer) currentViewer.clearOverlays();
@@ -36,18 +45,6 @@ function addPeopleOverlays(people, editMode = false) {
     label.textContent = person.name;
     el.appendChild(label);
 
-    if (editMode) {
-      const deleteBtn = document.createElement('button');
-      deleteBtn.className = 'person-tag-delete';
-      deleteBtn.innerHTML = '✕';
-      deleteBtn.title = 'Smazat označení';
-      deleteBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        deleteTag(idx);
-      });
-      el.appendChild(deleteBtn);
-    }
-
     const viewportRect = tiledImage.imageToViewportRectangle(
       person.x * imgSize.x,
       person.y * imgSize.y,
@@ -63,6 +60,8 @@ function highlightOverlay(idx, on) {
   const el = document.querySelector(`.person-tag-overlay[data-index="${idx}"]`);
   if (el) el.classList.toggle('highlighted', on);
 }
+
+// --- Sidebar people list ---
 
 function updatePeopleList() {
   const list = document.querySelector('.metadata-people');
@@ -80,7 +79,8 @@ function updatePeopleList() {
       ${people.map((p, i) => `
         <li class="person-list-item" data-index="${i}">
           <i class="fa-solid fa-magnifying-glass person-locate-icon"></i>
-          ${escapeHtml(p.name)}
+          <span class="person-name">${escapeHtml(p.name)}</span>
+          ${isTagMode ? `<button class="person-delete-btn" data-index="${i}" title="Smazat">✕</button>` : ''}
         </li>
       `).join('')}
     </ul>
@@ -91,16 +91,22 @@ function updatePeopleList() {
     item.addEventListener('mouseenter', () => highlightOverlay(idx, true));
     item.addEventListener('mouseleave', () => highlightOverlay(idx, false));
   });
+
+  list.querySelectorAll('.person-delete-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      deleteTag(parseInt(btn.dataset.index));
+    });
+  });
 }
 
 function updateJsonOutput() {
   const output = document.getElementById('people-json-output');
   if (!output || !currentItem) return;
-
-  const people = currentItem.people || [];
-  const json = JSON.stringify(people, null, 2);
-  output.querySelector('pre').textContent = json;
+  output.querySelector('pre').textContent = JSON.stringify(currentItem.people || [], null, 2);
 }
+
+// --- Tag data operations ---
 
 function deleteTag(idx) {
   if (!currentItem) return;
@@ -112,7 +118,9 @@ function deleteTag(idx) {
   addPeopleOverlays(people, true);
 }
 
-function showTagForm(fx, fy, screenX, screenY) {
+// --- Tag input form ---
+
+function showTagForm(rect, screenX, screenY) {
   hideTagForm();
 
   const container = document.getElementById('imageContainer');
@@ -142,10 +150,10 @@ function showTagForm(fx, fy, screenX, screenY) {
   container.appendChild(form);
   document.getElementById('tag-name-input').focus();
 
-  document.getElementById('tag-save-btn').addEventListener('click', () => confirmTag(fx, fy));
+  document.getElementById('tag-save-btn').addEventListener('click', () => confirmTag(rect));
   document.getElementById('tag-cancel-btn').addEventListener('click', hideTagForm);
   document.getElementById('tag-name-input').addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') confirmTag(fx, fy);
+    if (e.key === 'Enter') confirmTag(rect);
     if (e.key === 'Escape') hideTagForm();
   });
 }
@@ -154,7 +162,7 @@ function hideTagForm() {
   document.getElementById('tag-input-form')?.remove();
 }
 
-function confirmTag(fx, fy) {
+function confirmTag(rect) {
   const name = document.getElementById('tag-name-input')?.value.trim();
   if (!name || !currentItem) {
     hideTagForm();
@@ -162,13 +170,7 @@ function confirmTag(fx, fy) {
   }
 
   const people = [...(currentItem.people || [])];
-  people.push({
-    name,
-    x: Math.max(0, fx - TAG_DEFAULT_W / 2),
-    y: Math.max(0, fy - TAG_DEFAULT_H / 2),
-    w: TAG_DEFAULT_W,
-    h: TAG_DEFAULT_H
-  });
+  people.push({ name, x: rect.x, y: rect.y, w: rect.w, h: rect.h });
   currentItem.people = people;
 
   hideTagForm();
@@ -177,26 +179,115 @@ function confirmTag(fx, fy) {
   addPeopleOverlays(people, true);
 }
 
-function onCanvasClick(event) {
-  if (!isTagMode) return;
-  event.preventDefaultAction = true;
+// --- OSD tag mode event handlers ---
 
+function getImageFraction(position) {
   const tiledImage = currentViewer.world.getItemAt(0);
-  if (!tiledImage) return;
-
+  if (!tiledImage) return null;
   const imgSize = tiledImage.getContentSize();
-  const viewportPoint = currentViewer.viewport.pointFromPixel(event.position);
-  const imgPoint = tiledImage.viewportToImageCoordinates(viewportPoint.x, viewportPoint.y);
+  const vp = currentViewer.viewport.pointFromPixel(position);
+  const img = tiledImage.viewportToImageCoordinates(vp.x, vp.y);
+  return {
+    fx: Math.max(0, Math.min(1, img.x / imgSize.x)),
+    fy: Math.max(0, Math.min(1, img.y / imgSize.y))
+  };
+}
 
-  const fx = Math.max(0, Math.min(1, imgPoint.x / imgSize.x));
-  const fy = Math.max(0, Math.min(1, imgPoint.y / imgSize.y));
+function removeRubberBand() {
+  rubberBand?.remove();
+  rubberBand = null;
+}
+
+function onCanvasPress(event) {
+  if (!isTagMode) return;
+
+  const frac = getImageFraction(event.position);
+  if (!frac) return;
+
+  dragStart = { fx: frac.fx, fy: frac.fy, posX: event.position.x, posY: event.position.y };
+  isDragging = false;
+
+  rubberBand = document.createElement('div');
+  rubberBand.className = 'tag-rubber-band';
+  rubberBand.style.left = `${event.position.x}px`;
+  rubberBand.style.top = `${event.position.y}px`;
+  rubberBand.style.width = '0';
+  rubberBand.style.height = '0';
+  document.getElementById('imageContainer').appendChild(rubberBand);
+}
+
+function onCanvasDrag(event) {
+  if (!isTagMode || !dragStart) return;
+  event.preventDefaultAction = true; // prevent OSD panning
+
+  const dx = event.position.x - dragStart.posX;
+  const dy = event.position.y - dragStart.posY;
+
+  if (Math.abs(dx) > DRAG_THRESHOLD_PX || Math.abs(dy) > DRAG_THRESHOLD_PX) {
+    isDragging = true;
+  }
+
+  if (isDragging && rubberBand) {
+    rubberBand.style.left   = `${Math.min(event.position.x, dragStart.posX)}px`;
+    rubberBand.style.top    = `${Math.min(event.position.y, dragStart.posY)}px`;
+    rubberBand.style.width  = `${Math.abs(dx)}px`;
+    rubberBand.style.height = `${Math.abs(dy)}px`;
+  }
+}
+
+function onCanvasRelease(event) {
+  if (!isTagMode || !dragStart) return;
+
+  removeRubberBand();
+
+  if (!isDragging) {
+    // canvas-click will handle this
+    dragStart = null;
+    isDragging = false;
+    return;
+  }
+
+  const frac = getImageFraction(event.position);
+  if (!frac) { dragStart = null; isDragging = false; return; }
+
+  const rect = {
+    x: Math.min(dragStart.fx, frac.fx),
+    y: Math.min(dragStart.fy, frac.fy),
+    w: Math.abs(frac.fx - dragStart.fx),
+    h: Math.abs(frac.fy - dragStart.fy)
+  };
 
   const canvasRect = currentViewer.canvas.getBoundingClientRect();
   const screenX = canvasRect.left + event.position.x;
   const screenY = canvasRect.top + event.position.y;
 
-  showTagForm(fx, fy, screenX, screenY);
+  dragStart = null;
+  isDragging = false;
+  justDragged = true;
+
+  showTagForm(rect, screenX, screenY);
 }
+
+function onCanvasClick(event) {
+  if (!isTagMode) return;
+  if (justDragged) { justDragged = false; return; }
+  event.preventDefaultAction = true;
+
+  const frac = getImageFraction(event.position);
+  if (!frac) return;
+
+  const rect = {
+    x: Math.max(0, frac.fx - TAG_DEFAULT_W / 2),
+    y: Math.max(0, frac.fy - TAG_DEFAULT_H / 2),
+    w: TAG_DEFAULT_W,
+    h: TAG_DEFAULT_H
+  };
+
+  const canvasRect = currentViewer.canvas.getBoundingClientRect();
+  showTagForm(rect, canvasRect.left + event.position.x, canvasRect.top + event.position.y);
+}
+
+// --- Tag mode toggle ---
 
 function enableTagMode(btn) {
   isTagMode = true;
@@ -207,6 +298,11 @@ function enableTagMode(btn) {
   document.getElementById('people-json-output')?.style.setProperty('display', 'block');
 
   addPeopleOverlays(currentItem?.people || [], true);
+  updatePeopleList();
+
+  currentViewer.addHandler('canvas-press', onCanvasPress);
+  currentViewer.addHandler('canvas-drag', onCanvasDrag);
+  currentViewer.addHandler('canvas-release', onCanvasRelease);
   currentViewer.addHandler('canvas-click', onCanvasClick);
 }
 
@@ -215,14 +311,24 @@ function disableTagMode(btn) {
   btn.classList.remove('active');
   btn.textContent = 'Označit osoby';
   hideTagForm();
+  removeRubberBand();
+  dragStart = null;
+  isDragging = false;
+  justDragged = false;
 
   document.getElementById('tag-mode-hint')?.style.setProperty('display', 'none');
 
   addPeopleOverlays(currentItem?.people || [], false);
+  updatePeopleList();
+
+  currentViewer.removeHandler('canvas-press', onCanvasPress);
+  currentViewer.removeHandler('canvas-drag', onCanvasDrag);
+  currentViewer.removeHandler('canvas-release', onCanvasRelease);
   currentViewer.removeHandler('canvas-click', onCanvasClick);
 }
 
-// Setup navigation handlers
+// --- Navigation ---
+
 function setupNavigation(currentImageIndex, images, openFileFn) {
   const prevBtn = document.getElementById('prevImage');
   const nextBtn = document.getElementById('nextImage');
@@ -244,7 +350,8 @@ function setupNavigation(currentImageIndex, images, openFileFn) {
   }
 }
 
-// Render image viewer with navigation using OpenSeadragon
+// --- Main render ---
+
 export function renderImageViewer(item, openFileFn) {
   if (currentViewer) {
     currentViewer.destroy();
@@ -252,6 +359,9 @@ export function renderImageViewer(item, openFileFn) {
   }
 
   isTagMode = false;
+  dragStart = null;
+  isDragging = false;
+  rubberBand = null;
   currentItem = item;
   if (!item.people) item.people = [];
 
@@ -264,7 +374,7 @@ export function renderImageViewer(item, openFileFn) {
   const editControls = state.editMode ? `
     <div class="tag-mode-controls">
       <button id="tagModeBtn" class="tag-mode-btn">Označit osoby</button>
-      <p id="tag-mode-hint" class="tag-mode-hint" style="display:none;">Klikněte na fotografii pro označení osoby</p>
+      <p id="tag-mode-hint" class="tag-mode-hint" style="display:none;">Táhněte pro obdélník, nebo klikněte pro výchozí velikost</p>
     </div>
     <div id="people-json-output" class="people-json-output" style="display:none;">
       <strong>Zkopírujte do items.json:</strong>
@@ -291,14 +401,7 @@ export function renderImageViewer(item, openFileFn) {
             ${item.keywords.map(k => `<span class="keyword-tag">${escapeHtml(k)}</span>`).join(' ')}
           </div>
         ` : ''}
-        <div class="metadata-people">
-          ${item.people.length > 0 ? `
-            <strong>Osoby na fotografii:</strong>
-            <ul class="people-list">
-              ${item.people.map(p => `<li>${escapeHtml(p.name)}</li>`).join('')}
-            </ul>
-          ` : ''}
-        </div>
+        <div class="metadata-people"></div>
         ${editControls}
         <p class="metadata-filepath">${escapeHtml(item.path)}</p>
       </div>
@@ -314,8 +417,7 @@ export function renderImageViewer(item, openFileFn) {
     });
 
     document.querySelector('.json-copy-btn')?.addEventListener('click', () => {
-      const json = JSON.stringify(currentItem.people || [], null, 2);
-      navigator.clipboard.writeText(json).catch(() => {});
+      navigator.clipboard.writeText(JSON.stringify(currentItem.people || [], null, 2)).catch(() => {});
     });
   }
 

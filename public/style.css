@@ -977,7 +977,7 @@ body[data-text-size="large"] .file-thumbnail {
   transform: translateX(-50%);
   background: rgba(0, 0, 0, 0.78);
   color: #fff;
-  font-size: 12px;
+  font-size: 13px;
   padding: 3px 8px;
   border-radius: 4px;
   white-space: nowrap;
@@ -987,35 +987,45 @@ body[data-text-size="large"] .file-thumbnail {
   z-index: 100;
 }
 
+body[data-text-size="small"] .person-tag-label {
+  font-size: 11px;
+  padding: 2px 6px;
+}
+
+body[data-text-size="large"] .person-tag-label {
+  font-size: 17px;
+  padding: 4px 10px;
+  bottom: -30px;
+}
+
 .person-tag-overlay:hover .person-tag-label,
 .person-tag-overlay.highlighted .person-tag-label {
   opacity: 1;
 }
 
-.person-tag-delete {
-  position: absolute;
-  top: -9px;
-  right: -9px;
-  width: 18px;
-  height: 18px;
-  background: #c00;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  font-size: 9px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  line-height: 1;
-  z-index: 200;
-  opacity: 0;
-  transition: opacity 0.15s;
+.person-name {
+  flex: 1;
 }
 
-.person-tag-overlay:hover .person-tag-delete {
-  opacity: 1;
+.person-delete-btn {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  padding: 0 2px;
+  cursor: pointer;
+  color: #c00;
+  font-size: 0.8em;
+  opacity: 0;
+  transition: opacity 0.15s;
+  line-height: 1;
+}
+
+.person-list-item:hover .person-delete-btn {
+  opacity: 0.6;
+}
+
+.person-delete-btn:hover {
+  opacity: 1 !important;
 }
 
 /* JSON output panel */
@@ -1069,6 +1079,16 @@ body[data-text-size="large"] .file-thumbnail {
 
 .json-copy-btn:hover {
   opacity: 1;
+}
+
+/* Drag-to-draw rubber band */
+.tag-rubber-band {
+  position: absolute;
+  border: 2px dashed rgba(184, 148, 74, 0.9);
+  background: rgba(184, 148, 74, 0.08);
+  pointer-events: none;
+  box-sizing: border-box;
+  z-index: 500;
 }
 
 /* Tag name input form (floats over image) */
