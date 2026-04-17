@@ -284,6 +284,11 @@ app.get('/api/categories', async (req, res) => {
   }
 });
 
+// API endpoint: server configuration flags for the frontend (no auth required)
+app.get('/api/config', (req, res) => {
+  res.json({ editMode: process.argv.includes('--edit') });
+});
+
 // Main app
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
@@ -291,5 +296,7 @@ app.get('/', (req, res) => {
 
 // Start server
 app.listen(config.PORT, () => {
+  const editMode = process.argv.includes('--edit');
   console.log(`Server běží na http://localhost:${config.PORT}`);
+  console.log(`Edit mode: ${editMode ? 'ZAPNUT (--edit)' : 'vypnut'}`);
 });

@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
+    "start-edit": "node server.js --edit",
     "dev": "nodemon server.js"
   },
   "keywords": ["exposition", "historical", "touchscreen"],

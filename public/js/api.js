@@ -9,17 +9,26 @@ import { setLoading } from './utils.js';
 export async function loadAllData() {
   setLoading(true);
   try {
-    // Load categories
-    const catResponse = await fetch('/api/categories');
+    const [catResponse, itemsResponse] = await Promise.all([
+      fetch('/api/categories'),
+      fetch('/api/items')
+    ]);
+
     const catData = await catResponse.json();
     state.allCategories = catData.categories;
     state.currentCategories = catData.categories;
     state.isLegacy = catData.isLegacy || false;
 
-    // Load all items
-    const itemsResponse = await fetch('/api/items');
     const itemsData = await itemsResponse.json();
     state.allItems = itemsData.items;
+
+    try {
+      const configResponse = await fetch('/api/config');
+      const configData = await configResponse.json();
+      state.editMode = configData.editMode || false;
+    } catch {
+      state.editMode = false;
+    }
   } catch (error) {
     console.error('Error loading data:', error);
     alert('Chyba při načítání obsahu');

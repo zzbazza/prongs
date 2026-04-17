@@ -859,6 +859,278 @@ body[data-text-size="large"] .file-thumbnail {
   margin-bottom: var(--spacing-xs);
 }
 
+/* People list in metadata sidebar */
+.metadata-people {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 0.9em;
+  min-height: 0;
+}
+
+.metadata-people strong {
+  color: var(--gold-dark);
+  display: block;
+  margin-bottom: var(--spacing-xs);
+}
+
+.people-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.person-list-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 3px 0;
+  padding: 3px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.person-list-item:hover {
+  background: var(--cream-dark);
+}
+
+.person-locate-icon {
+  flex-shrink: 0;
+  color: var(--gold-dark);
+  opacity: 0.45;
+  font-size: 0.75em;
+  transition: opacity 0.15s;
+}
+
+.person-list-item:hover .person-locate-icon {
+  opacity: 1;
+}
+
+/* Tag mode controls */
+.tag-mode-controls {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.tag-mode-btn {
+  padding: 7px 12px;
+  background: transparent;
+  border: 1.5px solid var(--gold-dark);
+  border-radius: var(--radius-sm);
+  color: var(--gold-dark);
+  font-family: inherit;
+  font-size: 0.85em;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  text-align: center;
+}
+
+.tag-mode-btn:hover {
+  background: var(--gold-primary);
+  color: var(--cream-light);
+  border-color: var(--gold-primary);
+}
+
+.tag-mode-btn.active {
+  background: var(--gold-primary);
+  color: var(--cream-light);
+  border-color: var(--gold-primary);
+}
+
+.tag-mode-hint {
+  margin: 0;
+  font-size: 0.8em;
+  color: var(--text-secondary);
+  font-style: italic;
+  line-height: 1.3;
+}
+
+/* Person tag overlays (rendered by OpenSeadragon) */
+.person-tag-overlay {
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  cursor: default;
+  position: relative;
+  transition: border-color 0.15s;
+}
+
+.person-tag-overlay:hover,
+.person-tag-overlay.highlighted {
+  border-color: rgba(184, 148, 74, 1);
+  z-index: 10;
+}
+
+.person-tag-overlay.edit-mode {
+  border-color: rgba(184, 148, 74, 0.5);
+  cursor: crosshair;
+}
+
+.person-tag-overlay.edit-mode:hover {
+  border-color: rgba(184, 148, 74, 1);
+}
+
+.person-tag-label {
+  position: absolute;
+  bottom: -26px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.78);
+  color: #fff;
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.person-tag-overlay:hover .person-tag-label,
+.person-tag-overlay.highlighted .person-tag-label {
+  opacity: 1;
+}
+
+.person-tag-delete {
+  position: absolute;
+  top: -9px;
+  right: -9px;
+  width: 18px;
+  height: 18px;
+  background: #c00;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 9px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  line-height: 1;
+  z-index: 200;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.person-tag-overlay:hover .person-tag-delete {
+  opacity: 1;
+}
+
+/* JSON output panel */
+.people-json-output {
+  border: 1px solid var(--gold-dark);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-sm);
+  background: var(--cream-dark);
+  font-size: 0.8em;
+}
+
+.people-json-output strong {
+  color: var(--gold-dark);
+  display: block;
+  margin-bottom: var(--spacing-xs);
+}
+
+.json-output-wrapper {
+  position: relative;
+}
+
+.json-output-wrapper pre {
+  margin: 0;
+  font-size: 0.85em;
+  white-space: pre-wrap;
+  word-break: break-all;
+  color: var(--text-primary);
+  max-height: 160px;
+  overflow-y: auto;
+}
+
+.json-copy-btn {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: var(--gold-primary);
+  color: var(--cream-light);
+  border: none;
+  border-radius: 4px;
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  opacity: 0.7;
+  transition: opacity 0.15s;
+}
+
+.json-copy-btn:hover {
+  opacity: 1;
+}
+
+/* Tag name input form (floats over image) */
+.tag-input-form {
+  position: absolute;
+  background: var(--cream);
+  border: 2px solid var(--gold-dark);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  min-width: 200px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+.tag-input-form input {
+  padding: 6px 10px;
+  border: 1px solid var(--gold-dark);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 0.9em;
+  background: white;
+  outline: none;
+}
+
+.tag-input-form input:focus {
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 0 2px rgba(184, 148, 74, 0.2);
+}
+
+.tag-form-buttons {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.tag-form-buttons button {
+  flex: 1;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.85em;
+  transition: opacity 0.15s;
+}
+
+.tag-form-buttons button:hover {
+  opacity: 0.85;
+}
+
+.tag-form-buttons button:first-child {
+  background: var(--gold-primary);
+  color: var(--cream-light);
+}
+
+.tag-form-buttons button:last-child {
+  background: var(--cream-dark);
+  color: var(--text-primary);
+}
+
 .metadata-filepath {
   margin: 0;
   margin-top: auto;

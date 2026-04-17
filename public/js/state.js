@@ -16,7 +16,8 @@ export const state = {
   currentItems: [], // Items in current view
   textSize: 'medium',
   textSizes: ['small', 'medium', 'large'],
-  isLegacy: false // Whether using legacy flat category structure
+  isLegacy: false, // Whether using legacy flat category structure
+  editMode: false  // Whether server was started with --edit flag
 };
 
 // DOM elements
