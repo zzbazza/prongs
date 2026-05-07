@@ -329,24 +329,25 @@ function disableTagMode(btn) {
 
 // --- Navigation ---
 
-function setupNavigation(currentImageIndex, images, openFileFn) {
+function findAdjacentImage(dir) {
+  const items = state.currentItems || [];
+  let i = state.currentIndex + dir;
+  while (i >= 0 && i < items.length) {
+    if (items[i].type === 'image') return { item: items[i], index: i };
+    i += dir;
+  }
+  return null;
+}
+
+function setupNavigation(prevAdj, nextAdj, openFileFn) {
   const prevBtn = document.getElementById('prevImage');
   const nextBtn = document.getElementById('nextImage');
 
-  if (prevBtn) {
-    prevBtn.addEventListener('click', () => {
-      const prevImage = images[currentImageIndex - 1];
-      const prevIndex = state.currentItems.findIndex(f => f.path === prevImage.path);
-      openFileFn(prevImage, prevIndex);
-    });
+  if (prevBtn && prevAdj) {
+    prevBtn.addEventListener('click', () => openFileFn(prevAdj.item, prevAdj.index));
   }
-
-  if (nextBtn) {
-    nextBtn.addEventListener('click', () => {
-      const nextImage = images[currentImageIndex + 1];
-      const nextIndex = state.currentItems.findIndex(f => f.path === nextImage.path);
-      openFileFn(nextImage, nextIndex);
-    });
+  if (nextBtn && nextAdj) {
+    nextBtn.addEventListener('click', () => openFileFn(nextAdj.item, nextAdj.index));
   }
 }
 
@@ -366,10 +367,10 @@ export function renderImageViewer(item, openFileFn) {
   if (!item.people) item.people = [];
 
   const imagePath = `/content/${item.path}`;
-  const images = (state.currentItems || []).filter(f => f.type === 'image');
-  const currentImageIndex = images.findIndex(img => img.path === item.path);
-  const hasPrev = currentImageIndex > 0;
-  const hasNext = currentImageIndex < images.length - 1;
+  const prevAdj = findAdjacentImage(-1);
+  const nextAdj = findAdjacentImage(+1);
+  const hasPrev = !!prevAdj;
+  const hasNext = !!nextAdj;
 
   const editControls = state.editMode ? `
     <div class="tag-mode-controls">
@@ -472,5 +473,5 @@ export function renderImageViewer(item, openFileFn) {
     }
   });
 
-  setupNavigation(currentImageIndex, images, openFileFn);
+  setupNavigation(prevAdj, nextAdj, openFileFn);
 }

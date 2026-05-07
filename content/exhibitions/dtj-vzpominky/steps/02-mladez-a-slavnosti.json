@@ -1,0 +1,8 @@
+{
+  "title": "Mládež a slavnosti",
+  "images": [
+    { "path": "files/FOTO/DTJ/DTJ mládež.jpg",                "duration": 10 },
+    { "path": "files/FOTO/DTJ/1930 DTJ mládež.jpg",            "duration": 10 },
+    { "path": "files/FOTO/DTJ/DTJ 1930 Slavnost mládeže.jpg",  "duration": 10 }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Spolkový život",
+  "images": [
+    { "path": "files/FOTO/DTJ/DTJ divadlo.jpg",     "duration": 10 },
+    { "path": "files/FOTO/DTJ/DTJ divadlo 2.jpg",   "duration": 10 },
+    { "path": "files/FOTO/DTJ/DTJ pěvecký sbor.jpg","duration": 10 }
+  ]
+}

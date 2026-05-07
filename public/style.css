@@ -1159,6 +1159,9 @@ body[data-text-size="large"] .person-tag-label {
   opacity: 0.6;
   word-break: break-all;
   font-family: monospace;
+  user-select: text;
+  -webkit-user-select: text;
+  cursor: text;
 }
 
 .keyword-tag {
@@ -1210,6 +1213,330 @@ body[data-text-size="large"] .person-tag-label {
 
 .image-nav.next {
   right: calc(22% + var(--spacing-xl));
+}
+
+/* Virtual Exposition Viewer */
+.content-viewer:has(.exhibition-viewer) .viewer-content {
+  padding: 0;
+  overflow: hidden;
+}
+
+.exhibition-viewer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.exhibition-image-area {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1a1a1a;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.exhibition-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.exhibition-footer {
+  flex-shrink: 0;
+  background: var(--cream);
+  border-top: 2px solid var(--gold-dark);
+  padding: var(--spacing-md) var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.exhibition-step-title {
+  font-family: "Bodoni", Georgia, "Times New Roman", serif;
+  font-size: 1.05em;
+  color: var(--text-primary);
+  text-align: center;
+  min-height: 1.4em;
+}
+
+.exhibition-progress-bar {
+  position: relative;
+  width: 100%;
+  height: 8px;
+  background: var(--cream-dark);
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.exhibition-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--gold-primary);
+  border-radius: 4px;
+}
+
+.exhibition-progress-markers {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.exhibition-progress-marker {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  margin-left: -1px;
+  background: var(--cream-light);
+  opacity: 0.85;
+}
+
+.exhibition-progress-time {
+  position: absolute;
+  right: 0;
+  top: 12px;
+  font-size: 0.75em;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.exhibition-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--spacing-xs);
+}
+
+.exh-nav-btn {
+  padding: 8px 24px;
+  background: var(--gold-primary);
+  color: var(--cream-light);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 0.95em;
+  cursor: pointer;
+  transition: background 0.15s, opacity 0.15s;
+}
+
+.exh-nav-btn:hover:not(:disabled) {
+  background: var(--gold-dark);
+}
+
+.exh-nav-btn:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+
+.exhibition-step-counter {
+  font-size: 0.9em;
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+}
+
+.exhibition-center-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.exh-pause-btn {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gold-primary);
+  color: var(--cream-light);
+  border: none;
+  border-radius: 50%;
+  font-size: 0.95em;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.exh-pause-btn:hover {
+  background: var(--gold-dark);
+}
+
+/* Notes overlay */
+.exhibition-note-overlay {
+  position: absolute;
+  pointer-events: none;
+}
+
+.exhibition-note-overlay > .exh-note-marker {
+  pointer-events: auto;
+}
+
+.exhibition-note-overlay.edit-mode {
+  pointer-events: auto;
+  cursor: crosshair;
+}
+
+.exh-note-marker {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.exh-note-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid var(--cream-light);
+  background: var(--gold-primary);
+  color: var(--cream-light);
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 0.95em;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  transition: background 0.15s, transform 0.1s;
+}
+
+.exh-note-icon:hover {
+  background: var(--gold-dark);
+  transform: scale(1.08);
+}
+
+.exh-note-bubble {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 180px;
+  max-width: 320px;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: rgba(20, 20, 20, 0.78);
+  color: #f5f0e1;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-sm);
+  font-size: 0.9em;
+  line-height: 1.4;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
+  z-index: 3;
+  white-space: normal;
+}
+
+.exh-note-marker.open .exh-note-bubble {
+  display: block;
+}
+
+.exh-note-text {
+  white-space: pre-wrap;
+}
+
+.exh-note-edit-actions {
+  display: flex;
+  gap: var(--spacing-xs);
+  margin-top: var(--spacing-sm);
+  justify-content: flex-end;
+}
+
+.exh-note-edit-btn {
+  padding: 2px 10px;
+  font-size: 0.85em;
+  background: var(--gold-primary);
+  color: var(--cream-light);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.exh-note-edit-btn:hover {
+  background: var(--gold-dark);
+}
+
+/* Editor panel (edit mode) */
+.exhibition-editor {
+  position: absolute;
+  top: var(--spacing-md);
+  right: var(--spacing-md);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--spacing-xs);
+}
+
+.exh-editor-toggle {
+  padding: 6px 14px;
+  background: var(--gold-primary);
+  color: var(--cream-light);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 0.85em;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.exh-editor-toggle:hover {
+  background: var(--gold-dark);
+}
+
+.exh-editor-panel {
+  width: 380px;
+  max-width: 90vw;
+  padding: var(--spacing-sm);
+  background: rgba(20, 20, 20, 0.92);
+  color: #f5f0e1;
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.exh-editor-panel.hidden {
+  display: none;
+}
+
+.exh-editor-header {
+  font-size: 0.85em;
+  opacity: 0.85;
+}
+
+#exh-editor-json {
+  width: 100%;
+  height: 280px;
+  resize: vertical;
+  background: #0f0f0f;
+  color: #d8d8d8;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-sm);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.8em;
+  padding: 8px;
+}
+
+.exh-editor-btn {
+  align-self: flex-end;
+  padding: 4px 12px;
+  background: var(--gold-primary);
+  color: var(--cream-light);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 0.85em;
+  cursor: pointer;
+}
+
+.exh-editor-btn:hover {
+  background: var(--gold-dark);
 }
 
 /* PDF viewer */

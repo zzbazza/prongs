@@ -6,6 +6,7 @@ import { state, elements } from './state.js';
 import { updateBreadcrumbs } from './navigation.js';
 import { renderImageViewer } from './viewers/imageViewer.js';
 import { renderPDFViewer, renderTextViewer, renderVideoViewer, renderAudioViewer, renderPanelViewer } from './viewers/documentViewers.js';
+import { renderExhibitionViewer, destroyExhibitionViewer } from './viewers/exhibitionViewer.js';
 
 export function openFile(item, index) {
   state.currentIndex = index;
@@ -33,6 +34,9 @@ export function openFile(item, index) {
     case 'audio':
       renderAudioViewer(item);
       break;
+    case 'exhibition':
+      renderExhibitionViewer(item);
+      break;
     default:
       elements.viewerContent.innerHTML = '<div class="empty-state"><div class="empty-state-icon">❌</div><div>Nepodporovaný typ souboru</div></div>';
   }
@@ -41,6 +45,8 @@ export function openFile(item, index) {
 }
 
 export function closeViewer() {
+  destroyExhibitionViewer();
+
   elements.contentViewer.classList.add('hidden');
   elements.browserView.classList.remove('hidden');
   state.currentIndex = -1;
@@ -57,4 +63,3 @@ export function closeViewer() {
 
   updateBreadcrumbs();
 }
-
