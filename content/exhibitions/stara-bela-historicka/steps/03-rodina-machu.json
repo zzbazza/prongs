@@ -1,0 +1,40 @@
+{
+  "title": "Rodina Máchů a proměny hostince",
+  "audio": [
+    {
+      "path": "files/vir_vystava_jelen/audio/rodina_machu.wav",
+      "start": 2,
+      "volume": 1,
+      "once": true
+    },
+    {
+      "path": "files/vir_vystava_jelen/audio/odstavec9.wav",
+      "start": 8,
+      "volume": 1,
+      "once": true,
+      "length": "0:53"
+    }
+  ],
+  "images": [
+    {
+      "path": "files/vir_vystava_jelen/obr.9.jpg",
+      "duration": 47,
+      "notes": [
+        {
+          "x": 0.908,
+          "y": 0.4613,
+          "text": "Ludvík Mácha"
+        },
+        {
+          "x": 0.1028,
+          "y": 0.5301,
+          "text": "Johana Máchová"
+        }
+      ]
+    },
+    {
+      "path": "files/vir_vystava_jelen/obr.9X.jpg",
+      "duration": 19
+    }
+  ]
+}

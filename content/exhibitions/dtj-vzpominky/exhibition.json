@@ -1,9 +1,0 @@
-{
-  "title": "DTJ Stará Bělá – vzpomínky",
-  "description": "Virtuální expozice fotografií Dělnické tělovýchovné jednoty ve Staré Bělé.",
-  "steps": [
-    "steps/01-olympiady.json",
-    "steps/02-mladez-a-slavnosti.json",
-    "steps/03-spolkovy-zivot.json"
-  ]
-}

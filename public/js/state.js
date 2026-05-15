@@ -47,5 +47,7 @@ export const FILE_ICONS = {
   video: '🎬',
   audio: '🎵',
   panel: '🖼️',
+  exhibition: '🎞️',
+  game: '🎮',
   unknown: '📎'
 };

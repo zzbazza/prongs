@@ -1,0 +1,33 @@
+{
+  "title": "Od poválečných let k současnosti",
+  "audio": [
+    {
+      "path": "files/vir_vystava_jelen/audio/povalecna.wav",
+      "start": 2,
+      "volume": 1.0,
+      "once": true,
+      "length": "0:03"
+    },
+    {
+      "path": "files/vir_vystava_jelen/audio/odstavec24-25.wav",
+      "start": 8,
+      "volume": 1.0,
+      "once": true,
+      "length": "0:32"
+    }
+  ],
+  "images": [
+    {
+      "path": "files/vir_vystava_jelen/obr.24.jpg",
+      "duration": 14
+    },
+    {
+      "path": "files/vir_vystava_jelen/obr.25.jpg",
+      "duration": 14
+    },
+    {
+      "path": "files/vir_vystava_jelen/DSC_4254.jpg",
+      "duration": 14
+    }
+  ]
+}

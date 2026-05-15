@@ -1,0 +1,114 @@
+{
+  "title": "Historie budovy č.p. 173 ve Staré Bělé",
+  "audio": [
+    {
+      "path": "files/vir_vystava_jelen/audio/historie.wav",
+      "start": 5,
+      "volume": 1,
+      "once": true
+    },
+    {
+      "path": "files/vir_vystava_jelen/audio/odstavec1-6.wav",
+      "start": 12,
+      "volume": 1,
+      "once": true,
+      "length": "2:15"
+    }
+  ],
+  "images": [
+    {
+      "path": "files/vir_vystava_jelen/obr.1.jpg",
+      "duration": 65,
+      "notes": [
+        {
+          "type": "rectangle",
+          "x": 0.3128,
+          "y": 0.3158,
+          "width": 0.0512,
+          "height": 0.0652,
+          "appearTime": 25,
+          "duration": 10,
+          "color": "black",
+          "fadeIn": 2,
+          "fadeOut": 2,
+          "borderSize": 5
+        },
+        {
+          "type": "rectangle",
+          "x": 0.3371,
+          "y": 0.4105,
+          "width": 0.0294,
+          "height": 0.0348,
+          "appearTime": 35,
+          "color": "black",
+          "fadeIn": 2,
+          "borderSize": 5
+        },
+        {
+          "type": "image",
+          "src": "files/vir_vystava_jelen/obr.4.jpg",
+          "x": 0.5536,
+          "y": 0.0418,
+          "width": 0.4327,
+          "height": 0.8188,
+          "appearTime": 35,
+          "fadeIn": 2
+        },
+        {
+          "type": "arrow",
+          "x1": 0.5498,
+          "y1": 0.3349,
+          "x2": 0.374,
+          "y2": 0.4288,
+          "color": "black",
+          "width": 5,
+          "appearTime": 35,
+          "fadeIn": 2
+        }
+      ]
+    },
+    {
+      "path": "files/vir_vystava_jelen/obr.2.jpg",
+      "duration": 25,
+      "notes": [
+        {
+          "x": 0.2023,
+          "y": 0.4248,
+          "text": "Terezie Hořínková"
+        },
+        {
+          "x": 0.5077,
+          "y": 0.4059,
+          "text": "Cecílie Prošková"
+        },
+        {
+          "x": 0.8569,
+          "y": 0.4073,
+          "text": "Marie Hořínková"
+        },
+        {
+          "x": 0.3588,
+          "y": 0.5301,
+          "text": "Terezie Hořínková"
+        },
+        {
+          "x": 0.647,
+          "y": 0.526,
+          "text": "Matouš Hořínek"
+        }
+      ]
+    },
+    {
+      "path": "files/vir_vystava_jelen/obr.3.jpg",
+      "duration": 27
+    },
+    {
+      "path": "files/vir_vystava_jelen/obr.5.jpg",
+      "duration": 15
+    },
+    {
+      "path": "files/vir_vystava_jelen/obr.6.jpg",
+      "duration": 15
+    }
+  ]
+}

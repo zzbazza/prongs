@@ -3,5 +3,6 @@
   "icon": "🗺️",
   "icon_path": "/static/icons/blueprint.svg",
   "filter": false,
-  "description": "Historické plány a mapy"
+  "description": "Historické plány a mapy",
+  "position": 8
 }

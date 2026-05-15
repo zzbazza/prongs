@@ -11,13 +11,17 @@ let exhibition = null;   // { title, description, steps[] }
 let basePath = '';       // config base: exhibitions/<name>/
 let currentStepIndex = 0;
 let currentImageIndex = 0;
+let imageStartInStep = 0; // cumulative duration of images before current one
 let stepStartTime = null;
 let animFrameId = null;
-let tracks = [];         // [{ el, config: { path, start, volume, volumeChanges } }]
+let tracks = [];         // step-scoped tracks
+let globalTracks = [];   // exhibition-scoped tracks (continuous across steps)
 let paused = false;
 let pausedElapsed = 0;
 let currentImageObj = null;
 let resizeHandler = null;
+let currentEditTool = 'note';   // 'note' | 'rectangle' | 'arrow'
+let dragState = null;            // { tool, startX, startY, currX, currY, previewEl }
 
 // --- Load ---
 
@@ -47,6 +51,7 @@ function renderLayout() {
       <div class="exhibition-image-area">
         <img id="exh-image" class="exhibition-image" src="" alt="" />
         <div id="exh-note-overlay" class="exhibition-note-overlay"></div>
+        <div id="exh-text-content" class="exhibition-text-content hidden"></div>
       </div>
       <div class="exhibition-footer">
         <div class="exhibition-step-title" id="exh-step-title"></div>
@@ -58,6 +63,7 @@ function renderLayout() {
         <div class="exhibition-nav">
           <button id="exh-prev" class="exh-nav-btn">‹ Předchozí</button>
           <div class="exhibition-center-controls">
+            <span class="exhibition-time-info" id="exh-time-info"></span>
             <button id="exh-pause" class="exh-pause-btn" aria-label="Pauza">⏸</button>
             <span class="exhibition-step-counter" id="exh-step-counter"></span>
           </div>
@@ -80,6 +86,10 @@ function renderLayout() {
 
   const overlay = document.getElementById('exh-note-overlay');
   overlay.addEventListener('click', onOverlayClick);
+  overlay.addEventListener('pointerdown', onOverlayPointerDown);
+  overlay.addEventListener('pointermove', onOverlayPointerMove);
+  overlay.addEventListener('pointerup', onOverlayPointerUp);
+  overlay.addEventListener('pointercancel', onOverlayPointerUp);
 
   resizeHandler = () => positionNoteOverlay();
   window.addEventListener('resize', resizeHandler);
@@ -89,8 +99,64 @@ function renderLayout() {
 
 // --- Step playback ---
 
+function isTextStep(step) {
+  return step && step.type === 'text';
+}
+
 function stepDuration(step) {
-  return step.images.reduce((sum, img) => sum + img.duration, 0);
+  if (isTextStep(step)) return Number(step.duration) || 0;
+  return (step.images || []).reduce((sum, img) => sum + img.duration, 0);
+}
+
+function showTextStep(step) {
+  const textEl = document.getElementById('exh-text-content');
+  const imgEl = document.getElementById('exh-image');
+  const overlay = document.getElementById('exh-note-overlay');
+  if (imgEl) imgEl.style.display = 'none';
+  if (overlay) overlay.style.display = 'none';
+  if (!textEl) return;
+  textEl.classList.remove('hidden');
+  const heading = step.title ? `<div class="exhibition-text-heading">${escapeHtml(step.title)}</div>` : '';
+  const body = step.text
+    ? `<div class="exhibition-text-body">${escapeHtml(step.text)}</div>`
+    : '';
+  textEl.innerHTML = heading + body;
+}
+
+function hideTextStep() {
+  const textEl = document.getElementById('exh-text-content');
+  const imgEl = document.getElementById('exh-image');
+  const overlay = document.getElementById('exh-note-overlay');
+  if (textEl) { textEl.classList.add('hidden'); textEl.innerHTML = ''; }
+  if (imgEl) imgEl.style.display = '';
+  if (overlay) overlay.style.display = '';
+}
+
+function exhibitionTotalDuration() {
+  return exhibition.steps.reduce((sum, st) => sum + stepDuration(st), 0);
+}
+
+function priorStepsDuration() {
+  let sum = 0;
+  for (let i = 0; i < currentStepIndex; i++) sum += stepDuration(exhibition.steps[i]);
+  return sum;
+}
+
+function formatMMSS(seconds) {
+  const s = Math.max(0, Math.floor(seconds));
+  const m = Math.floor(s / 60);
+  const r = s % 60;
+  return `${m}:${r.toString().padStart(2, '0')}`;
+}
+
+function updateTimeInfo(stepElapsed, stepTotal) {
+  const el = document.getElementById('exh-time-info');
+  if (!el) return;
+  const total = exhibitionTotalDuration();
+  const overall = priorStepsDuration() + stepElapsed;
+  el.textContent =
+    `Krok ${formatMMSS(Math.min(stepElapsed, stepTotal))} / ${formatMMSS(stepTotal)}` +
+    `  ·  Celkem ${formatMMSS(Math.min(overall, total))} / ${formatMMSS(total)}`;
 }
 
 function startStep(index) {
@@ -99,6 +165,7 @@ function startStep(index) {
 
   currentStepIndex = index;
   currentImageIndex = 0;
+  imageStartInStep = 0;
 
   const step = exhibition.steps[index];
   const total = stepDuration(step);
@@ -110,9 +177,16 @@ function startStep(index) {
   document.getElementById('exh-next').disabled = index === exhibition.steps.length - 1;
   document.getElementById('exh-progress-fill').style.width = '0%';
   document.getElementById('exh-progress-time').textContent = `0 / ${total}s`;
-  renderMarkers(step, total);
+  updateTimeInfo(0, total);
 
-  setImage(step.images[0]);
+  if (isTextStep(step)) {
+    showTextStep(step);
+    renderMarkers(null, 0);
+  } else {
+    hideTextStep();
+    setImage(step.images[0]);
+    renderMarkers(step, total);
+  }
 
   loadTracks(step);
 
@@ -120,6 +194,7 @@ function startStep(index) {
   paused = false;
   updatePauseButton();
   refreshEditorJSON();
+  syncGlobalTracksOnSeek(priorStepsDuration());
   animFrameId = requestAnimationFrame(tick);
 }
 
@@ -130,24 +205,38 @@ function tick(now) {
   const step = exhibition.steps[currentStepIndex];
   const total = stepDuration(step);
   const elapsed = (now - stepStartTime) / 1000;
-  const progress = Math.min(elapsed / total, 1);
+  const progress = total > 0 ? Math.min(elapsed / total, 1) : 1;
 
   fill.style.width = `${progress * 100}%`;
   document.getElementById('exh-progress-time').textContent =
     `${Math.min(Math.floor(elapsed), total)} / ${total}s`;
+  updateTimeInfo(elapsed, total);
 
-  let imgIndex = step.images.length - 1;
-  let accum = 0;
-  for (let i = 0; i < step.images.length; i++) {
-    accum += step.images[i].duration;
-    if (elapsed < accum) { imgIndex = i; break; }
-  }
-  if (imgIndex !== currentImageIndex) {
-    currentImageIndex = imgIndex;
-    setImage(step.images[imgIndex]);
+  if (!isTextStep(step)) {
+    let imgIndex = step.images.length - 1;
+    let imgStart = 0;
+    let accum = 0;
+    for (let i = 0; i < step.images.length; i++) {
+      if (elapsed < accum + step.images[i].duration) {
+        imgIndex = i;
+        imgStart = accum;
+        break;
+      }
+      accum += step.images[i].duration;
+      imgStart = accum;
+    }
+    if (imgIndex !== currentImageIndex) {
+      currentImageIndex = imgIndex;
+      imageStartInStep = imgStart;
+      setImage(step.images[imgIndex]);
+    }
+    updateAnnotationVisibility(elapsed - imageStartInStep);
   }
 
   tickTracks(elapsed);
+  if (globalTracks.length > 0) {
+    tickGlobalTracks(priorStepsDuration() + elapsed);
+  }
 
   if (progress < 1) {
     animFrameId = requestAnimationFrame(tick);
@@ -155,6 +244,9 @@ function tick(now) {
     animFrameId = null;
     if (currentStepIndex < exhibition.steps.length - 1) {
       startStep(currentStepIndex + 1);
+    } else if (globalTracks.length > 0 && !paused) {
+      // Last step ended but global audio continues — keep ticking for envelopes.
+      animFrameId = requestAnimationFrame(tick);
     }
   }
 }
@@ -169,6 +261,7 @@ function seekStep(fraction) {
   stepStartTime = performance.now() - elapsed * 1000;
 
   syncTracksOnSeek(elapsed);
+  syncGlobalTracksOnSeek(priorStepsDuration() + elapsed);
 
   if (paused) {
     pausedElapsed = elapsed;
@@ -184,12 +277,14 @@ function togglePause() {
     stepStartTime = performance.now() - pausedElapsed * 1000;
     paused = false;
     resumeAllTracks(pausedElapsed);
+    resumeGlobalTracks(priorStepsDuration() + pausedElapsed);
     if (!animFrameId) animFrameId = requestAnimationFrame(tick);
   } else {
     pausedElapsed = (performance.now() - stepStartTime) / 1000;
     paused = true;
     stopTick();
     pauseAllTracks();
+    pauseGlobalTracks();
   }
   updatePauseButton();
 }
@@ -209,22 +304,37 @@ function renderFrameAt(elapsed) {
   if (fill) fill.style.width = `${progress * 100}%`;
   const time = document.getElementById('exh-progress-time');
   if (time) time.textContent = `${Math.min(Math.floor(elapsed), total)} / ${total}s`;
+  updateTimeInfo(elapsed, total);
 
-  let imgIndex = step.images.length - 1;
-  let accum = 0;
-  for (let i = 0; i < step.images.length; i++) {
-    accum += step.images[i].duration;
-    if (elapsed < accum) { imgIndex = i; break; }
-  }
-  if (imgIndex !== currentImageIndex) {
-    currentImageIndex = imgIndex;
-    setImage(step.images[imgIndex]);
+  if (!isTextStep(step)) {
+    let imgIndex = step.images.length - 1;
+    let imgStart = 0;
+    let accum = 0;
+    for (let i = 0; i < step.images.length; i++) {
+      if (elapsed < accum + step.images[i].duration) {
+        imgIndex = i;
+        imgStart = accum;
+        break;
+      }
+      accum += step.images[i].duration;
+      imgStart = accum;
+    }
+    if (imgIndex !== currentImageIndex) {
+      currentImageIndex = imgIndex;
+      imageStartInStep = imgStart;
+      setImage(step.images[imgIndex]);
+    }
+    updateAnnotationVisibility(elapsed - imageStartInStep);
   }
 }
 
 function renderMarkers(step, total) {
   const container = document.getElementById('exh-progress-markers');
   if (!container) return;
+  if (!step || !step.images || total <= 0) {
+    container.innerHTML = '';
+    return;
+  }
   let accum = 0;
   const marks = [];
   for (let i = 0; i < step.images.length - 1; i++) {
@@ -277,8 +387,102 @@ function renderNotes(notes) {
   const overlay = document.getElementById('exh-note-overlay');
   if (!overlay) return;
   overlay.classList.toggle('edit-mode', state.editMode);
-  overlay.innerHTML = notes.map((n, i) => `
-    <div class="exh-note-marker" data-index="${i}" style="left: ${n.x * 100}%; top: ${n.y * 100}%">
+  overlay.innerHTML = notes.map((n, i) => renderAnnotation(n, i)).join('');
+  // Initial visibility based on time = 0 (image just appeared).
+  updateAnnotationVisibility(0);
+}
+
+function sanitizeColor(v) {
+  if (typeof v !== 'string') return null;
+  // Allow letters, digits, #, %, ., ,, (, ), -, and spaces. Reject anything else
+  // to prevent CSS escape into other declarations.
+  if (!/^[\w#%.,()\s-]+$/.test(v.trim())) return null;
+  return v.trim();
+}
+
+function renderAnnotation(n, i) {
+  const type = n.type || 'note';
+  const timing = `data-appear="${n.appearTime ?? 0}" data-duration="${n.duration ?? -1}" ` +
+                 `data-fade-in="${n.fadeIn ?? 0}" data-fade-out="${n.fadeOut ?? 0}"`;
+  const color = sanitizeColor(n.color);
+
+  if (type === 'rectangle') {
+    const styles = [
+      `left: ${n.x * 100}%`,
+      `top: ${n.y * 100}%`,
+      `width: ${n.width * 100}%`,
+      `height: ${n.height * 100}%`
+    ];
+    if (color) styles.push(`--exh-annot-color: ${color}`);
+    if (typeof n.borderSize === 'number') styles.push(`--exh-annot-border: ${n.borderSize}px`);
+    return `<div class="exh-note-shape exh-note-rect"
+                 data-index="${i}" ${timing}
+                 style="${styles.join('; ')}"></div>`;
+  }
+
+  if (type === 'image') {
+    const styles = [
+      `left: ${n.x * 100}%`,
+      `top: ${n.y * 100}%`,
+      `width: ${n.width * 100}%`,
+      `height: ${n.height * 100}%`
+    ];
+    if (color) styles.push(`--exh-annot-color: ${color}`);
+    if (typeof n.borderSize === 'number') styles.push(`--exh-annot-border: ${n.borderSize}px`);
+    const src = escapeHtml(resolveMediaPath(n.src || ''));
+    return `<div class="exh-note-shape exh-note-image"
+                 data-index="${i}" ${timing}
+                 style="${styles.join('; ')}">
+      <img src="${src}" alt="" draggable="false"/>
+    </div>`;
+  }
+
+  if (type === 'person') {
+    const styles = [
+      `left: ${n.x * 100}%`,
+      `top: ${n.y * 100}%`,
+      `width: ${n.width * 100}%`,
+      `height: ${n.height * 100}%`
+    ];
+    if (color) styles.push(`--exh-annot-color: ${color}`);
+    if (typeof n.borderSize === 'number') styles.push(`--exh-annot-border: ${n.borderSize}px`);
+    const classes = ['exh-note-shape', 'exh-note-person'];
+    if (n.showName === true) classes.push('show-name');
+    return `<div class="${classes.join(' ')}"
+                 data-index="${i}" ${timing}
+                 style="${styles.join('; ')}">
+      <span class="exh-note-person-label">${escapeHtml(n.name || '')}</span>
+    </div>`;
+  }
+
+  if (type === 'arrow') {
+    const strokeWidth = typeof n.width === 'number' ? n.width : 1.2;
+    const svgStyle = color ? ` style="color: ${color}"` : '';
+    return `<svg class="exh-note-shape exh-note-arrow"
+                 data-index="${i}" ${timing}
+                 viewBox="0 0 100 100" preserveAspectRatio="none"${svgStyle}>
+      <defs>
+        <marker id="arr-${i}" viewBox="0 0 10 10" refX="8" refY="5"
+                markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"/>
+        </marker>
+      </defs>
+      <line x1="${n.x1 * 100}" y1="${n.y1 * 100}"
+            x2="${n.x2 * 100}" y2="${n.y2 * 100}"
+            stroke="currentColor" stroke-width="${strokeWidth}"
+            marker-end="url(#arr-${i})"
+            vector-effect="non-scaling-stroke" stroke-linecap="round"/>
+    </svg>`;
+  }
+
+  // Default: "note" (the original ? pin)
+  const markerStyle = [`left: ${n.x * 100}%`, `top: ${n.y * 100}%`];
+  if (color) markerStyle.push(`--exh-annot-color: ${color}`);
+  const openClass = n.open === true ? ' open' : '';
+  return `
+    <div class="exh-note-marker exh-note-shape${openClass}"
+         data-index="${i}" ${timing}
+         style="${markerStyle.join('; ')}">
       <button type="button" class="exh-note-icon" aria-label="Otevřít poznámku">?</button>
       <div class="exh-note-bubble">
         <div class="exh-note-text">${escapeHtml(n.text)}</div>
@@ -290,11 +494,49 @@ function renderNotes(notes) {
         ` : ''}
       </div>
     </div>
-  `).join('');
+  `;
+}
+
+function computeAnnotationOpacity(appear, duration, fadeIn, fadeOut, t) {
+  if (t < appear) return 0;
+  if (duration >= 0 && t >= appear + duration) return 0;
+  let op = 1;
+  if (fadeIn > 0 && t < appear + fadeIn) {
+    op = Math.min(op, (t - appear) / fadeIn);
+  }
+  if (fadeOut > 0 && duration >= 0) {
+    const fadeStart = appear + duration - fadeOut;
+    if (t >= fadeStart) op = Math.min(op, (appear + duration - t) / fadeOut);
+  }
+  return Math.max(0, Math.min(1, op));
+}
+
+function updateAnnotationVisibility(imageElapsed) {
+  const overlay = document.getElementById('exh-note-overlay');
+  if (!overlay) return;
+  const shapes = overlay.querySelectorAll('.exh-note-shape');
+  for (const el of shapes) {
+    const appear = parseFloat(el.dataset.appear) || 0;
+    const dur = parseFloat(el.dataset.duration);
+    const fadeIn = parseFloat(el.dataset.fadeIn) || 0;
+    const fadeOut = parseFloat(el.dataset.fadeOut) || 0;
+    const hasDur = !isNaN(dur) && dur >= 0;
+    const op = computeAnnotationOpacity(appear, hasDur ? dur : -1, fadeIn, fadeOut, imageElapsed);
+    el.style.opacity = op;
+    // display:none when fully transparent so clicks pass through and notes can't open.
+    el.style.display = op > 0 ? '' : 'none';
+  }
 }
 
 function onOverlayClick(e) {
   const overlay = e.currentTarget;
+
+  const personEl = e.target.closest('.exh-note-person');
+  if (personEl) {
+    personEl.classList.toggle('open');
+    return;
+  }
+
   const marker = e.target.closest('.exh-note-marker');
 
   if (marker) {
@@ -324,7 +566,7 @@ function onOverlayClick(e) {
     return;
   }
 
-  if (state.editMode && e.target === overlay) {
+  if (state.editMode && e.target === overlay && currentEditTool === 'note') {
     const rect = overlay.getBoundingClientRect();
     const x = (e.clientX - rect.left) / rect.width;
     const y = (e.clientY - rect.top) / rect.height;
@@ -337,6 +579,163 @@ function onOverlayClick(e) {
   }
 }
 
+// --- Drag-to-create for rectangles and arrows (edit mode) ---
+
+function onOverlayPointerDown(e) {
+  if (!state.editMode) return;
+  if (currentEditTool === 'note') return;
+  if (e.target.closest('.exh-note-marker, .exh-note-shape')) return;
+
+  const overlay = document.getElementById('exh-note-overlay');
+  if (!overlay) return;
+
+  const rect = overlay.getBoundingClientRect();
+  const x = (e.clientX - rect.left) / rect.width;
+  const y = (e.clientY - rect.top) / rect.height;
+
+  const previewEl = createDragPreview(currentEditTool);
+  overlay.appendChild(previewEl);
+
+  dragState = {
+    tool: currentEditTool,
+    startX: x, startY: y,
+    currX: x, currY: y,
+    previewEl
+  };
+  updateDragPreview();
+
+  try { overlay.setPointerCapture(e.pointerId); } catch (_) {}
+  e.preventDefault();
+}
+
+function onOverlayPointerMove(e) {
+  if (!dragState) return;
+  const overlay = document.getElementById('exh-note-overlay');
+  if (!overlay) return;
+  const rect = overlay.getBoundingClientRect();
+  let x = (e.clientX - rect.left) / rect.width;
+  let y = (e.clientY - rect.top) / rect.height;
+  x = Math.max(0, Math.min(1, x));
+  y = Math.max(0, Math.min(1, y));
+  dragState.currX = x;
+  dragState.currY = y;
+  updateDragPreview();
+}
+
+function onOverlayPointerUp(e) {
+  if (!dragState) return;
+  const { tool, startX, startY, currX, currY, previewEl } = dragState;
+  if (previewEl && previewEl.parentNode) previewEl.parentNode.removeChild(previewEl);
+  dragState = null;
+
+  // Min drag distance to avoid creating a shape on accidental click.
+  const dx = currX - startX, dy = currY - startY;
+  if (Math.sqrt(dx * dx + dy * dy) < 0.02 || !currentImageObj) return;
+
+  if (!currentImageObj.notes) currentImageObj.notes = [];
+  if (tool === 'rectangle') {
+    const left = Math.min(startX, currX);
+    const top = Math.min(startY, currY);
+    currentImageObj.notes.push({
+      type: 'rectangle',
+      x: +left.toFixed(4),
+      y: +top.toFixed(4),
+      width: +Math.abs(currX - startX).toFixed(4),
+      height: +Math.abs(currY - startY).toFixed(4)
+    });
+  } else if (tool === 'image') {
+    const src = prompt('Cesta k obrázku (např. files/.../detail.jpg):');
+    if (!src) return;
+    const left = Math.min(startX, currX);
+    const top = Math.min(startY, currY);
+    currentImageObj.notes.push({
+      type: 'image',
+      src: src.trim(),
+      x: +left.toFixed(4),
+      y: +top.toFixed(4),
+      width: +Math.abs(currX - startX).toFixed(4),
+      height: +Math.abs(currY - startY).toFixed(4)
+    });
+  } else if (tool === 'person') {
+    const name = prompt('Jméno osoby:');
+    if (!name) return;
+    const left = Math.min(startX, currX);
+    const top = Math.min(startY, currY);
+    currentImageObj.notes.push({
+      type: 'person',
+      name: name.trim(),
+      x: +left.toFixed(4),
+      y: +top.toFixed(4),
+      width: +Math.abs(currX - startX).toFixed(4),
+      height: +Math.abs(currY - startY).toFixed(4)
+    });
+  } else if (tool === 'arrow') {
+    currentImageObj.notes.push({
+      type: 'arrow',
+      x1: +startX.toFixed(4),
+      y1: +startY.toFixed(4),
+      x2: +currX.toFixed(4),
+      y2: +currY.toFixed(4)
+    });
+  }
+  renderNotes(currentImageObj.notes);
+  refreshEditorJSON();
+}
+
+function createDragPreview(tool) {
+  if (tool === 'rectangle') {
+    const el = document.createElement('div');
+    el.className = 'exh-note-rect exh-note-preview';
+    return el;
+  }
+  if (tool === 'image') {
+    const el = document.createElement('div');
+    el.className = 'exh-note-image exh-note-preview';
+    return el;
+  }
+  if (tool === 'person') {
+    const el = document.createElement('div');
+    el.className = 'exh-note-person exh-note-preview';
+    return el;
+  }
+  const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  svg.setAttribute('class', 'exh-note-arrow exh-note-preview');
+  svg.setAttribute('viewBox', '0 0 100 100');
+  svg.setAttribute('preserveAspectRatio', 'none');
+  svg.innerHTML = `
+    <defs>
+      <marker id="arr-preview" viewBox="0 0 10 10" refX="8" refY="5"
+              markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"/>
+      </marker>
+    </defs>
+    <line stroke="currentColor" stroke-width="1.2" marker-end="url(#arr-preview)"
+          vector-effect="non-scaling-stroke" stroke-linecap="round"/>
+  `;
+  return svg;
+}
+
+function updateDragPreview() {
+  if (!dragState || !dragState.previewEl) return;
+  const { tool, startX, startY, currX, currY, previewEl } = dragState;
+  if (tool === 'rectangle' || tool === 'image' || tool === 'person') {
+    const left = Math.min(startX, currX);
+    const top = Math.min(startY, currY);
+    const w = Math.abs(currX - startX);
+    const h = Math.abs(currY - startY);
+    previewEl.style.left = `${left * 100}%`;
+    previewEl.style.top = `${top * 100}%`;
+    previewEl.style.width = `${w * 100}%`;
+    previewEl.style.height = `${h * 100}%`;
+  } else if (tool === 'arrow') {
+    const line = previewEl.querySelector('line');
+    line.setAttribute('x1', startX * 100);
+    line.setAttribute('y1', startY * 100);
+    line.setAttribute('x2', currX * 100);
+    line.setAttribute('y2', currY * 100);
+  }
+}
+
 // --- Editor panel (edit mode only) ---
 
 function renderEditorPanel() {
@@ -346,6 +745,13 @@ function renderEditorPanel() {
   div.id = 'exh-editor';
   div.className = 'exhibition-editor';
   div.innerHTML = `
+    <div class="exh-edit-toolbar">
+      <button type="button" data-tool="note" class="exh-tool-btn active">Poznámka</button>
+      <button type="button" data-tool="rectangle" class="exh-tool-btn">Obdélník</button>
+      <button type="button" data-tool="arrow" class="exh-tool-btn">Šipka</button>
+      <button type="button" data-tool="image" class="exh-tool-btn">Obrázek</button>
+      <button type="button" data-tool="person" class="exh-tool-btn">Osoba</button>
+    </div>
     <button id="exh-editor-toggle" type="button" class="exh-editor-toggle">JSON</button>
     <div id="exh-editor-panel" class="exh-editor-panel hidden">
       <div class="exh-editor-header">JSON aktuálního kroku</div>
@@ -354,6 +760,13 @@ function renderEditorPanel() {
     </div>
   `;
   root.appendChild(div);
+  div.querySelectorAll('.exh-tool-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      currentEditTool = btn.dataset.tool;
+      div.querySelectorAll('.exh-tool-btn').forEach(b =>
+        b.classList.toggle('active', b === btn));
+    });
+  });
   document.getElementById('exh-editor-toggle').addEventListener('click', () => {
     document.getElementById('exh-editor-panel').classList.toggle('hidden');
     refreshEditorJSON();
@@ -398,6 +811,11 @@ function nextStep() {
 //   - { time, endVolume, duration?, startVolume? }     → linear ramp from
 //       startVolume (default = current volume) to endVolume over `duration`
 //       seconds starting at `time`. duration of 0 (or omitted) snaps.
+//
+// Optional `once: true` on a track sets `loop = false` (the track plays a
+// single time per pass through its `start` cue). Going back to the step or
+// scrubbing back before the cue resets the played flag so the track replays
+// when the cue is crossed again going forward.
 
 function loadTracks(step) {
   if (!step.audio) return;
@@ -408,8 +826,9 @@ function loadTracks(step) {
   tracks = list.map(cfg => {
     const el = new Audio(resolveMediaPath(cfg.path));
     el.preload = 'auto';
+    el.loop = cfg.once !== true;
     el.volume = effectiveVolume(cfg, 0);
-    return { el, config: cfg };
+    return { el, config: cfg, started: false };
   });
 }
 
@@ -437,10 +856,17 @@ function tickTracks(elapsed) {
     const start = t.config.start ?? 0;
     t.el.volume = effectiveVolume(t.config, elapsed);
 
-    if (elapsed >= start && t.el.paused && !paused) {
-      const trackTime = elapsed - start;
-      if (Math.abs(t.el.currentTime - trackTime) > 0.3) {
-        try { t.el.currentTime = trackTime; } catch (_) {}
+    if (elapsed >= start && t.el.paused && !paused && !t.el.ended) {
+      if (!t.started) {
+        // First play of this track in this step instance: always from 0,
+        // regardless of how late tick fires after startStep.
+        try { t.el.currentTime = 0; } catch (_) {}
+        t.started = true;
+      } else {
+        const trackTime = elapsed - start;
+        if (Math.abs(t.el.currentTime - trackTime) > 0.3) {
+          try { t.el.currentTime = trackTime; } catch (_) {}
+        }
       }
       t.el.play().catch(() => {});
     }
@@ -450,9 +876,17 @@ function tickTracks(elapsed) {
 function syncTracksOnSeek(elapsed) {
   for (const t of tracks) {
     const start = t.config.start ?? 0;
+    const dur = t.el.duration;
+    const pastEnd = !t.el.loop && !isNaN(dur) && elapsed >= start + dur;
+
     if (elapsed < start) {
+      // Seek-back across the start cue: reset so the track plays from 0
+      // when elapsed crosses `start` again going forward.
       t.el.pause();
       try { t.el.currentTime = 0; } catch (_) {}
+      t.started = false;
+    } else if (pastEnd) {
+      t.el.pause();
     } else {
       try { t.el.currentTime = elapsed - start; } catch (_) {}
       if (paused) t.el.pause();
@@ -469,7 +903,7 @@ function pauseAllTracks() {
 function resumeAllTracks(elapsed) {
   for (const t of tracks) {
     const start = t.config.start ?? 0;
-    if (elapsed >= start) {
+    if (elapsed >= start && !t.el.ended) {
       try { t.el.currentTime = elapsed - start; } catch (_) {}
       t.el.play().catch(() => {});
     }
@@ -485,6 +919,94 @@ function stopAllTracks() {
   tracks = [];
 }
 
+// --- Global (exhibition-wide) tracks ---
+//
+// `exhibition.json` may carry an `audio` array using the same track schema as
+// step audio (path/start/volume/volumeChanges). Times are seconds since the
+// exhibition was first opened. Tracks play continuously across step navigation
+// and only stop when the viewer is destroyed.
+
+function loadGlobalTracks(exh) {
+  stopGlobalTracks();
+  if (!exh.audio) return;
+  const list = Array.isArray(exh.audio)
+    ? exh.audio
+    : [{ path: exh.audio, start: 0, volume: 1 }];
+  globalTracks = list.map(cfg => {
+    const el = new Audio(resolveMediaPath(cfg.path));
+    el.preload = 'auto';
+    el.loop = cfg.once !== true;
+    el.volume = effectiveVolume(cfg, 0);
+    return { el, config: cfg, started: false };
+  });
+}
+
+function tickGlobalTracks(elapsed) {
+  for (const t of globalTracks) {
+    const start = t.config.start ?? 0;
+    t.el.volume = effectiveVolume(t.config, elapsed);
+    if (elapsed >= start && t.el.paused && !paused && !t.el.ended) {
+      if (!t.started) {
+        try { t.el.currentTime = 0; } catch (_) {}
+        t.started = true;
+      } else {
+        const trackTime = elapsed - start;
+        if (Math.abs(t.el.currentTime - trackTime) > 0.3) {
+          try { t.el.currentTime = trackTime; } catch (_) {}
+        }
+      }
+      t.el.play().catch(() => {});
+    }
+  }
+}
+
+function syncGlobalTracksOnSeek(elapsed) {
+  for (const t of globalTracks) {
+    const start = t.config.start ?? 0;
+    const dur = t.el.duration;
+    if (elapsed < start) {
+      t.el.pause();
+      try { t.el.currentTime = 0; } catch (_) {}
+      t.started = false;
+    } else {
+      let trackTime = elapsed - start;
+      if (t.el.loop && !isNaN(dur) && dur > 0) trackTime = trackTime % dur;
+      const pastEnd = !t.el.loop && !isNaN(dur) && trackTime >= dur;
+      if (pastEnd) {
+        t.el.pause();
+      } else {
+        try { t.el.currentTime = trackTime; } catch (_) {}
+        if (paused) t.el.pause();
+        else t.el.play().catch(() => {});
+      }
+    }
+    t.el.volume = effectiveVolume(t.config, elapsed);
+  }
+}
+
+function pauseGlobalTracks() {
+  for (const t of globalTracks) t.el.pause();
+}
+
+function resumeGlobalTracks(elapsed) {
+  for (const t of globalTracks) {
+    const start = t.config.start ?? 0;
+    if (elapsed >= start && !t.el.ended) {
+      try { t.el.currentTime = elapsed - start; } catch (_) {}
+      t.el.play().catch(() => {});
+    }
+    t.el.volume = effectiveVolume(t.config, elapsed);
+  }
+}
+
+function stopGlobalTracks() {
+  for (const t of globalTracks) {
+    t.el.pause();
+    t.el.src = '';
+  }
+  globalTracks = [];
+}
+
 // --- Cleanup ---
 
 function stopTick() {
@@ -497,6 +1019,7 @@ function stopTick() {
 export function destroyExhibitionViewer() {
   stopTick();
   stopAllTracks();
+  stopGlobalTracks();
   if (resizeHandler) {
     window.removeEventListener('resize', resizeHandler);
     resizeHandler = null;
@@ -520,6 +1043,7 @@ export async function renderExhibitionViewer(item) {
   try {
     await loadExhibition(item);
     renderLayout();
+    loadGlobalTracks(exhibition);
     startStep(0);
   } catch (err) {
     console.error('Exhibition load error:', err);

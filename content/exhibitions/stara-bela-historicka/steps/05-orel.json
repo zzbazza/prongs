@@ -1,0 +1,40 @@
+{
+  "title": "Jednota Orla čs.",
+  "audio": [
+    {
+      "path": "files/vir_vystava_jelen/audio/orel.wav",
+      "start": 2,
+      "volume": 1.0,
+      "once": true
+    },
+    {
+      "path": "files/vir_vystava_jelen/audio/odstavec19-23.wav",
+      "start": 8,
+      "volume": 1.0,
+      "once": true,
+      "length": "2:05"
+    }
+  ],
+  "images": [
+    {
+      "path": "files/vir_vystava_jelen/obr.19.jpg",
+      "duration": 44
+    },
+    {
+      "path": "files/vir_vystava_jelen/obr.20.jpg",
+      "duration": 25
+    },
+    {
+      "path": "files/vir_vystava_jelen/obr.21.jpg",
+      "duration": 25
+    },
+    {
+      "path": "files/vir_vystava_jelen/obr.22.jpg",
+      "duration": 22
+    },
+    {
+      "path": "files/vir_vystava_jelen/obr.23.jpg",
+      "duration": 20
+    }
+  ]
+}

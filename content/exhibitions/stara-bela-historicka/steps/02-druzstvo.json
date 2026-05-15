@@ -1,0 +1,28 @@
+{
+  "title": "Družstvo společenského hostince",
+  "audio": [
+    {
+      "path": "files/vir_vystava_jelen/audio/druzstvo.wav",
+      "start": 2,
+      "volume": 1.0,
+      "once": true
+    },
+    {
+      "path": "files/vir_vystava_jelen/audio/odstavec7.wav",
+      "start": 8,
+      "volume": 1.0,
+      "once": true,
+      "length": "0:28"
+    }
+  ],
+  "images": [
+    {
+      "path": "files/vir_vystava_jelen/obr.7.jpg",
+      "duration": 21
+    },
+    {
+      "path": "files/vir_vystava_jelen/obr.8.jpg",
+      "duration": 20
+    }
+  ]
+}

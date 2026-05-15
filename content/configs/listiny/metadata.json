@@ -3,5 +3,6 @@
   "icon": "📜",
   "icon_path": "/static/icons/listina.svg",
   "filter": false,
-  "description": "Historické dokumenty a listiny"
+  "description": "Historické dokumenty a listiny",
+  "position": 3
 }

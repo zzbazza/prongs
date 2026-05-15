@@ -143,6 +143,9 @@ async function scanConfigsDirectory(dirPath, categoryPath = []) {
         icon_path: subdirMetadata.icon_path || null,
         filter: subdirMetadata.filter !== undefined ? subdirMetadata.filter : true,
         description: subdirMetadata.description || '',
+        position: typeof subdirMetadata.position === 'number' ? subdirMetadata.position : null,
+        breakBefore: subdirMetadata.breakBefore === true || typeof subdirMetadata.dividerLabel === 'string',
+        dividerLabel: typeof subdirMetadata.dividerLabel === 'string' ? subdirMetadata.dividerLabel : null,
         parentPath: categoryPath,
         subcategories: subdirResult.categories,
         itemCount: subdirResult.items.length
@@ -151,6 +154,17 @@ async function scanConfigsDirectory(dirPath, categoryPath = []) {
       // Merge items from subdirectories
       result.items.push(...subdirResult.items);
     }
+
+    // Sort: explicit numeric `position` ascending first, then categories
+    // without position by title (Czech locale).
+    result.categories.sort((a, b) => {
+      const aHas = a.position !== null;
+      const bHas = b.position !== null;
+      if (aHas && bHas) return a.position - b.position;
+      if (aHas) return -1;
+      if (bHas) return 1;
+      return a.title.localeCompare(b.title, 'cs');
+    });
 
     return result;
   } catch (error) {

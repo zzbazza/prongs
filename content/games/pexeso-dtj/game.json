@@ -1,0 +1,16 @@
+{
+  "title": "Pexeso – DTJ Stará Bělá",
+  "description": "Najdi všechny dvojice fotografií",
+  "kind": "pexeso",
+  "gridSize": "4x4",
+  "pairs": [
+    "files/foto1/12-Rekonvalescent/DSC_0184.jpg",
+    "files/foto1/SOKOL/DSC_0834.jpg",
+    "files/FOTO/přelom 19. a 20. století/DSC_0209a.jpg",
+    "files/foto1/mišmaš/DSC_0196.jpg",
+    "files/FOTO/DTJ/DTJ 1930 Slavnost mládeže.jpg",
+    "files/foto1/mišmaš/DSC_0182.jpg",
+    "files/FOTO/Břetislav Lyčka/IMG_20250827_194035.jpg",
+    "files/foto1/3-bělský les/DSC_0419.jpg"
+  ]
+}

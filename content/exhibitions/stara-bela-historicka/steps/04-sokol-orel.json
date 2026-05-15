@@ -1,0 +1,83 @@
+{
+  "title": "Sokol a Orel: spolkový život pod jednou střechou",
+  "audio": [
+    {
+      "path": "files/vir_vystava_jelen/audio/sokol-orel.wav",
+      "start": 2,
+      "volume": 1,
+      "once": true
+    },
+    {
+      "path": "files/vir_vystava_jelen/audio/odstavec10-18a.wav",
+      "start": 8,
+      "volume": 1,
+      "once": true,
+      "length": "1:09",
+      "volumeChanges": [
+        {
+          "time": 77,
+          "volume": 0
+        }
+      ]
+    },
+    {
+      "path": "files/vir_vystava_jelen/audio/odstavec10-18-rec.wav",
+      "start": 77,
+      "volume": 1,
+      "once": true,
+      "length": "0:50"
+    },
+    {
+      "path": "files/vir_vystava_jelen/audio/odstavec10-18b.wav",
+      "start": 128,
+      "volume": 1,
+      "once": true,
+      "length": "1:23"
+    },
+    {
+      "path": "files/vir_vystava_jelen/audio/odstavec10-18c.wav",
+      "start": 213,
+      "volume": 1,
+      "once": true,
+      "length": "0:57"
+    }
+  ],
+  "images": [
+    {
+      "path": "files/vir_vystava_jelen/obr.10.jpg",
+      "duration": 40
+    },
+    {
+      "path": "files/vir_vystava_jelen/obr.11-13.jpg",
+      "duration": 33
+    },
+    {
+      "path": "files/vir_vystava_jelen/obr.14.jpg",
+      "duration": 54
+    },
+    {
+      "path": "files/vir_vystava_jelen/obr.15.jpg",
+      "duration": 50,
+      "notes": [
+        {
+          "x": 0.984,
+          "y": 0.1765,
+          "text": "Vizualizace opony podle popisu, opona ani fotografie se nezachovaly.",
+          "open": true
+        }
+      ]
+    },
+    {
+      "path": "files/vir_vystava_jelen/obr.16.jpg",
+      "duration": 32
+    },
+    {
+      "path": "files/vir_vystava_jelen/obr.17.jpg",
+      "duration": 32
+    },
+    {
+      "path": "files/vir_vystava_jelen/obr.18.jpg",
+      "duration": 32
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Puzzle – Otevření Sokolovny 1923",
+  "description": "Klepni na dva kousky a vyměň jejich pozice.",
+  "kind": "puzzle",
+  "gridSize": "4x4",
+  "images": [
+    "files/FOTO/DTJ/1927 DTJ Hastrman.jpg",
+    "files/pohlednice/DSC_0338.jpg",
+    "files/PLAKÁTY/slavnostní_otevření_sokolovny-4_8_1923a.jpg",
+    "files/pohlednice/17a.jpg",
+    "files/pohlednice/37.jpg",
+    "files/pohlednice/44a.jpg"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Puzzle 4x4",
+  "description": "Náročnější puzzle – 16 kousků.",
+  "kind": "puzzle",
+  "gridSize": "3x3",
+  "images": [
+    "files/FOTO/DTJ/1927 DTJ Hastrman.jpg",
+    "files/pohlednice/DSC_0338.jpg",
+    "files/PLAKÁTY/slavnostní_otevření_sokolovny-4_8_1923a.jpg",
+    "files/pohlednice/17a.jpg",
+    "files/pohlednice/37.jpg",
+    "files/pohlednice/44a.jpg"
+  ]
+}

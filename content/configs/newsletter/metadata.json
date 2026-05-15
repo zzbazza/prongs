@@ -3,5 +3,6 @@
   "icon": "📰",
   "icon_path": "/static/icons/zpravodaj.svg",
   "filter": false,
-  "description": "Stará Běla newsletter"
+  "description": "Stará Běla newsletter",
+  "position": 4
 }

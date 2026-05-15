@@ -1,0 +1,61 @@
+{
+  "title": "Stará Bělá - Historická",
+  "description": "",
+  "steps": [
+    "steps/01-historie.json",
+    "steps/02-druzstvo.json",
+    "steps/03-rodina-machu.json",
+    "steps/04-sokol-orel.json",
+    "steps/05-orel.json",
+    "steps/06-povalecna.json",
+    "steps/07-zaver.json"
+  ],
+  "audio": [
+    {
+      "path": "files/vir_vystava_jelen/audio/ustredni melodie.m4a",
+      "start": 0,
+      "volume": 1,
+      "volumeChanges": [
+        {
+          "time": 4,
+          "volume": 0.2,
+          "duration": 2
+        },
+        {
+          "time": 253,
+          "volume": 0.0,
+          "duration": 2
+        }
+      ]
+    },
+    {
+      "path": "files/vir_vystava_jelen/audio/TJ Sokol.mp3",
+      "start": 254,
+      "volume": 1,
+      "volumeChanges": [
+        {
+          "time": 257,
+          "volume": 0.1,
+          "duration": 2
+        },
+        {
+          "time": 526,
+          "volume": 0.0,
+          "duration": 2
+        }
+      ]
+    },
+    {
+      "path": "files/vir_vystava_jelen/audio/Jednota Orla.m4a",
+      "start": 527,
+      "volume": 0.8,
+      "volumeChanges": [
+        {
+          "time": 531,
+          "volume": 0.1,
+          "duration": 2
+        }
+      ]
+    }
+  ]
+}

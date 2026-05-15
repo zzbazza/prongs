@@ -3,5 +3,6 @@
   "icon": "💌",
   "icon_path": "/static/icons/pohlednice.svg",
   "filter": false,
-  "description": "Historické pohlednice"
+  "description": "Historické pohlednice",
+  "position": 10
 }

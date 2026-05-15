@@ -6,6 +6,15 @@ import { state, elements, FILE_ICONS } from './state.js';
 import { getCategoryTitles } from './api.js';
 import { escapeHtml, getThumbnailPath } from './utils.js';
 import { openFile } from './fileViewer.js';
+import { destroyExhibitionViewer } from './viewers/exhibitionViewer.js';
+import { destroyGameViewer } from './viewers/gameViewer.js';
+
+function teardownActiveViewer() {
+  destroyExhibitionViewer();
+  destroyGameViewer();
+  elements.contentViewer.classList.add('hidden');
+  elements.browserView.classList.remove('hidden');
+}
 
 function getCategoryIcon(cat) {
   // Use icon_path for SVG if available, otherwise use text icon, fallback to folder icon
@@ -146,8 +155,7 @@ function navigateToBreadcrumbLevel(level) {
 
   // Close viewer if open
   if (state.currentView === 'viewer') {
-    elements.contentViewer.classList.add('hidden');
-    elements.browserView.classList.remove('hidden');
+    teardownActiveViewer();
   }
 
   // Navigate to that level
@@ -201,8 +209,7 @@ function navigateToBreadcrumbLevel(level) {
 export function goHome() {
   // Close viewer if it's open
   if (!elements.contentViewer.classList.contains('hidden')) {
-    elements.contentViewer.classList.add('hidden');
-    elements.browserView.classList.remove('hidden');
+    teardownActiveViewer();
   }
 
   // Reset state
@@ -279,7 +286,7 @@ export function showHome(includeItems = false) {
   }
 
   // Build HTML for categories/subcategories
-  let html = categories.map(category => {
+  let html = categories.map((category, idx) => {
     // Use icon_path for SVG if available, otherwise use text icon
     // Apply filter class based on metadata filter property (default: true)
     const shouldFilter = category.filter !== undefined ? category.filter : true;
@@ -289,7 +296,15 @@ export function showHome(includeItems = false) {
       ? `<img src="${category.icon_path}" alt="${escapeHtml(category.title)}" class="file-icon-svg ${filterClass}">`
       : `<div class="file-icon ${filterClass}">${category.icon || '📁'}</div>`;
 
-    return `
+    // Optional row break / labeled section header before this category.
+    // Suppress on the very first category — no point in a leading break.
+    const divider = (idx > 0 && category.breakBefore)
+      ? (category.dividerLabel
+          ? `<div class="home-divider"><span class="home-divider-label">${escapeHtml(category.dividerLabel)}</span></div>`
+          : `<div class="home-divider home-divider-empty"></div>`)
+      : '';
+
+    return divider + `
       <div class="file-item category-folder"
            data-category-id="${category.id}"
            data-has-subcategories="${(category.subcategories && category.subcategories.length > 0) ? 'true' : 'false'}">

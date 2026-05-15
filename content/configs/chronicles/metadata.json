@@ -3,5 +3,6 @@
   "icon": "📕",
   "icon_path": "/static/icons/kroniky.svg",
   "filter": false,
-  "description": "Historical chronicles of Stará Běla"
+  "description": "Historical chronicles of Stará Běla",
+  "position": 1
 }

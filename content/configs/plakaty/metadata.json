@@ -3,5 +3,6 @@
   "icon": "📋",
   "icon_path": "/static/icons/poster.svg",
   "filter": false,
-  "description": "Historické plakáty a oznámení"
+  "description": "Historické plakáty a oznámení",
+  "position": 7
 }

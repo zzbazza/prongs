@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "path": "pexeso-dtj",
+      "type": "game",
+      "title": "Pexeso",
+      "description": "Najdi všechny dvojice fotografií."
+    },
+    {
+      "path": "puzzle-9",
+      "type": "game",
+      "title": "Puzzle 3x3",
+      "description": "Snadné puzzle (9 kousků)."
+    },
+    {
+      "path": "puzzle-16",
+      "type": "game",
+      "title": "Puzzle 4x4",
+      "description": "Těžší puzzle (16 kousků)."
+    },
+    {
+      "path": "puzzle-20",
+      "type": "game",
+      "title": "Puzzle 5x4",
+      "description": "Těžší puzzle (20 kousků)."
+    }
+  ]
+}

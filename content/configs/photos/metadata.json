@@ -3,5 +3,6 @@
   "icon": "📷",
   "icon_path": "/static/icons/fotoaparat.svg",
   "filter": false,
-  "description": "Photographs and views of Stará Běla"
+  "description": "Photographs and views of Stará Běla",
+  "position": 5
 }

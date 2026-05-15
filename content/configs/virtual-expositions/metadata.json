@@ -1,8 +1,10 @@
 {
-  "title": "Panely výstav",
+  "title": "Virtualní expozice",
   "icon": "🖼️",
   "icon_path": "/static/icons/panely.svg",
   "filter": false,
   "description": "Exhibition panels",
-  "position": 2
+  "position": 11,
+  "breakBefore": true,
+  "dividerLabel": "Interaktivní část"
 }
