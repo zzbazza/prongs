@@ -3,7 +3,6 @@
   "description": "Klepni na skřítky schované na obrázku.",
   "kind": "seek",
   "rooms": [
-    "rooms/mistnost-01.json",
-    "rooms/mistnost-02.json"
+    "rooms/mistnost-03.json"
   ]
 }

@@ -5,6 +5,9 @@
   "rooms": [
     "rooms/mistnost-04.json",
     "rooms/mistnost-05.json",
+    "rooms/mistnost-08.json",
+    "rooms/mistnost-09.json",
+    "rooms/mistnost-10.json",
     "rooms/mistnost-11.json"
   ]
 }
