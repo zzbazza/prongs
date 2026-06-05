@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "path": "skritek-maly",
+      "type": "game",
+      "title": "Skritci lehci",
+      "description": ".",
+      "icon_path": "static/icons/skritek-2.png"
+    },
+    {
+      "path": "skritek-velky",
+      "type": "game",
+      "title": "Skritci tezsi",
+      "description": ".",
+      "icon_path": "static/icons/skritek-1.png"
+    },
+    {
       "path": "pexeso-dtj",
       "type": "game",
       "title": "Pexeso",

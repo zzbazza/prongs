@@ -2071,6 +2071,359 @@ body[data-text-size="large"] .person-tag-label {
   font-variant-numeric: tabular-nums;
 }
 
+/* ===== Adventure / Seek game ===== */
+
+.content-viewer:has(.seek-game) .viewer-content {
+  padding: 0;
+  overflow: hidden;
+}
+
+.seek-game {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: var(--cream-light);
+}
+
+.seek-header {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background: var(--cream);
+  border-bottom: 2px solid var(--gold-dark);
+}
+
+.seek-title {
+  font-family: "Bodoni", Georgia, "Times New Roman", serif;
+  font-size: 1.1em;
+  color: var(--text-primary);
+  margin-right: auto;
+}
+
+.seek-stats {
+  display: flex;
+  gap: var(--spacing-lg);
+  font-size: 0.95em;
+  color: var(--text-secondary);
+}
+
+.seek-stats strong {
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.seek-btn {
+  padding: 8px 20px;
+  background: var(--gold-primary);
+  color: var(--cream-light);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 0.95em;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.seek-btn:hover {
+  background: var(--gold-dark);
+}
+
+.seek-board-wrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  min-width: 0;
+  padding: var(--spacing-md);
+}
+
+.seek-image-area {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.seek-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+  user-select: none;
+  -webkit-user-select: none;
+  pointer-events: none;
+}
+
+.seek-items {
+  position: absolute;
+}
+
+.seek-item {
+  position: absolute;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.seek-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  user-select: none;
+  -webkit-user-select: none;
+  pointer-events: none;
+}
+
+.seek-item.found {
+  cursor: default;
+  outline: 3px solid #4a7d3a;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.seek-item.found::after {
+  content: "✓";
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 22px;
+  height: 22px;
+  background: #4a7d3a;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+}
+
+.seek-footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: rgba(245, 240, 225, 0.96);
+  border-top: 2px solid var(--gold-dark);
+  transform: translateY(0);
+  transition: transform 0.25s ease;
+}
+
+.seek-footer.hidden {
+  transform: translateY(100%);
+  pointer-events: none;
+}
+
+.seek-btn-secondary {
+  background: transparent;
+  color: var(--gold-primary);
+  border: 1px solid var(--gold-primary);
+}
+
+.seek-btn-secondary:hover {
+  background: var(--gold-primary);
+  color: var(--cream-light);
+}
+
+.seek-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-lg);
+}
+
+.seek-list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 64px;
+  filter: grayscale(1);
+  opacity: 0.5;
+  transition: filter 0.3s, opacity 0.3s;
+}
+
+.seek-list-item.found {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+.seek-list-item img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  border: 1px solid var(--cream-dark);
+  border-radius: 4px;
+  background: var(--cream-light);
+}
+
+.seek-list-item.found img {
+  border-color: #4a7d3a;
+}
+
+.seek-list-name {
+  font-size: 0.8em;
+  text-align: center;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.seek-list-item.found .seek-list-name {
+  color: var(--text-primary);
+}
+
+.seek-empty {
+  width: 100%;
+  text-align: center;
+  font-size: 0.9em;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+/* Edit mode for seek game */
+
+.seek-game.edit-mode .seek-item {
+  outline: 1px dashed rgba(184, 148, 74, 0.6);
+  outline-offset: 1px;
+}
+
+.seek-game.edit-mode .seek-item:hover {
+  outline: 2px solid var(--gold-primary);
+  cursor: pointer;
+}
+
+.seek-drag-preview {
+  position: absolute;
+  border: 2px dashed var(--gold-primary);
+  background: rgba(184, 148, 74, 0.1);
+  pointer-events: none;
+}
+
+.seek-editor {
+  position: absolute;
+  top: 60px;
+  right: var(--spacing-md);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--spacing-xs);
+  max-width: 320px;
+}
+
+.seek-edit-hint {
+  background: rgba(20, 20, 20, 0.78);
+  color: #f5f0e1;
+  font-size: 0.75em;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  text-align: right;
+  line-height: 1.4;
+}
+
+.seek-edit-btn {
+  padding: 6px 14px;
+  background: var(--gold-primary);
+  color: var(--cream-light);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 0.85em;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.seek-edit-btn:hover {
+  background: var(--gold-dark);
+}
+
+.seek-editor-panel {
+  width: 380px;
+  max-width: 90vw;
+  padding: var(--spacing-sm);
+  background: rgba(20, 20, 20, 0.92);
+  color: #f5f0e1;
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.seek-editor-panel.hidden {
+  display: none;
+}
+
+.seek-editor-header {
+  font-size: 0.85em;
+  opacity: 0.85;
+}
+
+#seek-editor-json {
+  width: 100%;
+  height: 300px;
+  resize: vertical;
+  background: #0f0f0f;
+  color: #d8d8d8;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-sm);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.8em;
+  padding: 8px;
+}
+
+.seek-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.seek-overlay.hidden { display: none; }
+
+.seek-overlay-content {
+  background: var(--cream-light);
+  padding: var(--spacing-xl) var(--spacing-xl);
+  border-radius: var(--radius-md);
+  border: 3px solid var(--gold-primary);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  min-width: 280px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.seek-overlay-title {
+  font-family: "Bodoni", Georgia, "Times New Roman", serif;
+  font-size: 1.6em;
+  color: var(--gold-dark);
+}
+
+.seek-overlay-stats {
+  font-size: 1.05em;
+  color: var(--text-secondary);
+}
+
+.seek-overlay-stats strong {
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
 /* ===== Puzzle (swap-style) game ===== */
 
 .content-viewer:has(.puzzle-game) .viewer-content {

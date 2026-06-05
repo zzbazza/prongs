@@ -8,6 +8,7 @@
 import { elements } from '../state.js';
 import { renderPexeso, destroyPexeso } from './games/pexeso.js';
 import { renderPuzzle, destroyPuzzle } from './games/puzzle.js';
+import { renderSeek, destroySeek } from './games/seek.js';
 
 const GAMES_PATH = 'games';
 let currentKind = null;
@@ -35,6 +36,9 @@ export async function renderGameViewer(item) {
       case 'puzzle':
         renderPuzzle(game);
         break;
+      case 'seek':
+        renderSeek(game, item.path);
+        break;
       default:
         throw new Error(`Unknown game kind: ${game.kind}`);
     }
@@ -52,5 +56,6 @@ export async function renderGameViewer(item) {
 export function destroyGameViewer() {
   if (currentKind === 'pexeso') destroyPexeso();
   if (currentKind === 'puzzle') destroyPuzzle();
+  if (currentKind === 'seek') destroySeek();
   currentKind = null;
 }

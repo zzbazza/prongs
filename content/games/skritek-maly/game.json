@@ -1,0 +1,8 @@
+{
+  "title": "Najdi všechnz skřítky",
+  "description": "Klepni na skřítky schované na obrázku.",
+  "kind": "seek",
+  "rooms": [
+    "rooms/mistnost-01.json"
+  ]
+}

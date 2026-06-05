@@ -16,6 +16,23 @@ function teardownActiveViewer() {
   elements.browserView.classList.remove('hidden');
 }
 
+// Per-item icon: `icon_path` (svg/image) wins, then `icon` (emoji/text),
+// then thumbnail for images, then default FILE_ICONS by type.
+function getItemIconHtml(item) {
+  if (item.icon_path) {
+    const shouldFilter = item.filter !== undefined ? item.filter : true;
+    const filterClass = shouldFilter ? '' : 'no-filter';
+    return `<img src="${escapeHtml(item.icon_path)}" alt="${escapeHtml(item.title || item.path)}" class="file-icon-svg ${filterClass}">`;
+  }
+  if (item.icon) {
+    return `<div class="file-icon">${escapeHtml(item.icon)}</div>`;
+  }
+  if (item.type === 'image') {
+    return `<img src="/content/${getThumbnailPath(item.path)}" alt="${escapeHtml(item.title || item.path)}" class="file-thumbnail" loading="lazy">`;
+  }
+  return `<div class="file-icon">${FILE_ICONS[item.type] || FILE_ICONS.unknown}</div>`;
+}
+
 function getCategoryIcon(cat) {
   // Use icon_path for SVG if available, otherwise use text icon, fallback to folder icon
   const shouldFilter = cat.filter !== undefined ? cat.filter : true;
@@ -330,20 +347,14 @@ export function showHome(includeItems = false) {
       // Store items for file opening
       state.currentItems = filteredItems;
 
-      const itemsHtml = filteredItems.map((item, index) => {
-        const iconHtml = item.type === 'image'
-          ? `<img src="/content/${getThumbnailPath(item.path)}" alt="${escapeHtml(item.title || item.path)}" class="file-thumbnail" loading="lazy">`
-          : `<div class="file-icon">${FILE_ICONS[item.type] || FILE_ICONS.unknown}</div>`;
-
-        return `
-          <div class="file-item file-item-actual"
-               data-index="${index}"
-               data-type="${item.type}">
-            ${iconHtml}
-            <div class="file-name">${escapeHtml(item.title || item.path)}</div>
-          </div>
-        `;
-      }).join('');
+      const itemsHtml = filteredItems.map((item, index) => `
+        <div class="file-item file-item-actual"
+             data-index="${index}"
+             data-type="${item.type}">
+          ${getItemIconHtml(item)}
+          <div class="file-name">${escapeHtml(item.title || item.path)}</div>
+        </div>
+      `).join('');
 
       html += itemsHtml;
     }
@@ -455,19 +466,12 @@ export function renderItemList(items) {
     return;
   }
 
-  const html = items.map((item, index) => {
-    // Use thumbnail for images, icon for other types
-    const iconHtml = item.type === 'image'
-      ? `<img src="/content/${getThumbnailPath(item.path)}" alt="${escapeHtml(item.title || item.path)}" class="file-thumbnail" loading="lazy">`
-      : `<div class="file-icon">${FILE_ICONS[item.type] || FILE_ICONS.unknown}</div>`;
-
-    return `
-      <div class="file-item" data-index="${index}" data-type="${item.type}">
-        ${iconHtml}
-        <div class="file-name">${escapeHtml(item.title || item.path)}</div>
-      </div>
-    `;
-  }).join('');
+  const html = items.map((item, index) => `
+    <div class="file-item" data-index="${index}" data-type="${item.type}">
+      ${getItemIconHtml(item)}
+      <div class="file-name">${escapeHtml(item.title || item.path)}</div>
+    </div>
+  `).join('');
 
   elements.fileList.innerHTML = html;
 

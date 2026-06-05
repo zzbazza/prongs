@@ -86,6 +86,9 @@ Each category folder can contain one or more JSON files with content items. All 
 - `description` (optional): Longer description shown in viewer
 - `keywords` (optional): Array of keywords for searching
 - `display` (optional): Set to `false` to hide this item from display. Defaults to `true` if not specified
+- `icon` (optional): Emoji or short text used as the tile icon. Overrides the default `FILE_ICONS[type]` (e.g. 🎮 for every game).
+- `icon_path` (optional): URL/path to an icon image (SVG/PNG) used as the tile icon. Wins over `icon`. Same convention as category `icon_path` — typically `"/static/icons/foo.svg"`.
+- `filter` (optional, default `true`): When `icon_path` is set, controls whether the gold colour filter is applied. Set to `false` to render the icon as-is.
 
 **Example:**
 ```json
@@ -598,6 +601,80 @@ Swap-style image puzzle. The picture is sliced into an R×C grid of pieces; piec
 **Fields:**
 - `image` (string) **or** `images` (array of strings, one chosen at random each game) — at least one is required. Absolute path(s) to the source image(s). Aspect ratio is taken from the chosen image's natural dimensions, so the board fits the picture without distortion. If both are set, `images` wins.
 - `gridSize` (default `"3x3"`): Board dimensions as `"RxC"`. `R*C` must be ≥ 4. Easy: `"2x2"` / `"3x3"`. Hard: `"4x4"` / `"5x5"`.
+
+### Seek (`kind: "seek"`)
+
+Hidden-objects / "I-spy" game. A game can contain **multiple rooms** — each a separate scene with its own background and items. On every start/restart a random room is picked, so the same game offers varied playthroughs.
+
+#### Folder structure
+
+```
+content/games/<game-name>/
+├── game.json              ← top-level config (lists rooms)
+└── rooms/
+    ├── kitchen.json
+    ├── bedroom.json
+    └── garden.json
+```
+
+#### Game config
+
+```json
+{
+  "title": "Skřítci",
+  "description": "Najdi všechny předměty schované v místnosti.",
+  "kind": "seek",
+  "rooms": [
+    "rooms/kitchen.json",
+    "rooms/bedroom.json",
+    "rooms/garden.json"
+  ]
+}
+```
+
+**Fields:**
+- `rooms` (required): array of paths to room JSON files, relative to the game folder. One is picked at random each time the game opens or Restart is pressed.
+- `title`, `description` — game-level display; the chosen room's `title` is appended in the header (e.g. `"Skřítci — Kuchyně"`).
+
+**Back-compat:** if a game has no `rooms` array, the game itself is treated as a single inline room and may use `image` + `items` directly inside `game.json` (the original pre-rooms format).
+
+#### Room config
+
+```json
+{
+  "title": "Kuchyně",
+  "image": "files/games/kitchen.png",
+  "items": [
+    {
+      "src": "files/items/key.png",
+      "name": "Klíč",
+      "x": 0.30, "y": 0.45,
+      "width": 0.05, "height": 0.05
+    }
+  ]
+}
+```
+
+**Fields:**
+- `title` (optional): shown after the game title in the header.
+- `image` (required): absolute path to the background image. Rendered with `object-fit: contain` so it never distorts.
+- `items` (required, may be `[]`): array of items to find. Each entry:
+  - `src` (required): absolute path to the small item image (PNG with transparency works best so it blends into the scene).
+  - `x`, `y`, `width`, `height` (required): item rectangle, normalized `[0, 1]` to the rendered background image. The item is rendered at this rect on the scene and the same rect serves as the tap hit area.
+  - `name` (optional): label shown under the item's thumbnail in the bottom checklist.
+
+A correct tap adds a green outline + checkmark to the item on the scene and colours its thumbnail in the **Nápověda** (help) list. After the last item is found, the "Hotovo!" overlay appears with a Restart button (which picks a fresh random room). Tapping the background or an already-found item does nothing.
+
+The help list is **hidden by default** in play mode — the player searches without help. A **Nápověda** button in the header toggles it (shows thumbnails + names of all items, with found items in colour and unfound ones greyed out). In edit mode the list is visible by default so authors can see what they've added.
+
+Empty `items` is allowed — the room opens and shows just the background. The "Hotovo!" overlay only appears when at least one item has been added and all are found.
+
+**Authoring in edit mode** (`yarn start-edit`):
+- Edits apply to the **currently displayed room** only. Click Restart to land on a different room and edit that one.
+- A floating hint shows the current room's file path; a **JSON místnosti** button toggles a panel showing the live room JSON, ready to copy back into the matching `rooms/<file>.json`.
+- **Drag** anywhere on the background to define an item rectangle. On release, a prompt asks for the item's image path; an optional second prompt asks for the name.
+- Existing items get a dashed gold outline. **Click** any item to delete it (confirm dialog).
+- Edit-mode authoring lives in memory only — copy from the JSON panel and save manually to the matching room file.
 
 Example with image rotation:
 

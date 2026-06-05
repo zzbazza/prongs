@@ -1,0 +1,38 @@
+{
+  "title": "Místnost 1",
+  "image": "files/games/mistnost-01.png",
+  "items": [
+    {
+      "src": "files/games/skret-1.png",
+      "x": 0.3267,
+      "y": 0.6397,
+      "width": 0.0822,
+      "height": 0.0706,
+      "name": "Skritek1"
+    },
+    {
+      "src": "files/games/skret-2.png",
+      "x": 0.705,
+      "y": 0.4635,
+      "width": 0.0771,
+      "height": 0.0591,
+      "name": "Skritek za strojem"
+    },
+    {
+      "src": "files/games/skret-6.png",
+      "x": 0.4197,
+      "y": 0.8563,
+      "width": 0.08,
+      "height": 0.0605,
+      "name": "Skritek v kufru"
+    },
+    {
+      "src": "files/games/skret-12.png",
+      "x": 0.1755,
+      "y": 0.8142,
+      "width": 0.094,
+      "height": 0.0614,
+      "name": "Skritek v kosiku"
+    }
+  ]
+}
