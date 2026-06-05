@@ -4,6 +4,7 @@
   "kind": "seek",
   "rooms": [
     "rooms/mistnost-04.json",
-    "rooms/mistnost-05.json"
+    "rooms/mistnost-05.json",
+    "rooms/mistnost-11.json"
   ]
 }

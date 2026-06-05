@@ -1,0 +1,48 @@
+{
+  "title": "Místnost 1",
+  "image": "files/games/mistnost-11.png",
+  "items": [
+    {
+      "src": "files/games/skret-7.png",
+      "x": 0.6777,
+      "y": 0.0471,
+      "width": 0.0304,
+      "height": 0.0881
+    },
+    {
+      "src": "files/games/skret-8.png",
+      "x": 0.6702,
+      "y": 0.6764,
+      "width": 0.0532,
+      "height": 0.0879
+    },
+    {
+      "src": "files/games/skret-16.png",
+      "x": 0.4784,
+      "y": 0.5402,
+      "width": 0.0378,
+      "height": 0.0916
+    },
+    {
+      "src": "files/games/skret-18.png",
+      "x": 0.2494,
+      "y": 0.6805,
+      "width": 0.0468,
+      "height": 0.0837
+    },
+    {
+      "src": "files/games/skret-5.png",
+      "x": 0,
+      "y": 0.3433,
+      "width": 0.046,
+      "height": 0.1106
+    },
+    {
+      "src": "files/games/skret-3.png",
+      "x": 0.5626,
+      "y": 0.2181,
+      "width": 0.0428,
+      "height": 0.0651
+    }
+  ]
+}
